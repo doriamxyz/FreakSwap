@@ -2,6 +2,8 @@
 
 An independent, experimental browser tool for replacing one original MicroFreak synth engine with an engine adapted from Mutable Instruments’ Plaits.
 
+[Open FreakSwap](https://doriamxyz.github.io/FreakSwap/)
+
 ## Use
 
 1. Choose one of the 11 engines.
@@ -18,7 +20,9 @@ Back up your presets before installing. Presets using the replaced engine will s
 
 ## GitHub Pages
 
-Publish the `main` branch, using `/ (root)` as the source folder in Settings → Pages. `.nojekyll` keeps this static site from being processed by Jekyll. The site uses relative asset paths and can run under a repository URL.
+In Settings → Pages, select **GitHub Actions** as the source. The workflow in `.github/workflows/pages.yml` publishes every push to `main`: it copies the web files and extracts `catalog.zip` into the deployed `catalog/` folder. The archive contains all 114 patches, recipes, and installation guides.
+
+For a local preview, extract `catalog.zip` at the repository root, then serve that directory over HTTP. The site uses relative asset paths and runs under the repository URL.
 
 ## Notices
 
