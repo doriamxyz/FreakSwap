@@ -1,0 +1,79 @@
+--- a/vendor/plaits/dsp/fm/envelope.h
++++ b/vendor/plaits/dsp/fm/envelope.h
+@@ -78,6 +78,12 @@
+       level_[i] = 1.0f / float(1 << i);
+     }
+     level_[num_stages - 1] = 0.0f;
++  }
++
++  // Retiming preserves the active stage, phase, levels and release history.
++  inline void Rescale(float ratio) {
++    scale_ *= ratio;
++    for (int i = 0; i < num_stages; ++i) increment_[i] *= ratio;
+   }
+ 
+   // Directly copy the variables.
+--- a/vendor/plaits/dsp/fm/voice.h
++++ b/vendor/plaits/dsp/fm/voice.h
+@@ -66,6 +66,7 @@
+       const CompactAlgorithms* algorithms,
+       float sample_rate) {
+     algorithms_ = algorithms;
++    if (!(sample_rate >= 8000.0f && sample_rate <= 192000.0f)) sample_rate = 48000.0f;
+ 
+     sample_rate_ = sample_rate;
+     one_hz_ = 1.0f / sample_rate;
+@@ -90,6 +91,20 @@
+     dirty_ = true;
+   }
+   
++  // Native timing can be configured after engine Init. Retune each live
++  // voice without resetting phases, envelopes, gate, feedback or velocity.
++  inline void SetSampleRate(float sample_rate) {
++    if (!(sample_rate >= 8000.0f && sample_rate <= 192000.0f) ||
++        sample_rate == sample_rate_) return;
++    const float one_hz = 1.0f / sample_rate;
++    const float ratio = one_hz / one_hz_;
++    for (int i = 0; i < num_operators; ++i) operator_envelope_[i].Rescale(ratio);
++    pitch_envelope_.Rescale(ratio);
++    sample_rate_ = sample_rate;
++    one_hz_ = one_hz;
++    a0_ = 55.0f / sample_rate;
++  }
++
+   inline void SetPatch(const Patch* patch) {
+     patch_ = patch;
+     dirty_ = true;
+--- a/src/sixop.cc
++++ b/src/sixop.cc
+@@ -105,6 +105,7 @@
+     // Do not combine DX patch setup and rendering in the same audio block.
+     return;
+   }
++  s.voice.SetSampleRate(55.0f / *reinterpret_cast<const volatile float*>(0x20000004));
+   fm_patch(selection, patch_defaults[selection][0], patch_defaults[selection][1]);
+   volatile FMControls* controls = fm_state();
+   s.patch.algorithm = controls->value[0] == 65535 ? patch_defaults[selection][0] : controls->value[0];
+--- a/src/controls.cc
++++ b/src/controls.cc
+@@ -110,6 +110,9 @@
+ }
+ extern "C" int fm_refresh(uint8_t* view,unsigned force) {
+   volatile FMControls* s=fm_state();unsigned parameter=view[6]|(view[7]<<8);
++  // Native parameter IDs encode the section in the high byte. Never
++  // restore a VCO overlay into filter, cycling envelope, arp or other views.
++  if(parameter>>8){s->active=0;return 0;}
+   if(s->active==5 || (!s->active && bank()<3 && parameter==1)) {
+     if(bank()>=3 || parameter!=1){restore(view);return 1;}
+     unsigned entering=s->active!=5;s->active=5;
+@@ -123,8 +126,9 @@
+ }
+ extern "C" int fm_tick(uint8_t* view) {
+   volatile FMControls* s=fm_state();
++  unsigned parameter=view[6]|(view[7]<<8);
++  if(parameter>>8){s->active=0;return 0;}
+   if(s->active==5) {
+-    unsigned parameter=view[6]|(view[7]<<8);
+     if(bank()>=3 || parameter!=1){restore(view);return 1;}
+     fm_patch(0,0,0);
+     if(s->displayed_patch!=s->patch){draw_patch();return 1;}
