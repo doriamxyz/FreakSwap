@@ -1,7 +1,7 @@
 import {sha256} from './patch-core.js';
 import {recipeKey, normalizeRecipe} from './recipe-core.js';
 import {CATALOG_SHA256} from './release.js';
-import {DESCRIPTIONS,VARIANT_NAMES,engineName,orderedEngines,availableEngines,resolveSelection,choicesFromRecipe,selectionFile,validateSelectionFile,selectionAvailable} from './selection-core.js';
+import {DESCRIPTIONS,VARIANT_NAMES,engineName,orderedEngines,availableEngines,completionOptions,resolveSelection,choicesFromRecipe,selectionFile,validateSelectionFile,selectionAvailable} from './selection-core.js';
 
 const $ = id => document.getElementById(id);
 const DRAFT_KEY = 'microfreak-public-lite-draft-v1';
@@ -51,15 +51,24 @@ function updateResolution() {
   return state.resolved.cleared;
 }
 function renderEngines() {
-  $('engine-count').textContent=state.engines.length ? 'One engine selected':'None selected';
-  $('engine-cards').replaceChildren(...availableEngines(state.catalog,state.engines).map(key=>{
+  $('engine-count').textContent=state.engines.length ? `${state.engines.length} selected`:'None selected';
+  const available=availableEngines(state.catalog,state.engines);
+  $('engine-cards').replaceChildren(...state.catalog.engines.map(key=>{
     const selected=state.engines.includes(key),card=node('article','',selected?'engine-card selected':'engine-card');card.dataset.engine=key;
-    const heading=node('h3',name(key)),description=node('p',DESCRIPTIONS[key],'small'),button=node('button',selected?'Selected':'Choose','quiet');
-    button.id='engine-'+key;button.type='button';button.setAttribute('aria-label',`${selected?'Selected':'Choose'} ${name(key)}`);button.setAttribute('aria-pressed',String(selected));button.dataset.engine=key;
-    button.addEventListener('click',()=>changeEngines([key],button.id));
+    const heading=node('h3',name(key)),description=node('p',DESCRIPTIONS[key],'small'),button=node('button',selected?'Remove':available.includes(key)?'Add':'Unavailable together','quiet');
+    button.id='engine-'+key;button.type='button';button.setAttribute('aria-label',`${selected?'Remove':'Add'} ${name(key)}`);button.setAttribute('aria-pressed',String(selected));button.dataset.engine=key;button.disabled=!available.includes(key);
+    button.addEventListener('click',()=>changeEngines(selected?state.engines.filter(e=>e!==key):[...state.engines,key],button.id));
     card.append(heading,description,button);return card;
   }));
-
+  const groups=completionOptions(state.catalog,state.engines);
+  $('combination-options').hidden=!groups.length;
+  $('combination-options').open=!state.resolved.canContinue;
+  $('combination-title').textContent=state.resolved.canContinue?`Available groups (${groups.length})`:'Complete your combination';
+  $('combination-description').textContent=state.resolved.canContinue?'You can continue with your selection or add one of these groups.':'These engines are available as part of a larger combination. Choose a group to add, or remove an engine.';
+  $('combination-buttons').replaceChildren(...groups.map(group=>{
+    const added=group.filter(key=>!state.engines.includes(key)),button=node('button','Add '+added.map(name).join(' + '),'quiet');
+    button.type='button';button.addEventListener('click',()=>changeEngines(group,'engines-title'));return button;
+  }));
 }
 function renderPlacements() {
   $('placement-rows').replaceChildren(...state.resolved.rows.map(row=>{
@@ -101,19 +110,19 @@ function render(focusId=null) {
   }
 }
 function changeEngines(engines,focusId=null) {
-  resetResult();state.imported=null;state.choices=engines[0]===state.engines[0]?state.choices:{};state.engines=orderedEngines(state.catalog,engines);state.step=1;
-  updateResolution();render(focusId);
-  notice(state.engines.length?'Engine selected. Continue to choose which original to replace.':'Choose the new engine you want.');
+  resetResult();state.imported=null;state.engines=orderedEngines(state.catalog,engines);state.step=1;
+  const cleared=updateResolution();render(focusId);
+  notice(!state.engines.length?'Choose the engines you want.':!state.resolved.canContinue?'Choose a group below to complete this selection.':cleared.length?'Some destinations changed to match this combination. Continue to review all replacements.':'Selection ready. Continue to choose the originals to replace.');
 }
 function changeChoice(engine,field,value,focusId) {
   resetResult();state.imported=null;state.choices[engine]={...state.choices[engine],[field]:value};
-  updateResolution();render(focusId);
-  notice(state.selected?'Replacement selected. Continue to prepare your firmware.':'Choose an original engine and an available version.');
+  const cleared=updateResolution();render(focusId);
+  notice(cleared.length?'Some choices changed to match this replacement. Review all selected engines.':state.selected?'Replacements selected. Continue to prepare your firmware.':'Choose an original engine and an available version.');
 }
 function setStep(step,focus=true) {
   if ((step===2&&!state.resolved?.canContinue)||(step===3&&!state.selected)) return;
   if (state.busy) resetResult();state.step=step;render();
-  notice(step===1?'Choose the new engine you want.':step===2?'Choose which original engine to replace.':'Review your change and choose the official firmware.');
+  notice(step===1?'Choose the engines you want.':step===2?'Choose which originals to replace. Available choices depend on the whole combination.':'Review your replacements and choose the official firmware.');
   if (focus) $({1:'engines-title',2:'placements-title',3:'firmware-title'}[step]).focus();
 }
 function download(buffer,filename,type) {
@@ -186,7 +195,7 @@ async function init() {
     if(!crypto.subtle||!window.Worker) throw new Error('Use an up-to-date browser and open the tool from its website.');
     const response=await fetch('catalog.json',{cache:'no-store'});if(!response.ok) throw new Error('Could not load the engines.');
     const buffer=await response.arrayBuffer();if(await sha256(buffer)!==CATALOG_SHA256) throw new Error('Could not load the engines. Please reload the page.');
-    const catalog=JSON.parse(new TextDecoder().decode(buffer));if(catalog.format!=='microfreak.public-lite-catalog'||catalog.version!==1||!catalog.combinations.length||catalog.combinations.some(e=>e.recipe.replacements.length!==1)) throw new Error('Could not load the engines.');
+    const catalog=JSON.parse(new TextDecoder().decode(buffer));if(catalog.format!=='microfreak.public-lite-catalog'||catalog.version!==1||!catalog.combinations.length||catalog.combinations.some(e=>!e.recipe.replacements.length)) throw new Error('Could not load the engines.');
     state.catalog=catalog;for(const entry of catalog.combinations) normalizeRecipe(entry.recipe,catalog.base);
     state.names=Object.fromEntries(catalog.engines.map(key=>[key,engineName(catalog,key)]));
     let recovered=false,recoveryError=false;
@@ -198,7 +207,7 @@ async function init() {
       } else {const entry=catalog.combinations.find(e=>e.id===localStorage.getItem(LEGACY_KEY));if(entry){restoreRecipe(entry.recipe);state.step=1;recovered=true;}else{const id=localStorage.getItem(LEGACY_KEY);if(id&&/^[a-f0-9]{64}$/.test(id))state.imported={format:'microfreak.lite-catalog-reference',version:1,id};}}
     } catch {recoveryError=true;state.engines=[];state.choices={};state.step=1;state.imported=null;}
     updateResolution();render();$('recipe-input').disabled=false;$('firmware-input').disabled=false;
-    notice(recoveryError?'Could not restore your previous selection. Please choose an engine again.':state.imported?'This selection is not available in this version. You can save it or choose another engine.':recovered?'Your choices have been restored. You can keep editing them.':'Choose the new engine you want.');
+    notice(recoveryError?'Could not restore your previous selection. Please choose your engines again.':state.imported?'This selection is not available in this version. You can save it or choose other engines.':recovered?'Your choices have been restored. You can keep editing them.':'Choose the engines you want.');
   } catch(error) {notice(error.message || 'Could not start the tool.',true);}
 }
 init();
