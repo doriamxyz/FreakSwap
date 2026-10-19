@@ -1,0 +1,13 @@
+importScripts('./unicorn_arm.js');
+(async()=>{
+ const {LIBRARY_SHA256}=await import('./library-release.js'),core=await import('./compose.js'),{checkComposition}=await import('./arm-checks.js');
+ async function verifiedJSON(asset){if(!/^modules\/[a-f0-9]{64}\.json$/.test(asset.url))throw new Error('Invalid module reference.');const r=await fetch(asset.url);if(!r.ok)throw new Error('Could not load an engine module.');const bytes=await r.arrayBuffer();if(bytes.byteLength!==asset.size||await core.hash(bytes)!==asset.sha256)throw new Error('Engine module verification failed.');return JSON.parse(new TextDecoder().decode(bytes));}
+ self.onmessage=async({data})=>{const {id,recipe,base}=data;const progress=message=>self.postMessage({id,progress:message});try{
+  progress('Checking your official firmware…');const response=await fetch('./library.json',{cache:'no-store'});if(!response.ok)throw new Error('Could not load the engine library.');const bytes=await response.arrayBuffer();if(await core.hash(bytes)!==LIBRARY_SHA256)throw new Error('The engine library failed verification.');const library=JSON.parse(new TextDecoder().decode(bytes)),selected=core.selectAdapters(library,recipe),original=new Uint8Array(base),{raw}=await core.unpackOfficial(original,library);
+  progress('Loading reusable engine modules…');const modules={};await Promise.all([...new Set(selected.map(a=>a.module))].map(async id=>{modules[id]=await verifiedJSON(library.modules[id]);}));
+  progress('Assembling your selection…');const composition=await core.composeRaw(raw,library,recipe,modules);
+  progress('Starting audio checks…');const uc=await MUnicorn();const checks=await checkComposition(uc,composition.image,selected,progress);if(!checks.passed)throw new Error('The audio checks did not pass.');
+  progress('Checking the firmware archive…');const result=await core.packageFirmware(original,library,composition);self.postMessage({id,result:result.bytes.buffer,sha256:result.sha256,raw_sha256:composition.sha256,checks,recipe},[result.bytes.buffer]);
+ }catch(error){self.postMessage({id,error:typeof error==='string'?error:error.message||'The selection could not be verified. No download was created.'});}};
+ self.postMessage({ready:true});
+})().catch(error=>self.postMessage({startupError:error.message||String(error)}));

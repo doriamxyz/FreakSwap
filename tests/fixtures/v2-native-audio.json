@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "id": 8,
+      "dispatch_count": 32,
+      "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+      "peak": 7156
+    },
+    {
+      "id": 9,
+      "dispatch_count": 32,
+      "output_sha256": "3e659d178b1edb6deb9ae0ea3c20be46de40fbdeb612042b6ca621c7250a4f84",
+      "peak": 5555
+    },
+    {
+      "id": 11,
+      "dispatch_count": 32,
+      "output_sha256": "8ce5c7341ac03d658c21a913f815c054fa86b45085992e945da8e149e4916ec8",
+      "peak": 22234
+    },
+    {
+      "id": 6,
+      "dispatch_count": 32,
+      "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+      "peak": 7411
+    },
+    {
+      "id": 7,
+      "dispatch_count": 32,
+      "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+      "peak": 11277
+    },
+    {
+      "id": 10,
+      "dispatch_count": 32,
+      "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+      "peak": 14266
+    },
+    {
+      "id": 12,
+      "dispatch_count": 24,
+      "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+      "peak": 1927
+    }
+  ]
+}

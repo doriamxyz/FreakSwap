@@ -1,0 +1,46 @@
+{
+  "individual": [
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal",
+      "package_sha256": "4f7ed79dc2a6dc523fa47a81fa5dfa5dad230b7b8cf1f4bfde046ad18c2d58c1"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "chords",
+      "variant": "normal",
+      "package_sha256": "ae4336260b0a02668a60102ebb4ebb3b919618d3e5d2f3942497b1f29409732b"
+    },
+    {
+      "engine": "swarm",
+      "original": "speech",
+      "variant": "normal",
+      "package_sha256": "92fb28b6a1ed90a305bba09805627c8eb9da87c8ca36513f46dea63f94577668"
+    },
+    {
+      "engine": "swarm",
+      "original": "chords",
+      "variant": "normal",
+      "package_sha256": "ef067883cda2b0b0d12433cbeee8419da83d2fa4e4359f5f224c619e326d3c62"
+    },
+    {
+      "engine": "swarm",
+      "original": "two_op_fm",
+      "variant": "normal",
+      "package_sha256": "6fc0261d2eef9a17d86a26b6cf839fd9def5dc2f6a1ab1aba08b5b4869713414"
+    },
+    {
+      "engine": "bass_drum",
+      "original": "formant",
+      "variant": "normal",
+      "package_sha256": "3f10149250054ac0d236f1f1ecdf6df5998443514b7b94010cb4e6cf9d39d754"
+    },
+    {
+      "engine": "bass_drum",
+      "original": "virtual_analog",
+      "variant": "normal",
+      "package_sha256": "5769e7867f74661a81a3198b8bf5dbd266fdba6ca228b646306c6664fd68ffa8"
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "format": "freakswap.module-library",
+  "version": 1,
+  "base": {
+    "version": "5.0.0.2084",
+    "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+    "size": 941572,
+    "raw_sha256": "54be2e0b695e2279602513e1a9ed39906408ba221a45e782b61273f0ef55d15f",
+    "raw_size": 473695
+  },
+  "adapters": [
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal",
+      "name": "Phase Distortion",
+      "labels": [
+        "Phase Dist",
+        "Ratio",
+        "Amount",
+        "Distort"
+      ],
+      "module": "32f67419a043230e04a117bc4cc086155751c083f3690ebb6b978aaa7c2e6952",
+      "id": 11,
+      "registry": 5,
+      "object_offset": 848,
+      "object_bytes": 100,
+      "object_limit": 100,
+      "scratch_bytes": 384,
+      "windows": [
+        [
+          444472,
+          447544
+        ]
+      ],
+      "vtable": 443864,
+      "reset_on_activation": false,
+      "continuous_controls": true,
+      "configuration_remap": false
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "chords",
+      "variant": "normal",
+      "name": "Phase Distortion",
+      "labels": [
+        "Phase Dist",
+        "Ratio",
+        "Amount",
+        "Distort"
+      ],
+      "module": "32f67419a043230e04a117bc4cc086155751c083f3690ebb6b978aaa7c2e6952",
+      "id": 10,
+      "registry": 4,
+      "object_offset": 0,
+      "object_bytes": 100,
+      "object_limit": 240,
+      "scratch_bytes": 384,
+      "windows": [
+        [
+          312172,
+          315900
+        ]
+      ],
+      "vtable": 443768,
+      "reset_on_activation": false,
+      "continuous_controls": true,
+      "configuration_remap": false
+    },
+    {
+      "engine": "swarm",
+      "original": "speech",
+      "variant": "normal",
+      "name": "Swarm",
+      "labels": [
+        "Swarm",
+        "Spread",
+        "Density",
+        "Size"
+      ],
+      "module": "e46a5e5637f21593db2303fdefb26f37acd79622517c0265063970480dc09b23",
+      "id": 11,
+      "registry": 5,
+      "object_offset": 848,
+      "object_bytes": 20,
+      "object_limit": 100,
+      "scratch_bytes": 512,
+      "windows": [
+        [
+          447544,
+          449592
+        ]
+      ],
+      "vtable": 443864,
+      "reset_on_activation": true,
+      "continuous_controls": true,
+      "configuration_remap": false
+    },
+    {
+      "engine": "swarm",
+      "original": "chords",
+      "variant": "normal",
+      "name": "Swarm",
+      "labels": [
+        "Swarm",
+        "Spread",
+        "Density",
+        "Size"
+      ],
+      "module": "e46a5e5637f21593db2303fdefb26f37acd79622517c0265063970480dc09b23",
+      "id": 10,
+      "registry": 4,
+      "object_offset": 0,
+      "object_bytes": 20,
+      "object_limit": 240,
+      "scratch_bytes": 512,
+      "windows": [
+        [
+          312172,
+          315900
+        ]
+      ],
+      "vtable": 443768,
+      "reset_on_activation": true,
+      "continuous_controls": true,
+      "configuration_remap": false
+    },
+    {
+      "engine": "swarm",
+      "original": "two_op_fm",
+      "variant": "normal",
+      "name": "Swarm",
+      "labels": [
+        "Swarm",
+        "Spread",
+        "Density",
+        "Size"
+      ],
+      "module": "2b1dc305d87fe7a4134ec6ca2415c26505a4af129ac9075690a4947b16846540",
+      "id": 8,
+      "registry": 2,
+      "object_offset": 336,
+      "object_bytes": 20,
+      "object_limit": 56,
+      "scratch_bytes": 512,
+      "windows": [
+        [
+          315936,
+          317880
+        ]
+      ],
+      "vtable": 443792,
+      "reset_on_activation": true,
+      "continuous_controls": true,
+      "configuration_remap": true
+    },
+    {
+      "engine": "bass_drum",
+      "original": "formant",
+      "variant": "normal",
+      "name": "Bass Drum",
+      "labels": [
+        "Bass Drum",
+        "Attack",
+        "Tone",
+        "Decay"
+      ],
+      "module": "48711dead4929bf9ca04d6c165320a71e285a35923a45171df3d419c8abbf060",
+      "id": 9,
+      "registry": 3,
+      "object_offset": 392,
+      "object_bytes": 36,
+      "object_limit": 132,
+      "scratch_bytes": 160,
+      "windows": [
+        [
+          317968,
+          323612
+        ]
+      ],
+      "vtable": 443816,
+      "reset_on_activation": false,
+      "continuous_controls": true,
+      "configuration_remap": false
+    },
+    {
+      "engine": "bass_drum",
+      "original": "virtual_analog",
+      "variant": "normal",
+      "name": "Bass Drum",
+      "labels": [
+        "Bass Drum",
+        "Attack",
+        "Tone",
+        "Decay"
+      ],
+      "module": "48711dead4929bf9ca04d6c165320a71e285a35923a45171df3d419c8abbf060",
+      "id": 6,
+      "registry": 0,
+      "object_offset": 1376,
+      "object_bytes": 36,
+      "object_limit": 164,
+      "scratch_bytes": 160,
+      "windows": [
+        [
+          324980,
+          330044
+        ]
+      ],
+      "vtable": 443908,
+      "reset_on_activation": false,
+      "continuous_controls": true,
+      "configuration_remap": true
+    }
+  ],
+  "modules": {
+    "2b1dc305d87fe7a4134ec6ca2415c26505a4af129ac9075690a4947b16846540": {
+      "url": "modules/2b1dc305d87fe7a4134ec6ca2415c26505a4af129ac9075690a4947b16846540.json",
+      "size": 5957,
+      "sha256": "2b1dc305d87fe7a4134ec6ca2415c26505a4af129ac9075690a4947b16846540"
+    },
+    "32f67419a043230e04a117bc4cc086155751c083f3690ebb6b978aaa7c2e6952": {
+      "url": "modules/32f67419a043230e04a117bc4cc086155751c083f3690ebb6b978aaa7c2e6952.json",
+      "size": 6030,
+      "sha256": "32f67419a043230e04a117bc4cc086155751c083f3690ebb6b978aaa7c2e6952"
+    },
+    "48711dead4929bf9ca04d6c165320a71e285a35923a45171df3d419c8abbf060": {
+      "url": "modules/48711dead4929bf9ca04d6c165320a71e285a35923a45171df3d419c8abbf060.json",
+      "size": 12856,
+      "sha256": "48711dead4929bf9ca04d6c165320a71e285a35923a45171df3d419c8abbf060"
+    },
+    "e46a5e5637f21593db2303fdefb26f37acd79622517c0265063970480dc09b23": {
+      "url": "modules/e46a5e5637f21593db2303fdefb26f37acd79622517c0265063970480dc09b23.json",
+      "size": 5803,
+      "sha256": "e46a5e5637f21593db2303fdefb26f37acd79622517c0265063970480dc09b23"
+    }
+  },
+  "limits": {
+    "maximum_engines": 3,
+    "arena_per_voice": 16384,
+    "voices": 4
+  },
+  "scope": "Prototype: three engines, seven verified non-native adapters. Firmware assembly and browser checks; physical testing is separate."
+}
