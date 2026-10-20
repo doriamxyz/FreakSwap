@@ -180,6 +180,11 @@
       "url": "modules/1f29919d7b350c20bbc984a024d49814f77239035bf5342900c1a7c294973850.json",
       "size": 1269,
       "sha256": "1f29919d7b350c20bbc984a024d49814f77239035bf5342900c1a7c294973850"
+    },
+    "32293c26639307cdd2e860d8b6ee3a26447619b18dee57d20408e74243c8db10": {
+      "url": "modules/32293c26639307cdd2e860d8b6ee3a26447619b18dee57d20408e74243c8db10.json",
+      "size": 11103,
+      "sha256": "32293c26639307cdd2e860d8b6ee3a26447619b18dee57d20408e74243c8db10"
     }
   },
   "limits": {
@@ -187,7 +192,7 @@
     "arena_per_voice": 16384,
     "voices": 4
   },
-  "scope": "Two-engine portable proof: immutable Swarm and Bass Drum DSP modules use one unchanged native bridge in Basic Waves and Superwave, including both assignments together. Explicit Speech replacement releases audited code space. Physical testing of each new combination remains separate.",
+  "scope": "Four portable engines share the existing native bridge in Basic Waves and Superwave: Swarm, Bass Drum, Phase Distortion and Snare Drum. Explicit Speech replacement provides audited code space. At most three distinct replacements; physical acceptance of new files is separate.",
   "engines": {
     "swarm": {
       "engine": "swarm",
@@ -219,6 +224,46 @@
       "module": "48711dead4929bf9ca04d6c165320a71e285a35923a45171df3d419c8abbf060",
       "object_bytes": 36,
       "scratch_bytes": 160,
+      "reset_on_activation": false,
+      "continuous_controls": true,
+      "abi": "plaits-engine-v1",
+      "transports": [
+        "native-overlay"
+      ]
+    },
+    "phase_distortion": {
+      "engine": "phase_distortion",
+      "variant": "normal",
+      "name": "Phase Distortion",
+      "labels": [
+        "Phase Dist",
+        "Ratio",
+        "Amount",
+        "Distort"
+      ],
+      "module": "32f67419a043230e04a117bc4cc086155751c083f3690ebb6b978aaa7c2e6952",
+      "object_bytes": 100,
+      "scratch_bytes": 384,
+      "reset_on_activation": false,
+      "continuous_controls": true,
+      "abi": "plaits-engine-v1",
+      "transports": [
+        "native-overlay"
+      ]
+    },
+    "snare_drum": {
+      "engine": "snare_drum",
+      "variant": "normal",
+      "name": "Snare Drum",
+      "labels": [
+        "Snare Drum",
+        "Snappy",
+        "Tone",
+        "Decay"
+      ],
+      "module": "32293c26639307cdd2e860d8b6ee3a26447619b18dee57d20408e74243c8db10",
+      "object_bytes": 28,
+      "scratch_bytes": 276,
       "reset_on_activation": false,
       "continuous_controls": true,
       "abi": "plaits-engine-v1",

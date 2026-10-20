@@ -66,7 +66,7 @@ export function selectAdapters(library,recipe){
  });
  // Match the legacy builder's model order, without tying it to selection order.
  for(const a of selected)if(a.requires_retired&&!selected.some(b=>b.original===a.requires_retired))fail('To replace '+({basic_waves:'Basic Waves',superwave:'Superwave'}[a.original]||a.original)+', also select a replacement for Speech to make room.');
- const order=['phase_distortion','swarm','bass_drum'];selected.sort((a,b)=>order.indexOf(a.engine)-order.indexOf(b.engine));
+ const order=['phase_distortion','swarm','bass_drum','snare_drum'];selected.sort((a,b)=>order.indexOf(a.engine)-order.indexOf(b.engine));
  for(let i=0;i<selected.length;i++)for(let j=0;j<i;j++){const a=selected[i],b=selected[j];if(!a.native_alias&&!b.native_alias&&a.object_offset<b.object_offset+b.object_bytes&&a.object_offset+a.object_bytes>b.object_offset)fail('Voice objects overlap.');for(const [s,e] of a.windows)for(const [x,y] of b.windows)if(s<y&&e>x)fail('Code regions overlap.');}
  return selected;
 }

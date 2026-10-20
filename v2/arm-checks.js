@@ -1,6 +1,6 @@
 // Execute native firmware routines under the ARM interpreter in a Worker.
 // This is a bounded test harness, not a device/boot/interrupt simulation.
-import {FLASH_BASE,hash} from './compose.js?dual-portable-20261020-r2';
+import {FLASH_BASE,hash} from './compose.js?expanded-portable-20261020';
 const STOP=0x0800b000,CONTROLLER=0x2001c898,OWNER=0x20004830,COMMON=0x2000484c,STRIDE=0x59e4;
 const BUFFER=0x21005000,ALLOCATOR=0x20004384,KEYBOARD=0x20003778;
 const assert=(ok,message)=>{if(!ok)throw new Error('ARM verification failed: '+message);};
