@@ -1,6 +1,6 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import path from 'node:path';import {fileURLToPath} from 'node:url';import {createRequire} from 'node:module';
 import {availableAdapters,selectAdapters,composeRaw,hash,unpackOfficial,packageFirmware} from '../v2/compose.js';import {checkComposition} from '../v2/arm-checks.js';
-const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),require=createRequire(import.meta.url),library=JSON.parse(await fs.readFile(path.join(root,'v2/library.json'))),modules={};for(const [id,a] of Object.entries(library.modules))modules[id]=JSON.parse(await fs.readFile(path.join(root,'v2',a.url)));
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),require=createRequire(import.meta.url),library=JSON.parse(await fs.readFile(path.join(root,'tests/fixtures/v2-legacy-library.json'))),modules={};for(const [id,a] of Object.entries(library.modules))modules[id]=JSON.parse(await fs.readFile(path.join(root,'v2',a.url)));
 const file=process.env.FREAKSWAP_FIRMWARE?new Uint8Array(await fs.readFile(process.env.FREAKSWAP_FIRMWARE)):null,raw=file?(await unpackOfficial(file,library)).raw:null;
 const choice=original=>({original,engine:'swarm',variant:'normal'}),phase={original:'speech',engine:'phase_distortion',variant:'normal'},recipe=original=>[choice(original),...(['basic_waves','superwave'].includes(original)?[phase]:[])];
 const moduleID='e46a5e5637f21593db2303fdefb26f37acd79622517c0265063970480dc09b23';

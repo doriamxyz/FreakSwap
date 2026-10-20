@@ -1,6 +1,6 @@
 // Execute native firmware routines under the ARM interpreter in a Worker.
 // This is a bounded test harness, not a device/boot/interrupt simulation.
-import {FLASH_BASE,hash} from './compose.js?flexible-hosts-final2-20261020';
+import {FLASH_BASE,hash} from './compose.js?universal-final-20261020';
 const STOP=0x0800b000,CONTROLLER=0x2001c898,OWNER=0x20004830,COMMON=0x2000484c,STRIDE=0x59e4;
 const BUFFER=0x21005000,ALLOCATOR=0x20004384,KEYBOARD=0x20003778;
 const assert=(ok,message)=>{if(!ok)throw new Error('ARM verification failed: '+message);};
@@ -42,11 +42,12 @@ export async function checkComposition(uc,image,selected,onProgress=()=>{}){
  const start=performance.now(),f=audioFixture(uc,image),{e,read32,put32,r,w,call,set,render,hook}=f;
  const rows=[],dispatch=[],modelTables={},parameterReads=[],live={capture:false,object:0,objects:new Set(),coefficients:[]};hook(0x0805f6a6,()=>{dispatch.push({object:r('R0'),entry:r('R7')&~1});const pv=new DataView(e.mem_read(r('R1'),24).buffer);parameterReads.push({object:r('R0'),note:pv.getFloat32(4,true),controls:[8,12,16].map(off=>pv.getFloat32(off,true))});if(live.capture)live.object=r('R0');});
  try{
+  for(const a of selected)if(a.runtime_vtable!==undefined)modelTables[a.id]=FLASH_BASE+a.runtime_vtable;
   // Native note allocator and its actual keyboard dependency.
   call(0x0804d928,[ALLOCATOR]);call(0x080482b0,[KEYBOARD]);put32(KEYBOARD,ALLOCATOR);
   call(0x0803ef68,[0x2001c894,0x21006000]);w('R0',OWNER);e.emu_start(0x08038b03,0x08038b58,0,200000);assert(r('PC')===0x08038b58,'native note binding');
   for(let i=0;i<4;i++)assert(read32(COMMON+i*STRIDE+0x50b4)===ALLOCATOR+2+12*i,'voice note binding');
-  const activeModels=[...selected.map(a=>({id:a.id,registry:a.registry,name:a.labels[0]}))];
+  const activeModels=[...selected.filter(a=>!a.empty).map(a=>({id:a.id,registry:a.registry,name:a.labels[0]}))];
   // Include the original frontends retained in the seven-slot family.
   for(const [id,registry] of [[6,0],[7,1],[8,2],[9,3],[10,4],[11,5],[12,6]])if(!selected.some(a=>a.id===id))activeModels.push({id,registry,name:'Retained original '+id});
   for(const model of activeModels){
@@ -65,8 +66,16 @@ export async function checkComposition(uc,image,selected,onProgress=()=>{}){
    if(model.id===12&&!selected.some(a=>a.id===12)){assert(observed.length>0&&observed.length<=32,'retained Modal dispatch count');for(const d of observed)assert(expected.some(x=>x.object===d.object&&x.entry===d.entry),'retained Modal dispatch target');}
    else{assert(observed.length===32,'four DSP calls per block');for(let i=0;i<observed.length;i++)assert(observed[i].object===expected[i%4].object&&observed[i].entry===expected[i%4].entry,'DSP dispatch uses the selected module');}
    for(const p of parameterReads.slice(paramBefore)){const i=expected.findIndex(x=>x.object===p.object);assert(i>=0&&Math.abs(p.note-[48,55,60,67][i])<0.1,'DSP receives the note belonging to its own voice');assert(p.controls.every((v,j)=>Math.abs(v-[12288,20480,8192][j]/32768)<1e-5),'DSP receives all three current controls: '+JSON.stringify(p.controls));}
-   assert(samples.some(x=>Math.abs(x)>1),'non-silent native audio');assert(e.mem_read(CONTROLLER+0x1400,32).every(x=>x===0xc7),'preset memory guard');
+   assert(samples.some(x=>Math.abs(x)>1),'non-silent native audio: '+model.name+' id '+model.id);assert(e.mem_read(CONTROLLER+0x1400,32).every(x=>x===0xc7),'preset memory guard');
    rows.push({id:model.id,voices:4,blocks:8,dispatch_count:observed.length,output_sha256:await hash(new Int16Array(samples)),peak:Math.max(...samples.map(Math.abs))});
+  }
+  const retirementCases=[];
+  for(const a of selected.filter(a=>a.empty)){
+   call(0x0804d928,[ALLOCATOR]);set('Gen.Chord',0);set('Gen.Parafon',32767);set('VCO.Type',Math.floor((a.id*32767+11)/22));for(let i=0;i<4;i++)render();call(0x08049a98,[KEYBOARD,4]);
+   for(const key of [48,55,60,67])call(0x0804da80,[ALLOCATOR,0x90|(key<<8)|(100<<16),0,0]);
+   for(let i=0;i<32;i++)render();const pcm=new DataView(e.mem_read(BUFFER,64).buffer);assert(Array.from({length:32},(_,i)=>pcm.getInt16(i*2,true)).every(x=>Math.abs(x)<=1),'explicit Empty slot produces silence');
+   for(let i=0;i<4;i++){const wrapper=read32(COMMON+i*STRIDE+0x50ac),voice=read32(wrapper+0x5c)+0x28;assert(read32(voice)===modelTables[a.id],'Empty routes to its own silence table');}
+   retirementCases.push({id:a.id,silent:true,voices:4});
   }
   // The complete logical keyboard callback, with explicit internal-only routes.
   call(0x08048304,[KEYBOARD,ALLOCATOR,0x20000c98,0x20003c8c],100000,[0x20003a88,0x20003a64,0x20003cdc,0x200035f8,0x2000181c,0x20003704,0x20001834,0x20003b00,0x20000eec]);call(0x08028c88,[0x20003a88]);call(0x0800e168,[0x20001834]);e.mem_write(KEYBOARD+0x2dc,new Uint8Array(8).fill(8));
@@ -74,7 +83,7 @@ export async function checkComposition(uc,image,selected,onProgress=()=>{}){
   const records=()=>Array.from({length:4},(_,i)=>e.mem_read(ALLOCATOR+2+i*12,12));
   f.hookRead(0x20000004,4,()=>{if(live.capture&&live.object){live.objects.add(live.object);live.coefficients.push(new DataView(e.mem_read(0x20000004,4).buffer).getFloat32(0,true));}});
   const unisonCases=[],rateCases=[],paraphonicHistory=[],lifecycleCases=[];
-  for(const a of selected){
+  for(const a of selected.filter(a=>!a.empty)){
    onProgress('Checking unison and note changes: '+a.labels[0]+'…');call(0x0804d928,[ALLOCATOR]);set('Gen.Chord',0);set('Gen.Parafon',32767);set('VCO.Type',Math.floor((a.id*32767+11)/22));for(let i=0;i<4;i++)render();call(0x08049a98,[KEYBOARD,4]);set('Gen.Chord',32767);set('Gen.UniCnt',32767);set('Gen.UniSprd',12000);for(let i=0;i<3;i++)render();call(0x08049a98,[KEYBOARD,4]);note(5,60);for(let i=0;i<8;i++)render();assert(records().every(b=>b[0]===1&&b[2]===60),'four unison allocations');
    const pitches=Array.from({length:4},(_,i)=>new DataView(e.mem_read(read32(read32(COMMON+i*STRIDE+0x50ac)+0x5c),4).buffer).getFloat32(0,true));assert(new Set(pitches).size===4&&pitches.every(p=>Math.abs(p-60)<3),'native unison spread');note(5,60,false);assert(records().every(b=>b[0]===0),'unison note-off releases every voice');unisonCases.push({id:a.id,voices:4,pitches,note_off_released:true});
    set('Gen.Chord',0);for(let i=0;i<4;i++)render();
@@ -84,7 +93,7 @@ export async function checkComposition(uc,image,selected,onProgress=()=>{}){
     }
    }
   }
-  for(const a of selected){
+  for(const a of selected.filter(a=>!a.empty)){
    call(0x0804d928,[ALLOCATOR]);set('Gen.Chord',0);set('Gen.Parafon',32767);set('VCO.Type',Math.floor((a.id*32767+11)/22));for(let i=0;i<4;i++)render();call(0x08049a98,[KEYBOARD,4]);
    const held=new Set();
    for(const [key,on] of [[48,true],[55,true],[60,true],[67,true],[55,false],[36,true],[60,false],[84,true],[48,false],[67,false],[36,false],[84,false]]){
@@ -98,16 +107,16 @@ export async function checkComposition(uc,image,selected,onProgress=()=>{}){
     for(let i=0;i<4;i++){
      const common=COMMON+i*STRIDE,wrapper=read32(common+0x50ac),aggregate=read32(wrapper+0x5c),voice=aggregate+0x28,arena=common+0x34,init=read32(read32(wrapper)+12);
      call(init,[wrapper,a.id,arena,16384],1000000);const table=read32(voice),expected=e.mem_read(arena,a.scratch_bytes);
-     for(const other of [10,6,...(!selected.some(b=>b.id===11)?[11]:[]),...selected.filter(b=>b.native_alias&&b.id!==a.id).map(b=>b.id),10]){
+     for(const other of [10,6,...(!selected.some(b=>b.id===11)?[11]:[]),...selected.filter(b=>b.native_alias&&b.id!==a.id).map(b=>b.id),10].filter(id=>id!==a.id)){
       call(init,[wrapper,other,arena,16384],1000000);if(!selected.some(b=>b.native_alias&&b.id===other))assert(read32(voice)===0x08078578,'normal Chords object table restored when leaving an alias');else assert(read32(voice)===modelTables[other]&&modelTables[other]!==table,'the other native ID uses its own module table');
       e.mem_write(arena,new Uint8Array(16384).fill(0x55));call(init,[wrapper,a.id,arena,16384],1000000);
-      assert(read32(voice)===table&&read32(aggregate+0x1c)===4,'native ID returns to its own module');assert(e.mem_read(arena,a.scratch_bytes).every((x,n)=>x===expected[n]),'native alias scratch restored after a different engine');
+      assert(read32(voice)===table&&read32(aggregate+0x1c)===4,'native ID returns to its own module');assert(e.mem_read(arena,a.scratch_bytes).every((x,n)=>x===expected[n]),'native alias scratch restored after a different engine: '+a.engine+' id '+a.id);
       lifecycleCases.push({id:a.id,voice:i,previous_id:other,scratch_restored:true,normal_table_restored:!selected.some(b=>b.native_alias&&b.id===other),other_native_module_verified:selected.some(b=>b.native_alias&&b.id===other)});
      }
-     call(init,[wrapper,10,arena,16384],1000000);assert(read32(voice)===0x08078578,'final Chords restoration');
+     call(init,[wrapper,10,arena,16384],1000000);assert(read32(voice)===(selected.some(b=>b.native_alias&&b.id===10)?modelTables[10]:0x08078578),'final Chords restoration');
     }
    }
   }
-  return {passed:true,scope:'Native constructors, parameter setters, four-note allocation, paraphonic Common/audio dispatch, retained Plaits frontends, four-voice unison, logical note-on/off, DSP-level note/control ownership, multi-note paraphonic histories, native-overlay restoration and late sample-rate changes. Boot, interrupts, physical CPU and hardware audio are not emulated.',cases:rows,unison_cases:unisonCases,live_rate_cases:rateCases,paraphonic_history:paraphonicHistory,native_lifecycle_cases:lifecycleCases,elapsed_ms:Math.round(performance.now()-start),hardware_verified:false};
+  return {passed:true,scope:'Native constructors, parameter setters, four-note allocation, paraphonic Common/audio dispatch, retained Plaits frontends, four-voice unison, logical note-on/off, DSP-level note/control ownership, multi-note paraphonic histories, native-overlay restoration and late sample-rate changes. Boot, interrupts, physical CPU and hardware audio are not emulated.',cases:rows,unison_cases:unisonCases,live_rate_cases:rateCases,paraphonic_history:paraphonicHistory,native_lifecycle_cases:lifecycleCases,retirement_cases:retirementCases,elapsed_ms:Math.round(performance.now()-start),hardware_verified:false};
  }finally{f.close();}
 }

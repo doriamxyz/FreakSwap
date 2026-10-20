@@ -1,3 +1,4 @@
+import {universalAdapters,universalSelection,composeUniversal} from './universal.js?universal-final-20261020';
 // Offline ARM module composition. No catalog of complete firmware is consulted.
 export const FLASH_BASE=0x0800c000, META=0x564f4, POOL_END=0x6f366;
 export const hash=async bytes=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),x=>x.toString(16).padStart(2,'0')).join('');
@@ -50,6 +51,7 @@ export function linkModule(module,windows,{searchLimit=200000}={}){
 }
 // Compatibility is computed from one engine ABI and independent host contracts.
 export function availableAdapters(library){
+ if(library.version===3)return universalAdapters(library);
  const result=[...library.adapters];
  for(const engine of Object.values(library.engines||{}))for(const [original,host] of Object.entries(library.hosts||{})){
   if(result.some(a=>a.engine===engine.engine&&a.original===original&&a.variant===engine.variant))continue;
@@ -59,6 +61,7 @@ export function availableAdapters(library){
  }return result;
 }
 export function selectAdapters(library,recipe){
+ if(library.version===3)return universalSelection(library,recipe);
  if(!Array.isArray(recipe)||!recipe.length||recipe.length>library.limits.maximum_engines)fail('Choose one to three replacement engines.');
  const engines=new Set(),originals=new Set();const selected=recipe.map(r=>{
   if(!r||Object.keys(r).sort().join(',')!=='engine,original,variant'||r.variant!=='normal')fail('Invalid replacement selection.');
@@ -72,7 +75,7 @@ export function selectAdapters(library,recipe){
  for(let i=0;i<selected.length;i++)for(let j=0;j<i;j++){const a=selected[i],b=selected[j];if(!a.native_alias&&!b.native_alias&&a.object_offset<b.object_offset+b.object_bytes&&a.object_offset+a.object_bytes>b.object_offset)fail('Voice objects overlap.');for(const [s,e] of a.windows)for(const [x,y] of b.windows)if(s<y&&e>x)fail('Code regions overlap.');}
  return selected;
 }
-function configurationBridge(ids,raw){
+export function configurationBridge(ids,raw){
  const b=new Uint8Array(align(ids.length*6+8,4)+4),v=view(b);let at=0;
  for(const id of ids){if(!uint(id,255))fail('Invalid model ID.');v.setUint16(at,0x2900|id,true);v.setUint16(at+2,0xbf08,true);v.setUint16(at+4,0x2109,true);at+=6;}
  v.setUint16(at,0xb410,true);v.setUint16(at+2,0x3906,true);const literal=b.length-4; // LDR uses Align(instruction address + 4, 4).
@@ -83,6 +86,7 @@ function configurationBridge(ids,raw){
  if(at+8<literal)v.setUint16(at+8,0xbf00,true);v.setUint32(literal,0x0802fea9,true);return b;
 }
 export async function composeRaw(base,library,recipe,modules){
+ if(library.version===3)return composeUniversal(base,library,recipe,modules);
  if(!(base instanceof Uint8Array)||base.length!==library.base.raw_size||await hash(base)!==library.base.raw_sha256)fail('The raw official firmware is incorrect.');
  const selected=selectAdapters(library,recipe),image=base.slice(),edits=[],links=[],tails=[];let speechCursor=0x6c838;
  function replace(start,data,purpose,allowed){if(!(data instanceof Uint8Array)||!data.length||!uint(start)||start+data.length>image.length||!allowed.some(([a,b])=>start>=a&&start+data.length<=b))fail('Write outside the selected adapter contract.');if(edits.some(e=>start<e.end&&start+data.length>e.start))fail('Firmware writes overlap.');image.set(data,start);edits.push({start,end:start+data.length,purpose});}
