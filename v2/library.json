@@ -192,7 +192,7 @@
     "arena_per_voice": 16384,
     "voices": 4
   },
-  "scope": "Four portable engines share the existing native bridge in Basic Waves and Superwave: Swarm, Bass Drum, Phase Distortion and Snare Drum. Explicit Speech replacement provides audited code space. At most three distinct replacements; physical acceptance of new files is separate.",
+  "scope": "Four reusable engines; native overlays in Basic Waves, Superwave, Wavetable and Harmonic. Code comes only from explicitly replaced direct hosts, including Formant and Virtual Analog; Speech may be retained. Up to three distinct replacements; actual fit and runtime checks required.",
   "engines": {
     "swarm": {
       "engine": "swarm",
@@ -228,7 +228,12 @@
       "continuous_controls": true,
       "abi": "plaits-engine-v1",
       "transports": [
-        "native-overlay"
+        "native-overlay",
+        "direct"
+      ],
+      "direct_hosts": [
+        "formant",
+        "virtual_analog"
       ]
     },
     "phase_distortion": {
@@ -248,7 +253,12 @@
       "continuous_controls": true,
       "abi": "plaits-engine-v1",
       "transports": [
-        "native-overlay"
+        "native-overlay",
+        "direct"
+      ],
+      "direct_hosts": [
+        "formant",
+        "virtual_analog"
       ]
     },
     "snare_drum": {
@@ -268,7 +278,12 @@
       "continuous_controls": true,
       "abi": "plaits-engine-v1",
       "transports": [
-        "native-overlay"
+        "native-overlay",
+        "direct"
+      ],
+      "direct_hosts": [
+        "formant",
+        "virtual_analog"
       ]
     }
   },
@@ -314,8 +329,7 @@
       "vtable": 0,
       "configuration_remap": false,
       "abi": "plaits-engine-v1",
-      "transport": "native-overlay",
-      "requires_retired": "speech"
+      "transport": "native-overlay"
     },
     "superwave": {
       "id": 2,
@@ -326,8 +340,61 @@
       "vtable": 0,
       "configuration_remap": false,
       "abi": "plaits-engine-v1",
-      "transport": "native-overlay",
-      "requires_retired": "speech"
+      "transport": "native-overlay"
+    },
+    "formant": {
+      "id": 9,
+      "registry": 3,
+      "object_offset": 392,
+      "object_limit": 132,
+      "windows": [
+        [
+          317968,
+          323612
+        ]
+      ],
+      "vtable": 443816,
+      "configuration_remap": false,
+      "abi": "plaits-engine-v1",
+      "transport": "direct"
+    },
+    "virtual_analog": {
+      "id": 6,
+      "registry": 0,
+      "object_offset": 1376,
+      "object_limit": 164,
+      "windows": [
+        [
+          324980,
+          330044
+        ]
+      ],
+      "vtable": 443908,
+      "configuration_remap": true,
+      "abi": "plaits-engine-v1",
+      "transport": "direct"
+    },
+    "wavetable": {
+      "id": 3,
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "windows": [],
+      "vtable": 0,
+      "configuration_remap": false,
+      "abi": "plaits-engine-v1",
+      "transport": "native-overlay"
+    },
+    "harmonic": {
+      "id": 4,
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "windows": [],
+      "vtable": 0,
+      "configuration_remap": false,
+      "abi": "plaits-engine-v1",
+      "transport": "native-overlay"
     }
   },
   "bridge": {

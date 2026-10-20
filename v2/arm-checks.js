@@ -1,6 +1,6 @@
 // Execute native firmware routines under the ARM interpreter in a Worker.
 // This is a bounded test harness, not a device/boot/interrupt simulation.
-import {FLASH_BASE,hash} from './compose.js?expanded-portable-20261020';
+import {FLASH_BASE,hash} from './compose.js?flexible-hosts-final2-20261020';
 const STOP=0x0800b000,CONTROLLER=0x2001c898,OWNER=0x20004830,COMMON=0x2000484c,STRIDE=0x59e4;
 const BUFFER=0x21005000,ALLOCATOR=0x20004384,KEYBOARD=0x20003778;
 const assert=(ok,message)=>{if(!ok)throw new Error('ARM verification failed: '+message);};
@@ -98,7 +98,7 @@ export async function checkComposition(uc,image,selected,onProgress=()=>{}){
     for(let i=0;i<4;i++){
      const common=COMMON+i*STRIDE,wrapper=read32(common+0x50ac),aggregate=read32(wrapper+0x5c),voice=aggregate+0x28,arena=common+0x34,init=read32(read32(wrapper)+12);
      call(init,[wrapper,a.id,arena,16384],1000000);const table=read32(voice),expected=e.mem_read(arena,a.scratch_bytes);
-     for(const other of [10,6,...selected.filter(b=>b.native_alias&&b.id!==a.id).map(b=>b.id),10]){
+     for(const other of [10,6,...(!selected.some(b=>b.id===11)?[11]:[]),...selected.filter(b=>b.native_alias&&b.id!==a.id).map(b=>b.id),10]){
       call(init,[wrapper,other,arena,16384],1000000);if(!selected.some(b=>b.native_alias&&b.id===other))assert(read32(voice)===0x08078578,'normal Chords object table restored when leaving an alias');else assert(read32(voice)===modelTables[other]&&modelTables[other]!==table,'the other native ID uses its own module table');
       e.mem_write(arena,new Uint8Array(16384).fill(0x55));call(init,[wrapper,a.id,arena,16384],1000000);
       assert(read32(voice)===table&&read32(aggregate+0x1c)===4,'native ID returns to its own module');assert(e.mem_read(arena,a.scratch_bytes).every((x,n)=>x===expected[n]),'native alias scratch restored after a different engine');

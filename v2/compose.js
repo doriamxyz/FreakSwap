@@ -52,6 +52,8 @@ export function linkModule(module,windows,{searchLimit=200000}={}){
 export function availableAdapters(library){
  const result=[...library.adapters];
  for(const engine of Object.values(library.engines||{}))for(const [original,host] of Object.entries(library.hosts||{})){
+  if(result.some(a=>a.engine===engine.engine&&a.original===original&&a.variant===engine.variant))continue;
+  if(host.transport==='direct'&&engine.direct_hosts&&!engine.direct_hosts.includes(original))continue;
   if((engine.transports&&!engine.transports.includes(host.transport))||engine.abi!==host.abi||engine.object_bytes>host.object_limit||engine.scratch_bytes>library.limits.arena_per_voice)continue;
   result.push({...engine,...host,original,portable:true,native_alias:host.transport==='native-overlay'});
  }return result;
@@ -65,7 +67,7 @@ export function selectAdapters(library,recipe){
   if(a.object_bytes>a.object_limit||a.scratch_bytes>library.limits.arena_per_voice)fail('The replacement exceeds the verified voice memory.');return a;
  });
  // Match the legacy builder's model order, without tying it to selection order.
- for(const a of selected)if(a.requires_retired&&!selected.some(b=>b.original===a.requires_retired))fail('To replace '+({basic_waves:'Basic Waves',superwave:'Superwave'}[a.original]||a.original)+', also select a replacement for Speech to make room.');
+ if(selected.some(a=>a.native_alias)&&!selected.some(a=>!a.native_alias))fail('Also replace Speech, Formant, Virtual Analog or another available direct host to make room.');
  const order=['phase_distortion','swarm','bass_drum','snare_drum'];selected.sort((a,b)=>order.indexOf(a.engine)-order.indexOf(b.engine));
  for(let i=0;i<selected.length;i++)for(let j=0;j<i;j++){const a=selected[i],b=selected[j];if(!a.native_alias&&!b.native_alias&&a.object_offset<b.object_offset+b.object_bytes&&a.object_offset+a.object_bytes>b.object_offset)fail('Voice objects overlap.');for(const [s,e] of a.windows)for(const [x,y] of b.windows)if(s<y&&e>x)fail('Code regions overlap.');}
  return selected;
@@ -98,20 +100,22 @@ export async function composeRaw(base,library,recipe,modules){
   else if(a.id===10&&a.continuous_controls)replace(0x41fb6,Uint8Array.of(0x17,0),a.engine+' UI',allowed);
   if(a.id===11)speechCursor+=labelData.length;else for(const c of linked.chunks)tails.push([c===region?labelStart+labelData.length:c.end,c.capacity]);
  }
- const remap=selected.filter(a=>a.configuration_remap).map(a=>a.id),speech=selected.some(a=>a.original==='speech');
+ const speech=selected.some(a=>a.original==='speech'),remap=selected.filter(a=>a.configuration_remap||(!speech&&a.native_alias)).map(a=>a.id);
  if(speech||remap.length){const ids=speech?[11,23,...remap]:remap;let raw=speech?align(speechCursor,4):null;
   if(!speech){const size=configurationBridge(ids,0).length;raw=tails.map(([a,b])=>[align(a,4),b]).find(([a,b])=>a+size<=b)?.[0];}
   if(raw===null||raw===undefined)fail('No space for the configuration bridge.');const data=configurationBridge(ids,raw),end=speech?POOL_END:tails.find(([a,b])=>raw>=a&&raw<b)?.[1];replace(raw,data,'configuration bridge',[[raw,end]]);replace(0x23ea4,branch(FLASH_BASE+0x23ea4,FLASH_BASE+raw,true),'configuration hook',commonAllowed);}
  if(speech){replace(0x5366c,Uint8Array.of(0,0xbf),'Speech render route',commonAllowed);if(selected.some(a=>a.engine==='phase_distortion'&&a.id===11)){const f=new Uint8Array(4);view(f).setFloat32(0,0.7,true);replace(0x53450,f,'Phase output gain',commonAllowed);}}
  const aliases=selected.filter(a=>a.native_alias);let nativeBridge=null;
  if(aliases.length){
-  const spec=library.bridge;if(!spec||!speech)fail('A verified shared native bridge and retired Speech are required.');
-  // Reclaim only the explicitly retired Speech pool; preserve all native-family code.
-  let free=[[0x6c838,POOL_END]];
+  const spec=library.bridge;if(!spec)fail('A verified shared native bridge is required.');
+  // Pool only audited code belonging to explicit replacements. Native families stay intact.
+  const candidates=[...(speech?[[0x6c838,POOL_END]]:[]),...selected.filter(a=>!a.native_alias).flatMap(a=>a.windows)].sort((a,b)=>a[0]-b[0]);
+  const reclaimed=[];for(const [a,b] of candidates){const last=reclaimed.at(-1);if(last&&a<=last[1])last[1]=Math.max(last[1],b);else reclaimed.push([a,b]);}
+  let free=reclaimed.map(w=>[...w]);
   const subtract=(start,end)=>{free=free.flatMap(([a,b])=>[[a,Math.min(b,start)],[Math.max(a,end),b]]).filter(([a,b])=>a<b);};
   for(const e of edits)subtract(e.start,e.end);
   function reserve(size,alignment=4){for(const [a,b] of free){const raw=align(a,alignment);if(raw+size<=b){subtract(raw,raw+size);return raw;}}fail('The portable engine and bridge do not fit the verified free space.');}
-  const allowed=[[0x6c838,POOL_END],[0x27986,0x2798a],[0x68d20,0x68d24],[0x68d2c,0x68d30]];
+  const allowed=[...reclaimed,[0x27986,0x2798a],[0x68d20,0x68d24],[0x68d2c,0x68d30]];
   async function checkedModule(id){const m=modules[id];if(!m||await hash(new TextEncoder().encode(JSON.stringify(m,null,2)+'\n'))!==id)fail('Module content failed verification.');return m;}
   const bindings=new Array(23).fill(0);
   for(const a of aliases){
@@ -137,7 +141,7 @@ export async function composeRaw(base,library,recipe,modules){
   replace(spec.dispatch_hook,branch(FLASH_BASE+spec.dispatch_hook,FLASH_BASE+raw,true),'portable native route hook',allowed);
   replace(spec.init_hook,words([bridge.roots[0]|1]),'portable frontend init hook',allowed);
   replace(spec.parameter_hook,words([bridge.roots[1]|1]),'portable parameter hook',allowed);
-  nativeBridge={bindings,bindings_raw:bindingRaw,route:raw,roots:bridge.roots,module:spec.module,overlay_group:'chords',preserves_native_vtables:true};
+  nativeBridge={bindings,bindings_raw:bindingRaw,route:raw,roots:bridge.roots,module:spec.module,overlay_group:'chords',preserves_native_vtables:true,reclaimed_regions:reclaimed,speech_retained:!speech};
   // Native family vtables remain authoritative for every unselected ID.
   for(const [a,b] of [[0x68d30,0x68f00]])if(!same(image.slice(a,b),base.slice(a,b)))fail('A retained native-family table changed.');
  }
