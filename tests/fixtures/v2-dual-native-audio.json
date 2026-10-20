@@ -1,0 +1,237 @@
+{
+  "all_passed": true,
+  "reports": [
+    {
+      "original": "bass-basic",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "5b5e1308e924e9b36dcc455812092eeca587922d9cdbbee171735642e9ad4346",
+          "peak": 13005
+        },
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "3e659d178b1edb6deb9ae0ea3c20be46de40fbdeb612042b6ca621c7250a4f84",
+          "peak": 5555
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "bass-super",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "5b5e1308e924e9b36dcc455812092eeca587922d9cdbbee171735642e9ad4346",
+          "peak": 13005
+        },
+        {
+          "id": 2,
+          "dispatch_count": 32,
+          "output_sha256": "3e659d178b1edb6deb9ae0ea3c20be46de40fbdeb612042b6ca621c7250a4f84",
+          "peak": 5555
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "swarm-basic-bass-super",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "5b5e1308e924e9b36dcc455812092eeca587922d9cdbbee171735642e9ad4346",
+          "peak": 13005
+        },
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "78d2b9317fa9e75ccbee02caad1f425819e3c8f0c90dd79b70a37c2873c03214",
+          "peak": 10391
+        },
+        {
+          "id": 2,
+          "dispatch_count": 32,
+          "output_sha256": "3e659d178b1edb6deb9ae0ea3c20be46de40fbdeb612042b6ca621c7250a4f84",
+          "peak": 5555
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "bass-basic-swarm-super",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "5b5e1308e924e9b36dcc455812092eeca587922d9cdbbee171735642e9ad4346",
+          "peak": 13005
+        },
+        {
+          "id": 2,
+          "dispatch_count": 32,
+          "output_sha256": "5b1c73f0cdd93c780ebdce803fdd7b8332056e074e81bba363ca09441b2d407c",
+          "peak": 10890
+        },
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "3e659d178b1edb6deb9ae0ea3c20be46de40fbdeb612042b6ca621c7250a4f84",
+          "peak": 5555
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    }
+  ]
+}

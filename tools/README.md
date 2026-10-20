@@ -6,4 +6,4 @@ The exported closure contains `native_alias_init`, `native_alias_parameter`, and
 
 The bridge temporarily uses the original Chords object for each voice while a selected native ID is active. It restores Chords' normal table before every frontend Init, preserves the visible native model ID, and calls the selected engine's Init and activation methods. Original native family tables are preserved; IDs absent from the binding table retain their original routes.
 
-Current library contracts expose this mechanism only for Swarm in Basic Waves and Superwave, with an explicit Speech replacement providing audited code space. These sources do not certify additional IDs or engines.
+Current library contracts expose this mechanism for Swarm and Bass Drum in Basic Waves and Superwave, including both together, with an explicit Speech replacement providing audited code space. These sources do not certify additional IDs or engines.

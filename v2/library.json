@@ -187,7 +187,7 @@
     "arena_per_voice": 16384,
     "voices": 4
   },
-  "scope": "Portable Swarm proof: the same immutable DSP module uses independent host contracts for Speech, Chords, Basic Waves and Superwave. Native positions require explicitly replacing Speech to release audited code space. Physical testing is separate.",
+  "scope": "Two-engine portable proof: immutable Swarm and Bass Drum DSP modules use one unchanged native bridge in Basic Waves and Superwave, including both assignments together. Explicit Speech replacement releases audited code space. Physical testing of each new combination remains separate.",
   "engines": {
     "swarm": {
       "engine": "swarm",
@@ -205,6 +205,26 @@
       "reset_on_activation": true,
       "continuous_controls": true,
       "abi": "plaits-engine-v1"
+    },
+    "bass_drum": {
+      "engine": "bass_drum",
+      "variant": "normal",
+      "name": "Bass Drum",
+      "labels": [
+        "Bass Drum",
+        "Attack",
+        "Tone",
+        "Decay"
+      ],
+      "module": "48711dead4929bf9ca04d6c165320a71e285a35923a45171df3d419c8abbf060",
+      "object_bytes": 36,
+      "scratch_bytes": 160,
+      "reset_on_activation": false,
+      "continuous_controls": true,
+      "abi": "plaits-engine-v1",
+      "transports": [
+        "native-overlay"
+      ]
     }
   },
   "hosts": {

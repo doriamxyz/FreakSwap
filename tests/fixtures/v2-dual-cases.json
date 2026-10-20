@@ -1,0 +1,6 @@
+{
+  "bass-basic": [{"engine":"bass_drum","original":"basic_waves","variant":"normal"},{"engine":"phase_distortion","original":"speech","variant":"normal"}],
+  "bass-super": [{"engine":"bass_drum","original":"superwave","variant":"normal"},{"engine":"phase_distortion","original":"speech","variant":"normal"}],
+  "swarm-basic-bass-super": [{"engine":"swarm","original":"basic_waves","variant":"normal"},{"engine":"bass_drum","original":"superwave","variant":"normal"},{"engine":"phase_distortion","original":"speech","variant":"normal"}],
+  "bass-basic-swarm-super": [{"engine":"bass_drum","original":"basic_waves","variant":"normal"},{"engine":"swarm","original":"superwave","variant":"normal"},{"engine":"phase_distortion","original":"speech","variant":"normal"}]
+}

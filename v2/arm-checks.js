@@ -1,6 +1,6 @@
 // Execute native firmware routines under the ARM interpreter in a Worker.
 // This is a bounded test harness, not a device/boot/interrupt simulation.
-import {FLASH_BASE,hash} from './compose.js?portable-20261020';
+import {FLASH_BASE,hash} from './compose.js?dual-portable-20261020-r2';
 const STOP=0x0800b000,CONTROLLER=0x2001c898,OWNER=0x20004830,COMMON=0x2000484c,STRIDE=0x59e4;
 const BUFFER=0x21005000,ALLOCATOR=0x20004384,KEYBOARD=0x20003778;
 const assert=(ok,message)=>{if(!ok)throw new Error('ARM verification failed: '+message);};
@@ -40,7 +40,7 @@ export function audioFixture(uc,image){
 }
 export async function checkComposition(uc,image,selected,onProgress=()=>{}){
  const start=performance.now(),f=audioFixture(uc,image),{e,read32,put32,r,w,call,set,render,hook}=f;
- const rows=[],dispatch=[],parameterReads=[],live={capture:false,object:0,objects:new Set(),coefficients:[]};hook(0x0805f6a6,()=>{dispatch.push({object:r('R0'),entry:r('R7')&~1});const pv=new DataView(e.mem_read(r('R1'),24).buffer);parameterReads.push({object:r('R0'),note:pv.getFloat32(4,true),controls:[8,12,16].map(off=>pv.getFloat32(off,true))});if(live.capture)live.object=r('R0');});
+ const rows=[],dispatch=[],modelTables={},parameterReads=[],live={capture:false,object:0,objects:new Set(),coefficients:[]};hook(0x0805f6a6,()=>{dispatch.push({object:r('R0'),entry:r('R7')&~1});const pv=new DataView(e.mem_read(r('R1'),24).buffer);parameterReads.push({object:r('R0'),note:pv.getFloat32(4,true),controls:[8,12,16].map(off=>pv.getFloat32(off,true))});if(live.capture)live.object=r('R0');});
  try{
   // Native note allocator and its actual keyboard dependency.
   call(0x0804d928,[ALLOCATOR]);call(0x080482b0,[KEYBOARD]);put32(KEYBOARD,ALLOCATOR);
@@ -56,7 +56,7 @@ export async function checkComposition(uc,image,selected,onProgress=()=>{}){
    const active=[];for(let i=0;i<4;i++){const b=e.mem_read(ALLOCATOR+2+i*12,12);if(b[0]===1)active.push(b[2]);}assert(JSON.stringify(active)==='[48,55,60,67]','four independent note allocations');
    for(let i=0;i<8;i++)render();
    const expected=[];for(let i=0;i<4;i++){const common=COMMON+i*STRIDE,wrapper=read32(common+0x50ac),aggregate=read32(wrapper+0x5c),voice=aggregate+0x28,obj=read32(voice+0x6e4+model.registry*4),target=read32(read32(obj)+8)&~1;
-    assert(e.mem_read(common+0x50a8,1)[0]===model.id,'selected ID per voice');assert(read32(aggregate+0x1c)===model.registry,'selected DSP registry');const pitch=new DataView(e.mem_read(aggregate,4).buffer).getFloat32(0,true);assert(Math.abs(pitch-[48,55,60,67][i])<0.1,'pitch per voice');expected.push({object:obj,entry:target});
+    assert(e.mem_read(common+0x50a8,1)[0]===model.id,'selected ID per voice');assert(read32(aggregate+0x1c)===model.registry,'selected DSP registry');const pitch=new DataView(e.mem_read(aggregate,4).buffer).getFloat32(0,true);assert(Math.abs(pitch-[48,55,60,67][i])<0.1,'pitch per voice');modelTables[model.id]=read32(obj);expected.push({object:obj,entry:target});
    }
    const before=dispatch.length,paramBefore=parameterReads.length,samples=[];for(let b=0;b<8;b++){put32(0x22000024,b);render();const v=new DataView(e.mem_read(BUFFER,64).buffer);for(let i=0;i<32;i++)samples.push(v.getInt16(i*2,true));}
    const observed=dispatch.slice(before);
@@ -98,11 +98,11 @@ export async function checkComposition(uc,image,selected,onProgress=()=>{}){
     for(let i=0;i<4;i++){
      const common=COMMON+i*STRIDE,wrapper=read32(common+0x50ac),aggregate=read32(wrapper+0x5c),voice=aggregate+0x28,arena=common+0x34,init=read32(read32(wrapper)+12);
      call(init,[wrapper,a.id,arena,16384],1000000);const table=read32(voice),expected=e.mem_read(arena,a.scratch_bytes);
-     for(const other of [10,6,10]){
-      call(init,[wrapper,other,arena,16384],1000000);assert(read32(voice)===0x08078578,'normal Chords object table restored when leaving an alias');
+     for(const other of [10,6,...selected.filter(b=>b.native_alias&&b.id!==a.id).map(b=>b.id),10]){
+      call(init,[wrapper,other,arena,16384],1000000);if(!selected.some(b=>b.native_alias&&b.id===other))assert(read32(voice)===0x08078578,'normal Chords object table restored when leaving an alias');else assert(read32(voice)===modelTables[other]&&modelTables[other]!==table,'the other native ID uses its own module table');
       e.mem_write(arena,new Uint8Array(16384).fill(0x55));call(init,[wrapper,a.id,arena,16384],1000000);
       assert(read32(voice)===table&&read32(aggregate+0x1c)===4,'native ID returns to its own module');assert(e.mem_read(arena,a.scratch_bytes).every((x,n)=>x===expected[n]),'native alias scratch restored after a different engine');
-      lifecycleCases.push({id:a.id,voice:i,previous_id:other,scratch_restored:true,normal_table_restored:true});
+      lifecycleCases.push({id:a.id,voice:i,previous_id:other,scratch_restored:true,normal_table_restored:!selected.some(b=>b.native_alias&&b.id===other),other_native_module_verified:selected.some(b=>b.native_alias&&b.id===other)});
      }
      call(init,[wrapper,10,arena,16384],1000000);assert(read32(voice)===0x08078578,'final Chords restoration');
     }

@@ -52,7 +52,7 @@ export function linkModule(module,windows,{searchLimit=200000}={}){
 export function availableAdapters(library){
  const result=[...library.adapters];
  for(const engine of Object.values(library.engines||{}))for(const [original,host] of Object.entries(library.hosts||{})){
-  if(engine.abi!==host.abi||engine.object_bytes>host.object_limit||engine.scratch_bytes>library.limits.arena_per_voice)continue;
+  if((engine.transports&&!engine.transports.includes(host.transport))||engine.abi!==host.abi||engine.object_bytes>host.object_limit||engine.scratch_bytes>library.limits.arena_per_voice)continue;
   result.push({...engine,...host,original,portable:true,native_alias:host.transport==='native-overlay'});
  }return result;
 }
