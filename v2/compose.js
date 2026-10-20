@@ -48,17 +48,26 @@ export function linkModule(module,windows,{searchLimit=200000}={}){
   }}
  return {chunks,roots:module.roots.map(address),placements,relocationCount};
 }
+// Compatibility is computed from one engine ABI and independent host contracts.
+export function availableAdapters(library){
+ const result=[...library.adapters];
+ for(const engine of Object.values(library.engines||{}))for(const [original,host] of Object.entries(library.hosts||{})){
+  if(engine.abi!==host.abi||engine.object_bytes>host.object_limit||engine.scratch_bytes>library.limits.arena_per_voice)continue;
+  result.push({...engine,...host,original,portable:true,native_alias:host.transport==='native-overlay'});
+ }return result;
+}
 export function selectAdapters(library,recipe){
  if(!Array.isArray(recipe)||!recipe.length||recipe.length>library.limits.maximum_engines)fail('Choose one to three replacement engines.');
  const engines=new Set(),originals=new Set();const selected=recipe.map(r=>{
   if(!r||Object.keys(r).sort().join(',')!=='engine,original,variant'||r.variant!=='normal')fail('Invalid replacement selection.');
   if(engines.has(r.engine)||originals.has(r.original))fail('Engines and originals cannot be repeated.');engines.add(r.engine);originals.add(r.original);
-  const a=library.adapters.find(a=>a.engine===r.engine&&a.original===r.original&&a.variant===r.variant);if(!a)fail('This adapter is not available in the prototype.');
+  const a=availableAdapters(library).find(a=>a.engine===r.engine&&a.original===r.original&&a.variant===r.variant);if(!a)fail('This adapter is not available in the prototype.');
   if(a.object_bytes>a.object_limit||a.scratch_bytes>library.limits.arena_per_voice)fail('The replacement exceeds the verified voice memory.');return a;
  });
  // Match the legacy builder's model order, without tying it to selection order.
+ for(const a of selected)if(a.requires_retired&&!selected.some(b=>b.original===a.requires_retired))fail('To replace '+({basic_waves:'Basic Waves',superwave:'Superwave'}[a.original]||a.original)+', also select a replacement for Speech to make room.');
  const order=['phase_distortion','swarm','bass_drum'];selected.sort((a,b)=>order.indexOf(a.engine)-order.indexOf(b.engine));
- for(let i=0;i<selected.length;i++)for(let j=0;j<i;j++){const a=selected[i],b=selected[j];if(a.object_offset<b.object_offset+b.object_bytes&&a.object_offset+a.object_bytes>b.object_offset)fail('Voice objects overlap.');for(const [s,e] of a.windows)for(const [x,y] of b.windows)if(s<y&&e>x)fail('Code regions overlap.');}
+ for(let i=0;i<selected.length;i++)for(let j=0;j<i;j++){const a=selected[i],b=selected[j];if(!a.native_alias&&!b.native_alias&&a.object_offset<b.object_offset+b.object_bytes&&a.object_offset+a.object_bytes>b.object_offset)fail('Voice objects overlap.');for(const [s,e] of a.windows)for(const [x,y] of b.windows)if(s<y&&e>x)fail('Code regions overlap.');}
  return selected;
 }
 function configurationBridge(ids,raw){
@@ -76,7 +85,7 @@ export async function composeRaw(base,library,recipe,modules){
  const selected=selectAdapters(library,recipe),image=base.slice(),edits=[],links=[],tails=[];let speechCursor=0x6c838;
  function replace(start,data,purpose,allowed){if(!(data instanceof Uint8Array)||!data.length||!uint(start)||start+data.length>image.length||!allowed.some(([a,b])=>start>=a&&start+data.length<=b))fail('Write outside the selected adapter contract.');if(edits.some(e=>start<e.end&&start+data.length>e.start))fail('Firmware writes overlap.');image.set(data,start);edits.push({start,end:start+data.length,purpose});}
  const commonAllowed=[[0x23ea4,0x23ea8],[0x5366c,0x5366e],[0x53450,0x53454]];
- for(const a of selected){const module=modules[a.module];if(!module||await hash(new TextEncoder().encode(JSON.stringify(module,null,2)+'\n'))!==a.module)fail('Module content failed verification.');const linked=linkModule(module,a.windows);links.push({adapter:a,...linked});const allowed=[...a.windows,[a.vtable,a.vtable+16],[META+a.id*28,META+(a.id+1)*28],[0x41fa4+(a.id-1)*2,0x41fa6+(a.id-1)*2],...commonAllowed];
+ for(const a of selected.filter(a=>!a.native_alias)){const module=modules[a.module];if(!module||await hash(new TextEncoder().encode(JSON.stringify(module,null,2)+'\n'))!==a.module)fail('Module content failed verification.');const linked=linkModule(module,a.windows);links.push({adapter:a,...linked});const allowed=[...a.windows,[a.vtable,a.vtable+16],[META+a.id*28,META+(a.id+1)*28],[0x41fa4+(a.id-1)*2,0x41fa6+(a.id-1)*2],...commonAllowed];
   for(const c of linked.chunks)if(c.data.length)replace(c.start,c.data,a.engine+' code',allowed);
   let [init,reset,load,render]=linked.roots;replace(a.vtable,words([init|1,(a.reset_on_activation?reset:load)|1,render|1,reset|1]),a.engine+' ABI',allowed);
   const labelData=new TextEncoder().encode(a.labels.join('\0')+'\0');let region,labelStart;
@@ -94,11 +103,49 @@ export async function composeRaw(base,library,recipe,modules){
   if(!speech){const size=configurationBridge(ids,0).length;raw=tails.map(([a,b])=>[align(a,4),b]).find(([a,b])=>a+size<=b)?.[0];}
   if(raw===null||raw===undefined)fail('No space for the configuration bridge.');const data=configurationBridge(ids,raw),end=speech?POOL_END:tails.find(([a,b])=>raw>=a&&raw<b)?.[1];replace(raw,data,'configuration bridge',[[raw,end]]);replace(0x23ea4,branch(FLASH_BASE+0x23ea4,FLASH_BASE+raw,true),'configuration hook',commonAllowed);}
  if(speech){replace(0x5366c,Uint8Array.of(0,0xbf),'Speech render route',commonAllowed);if(selected.some(a=>a.engine==='phase_distortion'&&a.id===11)){const f=new Uint8Array(4);view(f).setFloat32(0,0.7,true);replace(0x53450,f,'Phase output gain',commonAllowed);}}
+ const aliases=selected.filter(a=>a.native_alias);let nativeBridge=null;
+ if(aliases.length){
+  const spec=library.bridge;if(!spec||!speech)fail('A verified shared native bridge and retired Speech are required.');
+  // Reclaim only the explicitly retired Speech pool; preserve all native-family code.
+  let free=[[0x6c838,POOL_END]];
+  const subtract=(start,end)=>{free=free.flatMap(([a,b])=>[[a,Math.min(b,start)],[Math.max(a,end),b]]).filter(([a,b])=>a<b);};
+  for(const e of edits)subtract(e.start,e.end);
+  function reserve(size,alignment=4){for(const [a,b] of free){const raw=align(a,alignment);if(raw+size<=b){subtract(raw,raw+size);return raw;}}fail('The portable engine and bridge do not fit the verified free space.');}
+  const allowed=[[0x6c838,POOL_END],[0x27986,0x2798a],[0x68d20,0x68d24],[0x68d2c,0x68d30]];
+  async function checkedModule(id){const m=modules[id];if(!m||await hash(new TextEncoder().encode(JSON.stringify(m,null,2)+'\n'))!==id)fail('Module content failed verification.');return m;}
+  const bindings=new Array(23).fill(0);
+  for(const a of aliases){
+   const table=reserve(16),labelData=new TextEncoder().encode(a.labels.join('\0')+'\0'),labelStart=reserve(labelData.length);
+   replace(labelStart,labelData,a.engine+' portable labels',allowed);
+   const descriptor=base.slice(META+9*28,META+10*28);let offset=0;
+   a.labels.forEach((label,i)=>{view(descriptor).setUint32(12+i*4,FLASH_BASE+labelStart+offset,true);offset+=new TextEncoder().encode(label).length+1;});
+   replace(META+a.id*28,descriptor,a.engine+' portable metadata',[[META+a.id*28,META+(a.id+1)*28]]);
+   const cell=0x41fa4+(a.id-1)*2;if(a.id>20&&!a.continuous_controls)fail('The native slot needs an unsupported discrete display formatter.');
+   if(a.id<=20)replace(cell,base.slice(a.continuous_controls?0x41fb4:0x41fb6,(a.continuous_controls?0x41fb4:0x41fb6)+2),a.engine+' portable UI',[[cell,cell+2]]);
+   const linked=linkModule(await checkedModule(a.module),free);
+   for(const c of linked.chunks)if(c.data.length){replace(c.start,c.data,a.engine+' portable DSP',allowed);subtract(c.start,c.end);}
+   const [init,reset,load,render]=linked.roots;replace(table,words([init|1,(a.reset_on_activation?reset:load)|1,render|1,reset|1]),a.engine+' portable ABI',allowed);
+   bindings[a.id]=FLASH_BASE+table;links.push({adapter:a,...linked,vtable:table});
+  }
+  const bridge=linkModule(await checkedModule(spec.module),free),bindingAddress=bridge.roots[spec.bindings_root],bindingRaw=bindingAddress-FLASH_BASE;
+  const bindingChunk=bridge.chunks.find(c=>bindingRaw>=c.start&&bindingRaw+92<=c.end);
+  if(!bindingChunk||bindingRaw%4||bindingChunk.data.slice(bindingRaw-bindingChunk.start,bindingRaw-bindingChunk.start+92).some(x=>x))fail('The shared bridge binding table is invalid.');
+  bindingChunk.data.set(words(bindings),bindingRaw-bindingChunk.start);
+  for(const c of bridge.chunks)if(c.data.length){replace(c.start,c.data,'shared portable lifecycle bridge',allowed);subtract(c.start,c.end);}
+  const route=Uint8Array.from(spec.route_hex.match(/../g),x=>parseInt(x,16));view(route).setUint32(spec.route_binding_offset,bindingAddress,true);const raw=reserve(route.length);replace(raw,route,'portable ID dispatch',allowed);
+  if(!same(image.slice(spec.dispatch_hook,spec.dispatch_hook+4),Uint8Array.from(spec.dispatch_expected.match(/../g),x=>parseInt(x,16))))fail('The native dispatch hook does not match the verified base.');
+  replace(spec.dispatch_hook,branch(FLASH_BASE+spec.dispatch_hook,FLASH_BASE+raw,true),'portable native route hook',allowed);
+  replace(spec.init_hook,words([bridge.roots[0]|1]),'portable frontend init hook',allowed);
+  replace(spec.parameter_hook,words([bridge.roots[1]|1]),'portable parameter hook',allowed);
+  nativeBridge={bindings,bindings_raw:bindingRaw,route:raw,roots:bridge.roots,module:spec.module,overlay_group:'chords',preserves_native_vtables:true};
+  // Native family vtables remain authoritative for every unselected ID.
+  for(const [a,b] of [[0x68d30,0x68f00]])if(!same(image.slice(a,b),base.slice(a,b)))fail('A retained native-family table changed.');
+ }
  edits.sort((a,b)=>a.start-b.start);
  // Independently check preservation and every selected descriptor/vtable.
  let cursor=0;for(const e of edits){if(!same(image.subarray(cursor,e.start),base.subarray(cursor,e.start)))fail('An unselected region changed.');cursor=e.end;}if(!same(image.subarray(cursor),base.subarray(cursor)))fail('An unselected region changed.');
- for(const {adapter:a,roots} of links){const p=META+a.id*28;let pos=0;for(let i=0;i<4;i++){const addr=view(image).getUint32(p+12+i*4,true)-FLASH_BASE;if(addr<0||addr>=image.length)fail('Invalid UI string pointer.');const end=image.indexOf(0,addr);if(new TextDecoder().decode(image.subarray(addr,end))!==a.labels[i])fail('UI label verification failed.');pos++;}if(view(image).getUint32(a.vtable+8,true)!==(roots[3]|1))fail('DSP dispatch verification failed.');}
- return {image,edits,selected,links,sha256:await hash(image),structuralVerified:true};
+ for(const {adapter:a,roots,vtable} of links){const p=META+a.id*28;let pos=0;for(let i=0;i<4;i++){const addr=view(image).getUint32(p+12+i*4,true)-FLASH_BASE;if(addr<0||addr>=image.length)fail('Invalid UI string pointer.');const end=image.indexOf(0,addr);if(new TextDecoder().decode(image.subarray(addr,end))!==a.labels[i])fail('UI label verification failed.');pos++;}if(view(image).getUint32((vtable??a.vtable)+8,true)!==(roots[3]|1))fail('DSP dispatch verification failed.');}
+ return {image,edits,selected,links,nativeBridge,sha256:await hash(image),structuralVerified:true};
 }
 const crcTable=Array.from({length:256},(_,i)=>{let c=i;for(let k=0;k<8;k++)c=(c&1)?0xedb88320^(c>>>1):c>>>1;return c>>>0;});
 export function crc32(bytes){let crc=0xffffffff;for(const b of bytes)crc=crcTable[(crc^b)&255]^(crc>>>8);return (crc^0xffffffff)>>>0;}

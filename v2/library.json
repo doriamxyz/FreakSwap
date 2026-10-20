@@ -1,6 +1,6 @@
 {
   "format": "freakswap.module-library",
-  "version": 1,
+  "version": 2,
   "base": {
     "version": "5.0.0.2084",
     "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
@@ -64,64 +64,6 @@
       ],
       "vtable": 443768,
       "reset_on_activation": false,
-      "continuous_controls": true,
-      "configuration_remap": false
-    },
-    {
-      "engine": "swarm",
-      "original": "speech",
-      "variant": "normal",
-      "name": "Swarm",
-      "labels": [
-        "Swarm",
-        "Spread",
-        "Density",
-        "Size"
-      ],
-      "module": "e46a5e5637f21593db2303fdefb26f37acd79622517c0265063970480dc09b23",
-      "id": 11,
-      "registry": 5,
-      "object_offset": 848,
-      "object_bytes": 20,
-      "object_limit": 100,
-      "scratch_bytes": 512,
-      "windows": [
-        [
-          447544,
-          449592
-        ]
-      ],
-      "vtable": 443864,
-      "reset_on_activation": true,
-      "continuous_controls": true,
-      "configuration_remap": false
-    },
-    {
-      "engine": "swarm",
-      "original": "chords",
-      "variant": "normal",
-      "name": "Swarm",
-      "labels": [
-        "Swarm",
-        "Spread",
-        "Density",
-        "Size"
-      ],
-      "module": "e46a5e5637f21593db2303fdefb26f37acd79622517c0265063970480dc09b23",
-      "id": 10,
-      "registry": 4,
-      "object_offset": 0,
-      "object_bytes": 20,
-      "object_limit": 240,
-      "scratch_bytes": 512,
-      "windows": [
-        [
-          312172,
-          315900
-        ]
-      ],
-      "vtable": 443768,
-      "reset_on_activation": true,
       "continuous_controls": true,
       "configuration_remap": false
     },
@@ -233,6 +175,11 @@
       "url": "modules/e46a5e5637f21593db2303fdefb26f37acd79622517c0265063970480dc09b23.json",
       "size": 5803,
       "sha256": "e46a5e5637f21593db2303fdefb26f37acd79622517c0265063970480dc09b23"
+    },
+    "1f29919d7b350c20bbc984a024d49814f77239035bf5342900c1a7c294973850": {
+      "url": "modules/1f29919d7b350c20bbc984a024d49814f77239035bf5342900c1a7c294973850.json",
+      "size": 1269,
+      "sha256": "1f29919d7b350c20bbc984a024d49814f77239035bf5342900c1a7c294973850"
     }
   },
   "limits": {
@@ -240,5 +187,93 @@
     "arena_per_voice": 16384,
     "voices": 4
   },
-  "scope": "Prototype: three engines, seven verified non-native adapters. Firmware assembly and browser checks; physical testing is separate."
+  "scope": "Portable Swarm proof: the same immutable DSP module uses independent host contracts for Speech, Chords, Basic Waves and Superwave. Native positions require explicitly replacing Speech to release audited code space. Physical testing is separate.",
+  "engines": {
+    "swarm": {
+      "engine": "swarm",
+      "variant": "normal",
+      "name": "Swarm",
+      "labels": [
+        "Swarm",
+        "Spread",
+        "Density",
+        "Size"
+      ],
+      "module": "e46a5e5637f21593db2303fdefb26f37acd79622517c0265063970480dc09b23",
+      "object_bytes": 20,
+      "scratch_bytes": 512,
+      "reset_on_activation": true,
+      "continuous_controls": true,
+      "abi": "plaits-engine-v1"
+    }
+  },
+  "hosts": {
+    "speech": {
+      "id": 11,
+      "registry": 5,
+      "object_offset": 848,
+      "object_limit": 100,
+      "windows": [
+        [
+          447544,
+          449592
+        ]
+      ],
+      "vtable": 443864,
+      "configuration_remap": false,
+      "abi": "plaits-engine-v1",
+      "transport": "direct"
+    },
+    "chords": {
+      "id": 10,
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 240,
+      "windows": [
+        [
+          312172,
+          315900
+        ]
+      ],
+      "vtable": 443768,
+      "configuration_remap": false,
+      "abi": "plaits-engine-v1",
+      "transport": "direct"
+    },
+    "basic_waves": {
+      "id": 1,
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "windows": [],
+      "vtable": 0,
+      "configuration_remap": false,
+      "abi": "plaits-engine-v1",
+      "transport": "native-overlay",
+      "requires_retired": "speech"
+    },
+    "superwave": {
+      "id": 2,
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "windows": [],
+      "vtable": 0,
+      "configuration_remap": false,
+      "abi": "plaits-engine-v1",
+      "transport": "native-overlay",
+      "requires_retired": "speech"
+    }
+  },
+  "bridge": {
+    "module": "1f29919d7b350c20bbc984a024d49814f77239035bf5342900c1a7c294973850",
+    "bindings_root": 2,
+    "route_hex": "5846dff818c05cf820c0bcf1000f18bf41f2696354f82300dff804f0000000008b390308",
+    "route_binding_offset": 28,
+    "dispatch_hook": 162182,
+    "dispatch_expected": "54f82300",
+    "init_hook": 429344,
+    "parameter_hook": 429356,
+    "overlay_vtable": 443768
+  }
 }

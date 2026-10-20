@@ -1,6 +1,6 @@
 // Execute native firmware routines under the ARM interpreter in a Worker.
 // This is a bounded test harness, not a device/boot/interrupt simulation.
-import {FLASH_BASE,hash} from './compose.js';
+import {FLASH_BASE,hash} from './compose.js?portable-20261020';
 const STOP=0x0800b000,CONTROLLER=0x2001c898,OWNER=0x20004830,COMMON=0x2000484c,STRIDE=0x59e4;
 const BUFFER=0x21005000,ALLOCATOR=0x20004384,KEYBOARD=0x20003778;
 const assert=(ok,message)=>{if(!ok)throw new Error('ARM verification failed: '+message);};
@@ -40,7 +40,7 @@ export function audioFixture(uc,image){
 }
 export async function checkComposition(uc,image,selected,onProgress=()=>{}){
  const start=performance.now(),f=audioFixture(uc,image),{e,read32,put32,r,w,call,set,render,hook}=f;
- const rows=[],dispatch=[],live={capture:false,object:0,objects:new Set(),coefficients:[]};hook(0x0805f6a6,()=>{dispatch.push({object:r('R0'),entry:r('R7')&~1});if(live.capture)live.object=r('R0');});
+ const rows=[],dispatch=[],parameterReads=[],live={capture:false,object:0,objects:new Set(),coefficients:[]};hook(0x0805f6a6,()=>{dispatch.push({object:r('R0'),entry:r('R7')&~1});const pv=new DataView(e.mem_read(r('R1'),24).buffer);parameterReads.push({object:r('R0'),note:pv.getFloat32(4,true),controls:[8,12,16].map(off=>pv.getFloat32(off,true))});if(live.capture)live.object=r('R0');});
  try{
   // Native note allocator and its actual keyboard dependency.
   call(0x0804d928,[ALLOCATOR]);call(0x080482b0,[KEYBOARD]);put32(KEYBOARD,ALLOCATOR);
@@ -58,12 +58,13 @@ export async function checkComposition(uc,image,selected,onProgress=()=>{}){
    const expected=[];for(let i=0;i<4;i++){const common=COMMON+i*STRIDE,wrapper=read32(common+0x50ac),aggregate=read32(wrapper+0x5c),voice=aggregate+0x28,obj=read32(voice+0x6e4+model.registry*4),target=read32(read32(obj)+8)&~1;
     assert(e.mem_read(common+0x50a8,1)[0]===model.id,'selected ID per voice');assert(read32(aggregate+0x1c)===model.registry,'selected DSP registry');const pitch=new DataView(e.mem_read(aggregate,4).buffer).getFloat32(0,true);assert(Math.abs(pitch-[48,55,60,67][i])<0.1,'pitch per voice');expected.push({object:obj,entry:target});
    }
-   const before=dispatch.length,samples=[];for(let b=0;b<8;b++){put32(0x22000024,b);render();const v=new DataView(e.mem_read(BUFFER,64).buffer);for(let i=0;i<32;i++)samples.push(v.getInt16(i*2,true));}
+   const before=dispatch.length,paramBefore=parameterReads.length,samples=[];for(let b=0;b<8;b++){put32(0x22000024,b);render();const v=new DataView(e.mem_read(BUFFER,64).buffer);for(let i=0;i<32;i++)samples.push(v.getInt16(i*2,true));}
    const observed=dispatch.slice(before);
    // The retained Modal frontend can skip a silent voice; native Unicorn
    // produces 24 calls here. Selected adapters must dispatch all four.
    if(model.id===12&&!selected.some(a=>a.id===12)){assert(observed.length>0&&observed.length<=32,'retained Modal dispatch count');for(const d of observed)assert(expected.some(x=>x.object===d.object&&x.entry===d.entry),'retained Modal dispatch target');}
    else{assert(observed.length===32,'four DSP calls per block');for(let i=0;i<observed.length;i++)assert(observed[i].object===expected[i%4].object&&observed[i].entry===expected[i%4].entry,'DSP dispatch uses the selected module');}
+   for(const p of parameterReads.slice(paramBefore)){const i=expected.findIndex(x=>x.object===p.object);assert(i>=0&&Math.abs(p.note-[48,55,60,67][i])<0.1,'DSP receives the note belonging to its own voice');assert(p.controls.every((v,j)=>Math.abs(v-[12288,20480,8192][j]/32768)<1e-5),'DSP receives all three current controls: '+JSON.stringify(p.controls));}
    assert(samples.some(x=>Math.abs(x)>1),'non-silent native audio');assert(e.mem_read(CONTROLLER+0x1400,32).every(x=>x===0xc7),'preset memory guard');
    rows.push({id:model.id,voices:4,blocks:8,dispatch_count:observed.length,output_sha256:await hash(new Int16Array(samples)),peak:Math.max(...samples.map(Math.abs))});
   }
@@ -72,7 +73,7 @@ export async function checkComposition(uc,image,selected,onProgress=()=>{}){
   const note=(source,key,on=true)=>assert(call(0x08048524,[KEYBOARD,(on?0x90:0x80)|(key<<8)|((on?100:64)<<16),source,0],100000,[0,1])===1,'logical keyboard note callback');
   const records=()=>Array.from({length:4},(_,i)=>e.mem_read(ALLOCATOR+2+i*12,12));
   f.hookRead(0x20000004,4,()=>{if(live.capture&&live.object){live.objects.add(live.object);live.coefficients.push(new DataView(e.mem_read(0x20000004,4).buffer).getFloat32(0,true));}});
-  const unisonCases=[],rateCases=[];
+  const unisonCases=[],rateCases=[],paraphonicHistory=[],lifecycleCases=[];
   for(const a of selected){
    onProgress('Checking unison and note changes: '+a.labels[0]+'…');call(0x0804d928,[ALLOCATOR]);set('Gen.Chord',0);set('Gen.Parafon',32767);set('VCO.Type',Math.floor((a.id*32767+11)/22));for(let i=0;i<4;i++)render();call(0x08049a98,[KEYBOARD,4]);set('Gen.Chord',32767);set('Gen.UniCnt',32767);set('Gen.UniSprd',12000);for(let i=0;i<3;i++)render();call(0x08049a98,[KEYBOARD,4]);note(5,60);for(let i=0;i<8;i++)render();assert(records().every(b=>b[0]===1&&b[2]===60),'four unison allocations');
    const pitches=Array.from({length:4},(_,i)=>new DataView(e.mem_read(read32(read32(COMMON+i*STRIDE+0x50ac)+0x5c),4).buffer).getFloat32(0,true));assert(new Set(pitches).size===4&&pitches.every(p=>Math.abs(p-60)<3),'native unison spread');note(5,60,false);assert(records().every(b=>b[0]===0),'unison note-off releases every voice');unisonCases.push({id:a.id,voices:4,pitches,note_off_released:true});
@@ -83,6 +84,30 @@ export async function checkComposition(uc,image,selected,onProgress=()=>{}){
     }
    }
   }
-  return {passed:true,scope:'Native constructors, parameter setters, four-note allocation, paraphonic Common/audio dispatch, retained Plaits frontends, four-voice unison, logical note-on/off, note histories and late sample-rate changes. Boot, interrupts, physical CPU and hardware audio are not emulated.',cases:rows,unison_cases:unisonCases,live_rate_cases:rateCases,elapsed_ms:Math.round(performance.now()-start),hardware_verified:false};
+  for(const a of selected){
+   call(0x0804d928,[ALLOCATOR]);set('Gen.Chord',0);set('Gen.Parafon',32767);set('VCO.Type',Math.floor((a.id*32767+11)/22));for(let i=0;i<4;i++)render();call(0x08049a98,[KEYBOARD,4]);
+   const held=new Set();
+   for(const [key,on] of [[48,true],[55,true],[60,true],[67,true],[55,false],[36,true],[60,false],[84,true],[48,false],[67,false],[36,false],[84,false]]){
+    note(4,key,on);if(on)held.add(key);else held.delete(key);const before=parameterReads.length;
+    for(let i=0;i<4;i++)render();const rr=records(),active=rr.filter(b=>b[0]).map(b=>b[2]).sort((x,y)=>x-y);
+    assert(JSON.stringify(active)===JSON.stringify([...held].sort((x,y)=>x-y)),'held paraphonic notes follow note-on/off history');
+    for(let i=0;i<4;i++)if(rr[i][0]){const aggregate=read32(read32(COMMON+i*STRIDE+0x50ac)+0x5c),voice=aggregate+0x28,obj=read32(voice+0x6e4+a.registry*4),seen=parameterReads.slice(before).filter(p=>p.object===obj);assert(seen.length===4&&seen.every(p=>Math.abs(p.note-rr[i][2])<0.1),'paraphonic DSP note follows its own allocation after another voice changes');}
+    paraphonicHistory.push({id:a.id,key,on,active_notes:active,voice_notes_verified:true});
+   }
+   if(a.native_alias){
+    for(let i=0;i<4;i++){
+     const common=COMMON+i*STRIDE,wrapper=read32(common+0x50ac),aggregate=read32(wrapper+0x5c),voice=aggregate+0x28,arena=common+0x34,init=read32(read32(wrapper)+12);
+     call(init,[wrapper,a.id,arena,16384],1000000);const table=read32(voice),expected=e.mem_read(arena,a.scratch_bytes);
+     for(const other of [10,6,10]){
+      call(init,[wrapper,other,arena,16384],1000000);assert(read32(voice)===0x08078578,'normal Chords object table restored when leaving an alias');
+      e.mem_write(arena,new Uint8Array(16384).fill(0x55));call(init,[wrapper,a.id,arena,16384],1000000);
+      assert(read32(voice)===table&&read32(aggregate+0x1c)===4,'native ID returns to its own module');assert(e.mem_read(arena,a.scratch_bytes).every((x,n)=>x===expected[n]),'native alias scratch restored after a different engine');
+      lifecycleCases.push({id:a.id,voice:i,previous_id:other,scratch_restored:true,normal_table_restored:true});
+     }
+     call(init,[wrapper,10,arena,16384],1000000);assert(read32(voice)===0x08078578,'final Chords restoration');
+    }
+   }
+  }
+  return {passed:true,scope:'Native constructors, parameter setters, four-note allocation, paraphonic Common/audio dispatch, retained Plaits frontends, four-voice unison, logical note-on/off, DSP-level note/control ownership, multi-note paraphonic histories, native-overlay restoration and late sample-rate changes. Boot, interrupts, physical CPU and hardware audio are not emulated.',cases:rows,unison_cases:unisonCases,live_rate_cases:rateCases,paraphonic_history:paraphonicHistory,native_lifecycle_cases:lifecycleCases,elapsed_ms:Math.round(performance.now()-start),hardware_verified:false};
  }finally{f.close();}
 }
