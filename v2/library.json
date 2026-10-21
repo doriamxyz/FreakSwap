@@ -99,7 +99,7 @@
       "variant": "normal",
       "name": "Filtered Noise",
       "labels": [
-        "Filtered Noise",
+        "FilteredNoise",
         "Response",
         "Grain",
         "Resonance"
@@ -116,7 +116,7 @@
       "variant": "dual_band",
       "name": "Filtered Noise",
       "labels": [
-        "Filtered Noise",
+        "FilteredNoise",
         "Response",
         "Grain",
         "Resonance"
@@ -133,7 +133,7 @@
       "variant": "normal",
       "name": "String Machine v2",
       "labels": [
-        "String Machine",
+        "StringMachine",
         "Chord",
         "Bright/Ens",
         "Register"

@@ -1,6 +1,6 @@
 importScripts('./unicorn_arm.js');
 (async()=>{
- const {LIBRARY_SHA256}=await import('./library-release.js?space-sixop-final-20261021'),core=await import('./compose.js?space-sixop-final-20261021'),{checkComposition}=await import('./arm-checks.js?space-sixop-final-20261021');
+ const {LIBRARY_SHA256}=await import('./library-release.js?type-preview-fix-20261021'),core=await import('./compose.js?type-preview-fix-20261021'),{checkComposition}=await import('./arm-checks.js?type-preview-fix-20261021');
  async function verifiedJSON(asset){if(!/^modules\/[a-f0-9]{64}\.json$/.test(asset.url))throw new Error('Invalid module reference.');const r=await fetch(asset.url);if(!r.ok)throw new Error('Could not load an engine module.');const bytes=await r.arrayBuffer();if(bytes.byteLength!==asset.size||await core.hash(bytes)!==asset.sha256)throw new Error('Engine module verification failed.');return JSON.parse(new TextDecoder().decode(bytes));}
  self.onmessage=async({data})=>{const {id,recipe,base}=data;const progress=message=>self.postMessage({id,progress:message});try{
   progress('Checking your official firmware…');const response=await fetch('./library.json',{cache:'no-store'});if(!response.ok)throw new Error('Could not load the engine library.');const bytes=await response.arrayBuffer();if(await core.hash(bytes)!==LIBRARY_SHA256)throw new Error('The engine library failed verification.');const library=JSON.parse(new TextDecoder().decode(bytes)),selected=core.selectAdapters(library,recipe),original=new Uint8Array(base),{raw}=await core.unpackOfficial(original,library);

@@ -1,4 +1,4 @@
-import {verifyUniversal} from './verify-universal.js?space-sixop-final-20261021';
+import {verifyUniversal} from './verify-universal.js?type-preview-fix-20261021';
 // One overlay ABI, conditional ownership and joint placement for the whole selection.
 import {FLASH_BASE,META,hash,linkModule,branch,configurationBridge} from './compose.js';
 const enc=s=>new TextEncoder().encode(s),view=b=>new DataView(b.buffer,b.byteOffset,b.byteLength),align=(n,a=4)=>Math.ceil(n/a)*a;
