@@ -1,9 +1,10 @@
-import {verifyUniversal} from './verify-universal.js?universal-final-20261020';
+import {verifyUniversal} from './verify-universal.js?space-sixop-final-20261021';
 // One overlay ABI, conditional ownership and joint placement for the whole selection.
 import {FLASH_BASE,META,hash,linkModule,branch,configurationBridge} from './compose.js';
 const enc=s=>new TextEncoder().encode(s),view=b=>new DataView(b.buffer,b.byteOffset,b.byteLength),align=(n,a=4)=>Math.ceil(n/a)*a;
 const error=(code,message,details={})=>{const e=new Error(message);e.code=code;e.details=details;throw e;};
 const words=values=>{const b=new Uint8Array(values.length*4);values.forEach((n,i)=>view(b).setUint32(i*4,n,true));return b;};
+const abiKey=a=>a.module+':'+(a.root_indices||[0,1,2,3]).join(',');
 const same=(a,b)=>a.length===b.length&&a.every((n,i)=>n===b[i]);
 export function universalAdapters(library){
  const rows=[];for(const [original,host] of Object.entries(library.hosts)){
@@ -30,36 +31,41 @@ function screenBridge(selected){
 export function planUniversal(library,recipe,modules,{searchLimit=1000000}={}){
  const selected=universalSelection(library,recipe),regions=poolRegions(library,selected),sections=[],moduleMaps={};
  function add(data,alignment=4,relocations=[]){const id=sections.length;sections.push({id,size:data.length,alignment,data:btoa(String.fromCharCode(...data)),relocations});return id;}
- const needed=[...new Set([...selected.map(a=>a.module),library.bridge.module,...(selected.some(a=>a.retired_table)?[library.retirement_module]:[])])].sort();
+ const needed=[...new Set([...selected.flatMap(a=>[a.module,...(a.resources||[])]),library.bridge.module,...(selected.some(a=>a.retired_table)?[library.retirement_module]:[])])].sort();
  for(const id of needed){const m=modules[id];if(!m)error('module','Missing reusable module.');const offset=sections.length,map=t=>Object.hasOwn(t,'external')?{...t}:{...t,section:t.section+offset};moduleMaps[id]={offset,roots:m.roots.map(map)};for(const s of m.sections)sections.push({...s,id:s.id+offset,relocations:s.relocations.map(r=>({...r,target:map(r.target)}))});}
- const tableSections={},labelSections={};for(const id of [...new Set(selected.map(a=>a.module))])tableSections[id]=add(new Uint8Array(16));
+ const tableSections={},labelSections={};for(const a of selected)if(!Object.hasOwn(tableSections,abiKey(a)))tableSections[abiKey(a)]=add(new Uint8Array(16));
  for(const a of selected)labelSections[a.id]=add(enc(a.labels.join('\0')+'\0'),1);
  const config=add(configurationBridge([...selected.map(a=>a.id),...(selected.some(a=>a.id===11)?[23]:[])],0)),screen=add(screenBridge(selected)),route=add(Uint8Array.from(library.bridge.route_hex.match(/../g),x=>parseInt(x,16)));
  const synthetic={format:'freakswap.arm-module',version:1,sections,roots:moduleMaps[library.bridge.module].roots},required=sections.reduce((n,s)=>n+s.size,0),available=regions.reduce((n,[a,b])=>n+b-a,0);
- if(!regions.length||required>available)error('space',`This selection needs ${required} bytes; its replaced engines release ${available}. Choose Empty for another original, or use fewer replacements.`,{required,available});
+ if(!regions.length||required>available)error('space',`This selection needs ${required} bytes. Verified reusable space from the selected originals: ${available} bytes. Replacing a position does not always free code. Choose Empty for another original, or use fewer replacements.`,{required,available});
  let linked;try{linked=linkModule(synthetic,regions,{searchLimit});}catch(e){if(/budget/.test(e.message))error('search_budget','The placement search reached its limit. No firmware was generated; this does not prove the selection is impossible.',{required,available});error('fragmentation','The selected code does not fit the released regions. Choose Empty for another original to release more space.',{required,available});}
  const address=t=>Object.hasOwn(t,'external')?t.external:FLASH_BASE+linked.placements[t.section].start+t.value;
  return {selected,regions,required,available,linked,sections,moduleMaps,tableSections,labelSections,config,screen,route,address};
 }
 export async function composeUniversal(base,library,recipe,modules,options={}){
  if(!(base instanceof Uint8Array)||base.length!==library.base.raw_size||await hash(base)!==library.base.raw_sha256)error('base','The raw official firmware is incorrect.');
- for(const id of new Set([...universalSelection(library,recipe).map(a=>a.module),library.bridge.module,library.retirement_module])){const m=modules[id];if(!m||await hash(enc(JSON.stringify(m,null,2)+'\n'))!==id)error('module','Module content failed verification.');}
+ for(const id of new Set([...universalSelection(library,recipe).flatMap(a=>[a.module,...(a.resources||[])]),library.bridge.module,library.retirement_module])){const m=modules[id];if(!m||await hash(enc(JSON.stringify(m,null,2)+'\n'))!==id)error('module','Module content failed verification.');}
  const p=planUniversal(library,recipe,modules,options),{linked,address,selected}=p,image=base.slice(),edits=[],links=[],spec=library.bridge,retired=new Set(selected.map(a=>a.original));
  for(const region of library.regions.filter(r=>r.owners.every(k=>retired.has(k))))if(await hash(base.slice(region.start,region.end))!==region.sha256)error('ownership','The retired code region does not match the ownership audit.');
  function chunkAt(raw,size){const c=linked.chunks.find(c=>raw>=c.start&&raw+size<=c.end);if(!c)error('bounds','Generated data is outside its placement.');return [c,raw-c.start];}
  function patchLinked(raw,data){const [c,o]=chunkAt(raw,data.length);c.data.set(data,o);}
- const abi=id=>{const a=selected.find(a=>a.module===id),roots=p.moduleMaps[id].roots.map(address);return words([roots[0]|1,(a?.reset_on_activation?roots[1]:roots[2])|1,roots[3]|1,roots[1]|1]);};
- for(const [id,section] of Object.entries(p.tableSections))patchLinked(linked.placements[section].start,abi(id));
+ const moduleRoots=a=>(a.root_indices||[0,1,2,3]).map(i=>address(p.moduleMaps[a.module].roots[i]));
+ const abi=a=>{const roots=moduleRoots(a);return words([roots[0]|1,(a.reset_on_activation?roots[1]:roots[2])|1,roots[3]|1,roots[1]|1]);};
+ for(const [key,section] of Object.entries(p.tableSections))patchLinked(linked.placements[section].start,abi(selected.find(a=>abiKey(a)===key)));
  const roots=p.moduleMaps[spec.module].roots.map(address),bindingRaw=roots[spec.bindings_root]-FLASH_BASE,bindings=new Array(23).fill(0);
- for(const a of selected){const table=linked.placements[p.tableSections[a.module]].start;a.runtime_vtable=table;bindings[a.id]=FLASH_BASE+table;links.push({adapter:a,roots:p.moduleMaps[a.module].roots.map(address),vtable:table,placements:linked.placements,chunks:[]});}
+ for(const a of selected){const table=linked.placements[p.tableSections[abiKey(a)]].start;a.runtime_vtable=table;bindings[a.id]=FLASH_BASE+table;links.push({adapter:a,roots:moduleRoots(a),vtable:table,placements:linked.placements,chunks:[]});}
  const [bindingChunk,bindingOffset]=chunkAt(bindingRaw,92);if(bindingChunk.data.slice(bindingOffset,bindingOffset+92).some(x=>x))error('bridge','Shared binding data was not initially empty.');patchLinked(bindingRaw,words(bindings));
+ const sixop=selected.some(a=>a.sixop_bank!==undefined)?library.extensions?.sixop:null;
+ let sixopRoots=null;if(sixop){sixopRoots=p.moduleMaps[sixop.module].roots.map(address);const banks=new Array(23).fill(0);for(const a of selected)if(a.sixop_bank!==undefined){banks[a.id]=a.sixop_bank+1;a.runtime_boot=sixopRoots[sixop.boot_init_root];}const models=sixopRoots[sixop.models_root]-FLASH_BASE;for(const a of selected)if(a.sixop_bank!==undefined)a.runtime_models_raw=models;const [bc,bo]=chunkAt(models,92);if(bc.data.slice(bo,bo+92).some(x=>x))error('extension','Six-OP model bindings were not empty.');patchLinked(models,words(banks));const payloads=new Array(12).fill(0);for(const a of selected)if(a.sixop_bank!==undefined){const id=sixop.bank_modules[String(a.sixop_bank)],roots=p.moduleMaps[id].roots.map(address);for(let j=0;j<4;j++)payloads[a.sixop_bank*4+j]=roots[j];}const bankRaw=sixopRoots[sixop.banks_root]-FLASH_BASE;const [resourceChunk,resourceOffset]=chunkAt(bankRaw,48);if(resourceChunk.data.slice(resourceOffset,resourceOffset+48).some(x=>x))error('extension','Six-OP resource bindings were not empty.');patchLinked(bankRaw,words(payloads));}
  const routeRaw=linked.placements[p.route].start,routeBytes=Uint8Array.from(spec.route_hex.match(/../g),x=>parseInt(x,16));view(routeBytes).setUint32(spec.route_binding_offset,FLASH_BASE+bindingRaw,true);patchLinked(routeRaw,routeBytes);
  const configRaw=linked.placements[p.config].start;patchLinked(configRaw,configurationBridge([...selected.map(a=>a.id),...(retired.has('speech')?[23]:[])],configRaw));
  const screenRaw=linked.placements[p.screen].start;
  const vocoderGates=[0x28f50,0x28f5c,0x28f68,0x28fd8,0x2903e,0x29048];
  const allowed=[...p.regions,...(retired.has('vocoder')?[[0x2a86e,0x2a876],...vocoderGates.map(a=>[a,a+2])]:[]),[0x23ea4,0x23ea8],[0x41f96,0x41f9a],[0x5366c,0x5366e],[0x53450,0x53454],[spec.dispatch_hook,spec.dispatch_hook+4],[spec.init_hook,spec.init_hook+4],[spec.parameter_hook,spec.parameter_hook+4],...selected.flatMap(a=>[[META+a.id*28,META+(a.id+1)*28],...(a.retired_table?[[a.retired_table,a.retired_table+16]]:[])])];
+ if(sixop)allowed.push(...sixop.hooks.map(h=>[h.raw,h.raw+4]),...sixop.stack_words.map(a=>[a,a+4]),[sixop.boot_call,sixop.boot_call+4]);
  const families=library.native_families.filter(f=>f.owners.every(k=>retired.has(k)));allowed.push(...families.map(f=>[f.render_cell,f.render_cell+4]));
  function replace(start,data,purpose){if(!data.length)return;if(!allowed.some(([a,b])=>start>=a&&start+data.length<=b)||edits.some(e=>start<e.end&&start+data.length>e.start))error('bounds','Firmware writes exceed the retired owners or overlap.');image.set(data,start);edits.push({start,end:start+data.length,purpose});}
+ if(sixop){for(const h of sixop.hooks){if(!same(base.slice(h.raw,h.raw+4),Uint8Array.from(h.expected.match(/../g),x=>parseInt(x,16))))error('extension','Six-OP hook does not match the official firmware.');replace(h.raw,branch(FLASH_BASE+h.raw,sixopRoots[h.root],true),'Six-OP UI/preset hook');}for(const a of sixop.stack_words){if(view(base).getUint32(a,true)!==0x20020000)error('extension','Six-OP stack reservation base changed.');replace(a,words([sixop.state_address]),'Six-OP state reservation');}if(!same(base.slice(sixop.boot_call,sixop.boot_call+4),branch(FLASH_BASE+sixop.boot_call,0x08025731)))error('extension','Six-OP boot call changed.');replace(sixop.boot_call,branch(FLASH_BASE+sixop.boot_call,sixopRoots[sixop.boot_root]),'Six-OP boot initialization');}
  for(const c of linked.chunks)replace(c.start,c.data,'joint module placement');
  const stub=p.moduleMaps[library.retirement_module]?.roots.map(address);for(const a of selected)if(a.retired_table)replace(a.retired_table,words([stub[0]|1,stub[2]|1,stub[3]|1,stub[1]|1]),'retired original ABI');
  for(const f of families)replace(f.render_cell,words([f.idle_render]),'retired native family Render');
@@ -71,7 +77,7 @@ export async function composeUniversal(base,library,recipe,modules,options={}){
  replace(0x23ea4,branch(FLASH_BASE+0x23ea4,FLASH_BASE+configRaw,true),'universal configuration');replace(0x41f96,branch(FLASH_BASE+0x41f96,FLASH_BASE+screenRaw,true),'universal formatter');
  if(retired.has('speech')){replace(0x5366c,Uint8Array.of(0,0xbf),'retired Speech route');if(selected.some(a=>a.engine==='phase_distortion'&&a.id===11)){const b=new Uint8Array(4);view(b).setFloat32(0,0.7,true);replace(0x53450,b,'Phase output gain');}}
  edits.sort((a,b)=>a.start-b.start);let cursor=0;for(const e of edits){if(!same(image.slice(cursor,e.start),base.slice(cursor,e.start)))error('preservation','An unselected region changed.');cursor=e.end;}if(!same(image.slice(cursor),base.slice(cursor)))error('preservation','An unselected region changed.');
- for(const a of selected){if(view(image).getUint32(a.runtime_vtable+8,true)!==(p.moduleMaps[a.module].roots.map(address)[3]|1))error('dispatch','A module dispatch table is incorrect.');}
- const result={image,selected,edits,links,nativeBridge:{bindings,bindings_raw:bindingRaw,roots,route:routeRaw,module:spec.module,overlay_group:'chords',preserves_native_vtables:!families.length,reclaimed_regions:p.regions,speech_retained:!retired.has('speech')},plan:{regions:p.regions,required:p.required,available:p.available,placements:linked.placements,section_layout:p.sections.map(s=>({id:s.id,start:linked.placements[s.id].start,size:s.size,alignment:s.alignment})),relocations:linked.relocationCount,all_modules_placed_jointly:true},sha256:await hash(image),structuralVerified:false};
+ for(const a of selected){if(view(image).getUint32(a.runtime_vtable+8,true)!==(moduleRoots(a)[3]|1))error('dispatch','A module dispatch table is incorrect.');}
+ const result={image,selected,edits,links,nativeBridge:{bindings,bindings_raw:bindingRaw,roots,route:routeRaw,module:spec.module,overlay_group:'chords',preserves_native_vtables:!families.length,reclaimed_regions:p.regions,speech_retained:!retired.has('speech')},plan:{regions:p.regions,required:p.required,available:p.available,placements:linked.placements,section_layout:p.sections.map(s=>({id:s.id,start:linked.placements[s.id].start,size:s.size,alignment:s.alignment})),relocations:linked.relocationCount,all_modules_placed_jointly:true},extensions:sixop?{sixop:{roots:sixopRoots,models_raw:sixopRoots[sixop.models_root]-FLASH_BASE,banks_raw:sixopRoots[sixop.banks_root]-FLASH_BASE,state_address:sixop.state_address}}:null,sha256:await hash(image),structuralVerified:false};
  result.independentVerification=verifyUniversal(base,library,result);result.structuralVerified=result.independentVerification.passed;return result;
 }

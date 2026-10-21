@@ -1,0 +1,9 @@
+#ifndef MICROFREAK_RE_CSTRING_
+#define MICROFREAK_RE_CSTRING_
+#include "stddef.h"
+extern "C" {
+void* memcpy(void*, const void*, size_t);
+void* memset(void*, int, size_t);
+}
+namespace std { using ::memcpy; using ::memset; }
+#endif

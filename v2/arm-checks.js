@@ -1,6 +1,6 @@
 // Execute native firmware routines under the ARM interpreter in a Worker.
 // This is a bounded test harness, not a device/boot/interrupt simulation.
-import {FLASH_BASE,hash} from './compose.js?universal-final-20261020';
+import {FLASH_BASE,hash} from './compose.js?space-sixop-final-20261021';
 const STOP=0x0800b000,CONTROLLER=0x2001c898,OWNER=0x20004830,COMMON=0x2000484c,STRIDE=0x59e4;
 const BUFFER=0x21005000,ALLOCATOR=0x20004384,KEYBOARD=0x20003778;
 const assert=(ok,message)=>{if(!ok)throw new Error('ARM verification failed: '+message);};
@@ -42,6 +42,7 @@ export async function checkComposition(uc,image,selected,onProgress=()=>{}){
  const start=performance.now(),f=audioFixture(uc,image),{e,read32,put32,r,w,call,set,render,hook}=f;
  const rows=[],dispatch=[],modelTables={},parameterReads=[],live={capture:false,object:0,objects:new Set(),coefficients:[]};hook(0x0805f6a6,()=>{dispatch.push({object:r('R0'),entry:r('R7')&~1});const pv=new DataView(e.mem_read(r('R1'),24).buffer);parameterReads.push({object:r('R0'),note:pv.getFloat32(4,true),controls:[8,12,16].map(off=>pv.getFloat32(off,true))});if(live.capture)live.object=r('R0');});
  try{
+  const boot=selected.find(a=>a.runtime_boot)?.runtime_boot;if(boot)call(boot);for(const a of selected)if(a.sixop_bank!==undefined){assert(a.runtime_models_raw!==undefined&&read32(FLASH_BASE+a.runtime_models_raw+a.id*4)===a.sixop_bank+1,'Six-OP visible ID maps to its own bank');}
   for(const a of selected)if(a.runtime_vtable!==undefined)modelTables[a.id]=FLASH_BASE+a.runtime_vtable;
   // Native note allocator and its actual keyboard dependency.
   call(0x0804d928,[ALLOCATOR]);call(0x080482b0,[KEYBOARD]);put32(KEYBOARD,ALLOCATOR);
@@ -101,6 +102,7 @@ export async function checkComposition(uc,image,selected,onProgress=()=>{}){
     for(let i=0;i<4;i++)render();const rr=records(),active=rr.filter(b=>b[0]).map(b=>b[2]).sort((x,y)=>x-y);
     assert(JSON.stringify(active)===JSON.stringify([...held].sort((x,y)=>x-y)),'held paraphonic notes follow note-on/off history');
     for(let i=0;i<4;i++)if(rr[i][0]){const aggregate=read32(read32(COMMON+i*STRIDE+0x50ac)+0x5c),voice=aggregate+0x28,obj=read32(voice+0x6e4+a.registry*4),seen=parameterReads.slice(before).filter(p=>p.object===obj);assert(seen.length===4&&seen.every(p=>Math.abs(p.note-rr[i][2])<0.1),'paraphonic DSP note follows its own allocation after another voice changes');}
+    if(a.sixop_bank!==undefined)for(let i=0;i<4;i++){const aggregate=read32(read32(COMMON+i*STRIDE+0x50ac)+0x5c),voice=aggregate+0x28;assert(read32(voice+20)===voice+0x668,'Six-OP gate points to its own native Voice');assert(read32(voice+24)===a.sixop_bank,'Six-OP bank belongs to the selected engine');}
     paraphonicHistory.push({id:a.id,key,on,active_notes:active,voice_notes_verified:true});
    }
    if(a.native_alias){

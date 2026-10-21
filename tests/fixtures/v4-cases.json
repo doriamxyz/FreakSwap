@@ -1,0 +1,1212 @@
+{
+  "destination-basic_waves": [
+    {
+      "engine": "swarm",
+      "original": "basic_waves",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-superwave": [
+    {
+      "engine": "swarm",
+      "original": "superwave",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-wavetable": [
+    {
+      "engine": "swarm",
+      "original": "wavetable",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-harmonic": [
+    {
+      "engine": "swarm",
+      "original": "harmonic",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-karplusstr": [
+    {
+      "engine": "swarm",
+      "original": "karplusstr",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-virtual_analog": [
+    {
+      "engine": "swarm",
+      "original": "virtual_analog",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-waveshaper": [
+    {
+      "engine": "swarm",
+      "original": "waveshaper",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-two_op_fm": [
+    {
+      "engine": "swarm",
+      "original": "two_op_fm",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-formant": [
+    {
+      "engine": "swarm",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-chords": [
+    {
+      "engine": "swarm",
+      "original": "chords",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-speech": [
+    {
+      "engine": "swarm",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-modal": [
+    {
+      "engine": "swarm",
+      "original": "modal",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-noise": [
+    {
+      "engine": "swarm",
+      "original": "noise",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-bass": [
+    {
+      "engine": "swarm",
+      "original": "bass",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-sawx": [
+    {
+      "engine": "swarm",
+      "original": "sawx",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-harm": [
+    {
+      "engine": "swarm",
+      "original": "harm",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-user_wavetable": [
+    {
+      "engine": "swarm",
+      "original": "user_wavetable",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-sample": [
+    {
+      "engine": "swarm",
+      "original": "sample",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-scan_grains": [
+    {
+      "engine": "swarm",
+      "original": "scan_grains",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-cloud_grains": [
+    {
+      "engine": "swarm",
+      "original": "cloud_grains",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-hit_grains": [
+    {
+      "engine": "swarm",
+      "original": "hit_grains",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "destination-vocoder": [
+    {
+      "engine": "swarm",
+      "original": "vocoder",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "module-phase_distortion": [
+    {
+      "engine": "phase_distortion",
+      "original": "basic_waves",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "module-classic_waves_vcf": [
+    {
+      "engine": "classic_waves_vcf",
+      "original": "basic_waves",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "module-swarm": [
+    {
+      "engine": "swarm",
+      "original": "basic_waves",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "module-inharmonic_string": [
+    {
+      "engine": "inharmonic_string",
+      "original": "basic_waves",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "module-particle_noise": [
+    {
+      "engine": "particle_noise",
+      "original": "basic_waves",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "module-filtered_noise": [
+    {
+      "engine": "filtered_noise",
+      "original": "basic_waves",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "module-filtered_noise_dual_band": [
+    {
+      "engine": "filtered_noise",
+      "original": "basic_waves",
+      "variant": "dual_band"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "module-string_machine": [
+    {
+      "engine": "string_machine",
+      "original": "basic_waves",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "module-chiptune": [
+    {
+      "engine": "chiptune",
+      "original": "basic_waves",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "module-bass_drum": [
+    {
+      "engine": "bass_drum",
+      "original": "basic_waves",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "module-snare_drum": [
+    {
+      "engine": "snare_drum",
+      "original": "basic_waves",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "module-wave_terrain": [
+    {
+      "engine": "wave_terrain",
+      "original": "basic_waves",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "module-wave_terrain_aux": [
+    {
+      "engine": "wave_terrain",
+      "original": "basic_waves",
+      "variant": "aux"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "native-space-only": [
+    {
+      "engine": "swarm",
+      "original": "basic_waves",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "harmonic",
+      "variant": "normal"
+    }
+  ],
+  "all-eleven": [
+    {
+      "engine": "phase_distortion",
+      "original": "virtual_analog",
+      "variant": "normal"
+    },
+    {
+      "engine": "classic_waves_vcf",
+      "original": "waveshaper",
+      "variant": "normal"
+    },
+    {
+      "engine": "swarm",
+      "original": "two_op_fm",
+      "variant": "normal"
+    },
+    {
+      "engine": "inharmonic_string",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "particle_noise",
+      "original": "chords",
+      "variant": "normal"
+    },
+    {
+      "engine": "filtered_noise",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "string_machine",
+      "original": "modal",
+      "variant": "normal"
+    },
+    {
+      "engine": "chiptune",
+      "original": "basic_waves",
+      "variant": "normal"
+    },
+    {
+      "engine": "bass_drum",
+      "original": "superwave",
+      "variant": "normal"
+    },
+    {
+      "engine": "snare_drum",
+      "original": "wavetable",
+      "variant": "normal"
+    },
+    {
+      "engine": "wave_terrain",
+      "original": "harmonic",
+      "variant": "normal"
+    }
+  ],
+  "discrete-high-ids": [
+    {
+      "engine": "chiptune",
+      "original": "cloud_grains",
+      "variant": "normal"
+    },
+    {
+      "engine": "string_machine",
+      "original": "hit_grains",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-basic_waves": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "basic_waves",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-superwave": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "superwave",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-wavetable": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "wavetable",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-harmonic": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "harmonic",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-karplusstr": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "karplusstr",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-virtual_analog": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "virtual_analog",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-waveshaper": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "waveshaper",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-two_op_fm": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "two_op_fm",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-formant": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-chords": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "chords",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-speech": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-modal": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "modal",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-noise": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "noise",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-bass": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "bass",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-sawx": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "sawx",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-harm": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "harm",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-user_wavetable": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "user_wavetable",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-sample": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "sample",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-scan_grains": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "scan_grains",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-cloud_grains": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "cloud_grains",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-hit_grains": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "hit_grains",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "sixop-destination-vocoder": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "vocoder",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "single-bank-a": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "single-bank-b": [
+    {
+      "engine": "six_op_fm_b",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "single-bank-c": [
+    {
+      "engine": "six_op_fm_c",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "abc": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "two_op_fm",
+      "variant": "normal"
+    },
+    {
+      "engine": "six_op_fm_b",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "six_op_fm_c",
+      "original": "speech",
+      "variant": "normal"
+    }
+  ],
+  "abc-high-ids": [
+    {
+      "engine": "six_op_fm_a",
+      "original": "scan_grains",
+      "variant": "normal"
+    },
+    {
+      "engine": "six_op_fm_b",
+      "original": "cloud_grains",
+      "variant": "normal"
+    },
+    {
+      "engine": "six_op_fm_c",
+      "original": "hit_grains",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "two_op_fm",
+      "variant": "normal"
+    }
+  ],
+  "recovered-bass": [
+    {
+      "engine": "swarm",
+      "original": "bass",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "harmonic",
+      "variant": "normal"
+    }
+  ],
+  "recovered-sawx": [
+    {
+      "engine": "swarm",
+      "original": "sawx",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "harmonic",
+      "variant": "normal"
+    }
+  ],
+  "recovered-harm": [
+    {
+      "engine": "swarm",
+      "original": "harm",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "harmonic",
+      "variant": "normal"
+    }
+  ],
+  "shared-grains-sample": [
+    {
+      "engine": "phase_distortion",
+      "original": "scan_grains",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "cloud_grains",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "hit_grains",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "sample",
+      "variant": "normal"
+    }
+  ],
+  "all-fourteen": [
+    {
+      "engine": "phase_distortion",
+      "original": "virtual_analog",
+      "variant": "normal"
+    },
+    {
+      "engine": "classic_waves_vcf",
+      "original": "waveshaper",
+      "variant": "normal"
+    },
+    {
+      "engine": "swarm",
+      "original": "two_op_fm",
+      "variant": "normal"
+    },
+    {
+      "engine": "inharmonic_string",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "particle_noise",
+      "original": "chords",
+      "variant": "normal"
+    },
+    {
+      "engine": "filtered_noise",
+      "original": "speech",
+      "variant": "normal"
+    },
+    {
+      "engine": "string_machine",
+      "original": "modal",
+      "variant": "normal"
+    },
+    {
+      "engine": "chiptune",
+      "original": "basic_waves",
+      "variant": "normal"
+    },
+    {
+      "engine": "bass_drum",
+      "original": "superwave",
+      "variant": "normal"
+    },
+    {
+      "engine": "snare_drum",
+      "original": "wavetable",
+      "variant": "normal"
+    },
+    {
+      "engine": "wave_terrain",
+      "original": "harmonic",
+      "variant": "normal"
+    },
+    {
+      "engine": "six_op_fm_a",
+      "original": "karplusstr",
+      "variant": "normal"
+    },
+    {
+      "engine": "six_op_fm_b",
+      "original": "noise",
+      "variant": "normal"
+    },
+    {
+      "engine": "six_op_fm_c",
+      "original": "vocoder",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "bass",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "sawx",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "harm",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "user_wavetable",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "sample",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "scan_grains",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "cloud_grains",
+      "variant": "normal"
+    },
+    {
+      "engine": "empty",
+      "original": "hit_grains",
+      "variant": "normal"
+    }
+  ]
+}
