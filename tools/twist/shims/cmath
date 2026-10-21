@@ -1,0 +1,16 @@
+#ifndef MICROFREAK_RE_CMATH_
+#define MICROFREAK_RE_CMATH_
+#include "math.h"
+namespace std {
+using ::atanf;
+using ::cosf;
+using ::expf;
+using ::fabsf;
+using ::floorf;
+using ::powf;
+using ::roundf;
+using ::sinf;
+using ::sqrtf;
+using ::tanf;
+}
+#endif

@@ -1,0 +1,191 @@
+{
+  "format": "freakswap.arm-module",
+  "version": 1,
+  "sections": [
+    {
+      "id": 0,
+      "size": 300,
+      "alignment": 4,
+      "data": "ue4AGiDuARq37gAqMe4CGrXuACog7oEatO5CCp/tP0rx7hD6uL+w7kFKn+09Gp/tPVog7gEKuL+w7kBakO0AGpDtASoh7gF6Iu4CajfuBnq27gBqkO0CCpDtAzq07kZ68e4Q+rDuAGoE2bTuRnrx7hD6G9tF9t8SF+4QysX2N3Ki61wC/u4AGgDukCon7iF6J+4geifuIHr37ggaN+4heifuIHoh7gcaIu4HKmOzn+0eeiXuB3on7gV6N+4GaiXuBloG7hA6Ne5AWrjuRmo07kN6he4GSofuBloAvzTuAAog7gJqNu4BGiDuAWoy7kYqNe4DOpHtAGoj7gF6N+4GaqHsAWoBO+nRgO0AGoDtASqA7QM6gO0CCnBHAL8AAAAA2w9JQNsPST8K16O+",
+      "relocations": []
+    },
+    {
+      "id": 1,
+      "size": 2,
+      "alignment": 2,
+      "data": "cEc=",
+      "relocations": []
+    },
+    {
+      "id": 2,
+      "size": 106,
+      "alignment": 4,
+      "data": "sLUAaU3yCn4AIbjuDAqw7gwaT/B+Uk/wfFzD9iNOACMAJAC/Au4QSrjuQioy7gAqgu4BKsUYQDOz9QB/BPEBBGlgqmDqYClhxfgUwKlh6WEpYmlihe0AKsX4KODpYipjaWOpY+lj3dGwvQ==",
+      "relocations": []
+    },
+    {
+      "id": 3,
+      "size": 46,
+      "alignment": 2,
+      "data": "TPbNQtH4CMDD9kxyQmCCYAAivPUAfwJzBtMKaAL1AHMLYKz1AHOLYAJh//f+vw==",
+      "relocations": [
+        {
+          "offset": 42,
+          "type": 30,
+          "target": {
+            "section": 2,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "size": 4,
+      "alignment": 2,
+      "data": "//f+vw==",
+      "relocations": [
+        {
+          "offset": 0,
+          "type": 30,
+          "target": {
+            "section": 2,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "size": 1540,
+      "alignment": 4,
+      "data": "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",
+      "relocations": [
+        {
+          "offset": 106,
+          "type": 47,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 114,
+          "type": 48,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 138,
+          "type": 47,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 150,
+          "type": 48,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 246,
+          "type": 47,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 258,
+          "type": 48,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 454,
+          "type": 47,
+          "target": {
+            "external": 536871196
+          }
+        },
+        {
+          "offset": 516,
+          "type": 48,
+          "target": {
+            "external": 536871196
+          }
+        },
+        {
+          "offset": 872,
+          "type": 47,
+          "target": {
+            "external": 134730976
+          }
+        },
+        {
+          "offset": 888,
+          "type": 48,
+          "target": {
+            "external": 134730976
+          }
+        },
+        {
+          "offset": 1074,
+          "type": 47,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 1082,
+          "type": 48,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 1094,
+          "type": 47,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 1102,
+          "type": 48,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 1356,
+          "type": 10,
+          "target": {
+            "section": 0,
+            "value": 1
+          }
+        }
+      ]
+    }
+  ],
+  "roots": [
+    {
+      "section": 3,
+      "value": 1
+    },
+    {
+      "section": 4,
+      "value": 1
+    },
+    {
+      "section": 1,
+      "value": 1
+    },
+    {
+      "section": 5,
+      "value": 1
+    }
+  ]
+}

@@ -1,2 +1,3 @@
 # Preserve vendored upstream source bytes and their provenance hashes.
 tools/sixop/vendor/** -whitespace
+tools/twist/vendor/** -whitespace
