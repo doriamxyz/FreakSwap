@@ -1,60 +1,10 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Choose a new engine for your MicroFreak, pick which original to replace, and prepare your firmware in your browser.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; worker-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
-  <title>FreakSwap · Choose your engine</title>
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="start.js"></script>
-</head>
-<body>
-  <a class="skip" href="#main">Skip to configurator</a>
-  <header class="masthead"><a href="./" class="wordmark">Freak<span>Swap</span></a></header>
-  <main id="main">
-    <section class="intro">
-      <p class="eyebrow">NEW WAYS TO SOUND</p>
-      <h1>A new engine.<br>The same <span>MicroFreak.</span></h1>
-      <p class="lead">Choose a new engine, pick which original to replace, and prepare your firmware. Your file stays on your computer.</p>
-    </section>
-    <noscript><p class="notice error">Enable JavaScript to prepare firmware in your browser.</p></noscript>
-    <p id="notice" class="notice" role="status" aria-live="polite">Loading engines…</p>
-    <p id="local-preview" class="notice" hidden>Open this tool from its website to prepare firmware.</p>
-    <nav class="wizard-nav" aria-label="Steps"><ol><li data-step="1" aria-current="step"><span>01</span> New engine</li><li data-step="2"><span>02</span> Replacement</li><li data-step="3"><span>03</span> Firmware</li></ol></nav>
-    <section id="step-1" class="panel wizard-panel" aria-labelledby="engines-title">
-      <div class="section-heading"><h2 id="engines-title" tabindex="-1">Choose your new engine</h2><span id="engine-count" class="pill">None selected</span></div>
-      <p class="muted">Choose the sound you want. Then pick which original engine to replace.</p>
-      <div id="engine-cards" class="engine-grid" aria-label="Available engines"></div>
-      <div class="wizard-actions"><button id="clear-engines" class="quiet" disabled>Clear selection</button><button id="next-engines" class="primary" disabled>Continue <span aria-hidden="true">→</span></button></div>
-    </section>
-    <section id="step-2" class="panel wizard-panel" aria-labelledby="placements-title" hidden>
-      <div class="section-heading"><h2 id="placements-title" tabindex="-1">Choose where it goes</h2></div>
-      <p class="muted">Pick which original your new engine replaces. The others stay unchanged.</p>
-      <div id="placement-rows" class="placement-rows"></div>
-      <div class="wizard-actions"><button id="back-placements" class="quiet">← Back</button><button id="next-placements" class="primary" disabled>Continue <span aria-hidden="true">→</span></button></div>
-    </section>
-    <section id="step-3" class="panel wizard-panel" aria-labelledby="firmware-title" hidden>
-      <div class="section-heading"><h2 id="firmware-title" tabindex="-1">Prepare your firmware</h2></div>
-      <div class="firmware-layout">
-        <div><h3>Your change</h3><ul id="replacements" class="replacements"></ul><p class="small">All other engines stay unchanged.</p><button id="edit-engines" class="quiet">Change engine</button></div>
-        <div>
-          <h3>Choose the official firmware</h3>
-          <p class="muted">Required version: <strong>5.0.0.2084</strong>.</p>
-          <label class="upload" for="firmware-input"><span class="upload-symbol" aria-hidden="true">↑</span><strong>Choose .mff file</strong><span id="file-label">Your file is processed on this device.</span></label>
-          <input id="firmware-input" class="visually-hidden" type="file" accept=".mff" disabled>
-          <p class="small">Use the original file from Arturia. Modified firmware or a different version cannot be used as the base.</p>
-          <button id="generate" class="primary" disabled>Prepare firmware <span aria-hidden="true">↗</span></button>
-          <div id="progress" hidden><div class="progress-bar"></div><p id="progress-text" role="status">Preparing your firmware…</p><button id="cancel" class="quiet">Cancel</button></div>
-          <div id="result" hidden><p class="success">Firmware ready</p><button id="download-firmware" class="primary">Download .mff firmware <span aria-hidden="true">↓</span></button><div class="result-tools"><button id="download-guide" class="quiet">Download guide</button><button id="download-recipe" class="quiet">Save selection</button></div></div>
-          <p class="small installation">Back up your presets and install the file manually with MIDI Control Center, following the guide. This tool does not connect to your instrument.</p>
-        </div>
-      </div>
-      <div class="wizard-actions"><button id="back-firmware" class="quiet">← Back</button></div>
-    </section>
-    <details class="selection-storage" hidden><summary>Save or load a selection</summary><p class="small">Save your choices and return to them later.</p><div class="selection-tools"><button id="export-recipe" class="quiet" disabled>Save selection</button><label class="file-button quiet">Load selection<input id="recipe-input" type="file" accept=".json,application/json" disabled></label></div></details>
-    <p id="unpublished" class="notice" hidden>This selection is not available in this version. You can save it or choose another engine.</p>
-  </main>
-  <footer><span>FreakSwap · independent project, not affiliated with Arturia</span><a href="NOTICE.txt">Licenses and notices</a></footer>
-</body>
-</html>
+<head><meta charset="utf-8"><meta name="theme-color" content="#080808"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self'; connect-src 'self'; media-src 'self' blob:; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'"><title>FreakSwap 2.0 · Modular prototype</title><link rel="stylesheet" href="styles.css?support-20261022"><script type="module" src="app.js?original-engine-names-20261022"></script></head>
+<body><a class="skip-link" href="#selection-title">Skip to tool</a><header><a href="./" class="brand">Freak<span>Swap</span></a><span class="badge">2.0 PROTOTYPE</span><button id="help-open" class="text-button">Help</button></header><main id="main">
+
+<section id="opening" class="opening" aria-labelledby="opening-title"><p class="opening-kicker">YOUR MICROFREAK. YOUR ENGINES.</p><h1 id="opening-title">Build your own MicroFreak engine lineup.</h1><p class="opening-description">Choose what stays and what takes its place. Build custom firmware locally in your browser.</p><p class="opening-facts">11 replacement engines + 6-Op FM · All 22 slots · Your official file stays on your computer.</p></section>
+<p id="notice" class="notice" role="status" aria-live="polite">Loading engine modules…</p>
+<section id="selection-panel" class="panel" aria-labelledby="selection-title"><div class="heading"><h2 id="selection-title" tabindex="-1">Choose your engines</h2><span id="count" class="sr-only">None selected</span></div><div class="column-headings" aria-hidden="true"><span>Original</span><span>Replacement</span></div><div id="rows"></div><p id="sixop-help" class="sr-only" hidden>6-Op FM: factory banks have 32 patches. Custom imports only the selected presets. Wave selects a named patch. Hold Shift to edit Algorithm, Feedback, Detune and Release with the four oscillator controls.</p><details id="selection-review" class="selection-review"><summary>Review changes <span id="review-counts"></span></summary><div id="review-content"></div></details><div class="selection-actions"><button id="undo" class="quiet" hidden>Undo removal</button><button id="add" class="quiet" disabled>Add replacement</button><button id="continue" class="primary" disabled>Continue</button></div><div id="space" class="small" role="status"></div></section>
+<section id="firmware-panel" class="panel" aria-labelledby="firmware-title" hidden><button id="edit-engines" class="text-button">← Edit engines</button><h1 id="firmware-title" tabindex="-1">Prepare your firmware</h1><p class="small">Use the official MicroFreak firmware <strong>5.0.0.2084</strong>. The file is processed in this browser.</p><label class="upload">Choose official .mff file<input id="file" type="file" accept=".mff" aria-describedby="file-name file-error" disabled></label><p id="file-name" class="small">No file selected.</p><p id="file-error" class="field-error" role="alert" hidden>This file has an unexpected size. Choose the official MicroFreak 5.0.0.2084 .mff file.</p><p id="prepare-help" class="small"></p><div class="actions"><button id="prepare" aria-describedby="prepare-help" class="primary" disabled>Prepare firmware</button><button id="cancel" class="quiet" hidden>Cancel</button></div><section id="result" aria-labelledby="result-title" hidden><h2 id="result-title" tabindex="-1">Firmware ready to download</h2><p class="success">Your selection was assembled and passed the browser checks.</p><ul id="summary"></ul><p id="result-kept" class="small"></p><button id="download" class="primary">Download .mff</button><button id="guide" class="quiet">Download installation guide</button><details><summary>What was checked</summary><p id="check-summary" class="small"></p></details></section><p class="small footnote">Experimental firmware. Back up your presets and install manually with MIDI Control Center. Browser checks do not replace testing the exact file on your instrument.</p></section>
+<dialog id="help-dialog" aria-labelledby="help-title"><div class="dialog-heading"><h2 id="help-title">Help</h2><button id="help-close" class="text-button">Close</button></div><h3>Choose a position and its replacement</h3><p>The other original engines stay as they are. Continue when your selection is ready, then choose the official firmware file. Your file stays in this browser.</p><p class="small" id="output-definition"><strong>OUT</strong> selects the engine’s main sound. <strong>AUX</strong> selects its alternative sound instead. This changes the sound heard from that position through the MicroFreak’s usual audio output.</p><p class="small"><strong>Empty</strong> removes the sound from an original position to free space for your replacements. That position will be silent in the new firmware. Only positions you explicitly choose are changed.</p><h3>Audio examples</h3><p>Listen plays a three-second dry digital reference. These are not hardware recordings and do not include the MicroFreak’s filter and effects. FM examples use the first patch of each bank.</p></dialog><dialog id="engine-dialog" aria-labelledby="engine-dialog-title"><div class="dialog-heading"><h2 id="engine-dialog-title"></h2><button id="engine-dialog-close" class="text-button">Close</button></div><div id="engine-dialog-content"></div></dialog></main><footer><div class="footer-support"><p>FreakSwap is free and always will be.<br>You can support its development with an optional contribution.</p><a class="support-link" href="https://ko-fi.com/doriamxyz" target="_blank" rel="noopener noreferrer">Support the project <span aria-hidden="true">♡</span><span class="sr-only"> on Ko-fi (opens in a new tab)</span></a></div><span>FreakSwap · independent project, unaffiliated with Arturia</span><span><a href="NOTICE.txt">Licenses</a> · <a href="unicorn-source.tar.gz">Verification engine source</a></span></footer></body></html>

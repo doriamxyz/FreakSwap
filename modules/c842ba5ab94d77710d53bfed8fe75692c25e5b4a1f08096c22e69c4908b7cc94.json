@@ -1,0 +1,52 @@
+{
+  "format": "freakswap.arm-module",
+  "version": 1,
+  "sections": [
+    {
+      "id": 0,
+      "size": 2,
+      "alignment": 2,
+      "data": "cEc=",
+      "relocations": []
+    },
+    {
+      "id": 1,
+      "size": 2,
+      "alignment": 2,
+      "data": "cEc=",
+      "relocations": []
+    },
+    {
+      "id": 2,
+      "size": 24,
+      "alignment": 2,
+      "data": "ELXd6QIQACQZsRDCEMMBOfrnACEBcBC9",
+      "relocations": []
+    },
+    {
+      "id": 3,
+      "size": 2,
+      "alignment": 2,
+      "data": "cEc=",
+      "relocations": []
+    }
+  ],
+  "roots": [
+    {
+      "section": 0,
+      "value": 1
+    },
+    {
+      "section": 3,
+      "value": 1
+    },
+    {
+      "section": 1,
+      "value": 1
+    },
+    {
+      "section": 2,
+      "value": 1
+    }
+  ]
+}

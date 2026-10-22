@@ -1,4 +1,4 @@
-FreakSwap · Distribution notices
+MicroFreak Lite · Distribution notices
 
 Independent project, not affiliated with or endorsed by Arturia. MicroFreak and
 MIDI Control Center are Arturia product names. This site does not distribute the
@@ -34,3 +34,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 Installation is performed manually with MIDI Control Center.
+
+ARM VERIFICATION ENGINE
+
+Unicorn.js and Unicorn Engine are used only as a browser-side test interpreter.
+They are not inserted into the generated MicroFreak firmware.
+Unicorn.js: https://github.com/AlexAltea/unicorn.js
+Unicorn Engine: https://github.com/unicorn-engine/unicorn
+License: GNU General Public License, version 2. See COPYING-Unicorn.txt.
+Matching complete source: unicorn-source.tar.gz (in this folder).
+Build instructions: PROTOTYPE-BUILD.md and build-prototype.py inside that archive.

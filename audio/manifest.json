@@ -1,0 +1,294 @@
+{
+  "description": "Dry digital DSP references rendered from the current ARM modules; external audition envelope, DC removal, loudness matching and fades. Not hardware recordings or a complete instrument simulation. FM uses patch 1 of each unchanged bank.",
+  "seconds": 3.2,
+  "samples": {
+    "phase_distortion": {
+      "source_module": "30e79cbd43b14b1364ae1d5f443de525a31500c9032f08bdad86e77028c5f587",
+      "image_sha256": "27fcfafec0b423fa3a0746af9307781b9d2de49c2a58fab0d82f8fe9ca9c9aa0",
+      "samples": 153600,
+      "sample_rate": 48000,
+      "peak": 0.19566962397824966,
+      "rms": 0.11998707129303701,
+      "gain": 0.19063726454461774,
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "patch": null,
+      "macro": 0.5,
+      "sha256": "88381aa0d3b02ca2ce2957973c89216fc37d9b472a7b31e723753510e5c36876"
+    },
+    "classic_waves_vcf": {
+      "source_module": "dfd8fd7871d950dffd64fa5060b1db8763c989d0c5be746690317976aaecd011",
+      "image_sha256": "d552ad36d95d822b024239a19db0961858f1a575aa2c02951bd28ed5f85a7acf",
+      "samples": 153600,
+      "sample_rate": 48000,
+      "peak": 0.19844877569868494,
+      "rms": 0.11999540815510128,
+      "gain": 0.4511597384774009,
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "patch": null,
+      "macro": 0.5,
+      "sha256": "68059a9d5ca5142ed47bcc16f6a43ad11babb2c311874c3ad2271f0b9ac7fc30"
+    },
+    "swarm": {
+      "source_module": "b11307266090ab6b522eec428527d6c0b92de66c82bb6dd19ea9ead74325cda4",
+      "image_sha256": "dd17d182aa894ea65f904dcb36134c283bfb05f1b1f3164b373b7adf2afc8b8f",
+      "samples": 153600,
+      "sample_rate": 48000,
+      "peak": 0.5,
+      "rms": 0.08710111059254046,
+      "gain": 1.3092253639085818,
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "patch": null,
+      "macro": 0.5,
+      "sha256": "162006c0b7ce86e03ffa8b8640be2d261888cd1633a86ede9281618cca97e991"
+    },
+    "inharmonic_string": {
+      "source_module": "f5fd9e5e37af1186bc9f119966645ad79c2942ac690e841039c2fe36ab3fd871",
+      "image_sha256": "652cbe920e90c55584db3d511d6ef2105b2e0e1b2772f9c2287389f66ef9f86a",
+      "samples": 153600,
+      "sample_rate": 48000,
+      "peak": 0.5,
+      "rms": 0.05219770087431614,
+      "gain": 2.781719397302209,
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "patch": null,
+      "macro": 0.5,
+      "sha256": "02594babcb88ad6e49fc0269197183b446447225e80e4fe241757168ee22226b"
+    },
+    "particle_noise": {
+      "source_module": "842cb660e75e4d36d8355e22574bba3b333afa21d75b84b5a4f883089fcb3fa2",
+      "image_sha256": "b4abb5f8f30b0101025a1d804fe8b290dcd17b93c9f7ca522a4b2b0620533596",
+      "samples": 153600,
+      "sample_rate": 48000,
+      "peak": 0.49999999999999994,
+      "rms": 0.019131188675147855,
+      "gain": 0.10900837128001754,
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "patch": null,
+      "macro": 0.5,
+      "sha256": "8d745c9410d6155297da055bcde662f5696eadcfc081fd7399c783dbef22cadc"
+    },
+    "filtered_noise": {
+      "source_module": "b6311c1bacbf948f39203e1e4472d71ba717b010d480a4010289a36d3a19855e",
+      "image_sha256": "d3db2932d2172552e9ed493411359a0f4e4961b8db17f2d0a41b7a5761a97ae5",
+      "samples": 153600,
+      "sample_rate": 48000,
+      "peak": 0.5,
+      "rms": 0.07447616150904247,
+      "gain": 0.14635322873326784,
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "patch": null,
+      "macro": 0.5,
+      "sha256": "4245477f1a6e5e18b32a3a27d3fa22de22a8659e9b0713f69d7cb8ab00224025"
+    },
+    "filtered_noise_dual_band": {
+      "source_module": "5aab3472a6c226b8769d52fcf2dca5e3793105118a34d5d17686003472c59fa8",
+      "image_sha256": "0436317ccb5f3f619b95f76e2448fe9bc143bbcf184940f580aa959660ca6263",
+      "samples": 153600,
+      "sample_rate": 48000,
+      "peak": 0.5,
+      "rms": 0.07186728717664885,
+      "gain": 0.09009724437653065,
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "patch": null,
+      "macro": null,
+      "sha256": "a43946a092b5ff0e146eba59a9a9b3493a7dcc6aac44119e0cf827377f1a6a26"
+    },
+    "string_machine": {
+      "source_module": "d2dc23f3fd58ffd6cc43927e5f92e8113ab9c223eaaa07d298caba4961ea2142",
+      "image_sha256": "18e207e65db4a328c6d06287e285bb1bc1c303c02b8f8832f82548bf948f5d40",
+      "samples": 153600,
+      "sample_rate": 48000,
+      "peak": 0.4266500891166825,
+      "rms": 0.11999431113288038,
+      "gain": 0.9064882507399199,
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "patch": null,
+      "macro": 0.5,
+      "sha256": "0e9573f78aa6344e14c30b6aabdb793dabced665623a3563c823cc195c024e31"
+    },
+    "chiptune": {
+      "source_module": "9be89d2d825734fcc254745741568c390db58ec8c58a638e30b4d8aa966d2687",
+      "image_sha256": "8796765c12bee421190a351891c0a90a3cc81c787bc4d0b78c6d87c9ea427450",
+      "samples": 153600,
+      "sample_rate": 48000,
+      "peak": 0.1577538498147393,
+      "rms": 0.1199750138737302,
+      "gain": 0.13804717957369644,
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "patch": null,
+      "macro": 0.5,
+      "sha256": "30f8baf01e9390afd25b6bd69ea1ced23984597882b0c2a2aa63d1bc7cb9c69c"
+    },
+    "bass_drum": {
+      "source_module": "196a3305ae8b2e60310c79b03d0a1a402dd7d2ab091f8acc5150fb97cb3e1dc5",
+      "image_sha256": "1aead7ce18e0cb7428f0e2b443013d0f835359bf334278d19b5247bf5bb13af3",
+      "samples": 153600,
+      "sample_rate": 48000,
+      "peak": 0.49999999999999994,
+      "rms": 0.050507012929253935,
+      "gain": 0.7030111828770109,
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "patch": null,
+      "macro": 0.5,
+      "sha256": "d935e34b51b019432b1543be31c59e086a8103ef8896ad9c2805fa8d2e9566ae"
+    },
+    "snare_drum": {
+      "source_module": "1d4c82d1370345dd24c9218e207401cf2729f51858ff1dd7a6dc01ca5ca736f1",
+      "image_sha256": "a6feaa6d8b4960630b6c126a94a2b9503e256f94eae850b4eaf0d0c27f0b0834",
+      "samples": 153600,
+      "sample_rate": 48000,
+      "peak": 0.5,
+      "rms": 0.022425651307807524,
+      "gain": 0.372709813776007,
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "patch": null,
+      "macro": 0.5,
+      "sha256": "7f3b6c702ddb73ab5b4b7cfc821fef10cae8815d7516eaf2a79a8b87d4121041"
+    },
+    "wave_terrain": {
+      "source_module": "399949a322ce37cff9ae4e2bf20de6cf99b31e22f9b7a8ff57983128ce8c5e47",
+      "image_sha256": "195adb6827a53616c77b6a26290cfefd9210236ec7c3135f7cd5a73c99296dba",
+      "samples": 153600,
+      "sample_rate": 48000,
+      "peak": 0.2134362789162832,
+      "rms": 0.11998155673634861,
+      "gain": 0.22158231758262723,
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "patch": null,
+      "macro": 0.5,
+      "sha256": "7638dc447e168bf98cbbed86a0c4049751e469e00ada410159edfbe17351a4b1"
+    },
+    "wave_terrain_aux": {
+      "source_module": "41fc0897727e1d550154d9fb7e37ecc8e9f470226caf9308b5dd2b3cec25d921",
+      "image_sha256": "c7592366ff78530c43cc3c0f5ab3af4a172bc25d94bca71a1fc6f588f68a3033",
+      "samples": 153600,
+      "sample_rate": 48000,
+      "peak": 0.17800148536294455,
+      "rms": 0.11998333147793784,
+      "gain": 0.17325752573928832,
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "patch": null,
+      "macro": 0.5,
+      "sha256": "3643bcffd6b3bb363e11c63fc9a14b981ca63735b0d4d90500082f0c33ca0a19"
+    },
+    "six_op_fm_a": {
+      "source_module": "eb896d4d369f37a2d1d9115549a514fdb432b0739ee4e998a52d8c5098ff26df",
+      "image_sha256": "4f550771683d5ac21dfc9934fbeeb1feb92e5398f08f356c7e3badc72843717d",
+      "samples": 153600,
+      "sample_rate": 48000,
+      "peak": 0.4000840433417782,
+      "rms": 0.11918405597203624,
+      "gain": 0.9615257707228801,
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "patch": 0,
+      "macro": null,
+      "sha256": "8bbce6faaac8909d087aaf8791ab01cd416acb4d67f900e1fd91b80af5db7713"
+    },
+    "six_op_fm_b": {
+      "source_module": "eb896d4d369f37a2d1d9115549a514fdb432b0739ee4e998a52d8c5098ff26df",
+      "image_sha256": "4f550771683d5ac21dfc9934fbeeb1feb92e5398f08f356c7e3badc72843717d",
+      "samples": 153600,
+      "sample_rate": 48000,
+      "peak": 0.2992460072962457,
+      "rms": 0.11991683611603927,
+      "gain": 0.34396840757111163,
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "patch": 0,
+      "macro": null,
+      "sha256": "94e8a2bfa43ce6f70ae873455059d57e5c83ccf716fa26e5aab9a0db2e3feff7"
+    },
+    "six_op_fm_c": {
+      "source_module": "eb896d4d369f37a2d1d9115549a514fdb432b0739ee4e998a52d8c5098ff26df",
+      "image_sha256": "4f550771683d5ac21dfc9934fbeeb1feb92e5398f08f356c7e3badc72843717d",
+      "samples": 153600,
+      "sample_rate": 48000,
+      "peak": 0.28891822624962304,
+      "rms": 0.11974439387413136,
+      "gain": 0.3018752788956511,
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "patch": 0,
+      "macro": null,
+      "sha256": "80c5c0dc3ca61571a927d2ffaa4df78d9a84172c9dcc2ffdf644d740965099f4"
+    }
+  }
+}

@@ -1,204 +1,98 @@
-import {sha256} from './patch-core.js';
-import {recipeKey, normalizeRecipe} from './recipe-core.js';
-import {CATALOG_SHA256} from './release.js';
-import {DESCRIPTIONS,VARIANT_NAMES,engineName,orderedEngines,availableEngines,resolveSelection,choicesFromRecipe,selectionFile,validateSelectionFile,selectionAvailable} from './selection-core.js';
-
-const $ = id => document.getElementById(id);
-const DRAFT_KEY = 'microfreak-public-lite-draft-v1';
-const LEGACY_KEY = 'microfreak-public-lite-combination-v1';
-const state = {catalog:null,names:{},engines:[],choices:{},resolved:null,step:1,selected:null,imported:null,file:null,worker:null,workerReject:null,controller:null,epoch:0,resultURL:null,busy:false};
-const node = (tag,text='',className='') => {const el=document.createElement(tag);el.textContent=text;el.className=className;return el;};
-function notice(message,error=false) {$('notice').textContent=message;$('notice').classList.toggle('error',error);}
-function name(key) {return state.names[key] || key;}
-function assetURL(path) {
-  const url = new URL(path,location.href), root = new URL('./',location.href);
-  if (typeof path !== 'string' || !path.startsWith('catalog/') || url.origin !== root.origin || !url.pathname.startsWith(root.pathname+'catalog/') || url.search || url.hash) throw new Error('Invalid file reference.');
-  return url;
+import {CustomAudition} from './custom-audition.js?custom-play-ready-20261022';
+import {CUSTOM_ENGINE,customBank,customContext} from './custom-sixop.js';
+import {ENGINE_GUIDE,audioKey,summarizeSelection,engineName} from './engine-guide.js?original-engine-names-20261022';
+import {hash,selectAdapters} from './compose.js?sixop-defaults-20261022';import {planUniversal} from './universal.js?sixop-defaults-20261022';import {LIBRARY_SHA256} from './library-release.js?sixop-defaults-20261022';
+const $=id=>document.getElementById(id),state={library:null,modules:{},rows:[],file:null,worker:null,epoch:0,busy:false,result:null,url:null,plan:null,removed:null,bank:null,bankPending:false};
+const audition=new CustomAudition(()=>state.bank?{...state.bank,id:state.bank.sourceId}:null);
+const node=(tag,text='')=>{const n=document.createElement(tag);n.textContent=text;return n;},variantName=v=>({normal:'Normal · OUT',aux:'AUX',dual_band:'Dual Band · AUX'}[v]||v);
+function notice(text,error=false){$('notice').textContent=text;$('notice').classList.toggle('error',error);$('notice').classList.toggle('sr-only',!error&&!state.busy&&!state.result);if(state.busy)$('prepare-help').textContent=text;if(state.result){const link=node('a','View download');link.href='#result-title';link.addEventListener('click',()=>{$('opening').hidden=true;$('selection-panel').hidden=true;$('firmware-panel').hidden=false;});$('notice').append(document.createTextNode(' '),link);}}
+const selection=()=>state.rows.map(r=>({engine:r.engine,original:r.original,variant:r.variant||'normal'}));
+function invalidate(){audition.stop();document.querySelectorAll('audio').forEach(audio=>audio.pause());state.epoch++;state.worker?.terminate();state.worker=null;state.busy=false;state.result=null;if(state.url)URL.revokeObjectURL(state.url);state.url=null;$('result').hidden=true;}
+function save(){try{localStorage.setItem('freakswap-v2-draft',JSON.stringify(state.rows));}catch{}}
+const context=()=>{if(state.bankPending)throw new Error('Updating the selected presets…');return customContext(state.library,state.modules,selection(),state.bank);};
+const activeLibrary=()=>{try{return context().library;}catch{return state.library;}};
+function families(){const rows=new Map();for(const e of Object.values(state.library.engines))if(!rows.has(e.engine))rows.set(e.engine,engineName(e));rows.set(CUSTOM_ENGINE,engineName(CUSTOM_ENGINE));return rows;}
+function suggestSpace(recipe){const extras=[],chosen=new Set(recipe.map(r=>r.original));for(let step=0;step<22-recipe.length;step++){
+ const options=Object.keys(state.library.hosts).filter(k=>!chosen.has(k)).map(original=>{const rows=[...recipe,...extras,{engine:'empty',original,variant:'normal'}];try{const p=planUniversal(state.library,rows,state.modules,{searchLimit:3000});return {original,fit:true,available:p.available};}catch(e){return {original,fit:false,available:e.details?.available||0};}}).sort((a,b)=>Number(b.fit)-Number(a.fit)||(a.fit?a.available-b.available:b.available-a.available));
+ if(!options.length||!options[0].available)return [];const best=options[0];chosen.add(best.original);extras.push({engine:'empty',original:best.original,variant:'normal'});if(best.fit)return extras;
+ }return [];}
+function reviewSelection(){
+ const review=summarizeSelection(activeLibrary(),state.rows),list=node('ul');
+ $('review-counts').textContent='· '+review.replaced.length+' replaced · '+review.kept.length+' kept · '+review.empty.length+' silent'+(review.pending?' · '+review.pending+' unfinished':'');
+ for(const row of review.replaced)list.append(node('li',row.from+' → '+row.to+(row.variant!=='normal'?' ('+variantName(row.variant)+')':'')));
+ for(const row of review.empty){const li=node('li',row.name+' → Empty (silent)');li.className='empty-change';list.append(li);}
+ const content=[];
+ if(!state.rows.length)content.push(node('p','Add a replacement to choose which sounds change. All original engines are currently kept.'));
+ if(review.pending)content.push(node('p','Complete the unfinished rows before preparing. The counts show completed choices.'));
+ if(list.childNodes.length)content.push(list);
+ const details=node('details'),summary=node('summary','Kept originals ('+review.kept.length+')');details.append(summary,node('p',review.kept.length?review.kept.map(r=>r.name).join(', '):'No original engines will be kept.'));
+ content.push(details);$('review-content').replaceChildren(...content);
 }
-async function verifiedAsset(asset,signal) {
-  const response=await fetch(assetURL(asset.url),{signal,cache:'no-store'});
-  if (!response.ok) throw new Error('Could not download a file. Please try again.');
-  const buffer=await response.arrayBuffer();
-  if ((asset.size!==undefined && buffer.byteLength!==asset.size) || await sha256(buffer)!==asset.sha256) throw new Error('Could not verify the file. Please reload the page.');
-  return buffer;
+function bankSelection(){
+ const section=node('details'),heading=node('summary'),actions=node('div'),list=node('div'),status=node('p');section.className='bank-selection';actions.className='bank-selection-actions';list.className='bank-preset-list';status.className='small';status.setAttribute('role','status');
+ const sourceId=state.bank.sourceId,bytes=state.bank.bytes,name=state.bank.name,boxes=[];let revision=0;
+ const count=()=>boxes.filter(box=>box.checked).length;
+ const updateHeading=()=>{heading.textContent='Presets to import · '+count()+' of 32';};
+ const apply=async()=>{const current=++revision,selected=boxes.flatMap((box,i)=>box.checked?[i]:[]);updateHeading();invalidate();state.bankPending=true;status.textContent='Updating selection…';sync();try{const bank=await customBank(bytes,name,selected);if(current!==revision||state.bank?.sourceId!==sourceId)return;state.bank=bank;state.bankPending=false;status.textContent=bank.count?'Wave will cycle through these '+bank.count+' presets, in bank order.':'Select at least one preset to continue.';for(const help of document.querySelectorAll('.custom-bank-status')){help.textContent=bank.count+' patches · select the file again after a page reload';help.className='custom-bank-status sr-only';}sync();}catch(e){if(current!==revision)return;state.bankPending=false;status.textContent=e.message;sync();}};
+ for(const [text,checked] of [['Select all',true],['Select none',false]]){const button=node('button',text);button.type='button';button.className='quiet';button.addEventListener('click',()=>{boxes.forEach(box=>box.checked=checked);apply();});actions.append(button);}
+ const clear=node('button','Clear import');clear.type='button';clear.className='quiet';clear.addEventListener('click',()=>{revision++;invalidate();audition.resetBank();state.bank=null;state.bankPending=false;$('engine-dialog').close();render();notice('Bank cleared. Load a .syx file to continue.');});actions.append(clear);
+ state.bank.allPatchNames.forEach((name,i)=>{const label=node('label'),box=document.createElement('input');box.type='checkbox';box.checked=state.bank.selected.includes(i);box.setAttribute('aria-label','Import preset '+(i+1)+': '+name);box.addEventListener('change',apply);boxes.push(box);label.append(box,node('span',(i+1)+'. '+name));list.append(label);});updateHeading();status.textContent='Wave will cycle through the selected presets, in bank order.';section.append(heading,actions,list,status);return section;
 }
-function resetResult() {
-  state.epoch++;
-  state.controller?.abort();state.controller=null;
-  state.worker?.terminate();state.worker=null;
-  state.workerReject?.(new Error('Preparation canceled.'));state.workerReject=null;
-  if (state.resultURL) URL.revokeObjectURL(state.resultURL);
-  state.resultURL=null;state.busy=false;
-  $('result').hidden=true;$('progress').hidden=true;$('generate').hidden=false;
-  syncButtons();
+function showEngine(current){
+ current={...current,name:engineName(current)};
+ const guide=ENGINE_GUIDE[current.engine]||{character:'Six-operator FM with your own 32-voice bank.',uses:'Choose a patch with Wave, then adjust brightness and envelope.'};$('engine-dialog-title').textContent=current.name;
+ const controls=node('dl');for(const [label,value] of [['Wave',current.labels[1]],['Timbre',current.labels[2]],['Shape',current.labels[3]]])controls.append(node('dt',label),node('dd',value));
+ const content=[node('p',guide.character),node('p',guide.uses),controls];
+ const shifted=current.engine.startsWith('six_op_fm_')?[['Shift + Type','Algorithm'],['Shift + Wave','Feedback'],['Shift + Timbre','Detune'],['Shift + Shape','Release']]:current.twist?[['Shift + Type',current.twist.label]]:[];
+ if(shifted.length){const shortcuts=node('dl');shortcuts.className='shift-controls';for(const [shortcut,action] of shifted)shortcuts.append(node('dt',shortcut),node('dd',action));content.push(node('h3','Shift shortcuts'),shortcuts);}
+ if(current.twist)content.push(node('p',current.twist.description));
+ else if(current.twist_note)content.push(node('p',current.twist_note));
+ if(current.engine===CUSTOM_ENGINE&&state.bank){const preview=node('div'),label=fieldLabel('Preview patch'),select=document.createElement('select');preview.className='custom-preview';select.setAttribute('aria-label','Preview patch');state.bank.allPatchNames.forEach((name,i)=>select.append(new Option((i+1)+'. '+name,String(i))));select.value=String(audition.patch);select.addEventListener('change',()=>audition.setPatch(Number(select.value)));label.append(select);preview.append(label,audition.button(),audition.status());content.splice(1,0,preview,node('p','Dry digital reference · 2.4 seconds. Filter and effects are not included.'),bankSelection());}$('engine-dialog-content').replaceChildren(...content);$('engine-dialog').showModal();
 }
-function syncButtons() {
-  $('next-engines').disabled=!state.resolved?.canContinue;
-  $('next-placements').disabled=!state.selected;
-  $('clear-engines').disabled=!state.engines.length && !state.imported;
-  $('generate').disabled=!state.selected || !state.file || state.busy;
-  $('export-recipe').disabled=!state.engines.length && !state.imported;
-  $('download-guide').disabled=!state.selected;
-  $('download-recipe').disabled=!state.selected;
+function engineInfo(current,i){
+ current={...current,name:engineName(current)};
+ if(!ENGINE_GUIDE[current.engine]&&current.engine!==CUSTOM_ENGINE)return null;
+ const box=node('div');box.className='row-actions';
+ const listen=node('button','▶');listen.className='quiet listen-button icon-button';listen.type='button';listen.title='Listen · 3s';listen.setAttribute('aria-label','Play example: '+current.name+' · '+variantName(current.variant));listen.setAttribute('aria-pressed','false');
+ const audio=document.createElement('audio');audio.preload='none';audio.src='./audio/'+audioKey(current.engine,current.variant)+'.wav';audio.volume=.65;
+ const status=node('span');status.className='audio-status';status.setAttribute('role','status');status.hidden=true;
+ const reset=()=>{listen.textContent='▶';listen.title='Listen · 3s';listen.setAttribute('aria-pressed','false');listen.setAttribute('aria-label','Play example: '+current.name+' · '+variantName(current.variant));};
+ audio.addEventListener('play',()=>{listen.textContent='■';listen.title='Stop';listen.setAttribute('aria-pressed','true');listen.setAttribute('aria-label','Stop example: '+current.name);});audio.addEventListener('pause',reset);audio.addEventListener('ended',reset);
+ const failed=()=>{reset();status.hidden=false;status.textContent='Audio unavailable. Try again.';};audio.addEventListener('error',failed);
+ listen.addEventListener('click',async()=>{if(!audio.paused){audio.pause();audio.currentTime=0;return;}status.hidden=true;audio.currentTime=0;try{await audio.play();}catch{failed();}});
+ const info=node('button','i');info.type='button';info.className='quiet icon-button';info.title='About this engine';info.setAttribute('aria-label','About '+current.name);info.addEventListener('click',()=>showEngine(current));
+ if(current.engine===CUSTOM_ENGINE)box.append(audition.button(true),info,audition.status(true));else box.append(listen,info,status,audio);return box;
 }
-function saveDraft() {
-  if (!state.catalog) return;
-  try {localStorage.setItem(DRAFT_KEY,JSON.stringify({version:1,selection:selectionFile(state.catalog,state.engines,state.choices),step:state.step,unavailable:state.imported}));} catch {}
+for(const [open,dialog,close] of [['help-open','help-dialog','help-close']]){$(open).addEventListener('click',()=>$(dialog).showModal());$(close).addEventListener('click',()=>$(dialog).close());}
+$('engine-dialog-close').addEventListener('click',()=>$('engine-dialog').close());$('engine-dialog').addEventListener('close',()=>audition.stop());
+$('continue').addEventListener('click',()=>{if($('continue').disabled)return;audition.stop();document.querySelectorAll('audio').forEach(audio=>audio.pause());$('opening').hidden=true;$('selection-panel').hidden=true;$('firmware-panel').hidden=false;$('firmware-title').focus();});
+$('edit-engines').addEventListener('click',()=>{$('firmware-panel').hidden=true;$('opening').hidden=false;$('selection-panel').hidden=false;$('selection-title').focus();});
+function fieldLabel(text){const label=node('label'),span=node('span',text);span.className='field-label';label.append(span);return label;}
+document.addEventListener('play',event=>{if(event.target.tagName==='AUDIO'){if(event.target!==audition.audio)audition.stop();document.querySelectorAll('audio').forEach(audio=>{if(audio!==event.target)audio.pause();});}},true);
+function sync(){let problem='',searchLimited=false;state.plan=null;if(state.library&&state.rows.length&&state.rows.every(r=>r.original&&r.engine)){try{const ctx=context();selectAdapters(ctx.library,selection());state.plan=planUniversal(ctx.library,selection(),ctx.modules,{searchLimit:50000});}catch(e){problem=e.message;searchLimited=e.code==='search_budget';}}else problem=state.library?'Choose an original and a replacement for each row.':'Engine library is loading.';
+ if(state.library)reviewSelection();$('sixop-help').hidden=!state.rows.some(r=>r.engine.startsWith('six_op_fm_'));
+ $('continue').disabled=(!state.plan&&!searchLimited)||state.busy;$('edit-engines').disabled=state.busy;$('prepare').disabled=(!state.plan&&!searchLimited)||!state.file||state.busy;$('add').disabled=!state.library||state.rows.length>=22||state.busy;$('file').disabled=!state.library||state.busy;$('cancel').hidden=!state.busy;$('prepare').textContent=state.busy?'Preparing…':'Prepare firmware';$('prepare').setAttribute('aria-busy',String(state.busy));$('undo').hidden=!state.removed;$('undo').disabled=state.busy;$('prepare-help').textContent=state.busy?'Checking your selection. You can cancel and keep your choices.':!state.rows.length?'Add a replacement to get started.':!state.plan&&!searchLimited?'Complete your selection and resolve the space message above.':!state.file?'Choose the official .mff file to enable preparation.':'Ready to prepare and verify your firmware.';
+ $('space').replaceChildren();if(!state.library||!state.rows.length)return;
+ if(!state.plan){$('space').append(node('p',problem));if(!state.busy&&!state.rows.some(r=>r.engine===CUSTOM_ENGINE)&&state.rows.every(r=>r.original&&r.engine)){
+ const suggestions=suggestSpace(selection());if(suggestions.length){const label=suggestions.map(r=>state.library.hosts[r.original].name).join(', '),button=node('button','Make room: set '+label+' to Empty');button.className='quiet';button.addEventListener('click',()=>{state.removed=null;invalidate();state.rows.push(...suggestions);save();render();notice('The listed originals will become Empty. Review your selection before preparing it.');});$('space').append(button);}
+ }}
 }
-function updateResolution() {
-  state.resolved=resolveSelection(state.catalog,state.engines,state.choices);
-  state.engines=state.resolved.engines;state.choices=state.resolved.choices;state.selected=state.imported?null:state.resolved.entry;
-  return state.resolved.cleared;
+function render(focusLabel=document.activeElement?.getAttribute('aria-label')){
+ $('selection-review').hidden=!state.rows.length;$('count').textContent=state.rows.length?state.rows.length+' selected':'None selected';
+ $('rows').replaceChildren(...state.rows.map((row,i)=>{const wrap=node('div');wrap.className='replacement';const originalLabel=fieldLabel('Original'),original=document.createElement('select');original.setAttribute('aria-label','Original engine '+(i+1));original.append(new Option('Choose an original…',''));
+ for(const [key,h] of Object.entries(state.library.hosts)){const o=new Option(h.name,key);o.disabled=state.rows.some((r,j)=>j!==i&&r.original===key);original.append(o);}original.value=row.original;original.disabled=state.busy;
+ const engineLabel=fieldLabel('Replacement'),engine=document.createElement('select');engine.setAttribute('aria-label','Replacement engine '+(i+1));engine.append(new Option('Choose a replacement…',''));for(const [key,name] of [['empty','Empty · release space'],...families()]){const o=new Option(name,key);o.disabled=key!=='empty'&&state.rows.some((r,j)=>j!==i&&r.engine===key);engine.append(o);}engine.value=row.engine;engine.disabled=!row.original||state.busy;
+ const changed=focus=>{state.removed=null;invalidate();save();render(focus);notice(state.plan?'Selection ready. Choose the official firmware.':'Review the selection and available space below.');};original.addEventListener('change',()=>{row.original=original.value;changed(original.getAttribute('aria-label'));});engine.addEventListener('change',()=>{row.engine=engine.value;row.variant='normal';changed(engine.getAttribute('aria-label'));});originalLabel.className='original-field';engineLabel.className='engine-field';originalLabel.append(original);engineLabel.append(engine);const choice=node('div');choice.className='replacement-choice';choice.append(engineLabel);wrap.append(originalLabel,choice);
+ const variants=Object.values(activeLibrary().engines).filter(e=>e.engine===row.engine);wrap.classList.toggle('has-output',variants.length>1);if(variants.length>1){const label=fieldLabel('Output'),variant=document.createElement('select');variant.setAttribute('aria-label','Output '+(i+1));for(const e of variants)variant.append(new Option(({normal:'OUT',aux:'AUX',dual_band:'AUX · Dual'}[e.variant]||e.variant),e.variant));variant.value=row.variant||'normal';variant.disabled=state.busy;variant.addEventListener('change',()=>{row.variant=variant.value;changed(variant.getAttribute('aria-label'));});label.className='output-field';variant.setAttribute('aria-describedby','output-definition');label.append(variant);choice.append(label);}
+ if(row.engine===CUSTOM_ENGINE){const upload=node('label'),caption=node('span',state.bank?state.bank.name+' · Change':'Load .syx'),input=document.createElement('input'),status=node('span',state.bank?state.bank.count+' patches · select the file again after a page reload':'DX7 bank · 32 voices');upload.className='custom-bank';upload.title=state.bank?state.bank.name+' · Change bank':'Load a DX7 bank · 32 voices';status.id='custom-bank-status-'+i;status.className='custom-bank-status sr-only';input.className='sr-only';input.type='file';input.accept='.syx';input.disabled=state.busy;input.setAttribute('aria-label','Custom 6-Op bank');input.setAttribute('aria-describedby',status.id);status.setAttribute('role','status');input.addEventListener('change',async()=>{const file=input.files[0];if(!file)return;invalidate();status.textContent='Checking bank…';try{if(file.size!==4104)throw new Error('Choose a DX7 .syx file containing one bank of 32 voices.');const bank=await customBank(await file.arrayBuffer(),file.name);if(!state.rows.includes(row)||row.engine!==CUSTOM_ENGINE)return;audition.resetBank();state.bank=bank;state.bankPending=false;render('Custom 6-Op bank');notice('Custom bank loaded. It stays in this tab until you close or reload it.');}catch(e){status.textContent=e.message+(state.bank?' Previous bank kept.':'');status.className='custom-bank-status field-error';input.value='';sync();}});upload.append(caption,input);choice.append(upload);wrap.append(status);}
+ const remove=node('button','×');remove.className='quiet icon-button remove-button';remove.title='Remove replacement';remove.disabled=state.busy;remove.setAttribute('aria-label','Remove replacement '+(i+1));remove.addEventListener('click',()=>{invalidate();state.removed={row:state.rows.splice(i,1)[0],index:i};save();render(state.rows.length?'Original engine '+(Math.min(i,state.rows.length-1)+1):null);if(!state.rows.length)$('add').focus();notice('Replacement removed. You can undo this change.');});wrap.append(remove);if(row.engine==='empty'){const help=node('p',(state.library.hosts[row.original]?.name||'This position')+' will be silent in the new firmware, freeing space for your replacements.');help.className='control-help empty-help';help.id='empty-help-'+i;engine.setAttribute('aria-describedby',[engine.getAttribute('aria-describedby'),help.id].filter(Boolean).join(' '));wrap.append(help);}const current=variants.find(e=>e.variant===(row.variant||'normal'))||(row.engine===CUSTOM_ENGINE?{...state.library.engines.six_op_fm_a,engine:CUSTOM_ENGINE,name:'Six-OP FM Custom'}:null);const info=current&&engineInfo(current,i);if(info){info.append(remove);wrap.append(info);}else{const actions=node('div');actions.className='row-actions';actions.append(remove);wrap.append(actions);}return wrap;}));sync();if(focusLabel){const target=[...$('rows').querySelectorAll('[aria-label]')].find(el=>el.getAttribute('aria-label')===focusLabel);if(target&&!target.disabled)target.focus({preventScroll:true});}
 }
-function renderEngines() {
-  $('engine-count').textContent=state.engines.length ? 'One engine selected':'None selected';
-  $('engine-cards').replaceChildren(...availableEngines(state.catalog,state.engines).map(key=>{
-    const selected=state.engines.includes(key),card=node('article','',selected?'engine-card selected':'engine-card');card.dataset.engine=key;
-    const heading=node('h3',name(key)),description=node('p',DESCRIPTIONS[key],'small'),button=node('button',selected?'Selected':'Choose','quiet');
-    button.id='engine-'+key;button.type='button';button.setAttribute('aria-label',`${selected?'Selected':'Choose'} ${name(key)}`);button.setAttribute('aria-pressed',String(selected));button.dataset.engine=key;
-    button.addEventListener('click',()=>changeEngines([key],button.id));
-    card.append(heading,description,button);return card;
-  }));
-
-}
-function renderPlacements() {
-  $('placement-rows').replaceChildren(...state.resolved.rows.map(row=>{
-    const card=node('div','','placement-row');card.dataset.engine=row.engine;
-    const title=node('h3',name(row.engine));title.id='placement-title-'+row.engine;title.tabIndex=-1;card.append(title);
-    const fields=node('div','','placement-fields');
-    if (row.originals.length===1) {
-      const text=node('p','Replaces ','fixed-placement'),strong=node('strong',row.originals[0].name);text.append(strong);text.dataset.original=row.original;fields.append(text);
-    } else {
-      const label=node('label','Replaces…'),select=document.createElement('select');select.id='placement-'+row.engine;label.htmlFor=select.id;select.dataset.engine=row.engine;
-      select.setAttribute('aria-label','Original engine for '+name(row.engine));select.append(new Option('Choose an original engine…',''),...row.originals.map(o=>new Option(o.name,o.key)));select.value=row.original || '';
-      select.addEventListener('change',()=>changeChoice(row.engine,'original',select.value || null,select.id));fields.append(label,select);
-    }
-    if (row.original && row.variants.length>1) {
-      const label=node('label','Version'),select=document.createElement('select');select.id='variant-'+row.engine;label.htmlFor=select.id;select.dataset.engine=row.engine;
-      select.setAttribute('aria-label','Version of '+name(row.engine));select.append(new Option('Choose a version…',''),...row.variants.map(v=>new Option(VARIANT_NAMES[v],v)));select.value=row.variant || '';
-      select.addEventListener('change',()=>changeChoice(row.engine,'variant',select.value || null,select.id));fields.append(label,select);
-    } else if (row.original && row.variant && row.variant!=='normal') fields.append(node('p',VARIANT_NAMES[row.variant],'small fixed-variant'));
-    card.append(fields);return card;
-  }));
-}
-function renderSummary() {
-  $('replacements').replaceChildren(...(state.selected?.replacements || []).map(row=>{
-    const li=node('li'),original=node('span',row.original_name),arrow=node('span','→','arrow'),engine=node('span',name(row.engine),'engine');arrow.setAttribute('aria-hidden','true');
-    if (row.variant!=='normal') engine.append(node('small',VARIANT_NAMES[row.variant]));li.append(original,arrow,engine);return li;
-  }));
-}
-function render(focusId=null) {
-  renderEngines();renderPlacements();renderSummary();
-  for (let step=1;step<=3;step++) {
-    $('step-'+step).hidden=state.step!==step;
-    const item=document.querySelector(`.wizard-nav [data-step="${step}"]`);item.classList.toggle('active',state.step===step);item.classList.toggle('done',state.step>step);
-    if (state.step===step) item.setAttribute('aria-current','step');else item.removeAttribute('aria-current');
-  }
-  $('unpublished').hidden=!state.imported;syncButtons();saveDraft();
-  if (focusId) {
-    const target=$(focusId) || $('placement-title-'+focusId.replace(/^(placement|variant)-/,''));
-    (target && !target.disabled ? target : $('engines-title')).focus({preventScroll:true});
-  }
-}
-function changeEngines(engines,focusId=null) {
-  resetResult();state.imported=null;state.choices=engines[0]===state.engines[0]?state.choices:{};state.engines=orderedEngines(state.catalog,engines);state.step=1;
-  updateResolution();render(focusId);
-  notice(state.engines.length?'Engine selected. Continue to choose which original to replace.':'Choose the new engine you want.');
-}
-function changeChoice(engine,field,value,focusId) {
-  resetResult();state.imported=null;state.choices[engine]={...state.choices[engine],[field]:value};
-  updateResolution();render(focusId);
-  notice(state.selected?'Replacement selected. Continue to prepare your firmware.':'Choose an original engine and an available version.');
-}
-function setStep(step,focus=true) {
-  if ((step===2&&!state.resolved?.canContinue)||(step===3&&!state.selected)) return;
-  if (state.busy) resetResult();state.step=step;render();
-  notice(step===1?'Choose the new engine you want.':step===2?'Choose which original engine to replace.':'Review your change and choose the official firmware.');
-  if (focus) $({1:'engines-title',2:'placements-title',3:'firmware-title'}[step]).focus();
-}
-function download(buffer,filename,type) {
-  const url=URL.createObjectURL(new Blob([buffer],{type})),link=node('a');link.href=url;link.download=filename;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
-}
-function exportRecipe() {
-  if (!state.catalog) return;
-  const value=state.imported || state.selected?.recipe || selectionFile(state.catalog,state.engines,state.choices);
-  if (state.engines.length || state.imported) download(JSON.stringify(value,null,2)+'\n','microfreak-lite-selection.json','application/json');
-}
-async function documentDownload(field,filename,type) {
-  const entry=state.selected,epoch=state.epoch;if (!entry) return;
-  try {const bytes=await verifiedAsset(entry[field]);if (epoch===state.epoch&&entry===state.selected) download(bytes,filename,type);} catch(error) {if(epoch===state.epoch) notice(error.message,true);}
-}
-function validateUnavailable(value) {
-  if(value?.format==='microfreak.lite-catalog-reference' && value.version===1 && /^[a-f0-9]{64}$/.test(value.id) && Object.keys(value).sort().join(',')==='format,id,version') return value;
-  return validateSelectionFile(state.catalog,value);
-}
-function restoreRecipe(recipe) {
-  state.engines=orderedEngines(state.catalog,recipe.replacements.map(r=>r.engine));state.choices=choicesFromRecipe(recipe);state.imported=null;updateResolution();state.step=3;
-}
-async function importRecipe(file) {
-  if (!file) return;const epoch=state.epoch;
-  try {
-    if (file.size>262144) throw new Error('The selection file is too large.');
-    const value=JSON.parse(await file.text());if(epoch!==state.epoch) return;
-    let recipe=null,draft=null,entry=null;
-    if (value.format==='microfreak.firmware-recipe') {
-      recipe=normalizeRecipe(value,state.catalog.base);const key=recipeKey(recipe,state.catalog.base);entry=state.catalog.combinations.find(e=>recipeKey(e.recipe,state.catalog.base)===key);
-    } else draft=validateUnavailable(value);
-    resetResult();
-    if (entry) {restoreRecipe(recipe);render();notice('Selection loaded. Review your change before preparing the firmware.');}
-    else if (draft?.engines && (!draft.engines.length || selectionAvailable(state.catalog,draft.engines,draft.choices))) {
-      state.engines=draft.engines;state.choices=draft.choices;state.imported=null;updateResolution();state.step=state.selected?3:state.resolved.canContinue?2:1;render();notice('Selection loaded. Continue where you left off.');
-    } else {
-      state.engines=[];state.choices={};state.imported=recipe || draft;state.step=1;updateResolution();render();notice('This selection is not available in this version. You can save it or choose another engine.');
-    }
-  } catch(error) {if(epoch===state.epoch) notice(error instanceof SyntaxError?'The file does not contain a valid JSON selection. Your choices have been kept.':error.message+' Your choices have been kept.',true);}
-  finally {$('recipe-input').value='';}
-}
-async function prepareFirmware() {
-  if (!state.selected||!state.file||state.busy) return;resetResult();
-  const epoch=state.epoch,entry=state.selected,file=state.file;state.busy=true;syncButtons();$('generate').hidden=true;$('progress').hidden=false;state.controller=new AbortController();
-  try {
-    if (file.size!==entry.base.size) throw new Error('The file size does not match the official 5.0.0.2084 firmware.');
-    const [base,patch]=await Promise.all([file.arrayBuffer(),verifiedAsset(entry.patch,state.controller.signal)]);if(epoch!==state.epoch) return;
-    const worker=new Worker(new URL('./worker.js',import.meta.url),{type:'module'});state.worker=worker;
-    const result=await new Promise((resolve,reject)=>{state.workerReject=reject;worker.onmessage=({data})=>{if(data.id===epoch) data.error?reject(new Error(data.error)):resolve(data.result);};worker.onerror=()=>reject(new Error('Could not start firmware preparation in your browser.'));worker.postMessage({id:epoch,base,patch,entry},[base,patch]);});
-    if(epoch!==state.epoch||entry!==state.selected) return;
-    worker.terminate();state.worker=null;state.workerReject=null;state.controller=null;state.busy=false;state.resultURL=URL.createObjectURL(new Blob([result],{type:'application/octet-stream'}));
-    $('progress').hidden=true;$('result').hidden=false;$('generate').hidden=true;notice('Firmware ready to download.');syncButtons();
-  } catch(error) {if(epoch===state.epoch){resetResult();notice(error.message,true);}}
-}
-$('next-engines').addEventListener('click',()=>setStep(2));$('next-placements').addEventListener('click',()=>setStep(3));
-$('back-placements').addEventListener('click',()=>setStep(1));$('back-firmware').addEventListener('click',()=>setStep(2));$('edit-engines').addEventListener('click',()=>setStep(1));
-$('clear-engines').addEventListener('click',()=>changeEngines([], 'clear-engines'));
-$('recipe-input').addEventListener('change',()=>importRecipe($('recipe-input').files[0]));
-$('firmware-input').addEventListener('change',()=>{
-  resetResult();state.file=$('firmware-input').files[0] || null;$('file-label').textContent=state.file?state.file.name+' · '+(state.file.size/1024).toFixed(0)+' KB':'Your file is processed on this device.';
-  if (state.file&&state.file.size!==state.catalog.base.size){notice('This file has a different size from the required official firmware.',true);state.file=null;}
-  else if(state.file) notice('File selected. You can now prepare your firmware.');syncButtons();
-});
-$('export-recipe').addEventListener('click',exportRecipe);$('download-recipe').addEventListener('click',exportRecipe);
-$('download-guide').addEventListener('click',()=>documentDownload('guide','INSTALLATION-GUIDE.md','text/markdown'));
-$('generate').addEventListener('click',prepareFirmware);$('cancel').addEventListener('click',()=>{resetResult();notice('Preparation canceled. Your choices have been kept.');});
-$('download-firmware').addEventListener('click',()=>{if(state.resultURL&&state.selected){const link=node('a');link.href=state.resultURL;link.download=state.selected.result.filename;document.body.append(link);link.click();link.remove();}});
-window.addEventListener('pagehide',()=>{saveDraft();resetResult();state.file=null;});
-async function init() {
-  try {
-    if(!crypto.subtle||!window.Worker) throw new Error('Use an up-to-date browser and open the tool from its website.');
-    const response=await fetch('catalog.json',{cache:'no-store'});if(!response.ok) throw new Error('Could not load the engines.');
-    const buffer=await response.arrayBuffer();if(await sha256(buffer)!==CATALOG_SHA256) throw new Error('Could not load the engines. Please reload the page.');
-    const catalog=JSON.parse(new TextDecoder().decode(buffer));if(catalog.format!=='microfreak.public-lite-catalog'||catalog.version!==1||!catalog.combinations.length||catalog.combinations.some(e=>e.recipe.replacements.length!==1)) throw new Error('Could not load the engines.');
-    state.catalog=catalog;for(const entry of catalog.combinations) normalizeRecipe(entry.recipe,catalog.base);
-    state.names=Object.fromEntries(catalog.engines.map(key=>[key,engineName(catalog,key)]));
-    let recovered=false,recoveryError=false;
-    try {
-      const raw=localStorage.getItem(DRAFT_KEY);
-      if(raw){const saved=JSON.parse(raw);if(saved.version!==1) throw new Error('Invalid draft.');const draft=validateSelectionFile(catalog,saved.selection);
-        if(!draft.engines.length||selectionAvailable(catalog,draft.engines,draft.choices)){state.engines=draft.engines;state.choices=draft.choices;updateResolution();state.step=[1,2,3].includes(saved.step)?saved.step:1;if(state.step===3&&!state.selected) state.step=state.resolved.canContinue?2:1;if(state.step===2&&!state.resolved.canContinue) state.step=1;recovered=Boolean(state.engines.length);} else {state.imported=draft;state.step=1;}
-        if(saved.unavailable){state.imported=saved.unavailable.format==='microfreak.firmware-recipe'?normalizeRecipe(saved.unavailable,catalog.base):validateUnavailable(saved.unavailable);state.step=1;}
-      } else {const entry=catalog.combinations.find(e=>e.id===localStorage.getItem(LEGACY_KEY));if(entry){restoreRecipe(entry.recipe);state.step=1;recovered=true;}else{const id=localStorage.getItem(LEGACY_KEY);if(id&&/^[a-f0-9]{64}$/.test(id))state.imported={format:'microfreak.lite-catalog-reference',version:1,id};}}
-    } catch {recoveryError=true;state.engines=[];state.choices={};state.step=1;state.imported=null;}
-    updateResolution();render();$('recipe-input').disabled=false;$('firmware-input').disabled=false;
-    notice(recoveryError?'Could not restore your previous selection. Please choose an engine again.':state.imported?'This selection is not available in this version. You can save it or choose another engine.':recovered?'Your choices have been restored. You can keep editing them.':'Choose the new engine you want.');
-  } catch(error) {notice(error.message || 'Could not start the tool.',true);}
-}
-init();
+$('add').addEventListener('click',()=>{state.removed=null;invalidate();state.rows.push({original:'',engine:'',variant:'normal'});save();render('Original engine '+state.rows.length);document.activeElement?.scrollIntoView({block:'nearest'});notice('Choose an original and its new engine.');});
+$('undo').addEventListener('click',()=>{if(!state.removed||state.busy)return;invalidate();const {row,index}=state.removed;state.removed=null;state.rows.splice(Math.min(index,state.rows.length),0,row);save();render('Original engine '+(Math.min(index,state.rows.length-1)+1));notice('Replacement restored.');});
+$('file').addEventListener('change',()=>{invalidate();state.file=$('file').files[0]||null;const invalid=state.file&&state.file.size!==state.library.base.size;$('file-error').hidden=!invalid;$('file').setAttribute('aria-invalid',String(Boolean(invalid)));$('file-name').textContent=state.file?.name||'No file selected.';if(invalid){state.file=null;notice('Choose the official MicroFreak 5.0.0.2084 .mff file.',true);}else notice(state.file?'File selected. Its contents will be verified before use.':'No file selected. Choose the official .mff file when ready.');sync();});
+$('cancel').addEventListener('click',()=>{invalidate();render();notice('Preparation canceled. Your choices have been kept.');});
+$('prepare').addEventListener('click',async()=>{if(!state.file||state.busy)return;invalidate();const epoch=state.epoch,recipe=selection(),file=state.file;state.busy=true;render();notice('Preparing your selection…');try{const base=await file.arrayBuffer();if(epoch!==state.epoch)return;const worker=new Worker('./worker.js?custom-selection-20261022');state.worker=worker;worker.onmessage=({data})=>{if(epoch!==state.epoch)return;if(data.startupError){invalidate();render();notice(data.startupError,true);return;}if(data.ready){worker.postMessage({id:epoch,recipe,base,custom:recipe.some(r=>r.engine===CUSTOM_ENGINE)?{bytes:state.bank.bytes,name:state.bank.name,selected:state.bank.selected}:null},[base]);return;}if(data.id!==epoch)return;if(data.progress){notice(data.progress);return;}if(data.error){invalidate();render();notice('Could not verify this selection. '+data.error,true);return;}if(data.result){if(!data.checks?.passed){invalidate();render();notice('Verification did not pass. Download blocked.',true);return;}worker.terminate();state.worker=null;state.busy=false;state.result=data;state.url=URL.createObjectURL(new Blob([data.result],{type:'application/octet-stream'}));$('summary').replaceChildren(...recipe.map(r=>node('li',state.library.hosts[r.original].name+' → '+(r.engine==='empty'?'Empty':engineName(Object.values(activeLibrary().engines).find(e=>e.engine===r.engine&&e.variant===r.variant)))+(r.variant!=='normal'?' ('+variantName(r.variant)+')':''))));const review=summarizeSelection(activeLibrary(),state.rows);$('result-kept').textContent=review.kept.length+' original engines kept. '+review.empty.length+' positions set to Empty (silent).';$('check-summary').textContent='The whole selection passed space, memory, archive, native initialization, notes, controls, four-voice audio and engine-change checks. Empty slots were checked for silence. Boot, physical audio, full MIDI transport and CPU timing need separate testing.';const moveFocus=document.hasFocus()&&[document.body,$('prepare'),$('cancel')].includes(document.activeElement);$('result').hidden=false;render();notice('Your firmware is ready.');if(moveFocus){$('result-title').focus({preventScroll:true});$('result-title').scrollIntoView({block:'nearest'});}}};worker.onerror=()=>{if(epoch===state.epoch){invalidate();render();notice('The browser could not complete verification. No download was created.',true);}};}catch(e){if(epoch===state.epoch){invalidate();render();notice(e.message,true);}}});
+$('download').addEventListener('click',()=>{if(!state.result||!state.url)return;const a=node('a');a.href=state.url;a.download='FreakSwap_2_0_'+state.result.sha256.slice(0,12)+'.mff';document.body.append(a);a.click();a.remove();});
+$('guide').addEventListener('click',()=>{if(!state.result)return;const text=['# FreakSwap installation','',...state.result.recipe.map(r=>state.library.hosts[r.original].name+' → '+(r.engine==='empty'?'Empty':engineName(Object.values(activeLibrary().engines).find(e=>e.engine===r.engine&&e.variant===r.variant)))+' ('+r.variant+')'),'','## Shift + Type','',...state.result.recipe.flatMap(r=>{const e=Object.values(state.library.engines).find(e=>e.engine===r.engine&&e.variant===r.variant);return e?.twist?[engineName(e)+' — '+e.twist.label+': '+e.twist.description+' Default: 50%.']:[];}),'',...(state.result.custom?['## Imported presets · '+state.result.custom.name,'',...state.result.custom.patchNames.map((name,i)=>(i+1)+'. '+name)]:[]),'','SHA-256: '+state.result.sha256,'','Back up your presets and keep the official firmware. Install the .mff manually with Arturia MIDI Control Center. Test every replacement, retained engine and Empty slot, controls, paraphonic notes, unison, MIDI and preset save/load after restarting. Automated checks do not certify hardware boot, timing or physical audio.'].join('\n'),url=URL.createObjectURL(new Blob([text],{type:'text/markdown'})),a=node('a');a.href=url;a.download='FreakSwap-INSTALLATION.md';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);});
+window.addEventListener('pagehide',()=>{audition.resetBank();save();state.file=null;$('file').value='';invalidate();});
+(async()=>{try{const response=await fetch('./library.json',{cache:'no-store'}),bytes=await response.arrayBuffer();if(!response.ok||await hash(bytes)!==LIBRARY_SHA256)throw new Error('The engine library failed verification.');state.library=JSON.parse(new TextDecoder().decode(bytes));await Promise.all(Object.entries(state.library.modules).map(async([id,a])=>{const r=await fetch(a.url),b=await r.arrayBuffer();if(!r.ok||b.byteLength!==a.size||await hash(b)!==id)throw new Error('A reusable engine module failed verification.');state.modules[id]=JSON.parse(new TextDecoder().decode(b));}));try{const saved=JSON.parse(localStorage.getItem('freakswap-v2-draft')||'[]');if(Array.isArray(saved)&&saved.length<=22&&saved.every(r=>r&&typeof r.engine==='string'&&typeof r.original==='string'))state.rows=saved.map(r=>({...r,variant:r.variant||'normal'}));}catch{}render();notice('Choose your engines. Space is planned for the complete selection.');}catch(e){notice(e.message,true);}})();

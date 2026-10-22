@@ -18,11 +18,23 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - name: Prepare static site
+      - name: Prepare audited static site
         run: |
-          mkdir _site
-          cp *.html *.js *.css *.json NOTICE.txt .nojekyll _site/
-          python3 -m zipfile -e catalog.zip _site
+          python3 - <<'PYTHON'
+          import hashlib, json, shutil
+          from pathlib import Path
+          files = json.loads(Path('.github/pages-files.json').read_text())['files']
+          for item in files:
+              source = Path(item['path'])
+              if source.is_absolute() or '..' in source.parts or source.is_symlink():
+                  raise SystemExit('Invalid release path')
+              data = source.read_bytes()
+              if len(data) != item['bytes'] or hashlib.sha256(data).hexdigest() != item['sha256']:
+                  raise SystemExit('Release integrity check failed: ' + str(source))
+              target = Path('_site') / source
+              target.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copyfile(source, target)
+          PYTHON
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

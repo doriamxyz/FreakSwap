@@ -1,0 +1,63 @@
+{
+  "format": "freakswap.arm-module",
+  "version": 1,
+  "sections": [
+    {
+      "id": 0,
+      "size": 92,
+      "alignment": 4,
+      "data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+      "relocations": []
+    },
+    {
+      "id": 1,
+      "size": 152,
+      "alignment": 4,
+      "data": "Len/R8RtgkYgSA9GFikeRhVGOUYqRjNGoEZI+CgPmr8bSFD4J5BP8AAJufEADxi/CiEYSIRGUEbgR7nxAA8i0DggACGq+AxwoPEoArL1qH8C0iFQBDD35wAgACGxQgLSaFAEMfrnyPgAkM3pAmZpRkBGzekAVdn4ACCQR9n4BCBARgAhkEe96P+HAL94hQcIAAAAAEUHAwg=",
+      "relocations": [
+        {
+          "offset": 144,
+          "type": 2,
+          "target": {
+            "section": 0,
+            "value": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "size": 52,
+      "alignment": 4,
+      "data": "cLUURgVGObkWLAXYB0hQ+CQACLEKJgDgJkYFSyhGMkaYR6ZCGL+sgXC9AL8AAAAAFf4CCA==",
+      "relocations": [
+        {
+          "offset": 44,
+          "type": 2,
+          "target": {
+            "section": 0,
+            "value": 0
+          }
+        }
+      ]
+    }
+  ],
+  "roots": [
+    {
+      "section": 1,
+      "value": 1
+    },
+    {
+      "section": 2,
+      "value": 1
+    },
+    {
+      "section": 0,
+      "value": 0
+    },
+    {
+      "section": 1,
+      "value": 1
+    }
+  ]
+}

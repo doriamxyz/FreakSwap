@@ -1,0 +1,139 @@
+{
+  "format": "freakswap.arm-module",
+  "version": 1,
+  "sections": [
+    {
+      "id": 0,
+      "size": 2,
+      "alignment": 2,
+      "data": "cEc=",
+      "relocations": []
+    },
+    {
+      "id": 1,
+      "size": 90,
+      "alignment": 2,
+      "data": "TfIKfMP2I0zA+FDAwPgowNH4CMAAIk/wfFO89cB/gmPCYwJkQ2SA+EggwmRDZYJlwmUCYUJhgmHDYYD4ICBCYsNiAmNCYwbTCmgC9cBzC2Cs9cBzi2ACZnBH",
+      "relocations": []
+    },
+    {
+      "id": 2,
+      "size": 2,
+      "alignment": 2,
+      "data": "cEc=",
+      "relocations": []
+    },
+    {
+      "id": 3,
+      "size": 932,
+      "alignment": 4,
+      "data": "LenwRy3tDouR7QEKuu4CKp/t2how7gIKtO5BChxGFUbx7hD6gEYK1J/t1Sqw7kAatO5CCvHuEPrIv7DuQhqf7dEKQPIADDHuABq97sE6uO7DShPuECox7kQ6n+3LGgQgwPIADMLyAAAM64ICI+4BOpDtACqS7QBKve7DOkDyAAIT7hB6wPIAAgLrhwdP9gBzl+0AOsLyAQO17gDaIu4NKiTuAzofaEXyUHAWniLuAyq27gDqw/JUEIdCIu4OihDRm4iz9YBPDtmj9YBAAu4QCp/trjq47kIqgu4DKjLuDioJ4E/0gEMC7hA6n+2pOrjuQioi7gMqke0EOkDyAAMj7gA6ve7DSrjuxFoU7hAKMu4CSr/uAHrA8gADJO4OajTuB0q37gB6A+uAADbuDmo07gdKtO5OKvHuEPpIv7DuRkqQ7QBq0O0BCjPuRTow7sZaJe4DOjPuBjoz7gAKve7AOrjuw1ow7kUKE+4QCiDuAQoM64AAve7ACpDtADoQ7hAKAuuAAJDtAAoo7gQqI+4ACpHtAxoi7gAKn+1+KrTuTQqw7k2ake0CSvHuEPpIv7DuQJoh7gIKn+14GjDuDqqy7gAKJO4ACinuARok7gAKMe4HGtj4YHCf7XHKIO4Buk/qRgoI8RAAOUZSRrDuSArw7kkKsO5KGvDuTBqw7ksqB+vGCf/3/v8I8TgAsO5ICvDuSQqw7koa8O5MGrDuSypJRlJG//f+/wAuAPCjgJ/tXApA8gAB8ADA8gABAL+X7QAaAT4x7g0ave7BKrjuwiox7kIaIe4AGr3uwSoS7hAqAeuCArjuwjqS7QAqku0BSjHuQxo07kI6I+4BGjHuAhoh7g4ahe0AGpftASoy7g0qve7COrjuwzoy7kMqIu4AKr3uwjoT7hAquO7DSgHrggIy7kQqku0AOpLtAUoH6wACNO5DSiTuAioy7gMqIu4OKjLuARql7AEaku0AGgfxCAcx7g0ave7BKrjuwiox7kIaIe4AGr3uwSoS7hA6AeuDA7juwjqT7QAqk+0BSjHuQxo07kI6I+4BGjHuAhoh7g4ahO0AGpLtASoy7g0qve7COrjuwzoy7kMqIu4AKr3uwjoT7hAquO7DSgHrggIy7kQqku0AOpLtAUo07kNKJO4CKjLuAyoi7g4qMu4BGqTsARp/9GWvvewOi73o8IcAvwAAAMMAAP5CAAAAQwAAgEMA/P9GAAAAOEjh+j4zM3PAAAAAAAAAgEQ=",
+      "relocations": [
+        {
+          "offset": 66,
+          "type": 47,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 96,
+          "type": 48,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 124,
+          "type": 47,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 132,
+          "type": 48,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 250,
+          "type": 47,
+          "target": {
+            "external": 134728396
+          }
+        },
+        {
+          "offset": 278,
+          "type": 48,
+          "target": {
+            "external": 134728396
+          }
+        },
+        {
+          "offset": 514,
+          "type": 10,
+          "target": {
+            "section": 5,
+            "value": 1
+          }
+        },
+        {
+          "offset": 546,
+          "type": 10,
+          "target": {
+            "section": 4,
+            "value": 1
+          }
+        },
+        {
+          "offset": 560,
+          "type": 47,
+          "target": {
+            "external": 134730976
+          }
+        },
+        {
+          "offset": 566,
+          "type": 48,
+          "target": {
+            "external": 134730976
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "size": 780,
+      "alignment": 4,
+      "data": "te4AerTuRwrx7hD69O5HCqi/sO5HCvHuEPq4v7DuYHoW2nDuoCq07mIa8e4Q+hHUMO6gOrfuAEo07kM6tO5DGvDuQSrx7hD6yL/w7kMqAeD27gAqLe0Qi4KwkO0CupDtBRqQ7QY6kO0HSpDtCFqQ7QlqACoA8DiBAO6QKjDuQQr47mA6gO4jCjfuQ3py7sQKce7FGjLuRirA7qMKwe6jGoLuIyoDfE/wAQz+7gAq9+4ASv/uAFr27gBqje0BCofuIwrf7ZE69O4IerfuCIqN7QAKAL8w7oRKNO7EqoTuisqE7oT6Me6FWjXuIto17gWate5A2jTuyZqd7QEK8e4Q+rXuQJpIv7DuY9rx7hD6SL+w7mOakO0A6jDuARox7g7qtO5k6j7uJarx7hD6uL+w7k6qne0ACtDtA4ow7gM6eO7EinPuKJp/7gyKkO0B6mPuKIpp7miqae4ounTuyYoBOj3uDdoz7g7q8e5oyvDuS4qw7mO6gO0AqoDtAerbBz/RtO5E6vHuEPoA8X6Afu5E2s3uqdqA+BDAbe6m6m3urvpt7i/6dO7t2n/uqIpt7qL6be6v+m3uL/pt7qbaP+6Lum3urfp37u3aL+6ICjDuLQpv7q/aMO5tCirugApw7iiKLu6uCnfu7tpg7gjqfu6t2iDuAAo97sAKKu6ACjDuC7q07mTq8e4Q+jzUPu4l6o7uAwoAI4DtAeoDdGDuJtpt7q3qd+7t+i7uiHo37i96bu6u6jfubnp07sDqbu6i+m7ur/ps7q/6P+6Luivuh3o37gu6Lu6memfuB+o37sd6bu6I+j/uh3pu7q7qIO4tCjfubnos7oAKMO4oCivuh3p37gCKe+cBIwDgACM+7kQKIO4MCjTuwAov7g56tO5E6vHuEPpIv7DuRwqw7mR6SL+w7mN6N+5OeifuDXo37g56MO5HCiDuCQow7gcKMu4GajvuALom7igKMO4KCoDtA0qh7AEKACp/9PaugO0CuoDtCWqA7QhagO0HSoDtBjqA7QUaArC97BCLcEcAAAAA",
+      "relocations": []
+    },
+    {
+      "id": 5,
+      "size": 1080,
+      "alignment": 4,
+      "data": "te4AerTuRwrx7hD69O5HCqi/sO5HCvHuEPq4v7DuYHoW2nDuoCq07mIa8e4Q+hHUMO6gOrfuAEo07kM6tO5DGvDuQSrx7hD6yL/w7kMqAeD27gAqELUt7RCLhLDQ7QJKkO0FGpDtBjqQ7QdKkO0IWpDtCWoAKgDwyoEA7pAqMO5BCvjuYDqA7iMKN+5DenLuxApx7sUaMu5GKoLuIyoDfE/wAQz+7gAq9+4AWv/uAGr27gB6tO4IirfuCJqN7QMKh+4jCo3tAgqA7qMKje0BCoHuowrf7dc6je0ACp3tAwow7gEane0CCjDuAzqd7QEKMO4ESjXuxMrF7oyKhe6E+p3tAAow7gVaNe4iqrXuQKrx7hD6SL+w7mOqOu4K2jXuBao17srKkO0AqrXuQMpx7gqq8e4Q+ki/sO5jyvTuZaqQ7QGq8e4Q+sDtAKqA8qKAc+4KusDtAbrw7mPK8O5jmrDuauqQ7QOqOu5EqnPuCto/7iiqI+4KqmzuSups7gr6Ne7MqrHuSqrbBz/R9O5EuvHuEPoA8dyAO+7EuovuLbqA+BDAK+4nCivuAHot7gd6N+4kenXuy0ok7qK6JO6Lui3uC7pk7qdKO+4sumTupMp47mRKbO6JCnDupAps7qxKcO7kCm7uoApw7odKIO4AejjuQApn7gkKMO6ACifuB3ow7kcKLu6ACnDuC8r07mW68e4Q+gDxmoB77qa6i+6DCgAjwO0BugN0IO4nemfuBwo47ke6YO6JGnHuixpg7qAKce7gCnXuwBoh7qK6Ie6LuiruC7o77iy6b+6gCnDui8ph7qcKYO6gGnjuYAoh7om6e+4gCmHuoRog7gcKcO7hCiruAAow7iQKL+6genfuAEp65wC/Ou6m6s7uAZpP8AAO3EN17um6a+6Dynzuitr07mXafe6myvDuberx7hD6qL/w7mzqfu7EymzuqMr07kTqde7sym/uLvrx7hD6SL/w7m/K8O5l+ki/8O5j+n/u7vpv7o36f+6u6nzu7sps7ozKfO6uymnup+pp7q7qbO6u6nTu7kpr7qfqa+6uumzuq8pz7gq6gO0A6qi/T/ABDnzuo8oU6g4PwO0Bun/0E6/07mXa8e4Q+r/2Da8H4AEjAOAAI/TuZarx7hD6Bdtj7im6ACPA7QG6A3Q77sQKIO4oCjXuwAov7it69O5EuvHuEPpIv7DuRwqw7mV6SL+w7mN6N+5reifuDXo37it6MO5HCiDuDAow7gcKPO6AqjXuzgqx7gB6IO4HCi7uAAqw7gB6N+5AeiDuBwou7g56J+4HenTuIgo37k568O7gCiDuh3ok7oAKN+4HejLuBmo37g56Ju4ACjDuBwoBOoDtA0qh7AEKACrw7kpKf/RorgHgsO5kqoDtAqqA7QlqgO0IWoDtB0qA7QY6gO0FGgSwvewQixC9AL8AAAAA",
+      "relocations": []
+    }
+  ],
+  "roots": [
+    {
+      "section": 1,
+      "value": 1
+    },
+    {
+      "section": 2,
+      "value": 1
+    },
+    {
+      "section": 0,
+      "value": 1
+    },
+    {
+      "section": 3,
+      "value": 1
+    }
+  ]
+}

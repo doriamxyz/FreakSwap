@@ -1,10 +1,14 @@
-import {generate} from './patch-core.js';
-
-self.onmessage = async ({data}) => {
-  try {
-    const result = await generate(data.base, data.patch, data.entry);
-    self.postMessage({id: data.id, result}, [result]);
-  } catch (error) {
-    self.postMessage({id: data.id, error: error.message || 'Could not prepare the firmware.'});
-  }
-};
+importScripts('./unicorn_arm.js');
+(async()=>{
+ const {customBank,customContext}=await import('./custom-sixop.js');
+ const {LIBRARY_SHA256}=await import('./library-release.js?sixop-defaults-20261022'),core=await import('./compose.js?sixop-defaults-20261022'),{checkComposition}=await import('./arm-checks.js?sixop-defaults-20261022');
+ async function verifiedJSON(asset){if(!/^modules\/[a-f0-9]{64}\.json$/.test(asset.url))throw new Error('Invalid module reference.');const r=await fetch(asset.url);if(!r.ok)throw new Error('Could not load an engine module.');const bytes=await r.arrayBuffer();if(bytes.byteLength!==asset.size||await core.hash(bytes)!==asset.sha256)throw new Error('Engine module verification failed.');return JSON.parse(new TextDecoder().decode(bytes));}
+ self.onmessage=async({data})=>{const {id,recipe,base}=data;const progress=message=>self.postMessage({id,progress:message});try{
+  progress('Checking your official firmware…');const response=await fetch('./library.json',{cache:'no-store'});if(!response.ok)throw new Error('Could not load the engine library.');const bytes=await response.arrayBuffer();if(await core.hash(bytes)!==LIBRARY_SHA256)throw new Error('The engine library failed verification.');const pinned=JSON.parse(new TextDecoder().decode(bytes)),bank=data.custom?await customBank(data.custom.bytes,data.custom.name,data.custom.selected??null):null,ctx=customContext(pinned,{},recipe,bank),library=ctx.library,selected=core.selectAdapters(library,recipe),original=new Uint8Array(base),{raw}=await core.unpackOfficial(original,library);
+  progress('Loading reusable engine modules…');const modules={...ctx.modules};await Promise.all([...new Set([...(selected.some(a=>a.twist)?[library.extensions.twist.module]:[]),...selected.flatMap(a=>[a.module,...(a.resources||[])]),...(selected.some(a=>a.native_alias)?[library.bridge.module]:[]),...(library.version===3?[library.retirement_module]:[])])].map(async id=>{if(!modules[id])modules[id]=await verifiedJSON(pinned.modules[id]);}));
+  progress('Assembling your selection…');const composition=await core.composeRaw(raw,library,recipe,modules);
+  progress('Starting audio checks…');const uc=await MUnicorn();const checks=await checkComposition(uc,composition.image,composition.selected,progress);if(!checks.passed)throw new Error('The audio checks did not pass.');
+  progress('Checking the firmware archive…');const result=await core.packageFirmware(original,library,composition);self.postMessage({id,result:result.bytes.buffer,sha256:result.sha256,raw_sha256:composition.sha256,checks,recipe,custom:bank?{name:bank.name,selected:bank.selected,patchNames:bank.patchNames}:null},[result.bytes.buffer]);
+ }catch(error){self.postMessage({id,error:typeof error==='string'?error:error.message||'The selection could not be verified. No download was created.'});}};
+ self.postMessage({ready:true});
+})().catch(error=>self.postMessage({startupError:error.message||String(error)}));

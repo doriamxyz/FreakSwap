@@ -1,29 +1,27 @@
 # FreakSwap
 
-An independent, experimental browser tool for replacing one original MicroFreak synth engine with an engine adapted from Mutable Instruments’ Plaits.
-
 [Open FreakSwap](https://doriamxyz.github.io/FreakSwap/)
+
+A free, independent browser tool for building a custom MicroFreak engine lineup. Choose which original engines to replace, listen to examples, and prepare a modified firmware file locally in your browser.
 
 ## Use
 
-1. Choose one of the 11 engines.
-2. Choose an available original engine to replace.
-3. Select your official MicroFreak 5.0.0.2084 firmware file.
-4. Download the modified `.mff` and installation guide.
-5. Install manually using Arturia’s MIDI Control Center.
+1. Choose the original positions and their replacement engines.
+2. Optionally load a compatible Yamaha DX7 bank for 6-Op FM Custom and select its presets.
+3. Continue and select the official MicroFreak firmware **5.0.0.2084** (`.mff`).
+4. Prepare and download the modified firmware and installation guide.
+5. Back up your presets and install manually with Arturia MIDI Control Center.
 
-The catalog contains 38 individual replacement options. Firmware processing runs locally in your browser. The official firmware is not included or uploaded to a server.
+The official firmware is not included or uploaded. Imported banks remain in the browser session and must be selected again after a reload. Audio examples are digital references, not recordings of the instrument's analog output.
 
 ## Installation risk
 
-Back up your presets before installing. Presets using the replaced engine will sound different. Installing modified firmware carries a risk of bricking your MicroFreak. You use this experimental tool at your own risk and are responsible for your hardware. The author cannot guarantee that it will work on your unit or accept responsibility for damage or issues resulting from its use.
+Modified firmware is experimental and can damage or brick your instrument. Back up your presets and keep the official firmware. Automated checks do not certify hardware boot, timing or physical audio. Use at your own risk.
 
-## GitHub Pages
+## Support
 
-In Settings → Pages, select **GitHub Actions** as the source. The workflow in `.github/workflows/pages.yml` publishes every push to `main`: it copies the web files and extracts `catalog.zip` into the deployed `catalog/` folder. The archive contains all 114 patches, recipes, and installation guides.
-
-For a local preview, extract `catalog.zip` at the repository root, then serve that directory over HTTP. The site uses relative asset paths and runs under the repository URL.
+FreakSwap is free and always will be. Optional contributions: [Support the project](https://ko-fi.com/doriamxyz).
 
 ## Notices
 
-Independent project, unaffiliated with Arturia. MicroFreak and MIDI Control Center are Arturia product names. See [NOTICE.txt](NOTICE.txt) for third-party attribution and license terms.
+Independent project, unaffiliated with Arturia. MicroFreak and MIDI Control Center are Arturia product names. See [NOTICE.txt](NOTICE.txt) for third-party attribution and licenses. The verification interpreter's source and build instructions are included in [unicorn-source.tar.gz](unicorn-source.tar.gz).
