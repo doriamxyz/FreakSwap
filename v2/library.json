@@ -19,12 +19,19 @@
         "Amount",
         "Distort"
       ],
-      "module": "32f67419a043230e04a117bc4cc086155751c083f3690ebb6b978aaa7c2e6952",
+      "module": "30e79cbd43b14b1364ae1d5f443de525a31500c9032f08bdad86e77028c5f587",
       "object_bytes": 100,
       "scratch_bytes": 384,
       "reset_on_activation": false,
       "continuous_controls": true,
-      "abi": "plaits-engine-v1"
+      "abi": "plaits-engine-v1",
+      "twist": {
+        "index": 0,
+        "label": "Ratio Fine",
+        "default": 16384,
+        "palette_id": "phase-distortion",
+        "description": "Moves the modulator ratio from an octave down through unison to an octave up."
+      }
     },
     "classic_waves_vcf": {
       "engine": "classic_waves_vcf",
@@ -36,12 +43,19 @@
         "Cutoff",
         "Shape"
       ],
-      "module": "b3ca75603aee57658d5fe28842040c76d275ea253dfe565491e016faed489f5e",
+      "module": "dfd8fd7871d950dffd64fa5060b1db8763c989d0c5be746690317976aaecd011",
       "object_bytes": 24,
       "scratch_bytes": 140,
       "reset_on_activation": false,
       "continuous_controls": true,
-      "abi": "plaits-engine-v1"
+      "abi": "plaits-engine-v1",
+      "twist": {
+        "index": 1,
+        "label": "Drive",
+        "default": 16384,
+        "palette_id": "virtual-analog-vcf",
+        "description": "Increases oscillator and filter drive from clean to saturated."
+      }
     },
     "swarm": {
       "engine": "swarm",
@@ -53,12 +67,19 @@
         "Density",
         "Size"
       ],
-      "module": "e46a5e5637f21593db2303fdefb26f37acd79622517c0265063970480dc09b23",
+      "module": "b11307266090ab6b522eec428527d6c0b92de66c82bb6dd19ea9ead74325cda4",
       "object_bytes": 20,
       "scratch_bytes": 512,
       "reset_on_activation": true,
       "continuous_controls": true,
-      "abi": "plaits-engine-v1"
+      "abi": "plaits-engine-v1",
+      "twist": {
+        "index": 2,
+        "label": "Size Spread",
+        "default": 16384,
+        "palette_id": "swarm",
+        "description": "Widens the distribution of grain sizes around the stock midpoint."
+      }
     },
     "inharmonic_string": {
       "engine": "inharmonic_string",
@@ -70,12 +91,19 @@
         "Bright",
         "Damping"
       ],
-      "module": "c7b7ee5d4100b0e931e8a72d2c2d8cc0df01416e77f68a12cb967156c2e9c4a6",
+      "module": "f5fd9e5e37af1186bc9f119966645ad79c2942ac690e841039c2fe36ab3fd871",
       "object_bytes": 52,
       "scratch_bytes": 15808,
       "reset_on_activation": false,
       "continuous_controls": true,
-      "abi": "plaits-engine-v1"
+      "abi": "plaits-engine-v1",
+      "twist": {
+        "index": 3,
+        "label": "Excite Size",
+        "default": 16384,
+        "palette_id": "inharmonic-string",
+        "description": "Lengthens the excitation from a short strike toward a scrape."
+      }
     },
     "particle_noise": {
       "engine": "particle_noise",
@@ -87,12 +115,19 @@
         "Density",
         "Diff/Res"
       ],
-      "module": "2cf141cfd2b2f63863d14a5b73aca92082fecf3e6db8a88f0ac698ff38518702",
+      "module": "842cb660e75e4d36d8355e22574bba3b333afa21d75b84b5a4f883089fcb3fa2",
       "object_bytes": 224,
       "scratch_bytes": 16384,
       "reset_on_activation": true,
       "continuous_controls": true,
-      "abi": "plaits-engine-v1"
+      "abi": "plaits-engine-v1",
+      "twist": {
+        "index": 4,
+        "label": "Diffusion",
+        "default": 16384,
+        "palette_id": "particle-noise",
+        "description": "Adds diffusion from a dry particle stream to a dense cloud."
+      }
     },
     "filtered_noise": {
       "engine": "filtered_noise",
@@ -104,12 +139,19 @@
         "Grain",
         "Resonance"
       ],
-      "module": "52800abdacd127ca257bfb021f784c8a4e2e715a3b9f134524d50d82b9373b6c",
+      "module": "b6311c1bacbf948f39203e1e4472d71ba717b010d480a4010289a36d3a19855e",
       "object_bytes": 132,
       "scratch_bytes": 96,
       "reset_on_activation": false,
       "continuous_controls": true,
-      "abi": "plaits-engine-v1"
+      "abi": "plaits-engine-v1",
+      "twist": {
+        "index": 5,
+        "label": "Filter Pos",
+        "default": 16384,
+        "palette_id": "filtered-noise",
+        "description": "Offsets the filter response from low-pass toward high-pass around the HARMONICS setting."
+      }
     },
     "filtered_noise_dual_band": {
       "engine": "filtered_noise",
@@ -126,7 +168,8 @@
       "scratch_bytes": 96,
       "reset_on_activation": false,
       "continuous_controls": true,
-      "abi": "plaits-engine-v1"
+      "abi": "plaits-engine-v1",
+      "twist_note": "Palette TWIST affects OUT only; Dual Band uses AUX, so this variant retains its original controls and DSP."
     },
     "string_machine": {
       "engine": "string_machine",
@@ -138,12 +181,19 @@
         "Bright/Ens",
         "Register"
       ],
-      "module": "cd1e78edfffe9130217081bd3afe03a3db138ea4127bc74397b297e7b1ab7640",
+      "module": "d2dc23f3fd58ffd6cc43927e5f92e8113ab9c223eaaa07d298caba4961ea2142",
       "object_bytes": 276,
       "scratch_bytes": 4332,
       "reset_on_activation": false,
       "continuous_controls": false,
-      "abi": "plaits-engine-v1"
+      "abi": "plaits-engine-v1",
+      "twist": {
+        "index": 6,
+        "label": "Ensemble",
+        "default": 16384,
+        "palette_id": "string-machine",
+        "description": "Moves ensemble depth from dry through the stock setting to fully wet."
+      }
     },
     "chiptune": {
       "engine": "chiptune",
@@ -155,12 +205,19 @@
         "Arp/Inv",
         "Wave"
       ],
-      "module": "34142df3344279cf3c57dc233fed5cba42729e721138731668a0dcb2bf801deb",
-      "object_bytes": 240,
+      "module": "9be89d2d825734fcc254745741568c390db58ec8c58a638e30b4d8aa966d2687",
+      "object_bytes": 260,
       "scratch_bytes": 236,
       "reset_on_activation": true,
       "continuous_controls": false,
-      "abi": "plaits-engine-v1"
+      "abi": "plaits-engine-v1",
+      "twist": {
+        "index": 7,
+        "label": "Register",
+        "default": 16384,
+        "palette_id": "chiptune",
+        "description": "Selects stepped register and inversion presets around the stock center step."
+      }
     },
     "bass_drum": {
       "engine": "bass_drum",
@@ -172,12 +229,19 @@
         "Tone",
         "Decay"
       ],
-      "module": "48711dead4929bf9ca04d6c165320a71e285a35923a45171df3d419c8abbf060",
+      "module": "196a3305ae8b2e60310c79b03d0a1a402dd7d2ab091f8acc5150fb97cb3e1dc5",
       "object_bytes": 36,
       "scratch_bytes": 160,
       "reset_on_activation": false,
       "continuous_controls": true,
-      "abi": "plaits-engine-v1"
+      "abi": "plaits-engine-v1",
+      "twist": {
+        "index": 8,
+        "label": "Punch",
+        "default": 16384,
+        "palette_id": "analog-bass-drum",
+        "description": "Changes pitch-envelope punch from restrained to exaggerated."
+      }
     },
     "snare_drum": {
       "engine": "snare_drum",
@@ -189,12 +253,19 @@
         "Tone",
         "Decay"
       ],
-      "module": "32293c26639307cdd2e860d8b6ee3a26447619b18dee57d20408e74243c8db10",
+      "module": "1d4c82d1370345dd24c9218e207401cf2729f51858ff1dd7a6dc01ca5ca736f1",
       "object_bytes": 28,
       "scratch_bytes": 276,
       "reset_on_activation": false,
       "continuous_controls": true,
-      "abi": "plaits-engine-v1"
+      "abi": "plaits-engine-v1",
+      "twist": {
+        "index": 9,
+        "label": "Mode Spread",
+        "default": 16384,
+        "palette_id": "analog-snare",
+        "description": "Spreads the shell modes from compact to strongly inharmonic."
+      }
     },
     "wave_terrain": {
       "engine": "wave_terrain",
@@ -206,12 +277,19 @@
         "Radius",
         "Offset"
       ],
-      "module": "80495f6fa6f14697ceeb62a5dfc9b04d76391d3fd8208539ae3ea0d284aa9c64",
-      "object_bytes": 48,
+      "module": "399949a322ce37cff9ae4e2bf20de6cf99b31e22f9b7a8ff57983128ce8c5e47",
+      "object_bytes": 52,
       "scratch_bytes": 384,
       "reset_on_activation": false,
       "continuous_controls": true,
-      "abi": "plaits-engine-v1"
+      "abi": "plaits-engine-v1",
+      "twist": {
+        "index": 10,
+        "label": "Y Offset",
+        "default": 16384,
+        "palette_id": "wave-terrain",
+        "description": "Offsets the Y-axis path to reveal complementary terrain contours."
+      }
     },
     "wave_terrain_aux": {
       "engine": "wave_terrain",
@@ -223,12 +301,19 @@
         "Radius",
         "Offset"
       ],
-      "module": "ac347a71540fda2c22dad7e0ef1592c7a2b7ff706ca1c832acd2a41c9ca2ca24",
-      "object_bytes": 48,
+      "module": "41fc0897727e1d550154d9fb7e37ecc8e9f470226caf9308b5dd2b3cec25d921",
+      "object_bytes": 52,
       "scratch_bytes": 384,
       "reset_on_activation": false,
       "continuous_controls": true,
-      "abi": "plaits-engine-v1"
+      "abi": "plaits-engine-v1",
+      "twist": {
+        "index": 10,
+        "label": "Y Offset",
+        "default": 16384,
+        "palette_id": "wave-terrain",
+        "description": "Offsets the Y-axis path to reveal complementary terrain contours."
+      }
     },
     "six_op_fm_a": {
       "engine": "six_op_fm_a",
@@ -690,6 +775,71 @@
       "url": "modules/63d4f7eae44dbf5148c0fbc70bf9009a751a35b2f77c79dd943e423a26df5409.json",
       "size": 5351,
       "sha256": "63d4f7eae44dbf5148c0fbc70bf9009a751a35b2f77c79dd943e423a26df5409"
+    },
+    "30e79cbd43b14b1364ae1d5f443de525a31500c9032f08bdad86e77028c5f587": {
+      "url": "modules/30e79cbd43b14b1364ae1d5f443de525a31500c9032f08bdad86e77028c5f587.json",
+      "size": 6200,
+      "sha256": "30e79cbd43b14b1364ae1d5f443de525a31500c9032f08bdad86e77028c5f587"
+    },
+    "dfd8fd7871d950dffd64fa5060b1db8763c989d0c5be746690317976aaecd011": {
+      "url": "modules/dfd8fd7871d950dffd64fa5060b1db8763c989d0c5be746690317976aaecd011.json",
+      "size": 5721,
+      "sha256": "dfd8fd7871d950dffd64fa5060b1db8763c989d0c5be746690317976aaecd011"
+    },
+    "b11307266090ab6b522eec428527d6c0b92de66c82bb6dd19ea9ead74325cda4": {
+      "url": "modules/b11307266090ab6b522eec428527d6c0b92de66c82bb6dd19ea9ead74325cda4.json",
+      "size": 6007,
+      "sha256": "b11307266090ab6b522eec428527d6c0b92de66c82bb6dd19ea9ead74325cda4"
+    },
+    "f5fd9e5e37af1186bc9f119966645ad79c2942ac690e841039c2fe36ab3fd871": {
+      "url": "modules/f5fd9e5e37af1186bc9f119966645ad79c2942ac690e841039c2fe36ab3fd871.json",
+      "size": 16862,
+      "sha256": "f5fd9e5e37af1186bc9f119966645ad79c2942ac690e841039c2fe36ab3fd871"
+    },
+    "842cb660e75e4d36d8355e22574bba3b333afa21d75b84b5a4f883089fcb3fa2": {
+      "url": "modules/842cb660e75e4d36d8355e22574bba3b333afa21d75b84b5a4f883089fcb3fa2.json",
+      "size": 5985,
+      "sha256": "842cb660e75e4d36d8355e22574bba3b333afa21d75b84b5a4f883089fcb3fa2"
+    },
+    "b6311c1bacbf948f39203e1e4472d71ba717b010d480a4010289a36d3a19855e": {
+      "url": "modules/b6311c1bacbf948f39203e1e4472d71ba717b010d480a4010289a36d3a19855e.json",
+      "size": 5205,
+      "sha256": "b6311c1bacbf948f39203e1e4472d71ba717b010d480a4010289a36d3a19855e"
+    },
+    "d2dc23f3fd58ffd6cc43927e5f92e8113ab9c223eaaa07d298caba4961ea2142": {
+      "url": "modules/d2dc23f3fd58ffd6cc43927e5f92e8113ab9c223eaaa07d298caba4961ea2142.json",
+      "size": 13980,
+      "sha256": "d2dc23f3fd58ffd6cc43927e5f92e8113ab9c223eaaa07d298caba4961ea2142"
+    },
+    "9be89d2d825734fcc254745741568c390db58ec8c58a638e30b4d8aa966d2687": {
+      "url": "modules/9be89d2d825734fcc254745741568c390db58ec8c58a638e30b4d8aa966d2687.json",
+      "size": 10563,
+      "sha256": "9be89d2d825734fcc254745741568c390db58ec8c58a638e30b4d8aa966d2687"
+    },
+    "196a3305ae8b2e60310c79b03d0a1a402dd7d2ab091f8acc5150fb97cb3e1dc5": {
+      "url": "modules/196a3305ae8b2e60310c79b03d0a1a402dd7d2ab091f8acc5150fb97cb3e1dc5.json",
+      "size": 13660,
+      "sha256": "196a3305ae8b2e60310c79b03d0a1a402dd7d2ab091f8acc5150fb97cb3e1dc5"
+    },
+    "1d4c82d1370345dd24c9218e207401cf2729f51858ff1dd7a6dc01ca5ca736f1": {
+      "url": "modules/1d4c82d1370345dd24c9218e207401cf2729f51858ff1dd7a6dc01ca5ca736f1.json",
+      "size": 12104,
+      "sha256": "1d4c82d1370345dd24c9218e207401cf2729f51858ff1dd7a6dc01ca5ca736f1"
+    },
+    "399949a322ce37cff9ae4e2bf20de6cf99b31e22f9b7a8ff57983128ce8c5e47": {
+      "url": "modules/399949a322ce37cff9ae4e2bf20de6cf99b31e22f9b7a8ff57983128ce8c5e47.json",
+      "size": 6439,
+      "sha256": "399949a322ce37cff9ae4e2bf20de6cf99b31e22f9b7a8ff57983128ce8c5e47"
+    },
+    "41fc0897727e1d550154d9fb7e37ecc8e9f470226caf9308b5dd2b3cec25d921": {
+      "url": "modules/41fc0897727e1d550154d9fb7e37ecc8e9f470226caf9308b5dd2b3cec25d921.json",
+      "size": 6456,
+      "sha256": "41fc0897727e1d550154d9fb7e37ecc8e9f470226caf9308b5dd2b3cec25d921"
+    },
+    "c1438f8b62f38555c746fa83826f1e1f7992a68a3ccf0837a8c760e5106c5f54": {
+      "url": "modules/c1438f8b62f38555c746fa83826f1e1f7992a68a3ccf0837a8c760e5106c5f54.json",
+      "size": 7654,
+      "sha256": "c1438f8b62f38555c746fa83826f1e1f7992a68a3ccf0837a8c760e5106c5f54"
     }
   },
   "bridge": {
@@ -1324,6 +1474,65 @@
         342148
       ],
       "boot_call": 342134
+    },
+    "twist": {
+      "module": "c1438f8b62f38555c746fa83826f1e1f7992a68a3ccf0837a8c760e5106c5f54",
+      "models_root": 0,
+      "next_root": 1,
+      "boot_root": 2,
+      "boot_init_root": 3,
+      "hooks": [
+        {
+          "raw": 224200,
+          "root": 4,
+          "expected": "2de9f047"
+        },
+        {
+          "raw": 285164,
+          "root": 5,
+          "expected": "2de9f047"
+        },
+        {
+          "raw": 289668,
+          "root": 6,
+          "expected": "2de9f04f"
+        },
+        {
+          "raw": 298240,
+          "root": 7,
+          "expected": "019a5355"
+        },
+        {
+          "raw": 298504,
+          "root": 8,
+          "expected": "d0f8d432"
+        }
+      ],
+      "state_address": 537001728,
+      "state_bytes": 128,
+      "stack_words": [
+        0,
+        342148
+      ],
+      "boot_call": 342134,
+      "roots": [
+        "tw_models",
+        "tw_next",
+        "tw_boot",
+        "tw_boot_init",
+        "tw_encoder_hook",
+        "tw_refresh_hook",
+        "tw_tick_hook",
+        "tw_save_hook",
+        "tw_load_hook",
+        "tw_encoder",
+        "tw_refresh",
+        "tw_tick",
+        "tw_save",
+        "tw_load",
+        "tw_runtime_init"
+      ],
+      "families": 11
     }
   }
 }

@@ -25,3 +25,10 @@ One core module exports the three bank initializers, shared DSP, UI/preset hooks
 Six-OP alone conditionally reserves 128 bytes at `0x2001ff80`, updates the initial/reset stack words and hooks boot, encoders, refresh/tick and SF6 persistence. The independent verifier checks these edits. Without Six-OP, those bytes are untouched. A/B/C retain SF6 V6 identities; relocating a bank to another Type position changes which engine old native presets select, so existing presets are not silently converted.
 
 The OLED Type-preview title limit and receiver-side regression are documented in [TYPE_PREVIEW_FIX.md](TYPE_PREVIEW_FIX.md).
+
+## Palette TWIST
+
+The experimental [TWIST extension](twist/README.md) adds the documented fourth
+parameter to the non-FM engine families with Shift + Type. Six-OP sources,
+modules and SF6 remain unchanged. Mixed selections chain the existing Six-OP
+hooks; a Six-OP-only selection retains its exact previous firmware.

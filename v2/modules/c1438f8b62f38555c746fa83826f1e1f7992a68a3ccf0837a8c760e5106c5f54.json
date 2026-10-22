@@ -1,0 +1,319 @@
+{
+  "format": "freakswap.arm-module",
+  "version": 1,
+  "sections": [
+    {
+      "id": 0,
+      "size": 276,
+      "alignment": 4,
+      "data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "relocations": []
+    },
+    {
+      "id": 1,
+      "size": 28,
+      "alignment": 4,
+      "data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+      "relocations": []
+    },
+    {
+      "id": 2,
+      "size": 236,
+      "alignment": 4,
+      "data": "Len8QTNIAYsWKWDYMk4B60EFVvglEAApWdAA60EAZCJH9lxzDfEDCDD4AhxD9v9wAfsCAkf2/3CZQrL78PAG0zEhCPEBA434AxACIQbgQPYpQ5lCENMN8QMDASEfT7L79/IKJ7L79/cH64cHoutHAkLwMAIacADgACHCsgojGE+y+/PyAuuCAqDrQgBP9g9yQPAwAAj4AQAI6wEAJSGg+AEQACACIbhHBuuFBg1NDkxwaClGoEewaAXxgGGgRwXxoGFARqBHACADIQAiuEe96PyBAL8E/wEgAAAAAPb/BACdVwUIABoAAQAAAAA=",
+      "relocations": [
+        {
+          "offset": 216,
+          "type": 2,
+          "target": {
+            "section": 0,
+            "value": 0
+          }
+        },
+        {
+          "offset": 232,
+          "type": 2,
+          "target": {
+            "section": 3,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "size": 76,
+      "alignment": 4,
+      "data": "+LUMRgVGACaoXQE2ACj70Q1PACAAIX8iuEcFLgbTACApRgQiuEcEPgQ19ucesQAgKUYyRrhHp/FMAwAgEiEiRgGwvejwQBhH6VcFCA==",
+      "relocations": []
+    },
+    {
+      "id": 4,
+      "size": 84,
+      "alignment": 4,
+      "data": "cLUERhBIACUFgGVzoHnheeVxQOoBIQZGIfACAgEqGL8BJgUpCUkIvwZGIEamcYhHT/SAcAZLZXImcgMhACKggQAgvehwQBhHGv8BIF38BAidVwUI",
+      "relocations": []
+    },
+    {
+      "id": 5,
+      "size": 296,
+      "alignment": 4,
+      "data": "ELX/9/7/vegQQN/4GMHc+ADAvPEADwDQYEff+ATwAL8xVwII/7WBsP/3/v8AKA7RAbC96P9A3/jswNz4BMC88QAPANBgRy3p8Eff+AjwAbD/vQC/zSsECP+1gbD/9/7/ACgO0QGwvej/QN/4uMDc+AjAvPEADwDQYEct6fBH3/gI8AGw/70Av/EZBQj/tYGw//f+/wAoDtEBsL3o/0Df+ITA3PgMwLzxAA8A0GBHLenwT9/4CPABsP+9AL+JKwUIAZnftRNIKkb/9/7/ACgH2wVGvejfQAGaICNTVd/4OPC96N9A3/g08P+1gbAP8gwDQ/ABDtD41DLf+CTwACgF0QKZSmiJaANI//f+/wGQAbD/vQC/AP8BIAVNBQjlTAUIDU4FCAAAAAA=",
+      "relocations": [
+        {
+          "offset": 2,
+          "type": 10,
+          "target": {
+            "section": 10,
+            "value": 1
+          }
+        },
+        {
+          "offset": 40,
+          "type": 10,
+          "target": {
+            "section": 7,
+            "value": 1
+          }
+        },
+        {
+          "offset": 92,
+          "type": 10,
+          "target": {
+            "section": 9,
+            "value": 1
+          }
+        },
+        {
+          "offset": 144,
+          "type": 10,
+          "target": {
+            "section": 12,
+            "value": 1
+          }
+        },
+        {
+          "offset": 200,
+          "type": 10,
+          "target": {
+            "section": 11,
+            "value": 1
+          }
+        },
+        {
+          "offset": 264,
+          "type": 10,
+          "target": {
+            "section": 8,
+            "value": 1
+          }
+        },
+        {
+          "offset": 292,
+          "type": 2,
+          "target": {
+            "section": 1,
+            "value": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "size": 52,
+      "alignment": 4,
+      "data": "CkgAIQAigCoC0IFUATL65wAhT/SAQgspBNAA60EDATGagPjnAkkBYHBHAL8A/wEgUFdUMQ==",
+      "relocations": []
+    },
+    {
+      "id": 7,
+      "size": 148,
+      "alignment": 4,
+      "data": "cLUVRhxIHUoORgAhACSQRxYoL9gaSgDrQAFS+CEQQbMYSgAkEmguuxLwAgIi0AEkBbNv8AECFfGAD9i/b/B/BQLrQQEQSoAtqL+AJYtaA+sFI4PzDwOLUhCDDEjUggAhC0oBgAD143ABIZBH//f+/wDgACQgRnC9mMgBIEXmAAgAAAAAKDcAIAT/ASAWCgAgjUgFCA==",
+      "relocations": [
+        {
+          "offset": 108,
+          "type": 10,
+          "target": {
+            "section": 2,
+            "value": 1
+          }
+        },
+        {
+          "offset": 128,
+          "type": 2,
+          "target": {
+            "section": 0,
+            "value": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "size": 300,
+      "alignment": 4,
+      "data": "LenwT4ewDEZGSRVGSmkasUtpIUYqRphHQPLcdrVCOL8uRv/3/v8E8QEKICBP8AAJT/ABCA3xBAxv8DMOT/AACwAisEJd0hFGIlxHHALwHwUC8OACQCon0QAiOEYALfDQ8BuoQk3TQBsEKErTexngXGMoRtEYHQAp49ABLUHRGvgDIO4qPdHiXUE6Cyo52Aj6AvUV6gsPNNEjREvqBQtbiCz4EjAKRsznICoq0bWx8RupQibTAy0O0eFdVCkL0SBEgXhXKQfRwHhe+oDwsPqA8EIJkUQA4AAieBmy57nxAQ8P0UD2/3CDRQvRvfgEAAEoB9EBIAwoCNA8+RAQATAAKfjVACAHsL3o8I8HSgzxAgAAIQsp9dAw+BEwIvgRMAEx9+cAvwAAAAAE/wEg",
+      "relocations": [
+        {
+          "offset": 34,
+          "type": 10,
+          "target": {
+            "section": 6,
+            "value": 1
+          }
+        },
+        {
+          "offset": 292,
+          "type": 2,
+          "target": {
+            "section": 1,
+            "value": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "size": 92,
+      "alignment": 4,
+      "data": "+LUSTgRGMIggseB5ILEAIDCA+L0AIPi9DUineQBogAcJ1QxIDEoNRgAhkEdxiIhCCL8ALwTQIEb/9/7/ASD4vQAt+9D/9/7/+OcAvxr/ASAoNwAgmMgBIEXmAAg=",
+      "relocations": [
+        {
+          "offset": 56,
+          "type": 10,
+          "target": {
+            "section": 4,
+            "value": 1
+          }
+        },
+        {
+          "offset": 68,
+          "type": 10,
+          "target": {
+            "section": 2,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "size": 28,
+      "alignment": 4,
+      "data": "gLX/9/7/BEiBaRmxgGm96IBAAEeAvQC/AAAAAA==",
+      "relocations": [
+        {
+          "offset": 2,
+          "type": 10,
+          "target": {
+            "section": 6,
+            "value": 1
+          }
+        },
+        {
+          "offset": 24,
+          "type": 2,
+          "target": {
+            "section": 1,
+            "value": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "size": 132,
+      "alignment": 4,
+      "data": "+LUMRhtJC2krsQtpIUaYRwJGACgs1CAqBNMXSaLyj3CIQgLST/D/MiLgFEgUSwAhTvZjbEEloFAFIJ5GIbEMKRHQPvgRcADgASemGDsKBjAGNHNyAfFBAzdypvgGwDVxATFzcernoRhP9AFTAkSLgBBG+L0AAAAAI/j//yNUVzQC/wEg",
+      "relocations": [
+        {
+          "offset": 116,
+          "type": 2,
+          "target": {
+            "section": 1,
+            "value": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "size": 84,
+      "alignment": 4,
+      "data": "+LUQTgRGMIggseB5ILEAJTWAFOAAJRLgC0ineQBogAcJ1QpICkoAIQAlkEdxiIhCCL8ALwPQIEb/9/7/ASUoRvi9AL8a/wEgKDcAIJjIASBF5gAI",
+      "relocations": [
+        {
+          "offset": 56,
+          "type": 10,
+          "target": {
+            "section": 4,
+            "value": 1
+          }
+        }
+      ]
+    }
+  ],
+  "roots": [
+    {
+      "section": 0,
+      "value": 0
+    },
+    {
+      "section": 1,
+      "value": 0
+    },
+    {
+      "section": 5,
+      "value": 1
+    },
+    {
+      "section": 6,
+      "value": 1
+    },
+    {
+      "section": 5,
+      "value": 37
+    },
+    {
+      "section": 5,
+      "value": 89
+    },
+    {
+      "section": 5,
+      "value": 141
+    },
+    {
+      "section": 5,
+      "value": 193
+    },
+    {
+      "section": 5,
+      "value": 233
+    },
+    {
+      "section": 7,
+      "value": 1
+    },
+    {
+      "section": 9,
+      "value": 1
+    },
+    {
+      "section": 12,
+      "value": 1
+    },
+    {
+      "section": 11,
+      "value": 1
+    },
+    {
+      "section": 8,
+      "value": 1
+    },
+    {
+      "section": 10,
+      "value": 1
+    }
+  ]
+}

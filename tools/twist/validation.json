@@ -1,0 +1,790 @@
+{
+  "tests": {
+    "passed": 67,
+    "failed": 0,
+    "skipped": 0,
+    "existing_regressions": 60,
+    "new_twist_cases": 7
+  },
+  "runtime": {
+    "all_passed": true,
+    "reports": [
+      {
+        "name": "phase_distortion",
+        "passed": true,
+        "raw_sha256": "27fcfafec0b423fa3a0746af9307781b9d2de49c2a58fab0d82f8fe9ca9c9aa0",
+        "package_sha256": "6eb69ee7fc1d180b5f3316d608ac39d04fccbe491c67c190eb7bbfebe4fad7b8",
+        "required": 5183,
+        "available": 18146,
+        "neutral_audio_matches_baseline": true,
+        "voices": 28,
+        "notes": 12
+      },
+      {
+        "name": "classic_waves_vcf",
+        "passed": true,
+        "raw_sha256": "d552ad36d95d822b024239a19db0961858f1a575aa2c02951bd28ed5f85a7acf",
+        "package_sha256": "2e9a584c33323b61c326e80b7f688da2aeb3363c3cababf161f748e88a8b0ef5",
+        "required": 4910,
+        "available": 18146,
+        "neutral_audio_matches_baseline": true,
+        "voices": 28,
+        "notes": 12
+      },
+      {
+        "name": "swarm",
+        "passed": true,
+        "raw_sha256": "dd17d182aa894ea65f904dcb36134c283bfb05f1b1f3164b373b7adf2afc8b8f",
+        "package_sha256": "4c57f4ae511aaa4b89789c07e6549e786629dae59a5b77585378eb10b2c85dd9",
+        "required": 4290,
+        "available": 18146,
+        "neutral_audio_matches_baseline": true,
+        "voices": 28,
+        "notes": 12
+      },
+      {
+        "name": "inharmonic_string",
+        "passed": true,
+        "raw_sha256": "652cbe920e90c55584db3d511d6ef2105b2e0e1b2772f9c2287389f66ef9f86a",
+        "package_sha256": "121a4dda5e73d2d6e674ece86821f996c31ea9b6ce63109ab9fba26365058e3a",
+        "required": 7441,
+        "available": 18146,
+        "neutral_audio_matches_baseline": true,
+        "voices": 28,
+        "notes": 12
+      },
+      {
+        "name": "particle_noise",
+        "passed": true,
+        "raw_sha256": "b4abb5f8f30b0101025a1d804fe8b290dcd17b93c9f7ca522a4b2b0620533596",
+        "package_sha256": "cd0c9171655c0248291cbf9fc79ed479dbf123301e74e6bb9191fd72c073222e",
+        "required": 4811,
+        "available": 18146,
+        "neutral_audio_matches_baseline": true,
+        "voices": 28,
+        "notes": 12
+      },
+      {
+        "name": "filtered_noise",
+        "passed": true,
+        "raw_sha256": "d3db2932d2172552e9ed493411359a0f4e4961b8db17f2d0a41b7a5761a97ae5",
+        "package_sha256": "4a8d5893de53a157420262c81b9f9d0efe7dd2b74516dec525162a329f9feee4",
+        "required": 4324,
+        "available": 18146,
+        "neutral_audio_matches_baseline": true,
+        "voices": 28,
+        "notes": 12
+      },
+      {
+        "name": "string_machine",
+        "passed": true,
+        "raw_sha256": "18e207e65db4a328c6d06287e285bb1bc1c303c02b8f8832f82548bf948f5d40",
+        "package_sha256": "236869886d0d3471bec86996276c060f8630c0d245e430330425ac07a3d45ac5",
+        "required": 6051,
+        "available": 18146,
+        "neutral_audio_matches_baseline": true,
+        "voices": 28,
+        "notes": 12
+      },
+      {
+        "name": "chiptune",
+        "passed": true,
+        "raw_sha256": "8796765c12bee421190a351891c0a90a3cc81c787bc4d0b78c6d87c9ea427450",
+        "package_sha256": "199605b787cef446f610802b3b0c733d42a0c2fffec108462b2cb465b1468845",
+        "required": 6360,
+        "available": 18146,
+        "neutral_audio_matches_baseline": true,
+        "voices": 28,
+        "notes": 12
+      },
+      {
+        "name": "bass_drum",
+        "passed": true,
+        "raw_sha256": "1aead7ce18e0cb7428f0e2b443013d0f835359bf334278d19b5247bf5bb13af3",
+        "package_sha256": "66554d1a58cc7661d3f4a1db5602c70023f42086d85c11723ea326595e0f762b",
+        "required": 5940,
+        "available": 18146,
+        "neutral_audio_matches_baseline": true,
+        "voices": 28,
+        "notes": 12
+      },
+      {
+        "name": "snare_drum",
+        "passed": true,
+        "raw_sha256": "a6feaa6d8b4960630b6c126a94a2b9503e256f94eae850b4eaf0d0c27f0b0834",
+        "package_sha256": "5d2fd9b32eb27badd71efeb6977e8c4f049ef277f58025354deca97acac7c25a",
+        "required": 5775,
+        "available": 18146,
+        "neutral_audio_matches_baseline": true,
+        "voices": 28,
+        "notes": 12
+      },
+      {
+        "name": "wave_terrain",
+        "passed": true,
+        "raw_sha256": "195adb6827a53616c77b6a26290cfefd9210236ec7c3135f7cd5a73c99296dba",
+        "package_sha256": "5378a270c0d69cddbe80a8ee810f658d8972328fa057f916bcf9f8bca57d65f4",
+        "required": 4436,
+        "available": 18146,
+        "neutral_audio_matches_baseline": true,
+        "voices": 28,
+        "notes": 12
+      },
+      {
+        "name": "wave_terrain_aux",
+        "passed": true,
+        "raw_sha256": "c7592366ff78530c43cc3c0f5ab3af4a172bc25d94bca71a1fc6f588f68a3033",
+        "package_sha256": "f68a7fc69d8ea15ee5811f60e16d7b2345524259f7dc4339293b266543b18789",
+        "required": 4448,
+        "available": 18146,
+        "neutral_audio_matches_baseline": true,
+        "voices": 28,
+        "notes": 12
+      },
+      {
+        "name": "filtered_noise_dual_band",
+        "passed": true,
+        "raw_sha256": "0436317ccb5f3f619b95f76e2448fe9bc143bbcf184940f580aa959660ca6263",
+        "package_sha256": "72f1ed3329cc7b9a1450e5895bc4a056d6ffaa4daff3d7560d1ce2bc3b563ec0",
+        "required": 2381,
+        "available": 18146,
+        "neutral_audio_matches_baseline": true,
+        "voices": 28,
+        "notes": 12
+      },
+      {
+        "name": "mixed",
+        "passed": true,
+        "raw_sha256": "cd67d1ed90546eeb257e6533367e870cf0f992735a3d40433e8d835cb0ea2c8f",
+        "package_sha256": "dc0ba790fef1a01d34a3f113238692aa3a9e7a141119bc55c83305c822729de5",
+        "required": 23310,
+        "available": 29578,
+        "neutral_audio_matches_baseline": true,
+        "voices": 28,
+        "notes": 48
+      },
+      {
+        "name": "sixop-only",
+        "passed": true,
+        "raw_sha256": "543f4dcbf82e7f118f056b83aab11056df9c1771a29c15ab2d07d73d33b3c181",
+        "package_sha256": "5f1b0bbd1e3b31af0a037fb2cff166c00853fec7e110d21ecec45a6497ba1f1d",
+        "required": 11481,
+        "available": 18146,
+        "neutral_audio_matches_baseline": true,
+        "voices": 28,
+        "notes": 12
+      },
+      {
+        "name": "all-fourteen",
+        "passed": true,
+        "raw_sha256": "4f550771683d5ac21dfc9934fbeeb1feb92e5398f08f356c7e3badc72843717d",
+        "package_sha256": "f36066f7339994cc70cf508170b6ac015e8d43536c3a5def8244283586432371",
+        "required": 55572,
+        "available": 60110,
+        "neutral_audio_matches_baseline": true,
+        "voices": 56,
+        "notes": 168
+      },
+      {
+        "name": "high-ids",
+        "passed": true,
+        "raw_sha256": "b849f33aeae797ca06001ad64a4e53b13351e661f947febd108f4130ef6978fc",
+        "package_sha256": "27e01f2ed9669be1c78e7a90481810e6d08ad0cd43002d7376e6760057442a11",
+        "required": 7284,
+        "available": 18146,
+        "neutral_audio_matches_baseline": true,
+        "voices": 32,
+        "notes": 24
+      }
+    ]
+  },
+  "controls_and_presets": {
+    "all_passed": true,
+    "reports": [
+      {
+        "case": "all-fourteen",
+        "engine": "chiptune",
+        "native_encoder": true,
+        "oled_labels": [
+          "Chiptune",
+          "Register",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "all-fourteen",
+        "engine": "bass_drum",
+        "native_encoder": true,
+        "oled_labels": [
+          "Bass Drum",
+          "Punch",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "all-fourteen",
+        "engine": "snare_drum",
+        "native_encoder": true,
+        "oled_labels": [
+          "Snare Drum",
+          "Mode Spread",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "all-fourteen",
+        "engine": "wave_terrain",
+        "native_encoder": true,
+        "oled_labels": [
+          "Wave Terrain",
+          "Y Offset",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "all-fourteen",
+        "engine": "phase_distortion",
+        "native_encoder": true,
+        "oled_labels": [
+          "Phase Dist",
+          "Ratio Fine",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "all-fourteen",
+        "engine": "classic_waves_vcf",
+        "native_encoder": true,
+        "oled_labels": [
+          "Classic VCF",
+          "Drive",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "all-fourteen",
+        "engine": "swarm",
+        "native_encoder": true,
+        "oled_labels": [
+          "Swarm",
+          "Size Spread",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "all-fourteen",
+        "engine": "inharmonic_string",
+        "native_encoder": true,
+        "oled_labels": [
+          "Inharm String",
+          "Excite Size",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "all-fourteen",
+        "engine": "particle_noise",
+        "native_encoder": true,
+        "oled_labels": [
+          "Particle",
+          "Diffusion",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "all-fourteen",
+        "engine": "filtered_noise",
+        "native_encoder": true,
+        "oled_labels": [
+          "FilteredNoise",
+          "Filter Pos",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "all-fourteen",
+        "engine": "string_machine",
+        "native_encoder": true,
+        "oled_labels": [
+          "StringMachine",
+          "Ensemble",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "all-fourteen",
+        "native_save_load": true,
+        "fresh_machine_nor": true,
+        "both_codecs": true
+      },
+      {
+        "case": "bass_drum",
+        "engine": "bass_drum",
+        "native_encoder": true,
+        "oled_labels": [
+          "Bass Drum",
+          "Punch",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "chiptune",
+        "engine": "chiptune",
+        "native_encoder": true,
+        "oled_labels": [
+          "Chiptune",
+          "Register",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "classic_waves_vcf",
+        "engine": "classic_waves_vcf",
+        "native_encoder": true,
+        "oled_labels": [
+          "Classic VCF",
+          "Drive",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "filtered_noise",
+        "engine": "filtered_noise",
+        "native_encoder": true,
+        "oled_labels": [
+          "FilteredNoise",
+          "Filter Pos",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "high-ids",
+        "engine": "swarm",
+        "native_encoder": true,
+        "oled_labels": [
+          "Swarm",
+          "Size Spread",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "high-ids",
+        "engine": "phase_distortion",
+        "native_encoder": true,
+        "oled_labels": [
+          "Phase Dist",
+          "Ratio Fine",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "high-ids",
+        "native_save_load": true,
+        "fresh_machine_nor": true,
+        "both_codecs": false
+      },
+      {
+        "case": "inharmonic_string",
+        "engine": "inharmonic_string",
+        "native_encoder": true,
+        "oled_labels": [
+          "Inharm String",
+          "Excite Size",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "mixed",
+        "engine": "phase_distortion",
+        "native_encoder": true,
+        "oled_labels": [
+          "Phase Dist",
+          "Ratio Fine",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "mixed",
+        "native_save_load": true,
+        "fresh_machine_nor": true,
+        "both_codecs": true
+      },
+      {
+        "case": "particle_noise",
+        "engine": "particle_noise",
+        "native_encoder": true,
+        "oled_labels": [
+          "Particle",
+          "Diffusion",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "phase_distortion",
+        "engine": "phase_distortion",
+        "native_encoder": true,
+        "oled_labels": [
+          "Phase Dist",
+          "Ratio Fine",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "phase_distortion",
+        "native_save_load": true,
+        "fresh_machine_nor": true,
+        "both_codecs": false
+      },
+      {
+        "case": "snare_drum",
+        "engine": "snare_drum",
+        "native_encoder": true,
+        "oled_labels": [
+          "Snare Drum",
+          "Mode Spread",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "string_machine",
+        "engine": "string_machine",
+        "native_encoder": true,
+        "oled_labels": [
+          "StringMachine",
+          "Ensemble",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "swarm",
+        "engine": "swarm",
+        "native_encoder": true,
+        "oled_labels": [
+          "Swarm",
+          "Size Spread",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "wave_terrain",
+        "engine": "wave_terrain",
+        "native_encoder": true,
+        "oled_labels": [
+          "Wave Terrain",
+          "Y Offset",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      },
+      {
+        "case": "wave_terrain_aux",
+        "engine": "wave_terrain",
+        "native_encoder": true,
+        "oled_labels": [
+          "Wave Terrain",
+          "Y Offset",
+          "51%"
+        ],
+        "bounds": true,
+        "native_controls_preserved": true,
+        "release_redraw": true
+      }
+    ],
+    "hardware_verified": false
+  },
+  "dsp": {
+    "reports": [
+      {
+        "engine": "bass_drum",
+        "centre_max_error": 0.0,
+        "endpoints_max_delta": 1.0239741802215576,
+        "shape_residual": 0.7122562982065316,
+        "finite_samples": true,
+        "output_bounds": true
+      },
+      {
+        "engine": "chiptune",
+        "centre_max_error": 0.0,
+        "endpoints_max_delta": 2.0,
+        "shape_residual": 0.9855336452534739,
+        "finite_samples": true,
+        "output_bounds": true
+      },
+      {
+        "engine": "classic_waves_vcf",
+        "centre_max_error": 0.0,
+        "endpoints_max_delta": 0.1497890055179596,
+        "shape_residual": 0.0783830111326153,
+        "finite_samples": true,
+        "output_bounds": true
+      },
+      {
+        "engine": "filtered_noise",
+        "centre_max_error": 0.0,
+        "endpoints_max_delta": 0.9360188245773315,
+        "shape_residual": 0.3748914322510564,
+        "finite_samples": true,
+        "output_bounds": true
+      },
+      {
+        "engine": "inharmonic_string",
+        "centre_max_error": 0.0,
+        "endpoints_max_delta": 0.8103014051448554,
+        "shape_residual": 0.9231167905226152,
+        "finite_samples": true,
+        "output_bounds": true
+      },
+      {
+        "engine": "particle_noise",
+        "centre_max_error": 0.0,
+        "endpoints_max_delta": 1.9140948057174683,
+        "shape_residual": 0.9993084847003144,
+        "finite_samples": true,
+        "output_bounds": true
+      },
+      {
+        "engine": "phase_distortion",
+        "centre_max_error": 0.0,
+        "endpoints_max_delta": 1.9928973317146301,
+        "shape_residual": 0.9997537262405345,
+        "finite_samples": true,
+        "output_bounds": true
+      },
+      {
+        "engine": "snare_drum",
+        "centre_max_error": 0.0,
+        "endpoints_max_delta": 0.4217846989631653,
+        "shape_residual": 0.4115789458030354,
+        "finite_samples": true,
+        "output_bounds": true
+      },
+      {
+        "engine": "string_machine",
+        "centre_max_error": 0.0,
+        "endpoints_max_delta": 0.42602936923503876,
+        "shape_residual": 0.7619563144150993,
+        "finite_samples": true,
+        "output_bounds": true
+      },
+      {
+        "engine": "swarm",
+        "centre_max_error": 0.0,
+        "endpoints_max_delta": 0.12895895168185234,
+        "shape_residual": 0.4298597057086044,
+        "finite_samples": true,
+        "output_bounds": true
+      },
+      {
+        "engine": "wave_terrain",
+        "centre_max_error": 0.0,
+        "endpoints_max_delta": 1.951824963092804,
+        "shape_residual": 0.4949646933910405,
+        "finite_samples": true,
+        "output_bounds": true
+      },
+      {
+        "engine": "wave_terrain_aux",
+        "centre_max_error": 0.0,
+        "endpoints_max_delta": 1.9983047842979431,
+        "shape_residual": 0.7581647132952888,
+        "finite_samples": true,
+        "output_bounds": true
+      }
+    ],
+    "all_neutral_identical": true,
+    "all_controls_change_audio": true
+  },
+  "browser": {
+    "passed": true,
+    "url": "http://127.0.0.1:8897/v2/",
+    "package_sha256": "6eb69ee7fc1d180b5f3316d608ac39d04fccbe491c67c190eb7bbfebe4fad7b8",
+    "download_matches_independent_composition": true,
+    "worker_loaded_twist_runtime": true
+  },
+  "reproduction": {
+    "passed": true,
+    "dsp_modules": 12,
+    "runtime_modules": 1,
+    "standalone_rebuild": true
+  },
+  "physical_hardware_verified": false,
+  "live_encoder_to_four_voice_audio": {
+    "all_passed": true,
+    "reports": [
+      {
+        "engine": "chiptune",
+        "id": 1,
+        "encoder_reached_both_endpoints": true,
+        "four_voice_macro_reads": true,
+        "shape_residual": 0.9969268297800477,
+        "low_sha256": "fc2281b96412a61fc0c0f30c94765c5f3472fa7dc002d530a8dd99d1b63cb0ec",
+        "high_sha256": "4575ccaeddad79a95210be64a210577f5c2eda415eccb5a90412123bb6dd26f4"
+      },
+      {
+        "engine": "bass_drum",
+        "id": 2,
+        "encoder_reached_both_endpoints": true,
+        "four_voice_macro_reads": true,
+        "shape_residual": 0.9895900335026315,
+        "low_sha256": "73806024786763910d7b3b7a38d7ba7358dee3d10fbeaeb49b75f76269bd2192",
+        "high_sha256": "84bf826aff93a46a4069342cf28cf3d5124c55b4d63f8661b1f26caee0abce9c"
+      },
+      {
+        "engine": "snare_drum",
+        "id": 3,
+        "encoder_reached_both_endpoints": true,
+        "four_voice_macro_reads": true,
+        "shape_residual": 0.5540693602099308,
+        "low_sha256": "1ae8fd0526cb1a8a757a4e8d33198cb6c6d7697696cc052d13299c3501a6fd81",
+        "high_sha256": "4fecc9a3e195afcee1d3b5e76fbb66562b25f545e90119cd2d1bdc310ba30ad4"
+      },
+      {
+        "engine": "wave_terrain",
+        "id": 4,
+        "encoder_reached_both_endpoints": true,
+        "four_voice_macro_reads": true,
+        "shape_residual": 0.5618439187580824,
+        "low_sha256": "b5387ca7c1d9759bedf2ec9d9acdcd8ac82a9836ec69973643d46439304b1d61",
+        "high_sha256": "21183b861991e9b7f3c2d8e789facdf30fcc875e9f585007dfa4cbe17b2ba752"
+      },
+      {
+        "engine": "phase_distortion",
+        "id": 6,
+        "encoder_reached_both_endpoints": true,
+        "four_voice_macro_reads": true,
+        "shape_residual": 0.998151275729509,
+        "low_sha256": "41adc86ae8040d9974bb50fb9c591f00fe8a819c9bedc4ae82f8b5a217a25a8a",
+        "high_sha256": "946009d0b85527affd0fe70c87247767d39b7b0c8ef5093d160a60952a04c934"
+      },
+      {
+        "engine": "classic_waves_vcf",
+        "id": 7,
+        "encoder_reached_both_endpoints": true,
+        "four_voice_macro_reads": true,
+        "shape_residual": 0.06304483864754014,
+        "low_sha256": "5bd266c6ab7564e3ef5a32f5be080516fb517ac5273b2455fba5774f840b0e48",
+        "high_sha256": "b5b7efaa97e003d17f7ce04dfbd200f9c90cb470144d33704bbd1114a1030012"
+      },
+      {
+        "engine": "swarm",
+        "id": 8,
+        "encoder_reached_both_endpoints": true,
+        "four_voice_macro_reads": true,
+        "shape_residual": 0.4544891830411507,
+        "low_sha256": "4685cfce89bfb04fd343f36f8cf924c5fe89e3fef7bf4db2195562ec2a742cd3",
+        "high_sha256": "9e936f2361dc98a3cd1b0a12c0511c8d62f0d3ec7f2660d4647f9e8c7a070813"
+      },
+      {
+        "engine": "inharmonic_string",
+        "id": 9,
+        "encoder_reached_both_endpoints": true,
+        "four_voice_macro_reads": true,
+        "shape_residual": 0.9643587396425182,
+        "low_sha256": "d491029db44ae298628a59c0d24ed7fbb2ac9f1aa30ae6d2168714240948361b",
+        "high_sha256": "b6eb5c85ee278e3505cb29e2fa2a026b28f4f0cb6cbcaad0494ddf65b97d3e4c"
+      },
+      {
+        "engine": "particle_noise",
+        "id": 10,
+        "encoder_reached_both_endpoints": true,
+        "four_voice_macro_reads": true,
+        "shape_residual": 0.9154868230094348,
+        "low_sha256": "17dadcfb024087f3780dedb992527024cd33345cb3e9b62b221f50a58c99f46a",
+        "high_sha256": "b10e797ae16c1f3b39b1a7c672fc23eb5df330c4ed28aafe7d37bf57aee90418"
+      },
+      {
+        "engine": "filtered_noise",
+        "id": 11,
+        "encoder_reached_both_endpoints": true,
+        "four_voice_macro_reads": true,
+        "shape_residual": 0.43181362179368094,
+        "low_sha256": "6006b3027202be847ea4fff394a411c11dc11ed79a478e6cf8da1264d5d4b637",
+        "high_sha256": "5398c10184d9a7bdc0cc1b140e006cf427b22c178b8a0a211e03cefbd309153b"
+      },
+      {
+        "engine": "string_machine",
+        "id": 12,
+        "encoder_reached_both_endpoints": true,
+        "four_voice_macro_reads": true,
+        "shape_residual": 0.7481906265774158,
+        "low_sha256": "e915d779dcdd8ccaa453bcc7326020a2e4b51b0470afa87077e7d7520a1a4eab",
+        "high_sha256": "28e18efd29e1b9f7701930f63334d6b084128193c8656b76dcd9a6bcb52b1532"
+      }
+    ],
+    "physical_hardware": false
+  }
+}

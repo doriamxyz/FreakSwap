@@ -1,0 +1,206 @@
+{
+  "format": "freakswap.arm-module",
+  "version": 1,
+  "sections": [
+    {
+      "id": 0,
+      "size": 30,
+      "alignment": 2,
+      "data": "gLWEsAFrAmhP9IBDAZEAkc3pAjMSaGlGkEcEsIC9",
+      "relocations": []
+    },
+    {
+      "id": 1,
+      "size": 90,
+      "alignment": 4,
+      "data": "ELUKaE/wAAwAIwJjQvgjwAEzYCv60dH4CMBP8H5TACS89cB/T/AADgNhRGGEYcRhBGJEYoRiBtMC9cBzC2Cs9cBzlkaLYEPyMzHD9jNxwPgs4ARzQWCBYBC9",
+      "relocations": []
+    },
+    {
+      "id": 2,
+      "size": 30,
+      "alignment": 2,
+      "data": "gLWEsAFrAmhP9IBDAZEAkc3pAjMSaGlGkEcEsIC9",
+      "relocations": []
+    },
+    {
+      "id": 3,
+      "size": 12,
+      "alignment": 2,
+      "data": "3fgAwM34AMD/9/6/",
+      "relocations": [
+        {
+          "offset": 8,
+          "type": 30,
+          "target": {
+            "section": 4,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "size": 876,
+      "alignment": 4,
+      "data": "LenwT4GwLe0Qi4Swke0BCrruAhow7gEan+3GCt34eLDQ+CygtO5AGs3pAiMMRgZGT+pLA/HuEPoK68sCCtSf7b4qsO5BCrTuQhrx7hD6yL+w7kIKn+25KgQgMO4CCsLyAAC97sAqkO0AGrjuwjoS7hAKn+2zKjDuQwpA8gABwPIAASDuAgoB64AAve7ACkDyAAGQ7QA6EO4QCsDyAAEB64AAkO0ACrXuAEoh7gQaI+4ACiHuAAq67gAaIO4BGrfuAMox7gwalO0CKp/tnzq17kAa8e4Q+t/tm9pIv7DubRoi7gMqsO4AOiLuASoz7kEan+2WOiLuARpx7gMKtu4AGk/2AHUG8RAAIO4BClFGwvIBBf/3/v+U7QMKlu0I+ihoRfJQccPyVBGIQhLRKIuw9YBPENmg9YBAAe4QCp/thSq47kEage4CGrbuACox7gIaCeBP9IBAAe4QCp/tfyq47kEaIe4CGpTtBCqf7X061u0JiiLuAyq07kwq1u0KmvHuEPoBlsi/sO5MKrvxAA8A8MOAn+1vOr/uAEog7gMKMO4ECgTuELoh7gMan+1sOjDuTwq47kRKwO4EqjHuAwqf7WkaMO5oCsDuBLoi7gEKMO5pCsDuBMpP6ssGT/AACAC/Ou6P+rXuQPqx7k8KsO5PGnvuqIrx7hD6SL+w7kAa9e5AirHuaAqw7mgqfO6pmvHuEPpIv7DuQCq97ukKEO4QSrjuwAp57sDqfO5B+jzuQrplHE/wAQlXRrDubeqw7m3al+0ACrgZkO0AGiDuLwow7g+KIe4LCjDuKJqw7kgK8O5JCiFG//f+/7DuQKqw7kgK8O5JCilG//f+/zDuSgog7i4KMO4KCj7uAOo57gAKPe4A2gQ3X+rJcE/wAAnQ0QKYtu4ACi7uAAoA64gAgO0ACrXuAAot7gAKMO4MCr3uwBq47sEaMO5BCp/tJxpA8gABIO4BCr3uwBoR7hAKwPIAAQHrgACQ7QAqkO0BOrjuwRoDmDDuQQoz7kIaIe4ACgDriAAI8QEIMO4CCthFCvEICoDtAAp/9GSvAZjA7QqawO0JioDtCPoEsL3sEIsBsL3o8I8AvwAAAMMAAP5CAAAAQwAAgEMAAAAAZmZmP83MzD0zM/M/APz/RgAAADgzM3O/ZmaGP1z+f0AAAIBE",
+      "relocations": [
+        {
+          "offset": 122,
+          "type": 47,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 126,
+          "type": 48,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 142,
+          "type": 47,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 154,
+          "type": 48,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 274,
+          "type": 10,
+          "target": {
+            "section": 6,
+            "value": 1
+          }
+        },
+        {
+          "offset": 612,
+          "type": 10,
+          "target": {
+            "section": 5,
+            "value": 1
+          }
+        },
+        {
+          "offset": 630,
+          "type": 10,
+          "target": {
+            "section": 5,
+            "value": 1
+          }
+        },
+        {
+          "offset": 716,
+          "type": 47,
+          "target": {
+            "external": 134730976
+          }
+        },
+        {
+          "offset": 732,
+          "type": 48,
+          "target": {
+            "external": 134730976
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "size": 800,
+      "alignment": 4,
+      "data": "BCkA8nCB3+gR8AUAFQGkANkAcQCf7b8ase4AKiDuARox7gIave7BOrjuwzqf7bRKMe5DGiHuBBq97sE6QPIAABPuEBrA8gAAAOuBAbjuw1qR7QA6ke0BajHuRRo27kNaJe4BGjHuAxox7gEase5BOrXuQBqw7kFa8e4Q+ki/sO5DWrfuADo17gM6n+2jWoHuAxow7gUKn+2dOiDugAog7gMKMO4CCr3uwCq47sIqMO5CCiDuBAq97sAqEu4QGgDrgQC47sI6kO0AKpDtAUow7kMKNO5COiPuAAow7gIKn+2PKjHuQAog7gIKcEe97gAaMO6BGrHuQSq17kAa8e4Q+ki/sO5CGp/teiqf7Xo6Me4CGrbuACow7gIKt+4IKjDugiqD7gEaIO4COiDuQgq17kA68e4Q+ki/sO5AOp/tbgqf7W4qM+4ACoLuAAox7gAKV+Cf7W0aIO4gCiDuARqx7gAqMe4CGr3uwTq47sM6n+1kSjHuQxoh7gQave7BOkDyAAET7hAKwPIAAQHrgAC47sNakO0AOpDtAWox7kUaNu5DWiXuARox7gMan+1TOiDuAAow7gMKge4ACnHgve4AKiDuIBow7gIKte4AKjDugiog7gIKse4EKiDuAjog7kIKte5AOvHuEPpIv7DuQDqw7gAKM+4ACoHuAAqf7UIaIO4BCrHuABow7gEKve7AGrjuwRqf7TsqMO5BCiDuAgq97sAaQPIAAbjuwSoR7hAKwPIAAUngn+01KiDuIBow7iAKIO4CCrHuACow7gIKve7AOrjuwzqf7SpKMO5DCiDuBAq97sA6QPIAARPuEArA8gABAeuAALjuw1qQ7QA6kO0BajDuRQo27kNaJe4ACjDuAwqf7R86Ie4BGjHuAxqA7gEKn+0UGiDuAQow7gIKve7AGrjuwRow7kEKIO4ECr3uwBq47sEqEe4QCgHrgACQ7QAakO0BOjDuQgoz7kEqIu4ACjDuAQpwR5/tAQpwRwAAAAB7FC4+5dAiPjMzsz5YOfQ+AACAREa2y0CcxBhAbxIjP83MTD6q8aI/hxbJP4XrET8=",
+      "relocations": [
+        {
+          "offset": 60,
+          "type": 47,
+          "target": {
+            "external": 134730976
+          }
+        },
+        {
+          "offset": 68,
+          "type": 48,
+          "target": {
+            "external": 134730976
+          }
+        },
+        {
+          "offset": 382,
+          "type": 47,
+          "target": {
+            "external": 134730976
+          }
+        },
+        {
+          "offset": 390,
+          "type": 48,
+          "target": {
+            "external": 134730976
+          }
+        },
+        {
+          "offset": 546,
+          "type": 47,
+          "target": {
+            "external": 134730976
+          }
+        },
+        {
+          "offset": 558,
+          "type": 48,
+          "target": {
+            "external": 134730976
+          }
+        },
+        {
+          "offset": 612,
+          "type": 47,
+          "target": {
+            "external": 134730976
+          }
+        },
+        {
+          "offset": 620,
+          "type": 48,
+          "target": {
+            "external": 134730976
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "size": 300,
+      "alignment": 4,
+      "data": "gLW57gAaIO4BGrfuACox7gIate4AKiDugRq07kIKn+0/SvHuEPq4v7DuQUqf7Twan+08WiDuAQq4v7DuQFqQ7QAakO0BKiHuAXoi7gJqN+4GerbuAGqQ7QIKkO0DOrTuRnrx7hD6sO4AagTZtO5GevHuEPob20X23x4X7hDKxfY3fq7rXAz+7gAaAO6QyifuIXon7iB6J+4gevfuCBo37iF6J+4geiHuBxoi7gcqW7Of7R16Je4HeifuBXo37gZqJe4GWgbuEDo17kBauO5GajTuQ3qF7gZKh+4GWjTuAAog7gJqNu4BGiDuAWo17gM6Mu5GKiPuAWqh7AFqI+4CaqLsAWoBO+nRgO0AGoDtASqA7QM6gO0CCoC9AL8AAAAA2w9JQNsPST8K16O+",
+      "relocations": []
+    }
+  ],
+  "roots": [
+    {
+      "section": 1,
+      "value": 1
+    },
+    {
+      "section": 2,
+      "value": 1
+    },
+    {
+      "section": 0,
+      "value": 1
+    },
+    {
+      "section": 3,
+      "value": 1
+    }
+  ]
+}

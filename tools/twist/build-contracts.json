@@ -1,0 +1,233 @@
+{
+  "engines": {
+    "phase_distortion": {
+      "source": "phase_distortion_microfreak",
+      "class": "PhaseDistortionEngine",
+      "object_bytes": 100,
+      "optimize": "-Os",
+      "no_builtin": false,
+      "defines": [],
+      "index": 0,
+      "module": "30e79cbd43b14b1364ae1d5f443de525a31500c9032f08bdad86e77028c5f587",
+      "wrapper": "",
+      "roots": [
+        "_ZN6plaits21PhaseDistortionEngine4InitEPN6stmlib15BufferAllocatorE",
+        "_ZN6plaits21PhaseDistortionEngine5ResetEv",
+        "_ZN6plaits21PhaseDistortionEngine12LoadUserDataEPKh",
+        "_ZN6plaits21PhaseDistortionEngine6RenderERKNS_16EngineParametersEPfS4_jPb"
+      ]
+    },
+    "classic_waves_vcf": {
+      "source": "virtual_analog_vcf_microfreak",
+      "class": "LiteClassicWavesVcf",
+      "object_bytes": 24,
+      "optimize": "-Os",
+      "no_builtin": true,
+      "defines": [],
+      "index": 1,
+      "module": "dfd8fd7871d950dffd64fa5060b1db8763c989d0c5be746690317976aaecd011",
+      "wrapper": "\nnamespace plaits {\n// The arena pointer lives in the persistent object, outside shared scratch.\n// Arturia calls LoadUserData on CV activation without repeating Common::Init.\nclass LiteClassicWavesVcf : public MicroFreakVirtualAnalogVCFEngine {\n public:\n  virtual void Init(stmlib::BufferAllocator* allocator);\n  virtual void Reset();\n  virtual void LoadUserData(const uint8_t*);\n  virtual void Render(const EngineParameters&, float*, float*, size_t, bool*);\n private: uint8_t* arena_;\n};\nvoid LiteClassicWavesVcf::Init(stmlib::BufferAllocator* allocator) {\n  arena_ = allocator->Allocate<uint8_t>(0);\n  for (size_t i = 0; i < 35; ++i) reinterpret_cast<uint32_t*>(arena_)[i] = 0;\n  MicroFreakVirtualAnalogVCFEngine::Init(allocator);\n  \n}\nvoid LiteClassicWavesVcf::LoadUserData(const uint8_t*) {\n  stmlib::BufferAllocator allocator(arena_, 16384);\n  Init(&allocator);\n}\nvoid LiteClassicWavesVcf::Reset() { LiteClassicWavesVcf::LoadUserData(0); }\nvoid LiteClassicWavesVcf::Render(const EngineParameters& p, float* out, float* aux, size_t n, bool* env) {\n  MicroFreakVirtualAnalogVCFEngine::Render(p, out, aux, n, env);\n}\n}\n",
+      "roots": [
+        "_ZN6plaits19LiteClassicWavesVcf4InitEPN6stmlib15BufferAllocatorE",
+        "_ZN6plaits19LiteClassicWavesVcf5ResetEv",
+        "_ZN6plaits19LiteClassicWavesVcf12LoadUserDataEPKh",
+        "_ZN6plaits19LiteClassicWavesVcf6RenderERKNS_16EngineParametersEPfS4_jPb"
+      ]
+    },
+    "swarm": {
+      "source": "swarm_microfreak",
+      "class": "MicroFreakSwarmEngine",
+      "object_bytes": 20,
+      "optimize": "-Os",
+      "no_builtin": true,
+      "defines": [],
+      "index": 2,
+      "module": "b11307266090ab6b522eec428527d6c0b92de66c82bb6dd19ea9ead74325cda4",
+      "wrapper": "",
+      "roots": [
+        "_ZN6plaits21MicroFreakSwarmEngine4InitEPN6stmlib15BufferAllocatorE",
+        "_ZN6plaits21MicroFreakSwarmEngine5ResetEv",
+        "_ZN6plaits21MicroFreakSwarmEngine12LoadUserDataEPKh",
+        "_ZN6plaits21MicroFreakSwarmEngine6RenderERKNS_16EngineParametersEPfS4_jPb"
+      ]
+    },
+    "inharmonic_string": {
+      "source": "inharmonic_string_microfreak",
+      "class": "LiteInharmonicString",
+      "object_bytes": 52,
+      "optimize": "-Oz",
+      "no_builtin": true,
+      "defines": [],
+      "index": 3,
+      "module": "f5fd9e5e37af1186bc9f119966645ad79c2942ac690e841039c2fe36ab3fd871",
+      "wrapper": "\nnamespace plaits {\n// The arena pointer lives in the persistent object, outside shared scratch.\n// Arturia calls LoadUserData on CV activation without repeating Common::Init.\nclass LiteInharmonicString : public MicroFreakInharmonicStringEngine {\n public:\n  virtual void Init(stmlib::BufferAllocator* allocator);\n  virtual void Reset();\n  virtual void LoadUserData(const uint8_t*);\n  virtual void Render(const EngineParameters&, float*, float*, size_t, bool*);\n private: uint8_t* arena_;\n};\nvoid LiteInharmonicString::Init(stmlib::BufferAllocator* allocator) {\n  arena_ = allocator->Allocate<uint8_t>(0);\n  for (size_t i = 0; i < 3952; ++i) reinterpret_cast<uint32_t*>(arena_)[i] = 0;\n  MicroFreakInharmonicStringEngine::Init(allocator);\n  \n}\nvoid LiteInharmonicString::LoadUserData(const uint8_t*) {\n  stmlib::BufferAllocator allocator(arena_, 16384);\n  Init(&allocator);\n}\nvoid LiteInharmonicString::Reset() { LiteInharmonicString::LoadUserData(0); }\nvoid LiteInharmonicString::Render(const EngineParameters& p, float* out, float* aux, size_t n, bool* env) {\n  MicroFreakInharmonicStringEngine::Render(p, out, aux, n, env);\n}\n}\n",
+      "roots": [
+        "_ZN6plaits20LiteInharmonicString4InitEPN6stmlib15BufferAllocatorE",
+        "_ZN6plaits20LiteInharmonicString5ResetEv",
+        "_ZN6plaits20LiteInharmonicString12LoadUserDataEPKh",
+        "_ZN6plaits20LiteInharmonicString6RenderERKNS_16EngineParametersEPfS4_jPb"
+      ]
+    },
+    "particle_noise": {
+      "source": "particle_noise_microfreak",
+      "class": "ParticleEngine",
+      "object_bytes": 224,
+      "optimize": "-Os",
+      "no_builtin": true,
+      "defines": [],
+      "index": 4,
+      "module": "842cb660e75e4d36d8355e22574bba3b333afa21d75b84b5a4f883089fcb3fa2",
+      "wrapper": "",
+      "roots": [
+        "_ZN6plaits14ParticleEngine4InitEPN6stmlib15BufferAllocatorE",
+        "_ZN6plaits14ParticleEngine5ResetEv",
+        "_ZN6plaits14ParticleEngine12LoadUserDataEPKh",
+        "_ZN6plaits14ParticleEngine6RenderERKNS_16EngineParametersEPfS4_jPb"
+      ]
+    },
+    "filtered_noise": {
+      "source": "filtered_noise_microfreak",
+      "class": "LiteFilteredNoise",
+      "object_bytes": 132,
+      "optimize": "-Os",
+      "no_builtin": true,
+      "defines": [],
+      "index": 5,
+      "module": "b6311c1bacbf948f39203e1e4472d71ba717b010d480a4010289a36d3a19855e",
+      "wrapper": "\nnamespace plaits {\n// The arena pointer lives in the persistent object, outside shared scratch.\n// Arturia calls LoadUserData on CV activation without repeating Common::Init.\nclass LiteFilteredNoise : public NoiseEngine {\n public:\n  virtual void Init(stmlib::BufferAllocator* allocator);\n  virtual void Reset();\n  virtual void LoadUserData(const uint8_t*);\n  virtual void Render(const EngineParameters&, float*, float*, size_t, bool*);\n private: uint8_t* arena_;\n};\nvoid LiteFilteredNoise::Init(stmlib::BufferAllocator* allocator) {\n  arena_ = allocator->Allocate<uint8_t>(0);\n  for (size_t i = 0; i < 24; ++i) reinterpret_cast<uint32_t*>(arena_)[i] = 0;\n  NoiseEngine::Init(allocator);\n  \n}\nvoid LiteFilteredNoise::LoadUserData(const uint8_t*) {\n  stmlib::BufferAllocator allocator(arena_, 16384);\n  Init(&allocator);\n}\nvoid LiteFilteredNoise::Reset() { LiteFilteredNoise::LoadUserData(0); }\nvoid LiteFilteredNoise::Render(const EngineParameters& p, float* out, float* aux, size_t n, bool* env) {\n  NoiseEngine::Render(p, out, aux, n, env);\n}\n}\n",
+      "roots": [
+        "_ZN6plaits17LiteFilteredNoise4InitEPN6stmlib15BufferAllocatorE",
+        "_ZN6plaits17LiteFilteredNoise5ResetEv",
+        "_ZN6plaits17LiteFilteredNoise12LoadUserDataEPKh",
+        "_ZN6plaits17LiteFilteredNoise6RenderERKNS_16EngineParametersEPfS4_jPb"
+      ]
+    },
+    "string_machine": {
+      "source": "string_machine_microfreak",
+      "class": "LiteStringMachine",
+      "object_bytes": 276,
+      "optimize": "-Oz",
+      "no_builtin": true,
+      "defines": [],
+      "index": 6,
+      "module": "d2dc23f3fd58ffd6cc43927e5f92e8113ab9c223eaaa07d298caba4961ea2142",
+      "wrapper": "\nnamespace plaits {\n// The arena pointer lives in the persistent object, outside shared scratch.\n// Arturia calls LoadUserData on CV activation without repeating Common::Init.\nclass LiteStringMachine : public MicroFreakStringMachineEngine {\n public:\n  virtual void Init(stmlib::BufferAllocator* allocator);\n  virtual void Reset();\n  virtual void LoadUserData(const uint8_t*);\n  virtual void Render(const EngineParameters&, float*, float*, size_t, bool*);\n private: uint8_t* arena_;\n};\nvoid LiteStringMachine::Init(stmlib::BufferAllocator* allocator) {\n  arena_ = allocator->Allocate<uint8_t>(0);\n  for (size_t i = 0; i < 1083; ++i) reinterpret_cast<uint32_t*>(arena_)[i] = 0;\n  MicroFreakStringMachineEngine::Init(allocator);\n  \n}\nvoid LiteStringMachine::LoadUserData(const uint8_t*) {\n  stmlib::BufferAllocator allocator(arena_, 16384);\n  Init(&allocator);\n}\nvoid LiteStringMachine::Reset() { LiteStringMachine::LoadUserData(0); }\nvoid LiteStringMachine::Render(const EngineParameters& p, float* out, float* aux, size_t n, bool* env) {\n  MicroFreakStringMachineEngine::Render(p, out, aux, n, env);\n}\n}\n",
+      "roots": [
+        "_ZN6plaits17LiteStringMachine4InitEPN6stmlib15BufferAllocatorE",
+        "_ZN6plaits17LiteStringMachine5ResetEv",
+        "_ZN6plaits17LiteStringMachine12LoadUserDataEPKh",
+        "_ZN6plaits17LiteStringMachine6RenderERKNS_16EngineParametersEPfS4_jPb"
+      ]
+    },
+    "chiptune": {
+      "source": "chiptune_microfreak",
+      "class": "ChiptuneEngine",
+      "object_bytes": 260,
+      "optimize": "-Os",
+      "no_builtin": true,
+      "defines": [],
+      "index": 7,
+      "module": "9be89d2d825734fcc254745741568c390db58ec8c58a638e30b4d8aa966d2687",
+      "wrapper": "",
+      "roots": [
+        "_ZN6plaits14ChiptuneEngine4InitEPN6stmlib15BufferAllocatorE",
+        "_ZN6plaits14ChiptuneEngine5ResetEv",
+        "_ZN6plaits14ChiptuneEngine12LoadUserDataEPKh",
+        "_ZN6plaits14ChiptuneEngine6RenderERKNS_16EngineParametersEPfS4_jPb"
+      ]
+    },
+    "bass_drum": {
+      "source": "bass_drum_microfreak",
+      "class": "LiteBassDrum",
+      "object_bytes": 36,
+      "optimize": "-Oz",
+      "no_builtin": true,
+      "defines": [],
+      "index": 8,
+      "module": "196a3305ae8b2e60310c79b03d0a1a402dd7d2ab091f8acc5150fb97cb3e1dc5",
+      "wrapper": "\nnamespace plaits {\n// The arena pointer lives in the persistent object, outside shared scratch.\n// Arturia calls LoadUserData on CV activation without repeating Common::Init.\nclass LiteBassDrum : public MicroFreakBassDrumEngine {\n public:\n  virtual void Init(stmlib::BufferAllocator* allocator);\n  virtual void Reset();\n  virtual void LoadUserData(const uint8_t*);\n  virtual void Render(const EngineParameters&, float*, float*, size_t, bool*);\n private: uint8_t* arena_;\n};\nvoid LiteBassDrum::Init(stmlib::BufferAllocator* allocator) {\n  arena_ = allocator->Allocate<uint8_t>(0);\n  for (size_t i = 0; i < 40; ++i) reinterpret_cast<uint32_t*>(arena_)[i] = 0;\n  MicroFreakBassDrumEngine::Init(allocator);\n  \n}\nvoid LiteBassDrum::LoadUserData(const uint8_t*) {\n  stmlib::BufferAllocator allocator(arena_, 16384);\n  Init(&allocator);\n}\nvoid LiteBassDrum::Reset() { LiteBassDrum::LoadUserData(0); }\nvoid LiteBassDrum::Render(const EngineParameters& p, float* out, float* aux, size_t n, bool* env) {\n  MicroFreakBassDrumEngine::Render(p, out, aux, n, env);\n}\n}\n",
+      "roots": [
+        "_ZN6plaits12LiteBassDrum4InitEPN6stmlib15BufferAllocatorE",
+        "_ZN6plaits12LiteBassDrum5ResetEv",
+        "_ZN6plaits12LiteBassDrum12LoadUserDataEPKh",
+        "_ZN6plaits12LiteBassDrum6RenderERKNS_16EngineParametersEPfS4_jPb"
+      ]
+    },
+    "snare_drum": {
+      "source": "snare_drum_microfreak",
+      "class": "LiteSnareDrum",
+      "object_bytes": 28,
+      "optimize": "-Oz",
+      "no_builtin": true,
+      "defines": [],
+      "index": 9,
+      "module": "1d4c82d1370345dd24c9218e207401cf2729f51858ff1dd7a6dc01ca5ca736f1",
+      "wrapper": "\nnamespace plaits {\n// The arena pointer lives in the persistent object, outside shared scratch.\n// Arturia calls LoadUserData on CV activation without repeating Common::Init.\nclass LiteSnareDrum : public MicroFreakSnareDrumEngine {\n public:\n  virtual void Init(stmlib::BufferAllocator* allocator);\n  virtual void Reset();\n  virtual void LoadUserData(const uint8_t*);\n  virtual void Render(const EngineParameters&, float*, float*, size_t, bool*);\n private: uint8_t* arena_;\n};\nvoid LiteSnareDrum::Init(stmlib::BufferAllocator* allocator) {\n  arena_ = allocator->Allocate<uint8_t>(0);\n  for (size_t i = 0; i < 69; ++i) reinterpret_cast<uint32_t*>(arena_)[i] = 0;\n  MicroFreakSnareDrumEngine::Init(allocator);\n  \n}\nvoid LiteSnareDrum::LoadUserData(const uint8_t*) {\n  stmlib::BufferAllocator allocator(arena_, 16384);\n  Init(&allocator);\n}\nvoid LiteSnareDrum::Reset() { LiteSnareDrum::LoadUserData(0); }\nvoid LiteSnareDrum::Render(const EngineParameters& p, float* out, float* aux, size_t n, bool* env) {\n  MicroFreakSnareDrumEngine::Render(p, out, aux, n, env);\n}\n}\n",
+      "roots": [
+        "_ZN6plaits13LiteSnareDrum4InitEPN6stmlib15BufferAllocatorE",
+        "_ZN6plaits13LiteSnareDrum5ResetEv",
+        "_ZN6plaits13LiteSnareDrum12LoadUserDataEPKh",
+        "_ZN6plaits13LiteSnareDrum6RenderERKNS_16EngineParametersEPfS4_jPb"
+      ]
+    },
+    "wave_terrain": {
+      "source": "wave_terrain_microfreak",
+      "class": "LiteWaveTerrain",
+      "object_bytes": 52,
+      "optimize": "-Os",
+      "no_builtin": true,
+      "defines": [],
+      "index": 10,
+      "module": "399949a322ce37cff9ae4e2bf20de6cf99b31e22f9b7a8ff57983128ce8c5e47",
+      "wrapper": "\nnamespace plaits {\n// The arena pointer lives in the persistent object, outside shared scratch.\n// Arturia calls LoadUserData on CV activation without repeating Common::Init.\nclass LiteWaveTerrain : public WaveTerrainEngine {\n public:\n  virtual void Init(stmlib::BufferAllocator* allocator);\n  virtual void Reset();\n  virtual void LoadUserData(const uint8_t*);\n  virtual void Render(const EngineParameters&, float*, float*, size_t, bool*);\n private: uint8_t* arena_;\n};\nvoid LiteWaveTerrain::Init(stmlib::BufferAllocator* allocator) {\n  arena_ = allocator->Allocate<uint8_t>(0);\n  for (size_t i = 0; i < 96; ++i) reinterpret_cast<uint32_t*>(arena_)[i] = 0;\n  WaveTerrainEngine::Init(allocator);\n  post_processing_settings.already_enveloped = false; post_processing_settings.out_gain = 0.7f; post_processing_settings.aux_gain = 0.7f;\n}\nvoid LiteWaveTerrain::LoadUserData(const uint8_t*) {\n  stmlib::BufferAllocator allocator(arena_, 16384);\n  Init(&allocator);\n}\nvoid LiteWaveTerrain::Reset() { LiteWaveTerrain::LoadUserData(0); }\nvoid LiteWaveTerrain::Render(const EngineParameters& p, float* out, float* aux, size_t n, bool* env) {\n  WaveTerrainEngine::Render(p, out, aux, n, env);\n}\n}\n",
+      "roots": [
+        "_ZN6plaits15LiteWaveTerrain4InitEPN6stmlib15BufferAllocatorE",
+        "_ZN6plaits15LiteWaveTerrain5ResetEv",
+        "_ZN6plaits15LiteWaveTerrain12LoadUserDataEPKh",
+        "_ZN6plaits15LiteWaveTerrain6RenderERKNS_16EngineParametersEPfS4_jPb"
+      ]
+    },
+    "wave_terrain_aux": {
+      "source": "wave_terrain_microfreak",
+      "class": "LiteWaveTerrain",
+      "object_bytes": 52,
+      "optimize": "-Os",
+      "no_builtin": true,
+      "defines": [],
+      "index": 10,
+      "module": "41fc0897727e1d550154d9fb7e37ecc8e9f470226caf9308b5dd2b3cec25d921",
+      "wrapper": "\nnamespace plaits {\n// The arena pointer lives in the persistent object, outside shared scratch.\n// Arturia calls LoadUserData on CV activation without repeating Common::Init.\nclass LiteWaveTerrain : public WaveTerrainEngine {\n public:\n  virtual void Init(stmlib::BufferAllocator* allocator);\n  virtual void Reset();\n  virtual void LoadUserData(const uint8_t*);\n  virtual void Render(const EngineParameters&, float*, float*, size_t, bool*);\n private: uint8_t* arena_;\n};\nvoid LiteWaveTerrain::Init(stmlib::BufferAllocator* allocator) {\n  arena_ = allocator->Allocate<uint8_t>(0);\n  for (size_t i = 0; i < 96; ++i) reinterpret_cast<uint32_t*>(arena_)[i] = 0;\n  WaveTerrainEngine::Init(allocator);\n  post_processing_settings.already_enveloped = false; post_processing_settings.out_gain = 0.7f; post_processing_settings.aux_gain = 0.7f;\n}\nvoid LiteWaveTerrain::LoadUserData(const uint8_t*) {\n  stmlib::BufferAllocator allocator(arena_, 16384);\n  Init(&allocator);\n}\nvoid LiteWaveTerrain::Reset() { LiteWaveTerrain::LoadUserData(0); }\nvoid LiteWaveTerrain::Render(const EngineParameters& p, float* out, float* aux, size_t n, bool* env) {\n  WaveTerrainEngine::Render(p, aux, out, n, env);\n}\n}\n",
+      "roots": [
+        "_ZN6plaits15LiteWaveTerrain4InitEPN6stmlib15BufferAllocatorE",
+        "_ZN6plaits15LiteWaveTerrain5ResetEv",
+        "_ZN6plaits15LiteWaveTerrain12LoadUserDataEPKh",
+        "_ZN6plaits15LiteWaveTerrain6RenderERKNS_16EngineParametersEPfS4_jPb"
+      ]
+    }
+  },
+  "externals": {
+    "_ZN6stmlib20lut_pitch_ratio_highE": 134737128,
+    "_ZN6stmlib19lut_pitch_ratio_lowE": 134736100,
+    "_ZN6stmlib6Random10rng_state_E": 536871196,
+    "_ZN6plaits8lut_sineE": 134730976,
+    "_ZN6plaits26lut_fm_frequency_quantizerE": 134728396
+  },
+  "runtime_roots": [
+    "tw_models",
+    "tw_next",
+    "tw_boot",
+    "tw_boot_init",
+    "tw_encoder_hook",
+    "tw_refresh_hook",
+    "tw_tick_hook",
+    "tw_save_hook",
+    "tw_load_hook",
+    "tw_encoder",
+    "tw_refresh",
+    "tw_tick",
+    "tw_save",
+    "tw_load",
+    "tw_runtime_init"
+  ],
+  "runtime_module": "c1438f8b62f38555c746fa83826f1e1f7992a68a3ccf0837a8c760e5106c5f54"
+}

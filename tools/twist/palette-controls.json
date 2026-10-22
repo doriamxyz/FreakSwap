@@ -1,0 +1,158 @@
+[
+  {
+    "engine": "phase_distortion",
+    "module": "30e79cbd43b14b1364ae1d5f443de525a31500c9032f08bdad86e77028c5f587",
+    "object_bytes": 100,
+    "object_sha256": "c8984f28fdf8b04d65c5a89b730678c7bf0f98bacb3ff1e25b4b4ca3644cbbe8",
+    "palette_documentation": {
+      "index": 0,
+      "label": "Ratio Fine",
+      "default": 16384,
+      "palette_id": "phase-distortion",
+      "description": "Moves the modulator ratio from an octave down through unison to an octave up."
+    }
+  },
+  {
+    "engine": "classic_waves_vcf",
+    "module": "dfd8fd7871d950dffd64fa5060b1db8763c989d0c5be746690317976aaecd011",
+    "object_bytes": 24,
+    "object_sha256": "9c9d2d6d4a882ef8815797fb18dc8342ad3b602cc886b99670508865d5428896",
+    "palette_documentation": {
+      "index": 1,
+      "label": "Drive",
+      "default": 16384,
+      "palette_id": "virtual-analog-vcf",
+      "description": "Increases oscillator and filter drive from clean to saturated."
+    }
+  },
+  {
+    "engine": "swarm",
+    "module": "b11307266090ab6b522eec428527d6c0b92de66c82bb6dd19ea9ead74325cda4",
+    "object_bytes": 20,
+    "object_sha256": "420b80c7572690078c6d0893f14d3a65f7088bb520d0e562e9cbea5841d8b8de",
+    "palette_documentation": {
+      "index": 2,
+      "label": "Size Spread",
+      "default": 16384,
+      "palette_id": "swarm",
+      "description": "Widens the distribution of grain sizes around the stock midpoint."
+    }
+  },
+  {
+    "engine": "inharmonic_string",
+    "module": "f5fd9e5e37af1186bc9f119966645ad79c2942ac690e841039c2fe36ab3fd871",
+    "object_bytes": 52,
+    "object_sha256": "f096338724f308c93565bab4d3b93135291fa3795eb99b42bb547fce9b5e0509",
+    "palette_documentation": {
+      "index": 3,
+      "label": "Excite Size",
+      "default": 16384,
+      "palette_id": "inharmonic-string",
+      "description": "Lengthens the excitation from a short strike toward a scrape."
+    }
+  },
+  {
+    "engine": "particle_noise",
+    "module": "842cb660e75e4d36d8355e22574bba3b333afa21d75b84b5a4f883089fcb3fa2",
+    "object_bytes": 224,
+    "object_sha256": "c530c75af5dac45f5ae9d458e13576f6952f628c4950d1a6b5eb76f93cd06951",
+    "palette_documentation": {
+      "index": 4,
+      "label": "Diffusion",
+      "default": 16384,
+      "palette_id": "particle-noise",
+      "description": "Adds diffusion from a dry particle stream to a dense cloud."
+    }
+  },
+  {
+    "engine": "filtered_noise",
+    "module": "b6311c1bacbf948f39203e1e4472d71ba717b010d480a4010289a36d3a19855e",
+    "object_bytes": 132,
+    "object_sha256": "a004bca10dd614773b403b2f2554f73d25a136832ccd87bfee68e9c71f64a996",
+    "palette_documentation": {
+      "index": 5,
+      "label": "Filter Pos",
+      "default": 16384,
+      "palette_id": "filtered-noise",
+      "description": "Offsets the filter response from low-pass toward high-pass around the HARMONICS setting."
+    }
+  },
+  {
+    "engine": "string_machine",
+    "module": "d2dc23f3fd58ffd6cc43927e5f92e8113ab9c223eaaa07d298caba4961ea2142",
+    "object_bytes": 276,
+    "object_sha256": "d135de54360b47eef759340d6351303ed2a3a010a1cbf69a41a503344950a740",
+    "palette_documentation": {
+      "index": 6,
+      "label": "Ensemble",
+      "default": 16384,
+      "palette_id": "string-machine",
+      "description": "Moves ensemble depth from dry through the stock setting to fully wet."
+    }
+  },
+  {
+    "engine": "chiptune",
+    "module": "9be89d2d825734fcc254745741568c390db58ec8c58a638e30b4d8aa966d2687",
+    "object_bytes": 260,
+    "object_sha256": "825d2cacbe99899caafdda1dca10e5e583a94a5706b6496fc5d4dc46b3ae3488",
+    "palette_documentation": {
+      "index": 7,
+      "label": "Register",
+      "default": 16384,
+      "palette_id": "chiptune",
+      "description": "Selects stepped register and inversion presets around the stock center step."
+    }
+  },
+  {
+    "engine": "bass_drum",
+    "module": "196a3305ae8b2e60310c79b03d0a1a402dd7d2ab091f8acc5150fb97cb3e1dc5",
+    "object_bytes": 36,
+    "object_sha256": "643bd02093091a487201740381778e66ce37bf4b4f9ba70be490569f00a8bd0e",
+    "palette_documentation": {
+      "index": 8,
+      "label": "Punch",
+      "default": 16384,
+      "palette_id": "analog-bass-drum",
+      "description": "Changes pitch-envelope punch from restrained to exaggerated."
+    }
+  },
+  {
+    "engine": "snare_drum",
+    "module": "1d4c82d1370345dd24c9218e207401cf2729f51858ff1dd7a6dc01ca5ca736f1",
+    "object_bytes": 28,
+    "object_sha256": "51bf2dddd4dfbf67e89700d6928b7de7cc24c79182aa273861d327ee29b0948e",
+    "palette_documentation": {
+      "index": 9,
+      "label": "Mode Spread",
+      "default": 16384,
+      "palette_id": "analog-snare",
+      "description": "Spreads the shell modes from compact to strongly inharmonic."
+    }
+  },
+  {
+    "engine": "wave_terrain",
+    "module": "399949a322ce37cff9ae4e2bf20de6cf99b31e22f9b7a8ff57983128ce8c5e47",
+    "object_bytes": 52,
+    "object_sha256": "fdb2356183f744fe0815276a64afaad4b67c5d8ea69312f6b8ef0806b05a320b",
+    "palette_documentation": {
+      "index": 10,
+      "label": "Y Offset",
+      "default": 16384,
+      "palette_id": "wave-terrain",
+      "description": "Offsets the Y-axis path to reveal complementary terrain contours."
+    }
+  },
+  {
+    "engine": "wave_terrain_aux",
+    "module": "41fc0897727e1d550154d9fb7e37ecc8e9f470226caf9308b5dd2b3cec25d921",
+    "object_bytes": 52,
+    "object_sha256": "b6c286f555b1a91cd2df5ba611098786971ae41fb41e301940086ba9f090ee35",
+    "palette_documentation": {
+      "index": 10,
+      "label": "Y Offset",
+      "default": 16384,
+      "palette_id": "wave-terrain",
+      "description": "Offsets the Y-axis path to reveal complementary terrain contours."
+    }
+  }
+]

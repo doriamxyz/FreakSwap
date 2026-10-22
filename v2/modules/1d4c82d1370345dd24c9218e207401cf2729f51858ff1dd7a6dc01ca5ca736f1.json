@@ -1,0 +1,433 @@
+{
+  "format": "freakswap.arm-module",
+  "version": 1,
+  "sections": [
+    {
+      "id": 0,
+      "size": 20,
+      "alignment": 4,
+      "data": "AACAPwAAAEAfhUtAuB6FQArXs0A=",
+      "relocations": []
+    },
+    {
+      "id": 1,
+      "size": 80,
+      "alignment": 2,
+      "data": "gLUt7QaLsO5BmrDuYKqw7kCK//f+/7buACow7gAatO5CCvHuEPpDvzjuSgoA7gGqsO5KCr/uAApfvzHuAAo57kgaAe4AirDuSAq97AaLgL0=",
+      "relocations": [
+        {
+          "offset": 18,
+          "type": 10,
+          "target": {
+            "section": 2,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "size": 92,
+      "alignment": 4,
+      "data": "EkkTSwpomkIU0QHrQACAiLD1gE8Q2aD1gECf7Q4aAO4QCrjuQAqA7gEKtu4AGjDuAQpwR0/0gEAA7hAKn+0GGrjuQAog7gEKcEcAvwD/ASBQV1QxAPz/RgAAADg=",
+      "relocations": []
+    },
+    {
+      "id": 3,
+      "size": 56,
+      "alignment": 4,
+      "data": "n+0LGgtJIO4BCr3uwBoR7hAKuO7BGgHrgAAw7kEakO0ACpDtASoy7kAqAu4BCnBHAACARAAAAAA=",
+      "relocations": [
+        {
+          "offset": 52,
+          "type": 2,
+          "target": {
+            "external": 134730976
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "size": 26,
+      "alignment": 2,
+      "data": "+LVP9IBBgmnN6QIRAWjN6QAiCmhpRpBHj70=",
+      "relocations": []
+    },
+    {
+      "id": 5,
+      "size": 30,
+      "alignment": 2,
+      "data": "ELUKaAAjACSCYUUsA9BC+CQwATT5573oEED/9/6/",
+      "relocations": [
+        {
+          "offset": 26,
+          "type": 30,
+          "target": {
+            "section": 14,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "size": 4,
+      "alignment": 2,
+      "data": "//f+vw==",
+      "relocations": [
+        {
+          "offset": 0,
+          "type": 30,
+          "target": {
+            "section": 4,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "size": 18,
+      "alignment": 2,
+      "data": "ELUCnAKUA5wDlL3oEED/9/6/",
+      "relocations": [
+        {
+          "offset": 14,
+          "type": 30,
+          "target": {
+            "section": 15,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "size": 60,
+      "alignment": 2,
+      "data": "tu4AGrfuACq07kEK8e4Q+qi/sO5BCpDtABow7gEav+4ACrTuQhox7gAK8e4Q+ri/sO5BCoDtAAr/9/6/",
+      "relocations": [
+        {
+          "offset": 56,
+          "type": 30,
+          "target": {
+            "section": 3,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "size": 96,
+      "alignment": 4,
+      "data": "8LUUShRLFUwAIQAlACZBYQFhwWCBYEFgAWA8Lg/QRxkUNbliOmL7YbxheWKHGQw2x/iYEMf4lBDH+JAQ7ecAIcD4hCDA+IAwxGfA+IwQwPiIEPC9yqp/PwrXIzwiugA9",
+      "relocations": []
+    },
+    {
+      "id": 10,
+      "size": 1008,
+      "alignment": 4,
+      "data": "Len4Ty3tHhuf7ePqsO5AmrLuBAq/7gD69+4AirDuQbqZRrDuQsqw7mGKsO5gqhRGDkYFRrDuaBoC7gDqMe6PCgHugBoh7oEKn+3UGiDuAQr/9/7/sO5A2ijuTgr/9/7/n+3QGt/t0JpM7gGasO4AGjHuTCqf7c4a9e5AmvHuEPoC1d/tzJoG4PTuaJrx7hD6yL/w7mian+3COp/txEos7gIqbe4B2mSxse4MGrDuCFpP8IBACe4BWihhMCAoYIXtAlpA7gOK9e4Aut34oKDf+OiC3+26ygXxGARi7gSqACe37gDKtu4A2rfuDOoN8SQLbe6r6gKUFC8v0LDuTArw7k0KsO5OGgkg//f+/wjrBwCw7kwq8O5MCpDtABoL6wcAMe4PGgHuACqw7m4aKu4CCrTubArx7hD6yL+w7mwKgO0ACiBGAC8Iv7DubRpA7gEK//f+/xQ0BDfN55/tmQq07kC68e4Q+kDx8oC37ggKn+2YOgAgK+4AGgiQzekGADHuASo87kEaMu4DKiHuARqN7QUqse4CKgHuAgqN7QQKs+4ACiruABqf7YOqte5AGvHuEPqw7koKCNS07mwasO5BCvHuEPrIv7DubAq37gga8O5MCgXxfAABkEDuAQr/9/7/le0FugHuEKrf7YDq3+17+gXxkAA87mnKDfEQCLjuQRoAkLDuSwoZ7ggKgO4B2rrxAA8A8JWAKGjN+AyQSLGV7QLqATgoYD7uDwoIv7DuQOoF4JXtAQqf7WcaIO4B6pXtAwq27ggqAp8AnKrxAQo97gu6T/AACbDuSoqF7QHqPu5AGgHuAgqF7QMKn+1bCm7uAMq58RQPK9AI6wkA0O0A2l6xC+sJAJDtAAogRv/3/v8r7gAKIO4rChPgle0DCrDubJq58QAPOEY+7kAKDu4vCgi/sO5AmrDuSQr/9/7/Ce4qCg3ugIoUNww0CfEECdDnsO5ICv/3/v9BSUJKQkuw7kCKle0ECghoKO6ACoXtBAoA+wMgAe4QCghguO5BGiHuLhox7gEaMe4PGrXuQBrx7hD6SL+w7koaAC4Yv7DuSwoBmCnugAow7gAKIO4BCv/3/v8I7gwK3fgMkKnsAQpm54XtBbq97B4bAbC96PCPn+0dCrDuCBqf7R0qACE77gAKIO4BCp/tGBoA7gEqvu4AGo3tBSq37ggqAO4BKo3tBCoEqAgwDCk/9AqvQhgEMYLtAAog7gAK9ecAAEhCAACoQonS3rrNzIw/zcxMvc3MzD0AAPpEAAAAAAAAAADufP8+sKoqP7CqKr8zMzO/mpkJQJqZGT6qqko/9P3UPKabxDsAAAAAX/NuPA1mGQAAAIAv",
+      "relocations": [
+        {
+          "offset": 80,
+          "type": 10,
+          "target": {
+            "section": 16,
+            "value": 1
+          }
+        },
+        {
+          "offset": 92,
+          "type": 10,
+          "target": {
+            "section": 16,
+            "value": 1
+          }
+        },
+        {
+          "offset": 264,
+          "type": 10,
+          "target": {
+            "section": 1,
+            "value": 1
+          }
+        },
+        {
+          "offset": 336,
+          "type": 10,
+          "target": {
+            "section": 19,
+            "value": 1
+          }
+        },
+        {
+          "offset": 476,
+          "type": 10,
+          "target": {
+            "section": 19,
+            "value": 1
+          }
+        },
+        {
+          "offset": 652,
+          "type": 10,
+          "target": {
+            "section": 8,
+            "value": 1
+          }
+        },
+        {
+          "offset": 698,
+          "type": 10,
+          "target": {
+            "section": 18,
+            "value": 1
+          }
+        },
+        {
+          "offset": 724,
+          "type": 10,
+          "target": {
+            "section": 20,
+            "value": 1
+          }
+        },
+        {
+          "offset": 814,
+          "type": 10,
+          "target": {
+            "section": 18,
+            "value": 1
+          }
+        },
+        {
+          "offset": 952,
+          "type": 2,
+          "target": {
+            "section": 0,
+            "value": 0
+          }
+        },
+        {
+          "offset": 992,
+          "type": 2,
+          "target": {
+            "external": 536871196
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "size": 76,
+      "alignment": 4,
+      "data": "t+4AGrbuADq07kMKMe5AKp/tDTrx7hD6SL+w7kAqse4ACgLuADq17kA6se5DCjPuAyrx7hD6SL+w7kA6M+4BCoLuAApwRwC/Zmamvw==",
+      "relocations": []
+    },
+    {
+      "id": 12,
+      "size": 64,
+      "alignment": 4,
+      "data": "C0oOSwAhgWEBYcFggWBBYAFgQWQBY0FiQWEBZMJjBUrDYgNigmMESkJjgmLCYXBHyqp/PwrXIzwiugA9IDN4Pw==",
+      "relocations": []
+    },
+    {
+      "id": 13,
+      "size": 1188,
+      "alignment": 4,
+      "data": "Len4Ty3tFGuw7kC6n+3RCp/t0er37gDasO5CmmHuAYq67ggaHEaw7mGqsO5gipBGiUYFRgLuAOq/7gAKsO5tKjHugAoB7oAqIe6CCp/twyog7gIKCO6BCrHuDBoJ7gEK//f+/7DuQMqf7b0Kue4MGiruAAoJ7gEK//f+/7XuQOqw7kDa8e4Q+gLVn+3y6gbgtO5t6vHuEPrIv7Dubeqy7gQK3+3uqrbuAJrf7eua3+3sygXxNArf7eW6n+3l+h6eKO4AClBGtO5JCrDuaiqw7mw68e4Q+si/sO5JCiDuABoB7ikqAe4COiDuAwo+7g4ahe0KCjDuLQpx7gkKje6ACoXtCwqf7dcKKO4ACrTuSQrx7hD6yL+w7kkK//f+/7DuCAq48QAPKO4ACiDuABpB7imqQe4qyvHuzqog7iwKMO4tGoXtBwo97s4K8e7Amo3ugRqF7QgaHdCf7cMKn+3DGk/wflAoYQAgC+4AGp/twApoYChghe0DGoXtAhqf7b0aCu4AGp/tvAoh7gAKve7ACoXtBgqw7m0KTe4P2pXtBdoB7hBquki5T5/tu+rf7bvKn+27+gzuKwq47kEa3+2yuoBGtEjN7QDa9e4A2o3tAQqw7k0Kg0Yb7goKt+4AqoDuAQqy7gAaje0DCrTuAAow7kgKIO4BCp/tlxq07koK8e4Q+rXuQArIv7DuSgrx7hD6SL+w7kEKIO4ACgE+aO6A6p/tlgou7oAKje0CCnAcAPAGgbnxAA8K0J3tAwow7g3an+2ECoXtAtqF7QPaJeCV7QIKn+2HGrTuQQrx7hD6A9zwB7DuShoB0Z3tARqoaSDuAQqF7QIKELEBOKhhB+CV7QMKne0AGiHuAAqF7QMKle0ECp/texog7gEKse4AGoXtBAqV7QDKle0BuvDuSQoJICDuAQqw7koaCO6AGmjuAfq37gwaPO4vCoXtAAqw7koK//f+/5/taxqw7koq9O5r6vHuEPoA7gEqle0BGg/ughqF7QEaNt207km6sO5KCr/uADqw7koq8e4Q+rTuScrIv7DuQwrx7hD6yL+w7kMqne0COjLuAAqw7koqA+4AKpXtAAq07kIK8e4Q+rTuQhqkvzruQAqF7QAK8e4Q+iLbOu5BGh3gzcyMP83MTL0AAJDCAABwwpXtAAq07koK8e4Q+rTuShqiv7/uACow7gIKhe0ACvHuEPoF27/uACox7gIahe0BGihG//f+/7DuQMqV7QEKKEb/9/7/sO5sGpXtByqV7QlKOGiV7Qg6DO4OGgD7C4AA7i0ale0CCjhgKe6ACiHuAAoC7gBKJO4DujDuSwqw7ksaAu4AGgDuEApQRrjuQAog7g8Khe0JGv/3/v+V7Qo6le0MWpXtC0qV7QMale0EKgE+A+4AWiXuBEox7gIaMO5ECgPuAEqF7QxKMO4rCiDuAQoK7oC6pOwBuvbmhe0F2r3sFGsBsL3o8I9hC7a6iYgIuwAAAABJJl9Cj7ohQdsPSUAAAAxCMzMzP5qZmT6PwvU8CtcjPQCAO0fNzMw89Dx/P9ej8D7NzMw9AAAAAF/zbjwNZhkAmpkZP83MzL0AAIAv",
+      "relocations": [
+        {
+          "offset": 96,
+          "type": 10,
+          "target": {
+            "section": 16,
+            "value": 1
+          }
+        },
+        {
+          "offset": 120,
+          "type": 10,
+          "target": {
+            "section": 16,
+            "value": 1
+          }
+        },
+        {
+          "offset": 282,
+          "type": 10,
+          "target": {
+            "section": 19,
+            "value": 1
+          }
+        },
+        {
+          "offset": 720,
+          "type": 10,
+          "target": {
+            "section": 1,
+            "value": 1
+          }
+        },
+        {
+          "offset": 918,
+          "type": 10,
+          "target": {
+            "section": 11,
+            "value": 1
+          }
+        },
+        {
+          "offset": 932,
+          "type": 10,
+          "target": {
+            "section": 11,
+            "value": 1
+          }
+        },
+        {
+          "offset": 1018,
+          "type": 10,
+          "target": {
+            "section": 17,
+            "value": 1
+          }
+        },
+        {
+          "offset": 1164,
+          "type": 2,
+          "target": {
+            "external": 536871196
+          }
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "size": 80,
+      "alignment": 4,
+      "data": "ELUERhFIimigYGBgASDMKiBzAdIAIAXgCGjMOopgAPHMAwtgSCogYQHSACIF4Eg6imAKaALxSAMLYGJh//f+/2BpvegQQP/3/r8Av83MTD8=",
+      "relocations": [
+        {
+          "offset": 60,
+          "type": 10,
+          "target": {
+            "section": 9,
+            "value": 1
+          }
+        },
+        {
+          "offset": 70,
+          "type": 30,
+          "target": {
+            "section": 12,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "size": 204,
+      "alignment": 4,
+      "data": "Len4Ty3tBHuR7QEKuu4CGt3pDrqYRpFGDkYFRjDuARqf7ScKtO5AGvHuEPoK1J/tJSqw7kEKtO5CGvHuEPrIv7DuQgogSJDtAIr/9/7/BvEIAbXuAEqW7QU6KGlLRpHsAxoxaCjuBErN+ACwJO4AirDuQwoB8AEHwfNABPDuSAohRjpG//f+/wbxCACW7QUKIUY6RvDuSApDRpDsAxpoac34ALD/9/7/uvEADxy/ASCK+AAAvewEewGwvejwjwC/AAAAwwAA/kIEAAAg",
+      "relocations": [
+        {
+          "offset": 74,
+          "type": 10,
+          "target": {
+            "section": 16,
+            "value": 1
+          }
+        },
+        {
+          "offset": 132,
+          "type": 10,
+          "target": {
+            "section": 10,
+            "value": 1
+          }
+        },
+        {
+          "offset": 164,
+          "type": 10,
+          "target": {
+            "section": 13,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "size": 84,
+      "alignment": 4,
+      "data": "n+0QGhFKMO4BCr3uwBoR7hAKuO7BGjDuQQqf7QsaIO4BCr3uwAoQ7hAaAuuBAZHtAAoHSQHrgACQ7QAaIe4ACnBHAL8AAABDAACAQwAAAAAAAAAA",
+      "relocations": [
+        {
+          "offset": 76,
+          "type": 2,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 80,
+          "type": 2,
+          "target": {
+            "external": 134737128
+          }
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "size": 70,
+      "alignment": 2,
+      "data": "kO0BKpDtA0qQ7QAakO0COgLuRAqQ7QQqAe5ECjDuQgog7gMKIe4ACjDuBDow7gMKIe4DGoDtAwox7gIKMe4AGoDtBBpwRw==",
+      "relocations": []
+    },
+    {
+      "id": 18,
+      "size": 70,
+      "alignment": 2,
+      "data": "kO0BKpDtA0qQ7QAakO0COgLuRAqQ7QQqAe5ECjDuQgog7gMKIe4AOjPuBAoh7gAaM+4AOjHuAiqA7QM6Me4CGoDtBBpwRw==",
+      "relocations": []
+    },
+    {
+      "id": 19,
+      "size": 80,
+      "alignment": 4,
+      "data": "t+4AGp/tD0qf7Q9aIO4AOoHuICoD7gRan+0MSgPuBUqw7kE6IO4ECoDtAAoC7gA6gO0BKgDuADqB7gMKgO0CCnBHAL9JJl9Cj7ohQdsPSUA=",
+      "relocations": []
+    },
+    {
+      "id": 20,
+      "size": 74,
+      "alignment": 2,
+      "data": "uO4IGrTuQQrx7hD6RL+/7gAKcEew7ggatO5BCvHuEPrEv7fuAApwR7LuAhqz7gsqsO5COiDuARoA7gAqAe4AOiDuAgqA7gMKcEc=",
+      "relocations": []
+    }
+  ],
+  "roots": [
+    {
+      "section": 5,
+      "value": 1
+    },
+    {
+      "section": 6,
+      "value": 1
+    },
+    {
+      "section": 4,
+      "value": 1
+    },
+    {
+      "section": 7,
+      "value": 1
+    }
+  ]
+}
