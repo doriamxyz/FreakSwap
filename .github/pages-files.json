@@ -1,6 +1,11 @@
 {
   "files": [
     {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "path": "COPYING-Unicorn.txt",
       "bytes": 18092,
       "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
@@ -11,9 +16,19 @@
       "sha256": "96ad83793a1d187a62a60accf41e5b056507e5eef1b35641a0f3b6805de9dcec"
     },
     {
+      "path": "analytics-config.js",
+      "bytes": 141,
+      "sha256": "a1f59a822ec715e0c56e97a061043fc899c2acf8020e79fcffc1a05338baf27a"
+    },
+    {
+      "path": "analytics.js",
+      "bytes": 1993,
+      "sha256": "ac10104e212ff7071f260e4a212aea633941263e5c7552191b7d52844bad2630"
+    },
+    {
       "path": "app.js",
-      "bytes": 26281,
-      "sha256": "6b8cbd82a77632ad0cb21ec29ef5454c2e5dc73ff3c173b0ede20d6180e91e10"
+      "bytes": 26433,
+      "sha256": "c3b44e0ba75b5c513336a8051820e51ce449a7744e45b8f0f097d9313fb6b3af"
     },
     {
       "path": "arm-checks.js",
@@ -142,8 +157,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 6004,
-      "sha256": "580dbf96b4116f6d99bb3cd541d219b9f4097272348a444780ec0f4b5d816b3d"
+      "bytes": 6050,
+      "sha256": "9ff52ffab01eca5ce49381c139c125ea26c3910743cb4a1205e156908542bd85"
     },
     {
       "path": "library-release.js",
@@ -354,11 +369,6 @@
       "path": "worker.js",
       "bytes": 2965,
       "sha256": "e8224513c8d607c781757eea5af0ea673ed4903bbf0a872fbcd6913065f27440"
-    },
-    {
-      "path": ".nojekyll",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     }
   ]
 }
