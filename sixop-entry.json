@@ -1,0 +1,20 @@
+{
+  "base": {
+    "size": 941572,
+    "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+  },
+  "patch": {
+    "url": "catalog/sixop-abc/firmware.mflp",
+    "size": 19801,
+    "sha256": "ae0fd89327713b4520982bc698ced8342c436e40d5ee1766d12e889ca0063f8a"
+  },
+  "result": {
+    "size": 941572,
+    "sha256": "d5528bf95c3c5fb8f2dc988549720c6ee9a0ac3a3ac8383397dea24d5ffdf151",
+    "filename": "UNTESTED_MicroFreak_5_0_0_2084_SixOpFM_ABC_ThreeEngines_LiveRate.mff"
+  },
+  "guide": {
+    "url": "catalog/sixop-abc/guide.md",
+    "sha256": "ddc19e1693603aba3b6a44c62e7964aebe158dc78b4db60c3a30badb2ee1a36b"
+  }
+}

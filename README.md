@@ -27,3 +27,7 @@ For a local preview, extract `catalog.zip` at the repository root, then serve th
 ## Notices
 
 Independent project, unaffiliated with Arturia. MicroFreak and MIDI Control Center are Arturia product names. See [NOTICE.txt](NOTICE.txt) for third-party attribution and license terms.
+
+## Six-Op FM A/B/C
+
+The Six-Op page prepares one fixed three-engine configuration: A in Two Op. FM, B in Formant and C in Speech, 32 patches per bank. It includes the live audio-rate tuning correction. The 38 individual replacement options remain available. Physical testing of the exact updated Six-Op firmware is pending.

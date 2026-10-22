@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Add Six-Op FM A, B and C to your MicroFreak: 96 factory patches in three engines.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; worker-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Six-Op FM A/B/C · FreakSwap</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="sixop-abc.css"><script type="module" src="sixop-abc.js"></script>
+</head>
+<body class="sixop-page">
+<a class="skip" href="#main">Skip to firmware</a>
+<header class="masthead"><a href="./" class="wordmark">Freak<span>Swap</span></a></header>
+<main id="main">
+<section class="intro"><p class="eyebrow">THREE BANKS. 96 PATCHES.</p><h1>Six-Op FM.<br>A, B <span>and C.</span></h1><p class="lead">Three engines in one firmware. Each bank has 32 factory patches, with patch names on your MicroFreak display.</p><a href="./">← All engines</a></section>
+<section class="panel" aria-labelledby="configuration"><h2 id="configuration">Your configuration</h2><ul class="replacements"><li>Two Op. FM → Six-Op A</li><li>Formant → Six-Op B</li><li>Speech → Six-Op C</li></ul><p>All three are included together in this configuration. The other engines stay unchanged.</p><p>Type chooses A, B or C. Wave selects a patch; Timbre controls brightness; Shape controls the envelope. Hold Shift with Type, Wave, Timbre or Shape for Algorithm, Feedback, Detune or Release.</p><p class="small">Presets from earlier Six-Op versions require selecting the bank and patch again and saving a copy. The DX LFO and second internal voice are omitted; MicroFreak's four voices are preserved.</p><p class="small">Experimental update, checked in emulation. Physical testing of this exact firmware is pending.</p></section>
+<section class="panel" aria-labelledby="firmware-title"><h2 id="firmware-title">Prepare your firmware</h2><p>Choose the official MicroFreak <strong>5.0.0.2084</strong> firmware. Your file stays on this computer.</p><label class="upload" for="firmware-input"><strong>Choose .mff file</strong><span id="file-label">Official firmware from Arturia</span></label><input id="firmware-input" class="visually-hidden" type="file" accept=".mff" disabled><p id="notice" class="notice" role="status" aria-live="polite">Loading configuration…</p><button id="generate" class="primary" disabled>Prepare firmware</button><button id="cancel" class="quiet" hidden>Cancel</button><div id="result" hidden><a id="download-firmware" class="primary" download>Download .mff firmware ↓</a></div><p><button id="download-guide" class="quiet" disabled>Download installation guide</button></p><p class="small">Back up your presets. Install manually with MIDI Control Center. This tool does not connect to your instrument.</p></section>
+<noscript><p>Enable JavaScript to prepare your firmware.</p></noscript>
+</main><footer><span>FreakSwap · independent project, not affiliated with Arturia</span><a href="NOTICE.txt">Licenses and notices</a></footer>
+</body></html>
