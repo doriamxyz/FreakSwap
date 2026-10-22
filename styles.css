@@ -5,3 +5,5 @@
 
 /* Keep the configurator separate from the footer when selection tools are hidden. */
 main{padding-bottom:40px}
+
+.combination-options{margin-top:24px;padding-top:24px;border-top:1px solid var(--line)}.combination-options h3{font-size:16px}.combination-options .selection-tools{gap:8px}.combination-options button{text-align:left;overflow-wrap:anywhere}.engine-card:has(button:disabled){opacity:.65}

@@ -20,12 +20,23 @@ export function candidates(catalog, engines, exact = true) {
   const keys = orderedEngines(catalog,engines);
   return catalog.combinations.filter(entry => (!exact || entry.recipe.replacements.length === keys.length) && keys.every(key => entry.recipe.replacements.some(r => r.engine === key)));
 }
-export function availableEngines(catalog) {
-  return catalog.engines.filter(key => candidates(catalog,[key],true).length > 0);
+export function availableEngines(catalog, engines = []) {
+  const keys = orderedEngines(catalog,engines);
+  return catalog.engines.filter(key => keys.includes(key) || candidates(catalog,[...keys,key],false).length > 0);
+}
+export function completionOptions(catalog, engines) {
+  const keys = orderedEngines(catalog,engines);
+  if (!keys.length) return [];
+  const seen = new Set();
+  return candidates(catalog,keys,false).map(entry => orderedEngines(catalog,entry.recipe.replacements.map(r=>r.engine)))
+    .filter(group => group.length > keys.length)
+    .sort((a,b)=>a.length-b.length || a.join(',').localeCompare(b.join(',')))
+    .filter(group => {const id=group.join(',');if(seen.has(id))return false;seen.add(id);return true;});
 }
 export function resolveSelection(catalog, engines, previous = {}) {
-  const keys = orderedEngines(catalog,engines), exact = keys.length === 1 ? candidates(catalog,keys,true) : [];
-  if (!exact.length) return {engines:keys,choices:previous,rows:[],cleared:[],entry:null,canContinue:false};
+  const keys = orderedEngines(catalog,engines), exact = keys.length ? candidates(catalog,keys,true) : [];
+  const retained = Object.fromEntries(keys.filter(key=>previous[key]).map(key=>[key,previous[key]]));
+  if (!exact.length) return {engines:keys,choices:retained,rows:[],cleared:[],entry:null,canContinue:false};
   let pool = exact;
   const choices = {}, rows = [], cleared = [];
   for (const engine of keys) {
@@ -69,7 +80,7 @@ export function validateSelectionFile(catalog, value) {
   return selectionFile(catalog,engines,choices);
 }
 export function selectionAvailable(catalog, engines, choices) {
-  return engines.length === 1 && candidates(catalog,engines,true).some(entry => engines.every(engine => {
+  return engines.length > 0 && candidates(catalog,engines,false).some(entry => engines.every(engine => {
     const row = entry.recipe.replacements.find(r => r.engine === engine), selected = choices[engine] || {};
     return (!selected.original || selected.original === row.original) && (!selected.variant || selected.variant === row.variant);
   }));

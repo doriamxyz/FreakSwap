@@ -2260,7 +2260,3913 @@
         "url": "catalog/4fe7d1e5c98782224ed81283d98ab26bb06c0b09338b7f94402bab3c61923bd1/guide.md",
         "sha256": "43316012b9e8f02b8bc2a37c70f6297ac7aff0160524df8015e688065d2cd4a1"
       }
+    },
+    {
+      "id": "04c1429e0b2dfc76af2fb0f54fdc75d68f3c1783ec794701d14d1dae5f7f1a71",
+      "title": "Bass Drum in Basic Waves + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "bass_drum",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "04c1429e0b2dfc76af2fb0f54fdc75d68f3c1783ec794701d14d1dae5f7f1a71",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "bass_drum",
+          "variant": "normal",
+          "original_name": "Basic Waves",
+          "engine_name": "Bass Drum",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/04c1429e0b2dfc76af2fb0f54fdc75d68f3c1783ec794701d14d1dae5f7f1a71/firmware.mflp",
+        "size": 7101,
+        "sha256": "c4f964f6b3ad23b952dec806def2038c1013b13d31ba2041bfed8ea4f5172603"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "fc3f3cbf7d9ad02258bbf00fa390b7f1cf14a8debbbb6287358d72c0389f4def",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-bass-drum-at-basic_waves_c226d4687b40.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/04c1429e0b2dfc76af2fb0f54fdc75d68f3c1783ec794701d14d1dae5f7f1a71/recipe.json",
+        "sha256": "cd219079392b193a3f0c8f948399b7a7829bb6086e33fa1ee599e9989cfe72b6"
+      },
+      "guide": {
+        "url": "catalog/04c1429e0b2dfc76af2fb0f54fdc75d68f3c1783ec794701d14d1dae5f7f1a71/guide.md",
+        "sha256": "ed0888930e0fb4dd1d1fb595bb58a1b6fe166b79584af1404155a70f9c070351"
+      }
+    },
+    {
+      "id": "c90b982ba9e30fbb482c947d87020a8efd5bef3849d50eafcbc35ea2e40a3322",
+      "title": "Bass Drum in Formant + Swarm in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "formant",
+            "engine": "bass_drum",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "swarm",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "c90b982ba9e30fbb482c947d87020a8efd5bef3849d50eafcbc35ea2e40a3322",
+      "replacements": [
+        {
+          "original": "formant",
+          "engine": "bass_drum",
+          "variant": "normal",
+          "original_name": "Formant",
+          "engine_name": "Bass Drum",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/c90b982ba9e30fbb482c947d87020a8efd5bef3849d50eafcbc35ea2e40a3322/firmware.mflp",
+        "size": 7050,
+        "sha256": "a9de37821f6a05ecfd8bb2d73de2c02f069c75380a1fe7752254a590e23504bf"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "ca9e434eca36c349a9b3eeba15b63042e9bbee4d20afa8bf0f641906fda4ff9e",
+        "filename": "MicroFreak_5_0_0_2084_lite-swarm-at-speech-bass-drum-at-formant_0f608924568f.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/c90b982ba9e30fbb482c947d87020a8efd5bef3849d50eafcbc35ea2e40a3322/recipe.json",
+        "sha256": "42fb3f7d4d4c974df591b78d6788160391121d8722f063c0eb5d8fdd0ac55d42"
+      },
+      "guide": {
+        "url": "catalog/c90b982ba9e30fbb482c947d87020a8efd5bef3849d50eafcbc35ea2e40a3322/guide.md",
+        "sha256": "0d1fb15a3a7604145007a39cca917fafb7b0a4e4e8ddc6c48330ba9af00ac44d"
+      }
+    },
+    {
+      "id": "e2c859df5f9db0491224d9c8152f45d219be9cda076a9979e828d713e4c55d06",
+      "title": "Chiptune in Basic Waves + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "chiptune",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "e2c859df5f9db0491224d9c8152f45d219be9cda076a9979e828d713e4c55d06",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "chiptune",
+          "variant": "normal",
+          "original_name": "Basic Waves",
+          "engine_name": "Chiptune",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/e2c859df5f9db0491224d9c8152f45d219be9cda076a9979e828d713e4c55d06/firmware.mflp",
+        "size": 7316,
+        "sha256": "1b61e923cfba8bfc8257aa71e23fe875a859e27aee856c461ebeb1b2d43e35a2"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "0bc45b7a0032f8fa732cc5bacd7a675bc1d5565cf94093749cb5ff18f46ca79e",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-chiptune-at-basic_waves_aba2cb471314.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/e2c859df5f9db0491224d9c8152f45d219be9cda076a9979e828d713e4c55d06/recipe.json",
+        "sha256": "5c4e9a69d1510e2d5a5750af2fe56a5438d2b66c65327c2c380ecb4ac5f28796"
+      },
+      "guide": {
+        "url": "catalog/e2c859df5f9db0491224d9c8152f45d219be9cda076a9979e828d713e4c55d06/guide.md",
+        "sha256": "5d13bb8bf89deac3a0238d9392c1ec139b60485c22317d2c0826bfff63356c7d"
+      }
+    },
+    {
+      "id": "61dd6315a8ac6e941b0328d599968a35b7601ea437dfdaad2b9f8543d473a2e8",
+      "title": "Classic Waveshapes + VCF in Basic Waves + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "classic_waves_vcf",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "61dd6315a8ac6e941b0328d599968a35b7601ea437dfdaad2b9f8543d473a2e8",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "classic_waves_vcf",
+          "variant": "normal",
+          "original_name": "Basic Waves",
+          "engine_name": "Classic Waveshapes + VCF",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/61dd6315a8ac6e941b0328d599968a35b7601ea437dfdaad2b9f8543d473a2e8/firmware.mflp",
+        "size": 6077,
+        "sha256": "4fa59353b823959aa808dca8f51cf08a5db22f5322cab16f42ffedde0532de5a"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "4b84f94bf89c9765d989a8733716f21da3411e78b6015297cdf3bcd7e307fb98",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-classic-waves-vcf-at-basic_waves_5c795fe33804.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/61dd6315a8ac6e941b0328d599968a35b7601ea437dfdaad2b9f8543d473a2e8/recipe.json",
+        "sha256": "72225a008c854c0e7d9fb1b53a15cf302d2b1cf8ac3b3984ba343ffec19ce74b"
+      },
+      "guide": {
+        "url": "catalog/61dd6315a8ac6e941b0328d599968a35b7601ea437dfdaad2b9f8543d473a2e8/guide.md",
+        "sha256": "6108389f4551aa22c74f3715a62188bf05e208cb5543b72e2c0950a953643920"
+      }
+    },
+    {
+      "id": "9e666d82749436c088592e57dbd4e477b40b1c78a63aa4375b91bb4359de7dd1",
+      "title": "Filtered Noise in Basic Waves + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "filtered_noise",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "9e666d82749436c088592e57dbd4e477b40b1c78a63aa4375b91bb4359de7dd1",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "filtered_noise",
+          "variant": "normal",
+          "original_name": "Basic Waves",
+          "engine_name": "Filtered Noise",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/9e666d82749436c088592e57dbd4e477b40b1c78a63aa4375b91bb4359de7dd1/firmware.mflp",
+        "size": 5511,
+        "sha256": "2c0b8cb782099c136f9c669a72de09cc341a64979aa509adc11956fb18ccedc8"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "7aa3cba9097f17611a60c65164d45ead471ad0bf27bef92830848bfac6d025bc",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-filtered-noise-at-basic_waves_57cd128642ad.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/9e666d82749436c088592e57dbd4e477b40b1c78a63aa4375b91bb4359de7dd1/recipe.json",
+        "sha256": "0a9322f1e491d97091b88dd73a7c3924592943e627ed5ef7097fb572c06fb993"
+      },
+      "guide": {
+        "url": "catalog/9e666d82749436c088592e57dbd4e477b40b1c78a63aa4375b91bb4359de7dd1/guide.md",
+        "sha256": "652299aa7b6eef4bf740bdb24ecbcde842516e243e827d9c1c64e2ad779eb910"
+      }
+    },
+    {
+      "id": "7d55b826ae2bfcf530a86e9566d06192adfe8b09e860cafa0bbf3a4f93ccaeb7",
+      "title": "Filtered Noise in Basic Waves · Two-band (AUX) + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "filtered_noise",
+            "variant": "dual_band"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "7d55b826ae2bfcf530a86e9566d06192adfe8b09e860cafa0bbf3a4f93ccaeb7",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "filtered_noise",
+          "variant": "dual_band",
+          "original_name": "Basic Waves",
+          "engine_name": "Filtered Noise",
+          "variant_name": "Two-band (AUX)"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/7d55b826ae2bfcf530a86e9566d06192adfe8b09e860cafa0bbf3a4f93ccaeb7/firmware.mflp",
+        "size": 5521,
+        "sha256": "3002db2f72f38590a29aed3f94468a3cb0f312a536b56a4d30d13268e847bf75"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "e2c50f36671fab7665675521fc0322a104ca95b4e64001f105cf41d22385b518",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-filtered-noise-dual-band-at-basic_waves_7a9b5b9e9a39.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/7d55b826ae2bfcf530a86e9566d06192adfe8b09e860cafa0bbf3a4f93ccaeb7/recipe.json",
+        "sha256": "dac1d9795a871bc0dd041b9f1d664eeba4cfef41200a2520ca71f8323f896ea8"
+      },
+      "guide": {
+        "url": "catalog/7d55b826ae2bfcf530a86e9566d06192adfe8b09e860cafa0bbf3a4f93ccaeb7/guide.md",
+        "sha256": "7e06267310ed149dbe6726743e0e5bba5034277e272d28af666e9c4d2fdfe9a9"
+      }
+    },
+    {
+      "id": "f2246ced4f3c1e08fb308559bbc5ed1d37a3911f19cddd63a7dc20546fe42d2a",
+      "title": "Filtered Noise in Formant + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "engine": "filtered_noise",
+            "variant": "normal",
+            "original": "formant"
+          },
+          {
+            "engine": "phase_distortion",
+            "variant": "normal",
+            "original": "speech"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "f2246ced4f3c1e08fb308559bbc5ed1d37a3911f19cddd63a7dc20546fe42d2a",
+      "replacements": [
+        {
+          "engine": "filtered_noise",
+          "variant": "normal",
+          "original": "formant",
+          "original_name": "Formant",
+          "engine_name": "Filtered Noise",
+          "variant_name": "Main"
+        },
+        {
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original": "speech",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/f2246ced4f3c1e08fb308559bbc5ed1d37a3911f19cddd63a7dc20546fe42d2a/firmware.mflp",
+        "size": 5989,
+        "sha256": "9d60cc6b86b83f749d961fdaaa258c84246544ba993bfed311954b1abfb4849a"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "4bbbcbb8ae31790b84821434957092e04a96aff49084f39e5955c689fbd1ff3b",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-filtered-noise-at-formant_50912e4ab066.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/f2246ced4f3c1e08fb308559bbc5ed1d37a3911f19cddd63a7dc20546fe42d2a/recipe.json",
+        "sha256": "e06c23c3a1a9cd9088ad1acc57a04f69ca717291371cd1d41f6c81bfadae00ec"
+      },
+      "guide": {
+        "url": "catalog/f2246ced4f3c1e08fb308559bbc5ed1d37a3911f19cddd63a7dc20546fe42d2a/guide.md",
+        "sha256": "759480766950a2d43d7f693dc9966f5edc5d1db600fa57602cb8d6945c34f1bc"
+      }
+    },
+    {
+      "id": "51ff989cf68cdc233aad3a19be7eae719279f9a71e2f8addafb8c45a1381c2b0",
+      "title": "Inharmonic String in Basic Waves + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "inharmonic_string",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "51ff989cf68cdc233aad3a19be7eae719279f9a71e2f8addafb8c45a1381c2b0",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "inharmonic_string",
+          "variant": "normal",
+          "original_name": "Basic Waves",
+          "engine_name": "Inharmonic String",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/51ff989cf68cdc233aad3a19be7eae719279f9a71e2f8addafb8c45a1381c2b0/firmware.mflp",
+        "size": 8649,
+        "sha256": "8b758ee4086745bc908cb6f74bcb168b3d3a0202ee26c278fbc5535c06418fa1"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "e1b28a0dd12494d096631821b497c7dde9735f99bde9c4850fa92ca534e029b8",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-inharmonic-string-at-basic_waves_14dbe762e77b.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/51ff989cf68cdc233aad3a19be7eae719279f9a71e2f8addafb8c45a1381c2b0/recipe.json",
+        "sha256": "df6851b1b50395bd9d8f32fe5e92c609f8b90bdeb0a560f1f4fd3d8633d1e84f"
+      },
+      "guide": {
+        "url": "catalog/51ff989cf68cdc233aad3a19be7eae719279f9a71e2f8addafb8c45a1381c2b0/guide.md",
+        "sha256": "2558bcba3cd94023be732b3f94456790e38456570cdcb6c1906cfb41a10066e0"
+      }
+    },
+    {
+      "id": "1cf0cf0d998b760974ab1e242e00d3db3cfe48239a5ea4113b99b7e9458b96b9",
+      "title": "Particle Noise in Basic Waves + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "particle_noise",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "1cf0cf0d998b760974ab1e242e00d3db3cfe48239a5ea4113b99b7e9458b96b9",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "particle_noise",
+          "variant": "normal",
+          "original_name": "Basic Waves",
+          "engine_name": "Particle Noise",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/1cf0cf0d998b760974ab1e242e00d3db3cfe48239a5ea4113b99b7e9458b96b9/firmware.mflp",
+        "size": 5999,
+        "sha256": "2a56300ac7ce1f3a6c40e596b475900f177b51828e3a8cb6865a355537ec7f89"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "54aafc3441ac5ba2aba79235e0b7643eeb06d533e4a7dbbe18b730493b1bbe26",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-particle-noise-at-basic_waves_bab83d250318.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/1cf0cf0d998b760974ab1e242e00d3db3cfe48239a5ea4113b99b7e9458b96b9/recipe.json",
+        "sha256": "64ca651676a94e06f3a73aa0f26920ed8d1532b7e4e510898352369c39c018af"
+      },
+      "guide": {
+        "url": "catalog/1cf0cf0d998b760974ab1e242e00d3db3cfe48239a5ea4113b99b7e9458b96b9/guide.md",
+        "sha256": "29dec8cf8dfc9c97016e74c0c9e2fa25f0a1980a7271f28afa853d197bc6a48d"
+      }
+    },
+    {
+      "id": "6dc18feea0052562682c984d938a27e4c5373240344c31c4aeb4d398462c8638",
+      "title": "Particle Noise in SuperWave + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "superwave",
+            "engine": "particle_noise",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "6dc18feea0052562682c984d938a27e4c5373240344c31c4aeb4d398462c8638",
+      "replacements": [
+        {
+          "original": "superwave",
+          "engine": "particle_noise",
+          "variant": "normal",
+          "original_name": "SuperWave",
+          "engine_name": "Particle Noise",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/6dc18feea0052562682c984d938a27e4c5373240344c31c4aeb4d398462c8638/firmware.mflp",
+        "size": 6007,
+        "sha256": "7f92dc8b5023a8c251e2a7dd6031270abb4e615ed4d9bb99858fb2dd33f5fc30"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "e7c5df3869dd517f6da44ba402181198f585085d3da059e460712a965c0564fb",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-particle-noise-at-superwave_261bf313627e.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/6dc18feea0052562682c984d938a27e4c5373240344c31c4aeb4d398462c8638/recipe.json",
+        "sha256": "3c32dc6dd040f09765bb027153dcbac15f04b62061ffb2cfba9a3c23703ca386"
+      },
+      "guide": {
+        "url": "catalog/6dc18feea0052562682c984d938a27e4c5373240344c31c4aeb4d398462c8638/guide.md",
+        "sha256": "0a0b3f8dc1a2e5227231d8e3d3e78f8a903a9e3f9797285f2d424618778581b3"
+      }
+    },
+    {
+      "id": "9f4a0c4204da520dcffddb47a6fc933f46fb53832608b59cbf3287c680422880",
+      "title": "Phase Distortion in Basic Waves + Swarm in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "swarm",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "9f4a0c4204da520dcffddb47a6fc933f46fb53832608b59cbf3287c680422880",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Basic Waves",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/9f4a0c4204da520dcffddb47a6fc933f46fb53832608b59cbf3287c680422880/firmware.mflp",
+        "size": 5502,
+        "sha256": "f46082b24384827f1cecfac6ca233f4fcccfde4d118c7051c6bafa4b0b34fe3a"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "e648ed23738000284d2ea9f8cc3e6a41d5d79a7cbbf6569c84a7316fb0b9ec01",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-basic_waves-swarm-at-speech_0c9051086d5a.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/9f4a0c4204da520dcffddb47a6fc933f46fb53832608b59cbf3287c680422880/recipe.json",
+        "sha256": "abf1f7c76ad2c7b0ad6b98a6e07c3735ab72a24a2b827e27fa64e284da734949"
+      },
+      "guide": {
+        "url": "catalog/9f4a0c4204da520dcffddb47a6fc933f46fb53832608b59cbf3287c680422880/guide.md",
+        "sha256": "81c5681efd50bed19ec54fb8e50b77f42c4b517bc7c911e22c33630b0d6da2ae"
+      }
+    },
+    {
+      "id": "0ff72a40a7ab8683468b4b7a455c0e4c8d2d533ba29ffdfd7e39e9cf25f43907",
+      "title": "Phase Distortion in Speech + Bass Drum in Noise",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "noise",
+            "engine": "bass_drum",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "0ff72a40a7ab8683468b4b7a455c0e4c8d2d533ba29ffdfd7e39e9cf25f43907",
+      "replacements": [
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "noise",
+          "engine": "bass_drum",
+          "variant": "normal",
+          "original_name": "Noise",
+          "engine_name": "Bass Drum",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/0ff72a40a7ab8683468b4b7a455c0e4c8d2d533ba29ffdfd7e39e9cf25f43907/firmware.mflp",
+        "size": 7092,
+        "sha256": "2097d4472a365bf0bce59ab55048ddbba97bd9aacac8952e2c0eb906639db9d4"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "4764b68104923297b233d8fe5932e9f9939fb453b93cd39dfa9e160a841fd1cf",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-bass-drum-at-noise_d13a5c33e9b4.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/0ff72a40a7ab8683468b4b7a455c0e4c8d2d533ba29ffdfd7e39e9cf25f43907/recipe.json",
+        "sha256": "6cc1344efb66c50f2083378e434ec963fc0737f2bc7bc8313d57f9c6c4996814"
+      },
+      "guide": {
+        "url": "catalog/0ff72a40a7ab8683468b4b7a455c0e4c8d2d533ba29ffdfd7e39e9cf25f43907/guide.md",
+        "sha256": "70da90b2ee438e25bf4529659c963780164f92b2383f0abb0b42cbe598783a2b"
+      }
+    },
+    {
+      "id": "db4d5507023f4c917164097f3960516246fe5455c3dd305ea516d21d19239aa6",
+      "title": "Phase Distortion in Speech + Snare Drum in Sample",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "sample",
+            "engine": "snare_drum",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "db4d5507023f4c917164097f3960516246fe5455c3dd305ea516d21d19239aa6",
+      "replacements": [
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "sample",
+          "engine": "snare_drum",
+          "variant": "normal",
+          "original_name": "Sample",
+          "engine_name": "Snare Drum",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/db4d5507023f4c917164097f3960516246fe5455c3dd305ea516d21d19239aa6/firmware.mflp",
+        "size": 6906,
+        "sha256": "9aea1b76fd3beaec75fdee7ac73a9086d3c06ff4b0e5286b3b1c3275cd6526de"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "b165cf716d7d41279c04d9c7b321f01bac6c377ef10d2ca98e36ce7cd3e7279c",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-snare-drum-at-sample_ac94f0c29401.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/db4d5507023f4c917164097f3960516246fe5455c3dd305ea516d21d19239aa6/recipe.json",
+        "sha256": "c1e3ee791feb27d8b54d9f398aaaa1ed8cb28f56aac6f2b39b7f50082f2d671c"
+      },
+      "guide": {
+        "url": "catalog/db4d5507023f4c917164097f3960516246fe5455c3dd305ea516d21d19239aa6/guide.md",
+        "sha256": "fd99b4c9555e4d4aa968a4b56b67b44650a59a94d27a03204fc3f1a6bed68a6b"
+      }
+    },
+    {
+      "id": "77370b5a4ba9feb583db12439899db951cc2aec458c21fd1e5c9a28458fc4319",
+      "title": "Phase Distortion in Speech + Swarm in Bass",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "bass",
+            "engine": "swarm",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "77370b5a4ba9feb583db12439899db951cc2aec458c21fd1e5c9a28458fc4319",
+      "replacements": [
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "bass",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Bass",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/77370b5a4ba9feb583db12439899db951cc2aec458c21fd1e5c9a28458fc4319/firmware.mflp",
+        "size": 5465,
+        "sha256": "36b7648e4bfa88a7b1fa3592044a32466b5ba193c1b3ccf9c4159968e387bdca"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "9e4d649cf31c28864a5c38a69fea38105484300d9ec3505b67317795539468dc",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-bass_7b84607c17af.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/77370b5a4ba9feb583db12439899db951cc2aec458c21fd1e5c9a28458fc4319/recipe.json",
+        "sha256": "c2252421585eb2163398e6e15e8716bbaa89cf290bcd470bb7d37f5541308b07"
+      },
+      "guide": {
+        "url": "catalog/77370b5a4ba9feb583db12439899db951cc2aec458c21fd1e5c9a28458fc4319/guide.md",
+        "sha256": "1470347279b707f32f35571ae237f89b58a917a25229355183b198e009ac7c65"
+      }
+    },
+    {
+      "id": "8c99d719209fed7b3592895b2dadac3bd92d23e8e77da6ab7d28e4b4d8af9229",
+      "title": "Phase Distortion in Speech + Swarm in Cloud Grains",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "cloud_grains",
+            "engine": "swarm",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "8c99d719209fed7b3592895b2dadac3bd92d23e8e77da6ab7d28e4b4d8af9229",
+      "replacements": [
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "cloud_grains",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Cloud Grains",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/8c99d719209fed7b3592895b2dadac3bd92d23e8e77da6ab7d28e4b4d8af9229/firmware.mflp",
+        "size": 5457,
+        "sha256": "73cac7d3bd2320f443e70e4696915dce728782439ca939c988469cd08f2ee402"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "0b35b98e279ceca93c037fa705b1f6e8563bbafd3d71107e2f785ce624db4c76",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-cloud_grains_ae7fea376e74.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/8c99d719209fed7b3592895b2dadac3bd92d23e8e77da6ab7d28e4b4d8af9229/recipe.json",
+        "sha256": "46e79a5482d398eb99a2541d33ee6c842b4c1f8e363040e78cad345e7e57538b"
+      },
+      "guide": {
+        "url": "catalog/8c99d719209fed7b3592895b2dadac3bd92d23e8e77da6ab7d28e4b4d8af9229/guide.md",
+        "sha256": "9885c71497d010a1ed8fb597e2a9395a813e0f2f35a5608beff39f26881960c4"
+      }
+    },
+    {
+      "id": "5160cc511d96580ff1d10713089794d04d553efb2d75650eda1cca54e90faa0f",
+      "title": "Phase Distortion in Speech + Swarm in Harm",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "harm",
+            "engine": "swarm",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "5160cc511d96580ff1d10713089794d04d553efb2d75650eda1cca54e90faa0f",
+      "replacements": [
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "harm",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Harm",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/5160cc511d96580ff1d10713089794d04d553efb2d75650eda1cca54e90faa0f/firmware.mflp",
+        "size": 5458,
+        "sha256": "da0b77a8336cba5a8b7711ce6ccb814cb1069db72fd6967ed704d92310c3b3fb"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "bf0b95bd4b4710ee22002658917ab85dc4e9cd6e9b1e892330328c0c1d596e1a",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-harm_af107e15683d.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/5160cc511d96580ff1d10713089794d04d553efb2d75650eda1cca54e90faa0f/recipe.json",
+        "sha256": "6325a36f2695a17c3907157c93bfe900e8bfb34a13ffbb6df27f681d0f9e469f"
+      },
+      "guide": {
+        "url": "catalog/5160cc511d96580ff1d10713089794d04d553efb2d75650eda1cca54e90faa0f/guide.md",
+        "sha256": "85a2f4f370396f74b96608093f3d87767af7922279315a914a79603cd367d09a"
+      }
+    },
+    {
+      "id": "ddfc25d5f326787a020ca0b686da6f169c5f612c31697734a2f46010cd9f21cc",
+      "title": "Phase Distortion in Speech + Swarm in Hit Grains",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "hit_grains",
+            "engine": "swarm",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "ddfc25d5f326787a020ca0b686da6f169c5f612c31697734a2f46010cd9f21cc",
+      "replacements": [
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "hit_grains",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Hit Grains",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/ddfc25d5f326787a020ca0b686da6f169c5f612c31697734a2f46010cd9f21cc/firmware.mflp",
+        "size": 5457,
+        "sha256": "c7d62144346552aee571106d5be5e7c65618717868cf6ad145ddd4ccef9e9a0a"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "8a495ec70782d16af0b34c236e3b3c57e184e236060bc2b6f2bf7e4cde75c033",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-hit_grains_bc5398e33e08.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/ddfc25d5f326787a020ca0b686da6f169c5f612c31697734a2f46010cd9f21cc/recipe.json",
+        "sha256": "891ec1907eedef771c06a0819d67a6263a03bd806572a6705199cc53e1a6ffcb"
+      },
+      "guide": {
+        "url": "catalog/ddfc25d5f326787a020ca0b686da6f169c5f612c31697734a2f46010cd9f21cc/guide.md",
+        "sha256": "1bd24bf8a32d709e757ef4cb7cb0b5901411037dc2f5fafd98016cf75c114fab"
+      }
+    },
+    {
+      "id": "9b5cfb37aad3f459c837d004a5e75cefb0eba12fe256f7f6a4a221649812976b",
+      "title": "Phase Distortion in Speech + Swarm in Noise",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "noise",
+            "engine": "swarm",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "9b5cfb37aad3f459c837d004a5e75cefb0eba12fe256f7f6a4a221649812976b",
+      "replacements": [
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "noise",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Noise",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/9b5cfb37aad3f459c837d004a5e75cefb0eba12fe256f7f6a4a221649812976b/firmware.mflp",
+        "size": 5481,
+        "sha256": "7e269b802fa61aa185e18779766ce0f4fce5882d1c9bfb892028b396750bc019"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "3cb0ae92d11ac5a1d72e606d56bb13fdd7783fda13798b95cd433f31c47383fd",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-noise_823356c2d913.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/9b5cfb37aad3f459c837d004a5e75cefb0eba12fe256f7f6a4a221649812976b/recipe.json",
+        "sha256": "6fc41dd682d049ba196d404d2c219c75c35aa8528526cca7b8e7c7763740a06e"
+      },
+      "guide": {
+        "url": "catalog/9b5cfb37aad3f459c837d004a5e75cefb0eba12fe256f7f6a4a221649812976b/guide.md",
+        "sha256": "9c2574931a5b976675b01140621f21801a9d08a3b475c4656338f22ef0497e0f"
+      }
+    },
+    {
+      "id": "b6431644f0d842d3253f50d51d5e775c08e2e22ea87b372ac20cee67a6e20f99",
+      "title": "Phase Distortion in Speech + Swarm in Sample",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "sample",
+            "engine": "swarm",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "b6431644f0d842d3253f50d51d5e775c08e2e22ea87b372ac20cee67a6e20f99",
+      "replacements": [
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "sample",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Sample",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/b6431644f0d842d3253f50d51d5e775c08e2e22ea87b372ac20cee67a6e20f99/firmware.mflp",
+        "size": 5465,
+        "sha256": "c148bcbc7ce239dd30b2752215c0a562a4d40b12df76ca262bc37f5649c94dbe"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "6f47c746abd4e1f6f182c7e7a9716c59c39adcfd39b674ec25e8193842026d85",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-sample_6dfd948df77e.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/b6431644f0d842d3253f50d51d5e775c08e2e22ea87b372ac20cee67a6e20f99/recipe.json",
+        "sha256": "7c0ff71f6f87fd65ecd8a77859f7548ff85abfd755879e2a0dbdfc9b95bc0287"
+      },
+      "guide": {
+        "url": "catalog/b6431644f0d842d3253f50d51d5e775c08e2e22ea87b372ac20cee67a6e20f99/guide.md",
+        "sha256": "3a7684056e79d66df6889bd021c9780f6a38efdcd2e50411d2525c7d8438d9fe"
+      }
+    },
+    {
+      "id": "c8006dd04d2ee70f9bcdbe609bc5ade41e4fe96f510c8e21b6c862e9f78a2734",
+      "title": "Phase Distortion in Speech + Swarm in SawX",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "sawx",
+            "engine": "swarm",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "c8006dd04d2ee70f9bcdbe609bc5ade41e4fe96f510c8e21b6c862e9f78a2734",
+      "replacements": [
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "sawx",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "SawX",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/c8006dd04d2ee70f9bcdbe609bc5ade41e4fe96f510c8e21b6c862e9f78a2734/firmware.mflp",
+        "size": 5458,
+        "sha256": "a15daa030ea223f3e02f330de4782754999c148fe8f3af81245085991d275dc4"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "39bc1d5658ded55d78fb13227bfb05671d8e9757d5d3ef796a5d33d89ac2e135",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-sawx_2e5077289f08.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/c8006dd04d2ee70f9bcdbe609bc5ade41e4fe96f510c8e21b6c862e9f78a2734/recipe.json",
+        "sha256": "b5ae4474da5a9a3cc89739149e6131d762063b549115ea0a9d795ee99598f46f"
+      },
+      "guide": {
+        "url": "catalog/c8006dd04d2ee70f9bcdbe609bc5ade41e4fe96f510c8e21b6c862e9f78a2734/guide.md",
+        "sha256": "e2dcb6bdcda701564c8241e1d6093d45a1dba45a760d7f515c55c8a82dd17525"
+      }
+    },
+    {
+      "id": "372f5bea986cd991bec7e96c532476b580060509792079c8f78efbcc97c431aa",
+      "title": "Phase Distortion in Speech + Swarm in Scan Grains",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "scan_grains",
+            "engine": "swarm",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "372f5bea986cd991bec7e96c532476b580060509792079c8f78efbcc97c431aa",
+      "replacements": [
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "scan_grains",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Scan Grains",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/372f5bea986cd991bec7e96c532476b580060509792079c8f78efbcc97c431aa/firmware.mflp",
+        "size": 5466,
+        "sha256": "733ed47f1ea9e7687d0990172329cd8e3ef0ea5d302f020eeb8adacbc0340754"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "991d646de07db8d8f78e62e91dfaef85ae0dda1894b7e7cef8f59e7549d2ffd3",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-scan_grains_c08409f1a2e4.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/372f5bea986cd991bec7e96c532476b580060509792079c8f78efbcc97c431aa/recipe.json",
+        "sha256": "50c7223c05ba7078d545c836260f2fb4393fc4b054f3f2a316ab877aa01cf650"
+      },
+      "guide": {
+        "url": "catalog/372f5bea986cd991bec7e96c532476b580060509792079c8f78efbcc97c431aa/guide.md",
+        "sha256": "ed220a534d1802d2c31f949f4b3e9281d902df0ff8c92aef986b3ff122ce7fee"
+      }
+    },
+    {
+      "id": "015365f715f8d23d9d7e0c8a1ef432b3c7688fc80befc498154a50aed5cf971c",
+      "title": "Phase Distortion in Speech + Swarm in User Wavetable",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "user_wavetable",
+            "engine": "swarm",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "015365f715f8d23d9d7e0c8a1ef432b3c7688fc80befc498154a50aed5cf971c",
+      "replacements": [
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "user_wavetable",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "User Wavetable",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/015365f715f8d23d9d7e0c8a1ef432b3c7688fc80befc498154a50aed5cf971c/firmware.mflp",
+        "size": 5476,
+        "sha256": "c8db40d43e608b9d9b1a51e84bcadd5fb256355a6733fb5528282c706043e3fc"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "8a76f2e242350b55caf5ffd3ab8cc079fa66595faa780a234f6e2cdeb748c176",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-user_wavetable_3384f7033d47.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/015365f715f8d23d9d7e0c8a1ef432b3c7688fc80befc498154a50aed5cf971c/recipe.json",
+        "sha256": "c29345a17f640350905eeb95d7835475cdded465907b28674b7513e0933a4c55"
+      },
+      "guide": {
+        "url": "catalog/015365f715f8d23d9d7e0c8a1ef432b3c7688fc80befc498154a50aed5cf971c/guide.md",
+        "sha256": "028d568caf9807193ba3de7106872caebe14683a597f0d0d5f50445378390227"
+      }
+    },
+    {
+      "id": "f22170a68acae6ba0ef941b4be79d26cad00eca66769d4c67fe1ee15cbe63c2d",
+      "title": "Snare Drum in Basic Waves + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "snare_drum",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "f22170a68acae6ba0ef941b4be79d26cad00eca66769d4c67fe1ee15cbe63c2d",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "snare_drum",
+          "variant": "normal",
+          "original_name": "Basic Waves",
+          "engine_name": "Snare Drum",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/f22170a68acae6ba0ef941b4be79d26cad00eca66769d4c67fe1ee15cbe63c2d/firmware.mflp",
+        "size": 6903,
+        "sha256": "466908b7737e634b8aa6024124c158d2cc9472b8452d989987d5492c4ea3a18f"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "f63f77f5a9d90243bc19477f994fcadd525371ae7a470c6eee021d72bdc4cac6",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-snare-drum-at-basic_waves_0fca53e26a64.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/f22170a68acae6ba0ef941b4be79d26cad00eca66769d4c67fe1ee15cbe63c2d/recipe.json",
+        "sha256": "4f6a22b357f6001abbb0670885ca9784a12c646f42aed20077e177d9b0007fa6"
+      },
+      "guide": {
+        "url": "catalog/f22170a68acae6ba0ef941b4be79d26cad00eca66769d4c67fe1ee15cbe63c2d/guide.md",
+        "sha256": "c695fc8ff398f27f1e8ab97f06fa3e94c1d37845239412a97c15e61243eb1b49"
+      }
+    },
+    {
+      "id": "5c11adcb45fe15989f4893237b52014476412a46dd1aa61f7ad659e77cdb832e",
+      "title": "Snare Drum in Formant + Particle Noise in Chords",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "formant",
+            "engine": "snare_drum",
+            "variant": "normal"
+          },
+          {
+            "original": "chords",
+            "engine": "particle_noise",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "5c11adcb45fe15989f4893237b52014476412a46dd1aa61f7ad659e77cdb832e",
+      "replacements": [
+        {
+          "original": "formant",
+          "engine": "snare_drum",
+          "variant": "normal",
+          "original_name": "Formant",
+          "engine_name": "Snare Drum",
+          "variant_name": "Main"
+        },
+        {
+          "original": "chords",
+          "engine": "particle_noise",
+          "variant": "normal",
+          "original_name": "Chords",
+          "engine_name": "Particle Noise",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/5c11adcb45fe15989f4893237b52014476412a46dd1aa61f7ad659e77cdb832e/firmware.mflp",
+        "size": 7697,
+        "sha256": "60c50fd6eb2274dc0786cfddedf1d93289ea77606e114a94468d1e84506d5eb0"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "bf615ee9981ba7d94ed772b3c647a85b8af046288a84b746216a586ce2c511f9",
+        "filename": "MicroFreak_5_0_0_2084_lite-particle-noise-at-chords-snare-drum-at-formant_b981819b936a.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/5c11adcb45fe15989f4893237b52014476412a46dd1aa61f7ad659e77cdb832e/recipe.json",
+        "sha256": "a5c43121aed1f7a393a7e9e528243ea7dc316b70c57f4f6f2b4146ca2c2e8fcd"
+      },
+      "guide": {
+        "url": "catalog/5c11adcb45fe15989f4893237b52014476412a46dd1aa61f7ad659e77cdb832e/guide.md",
+        "sha256": "17a21fd659748e167667ca822fbfbbfc7ac69317409b857f850a9ec6da57c5ea"
+      }
+    },
+    {
+      "id": "87b066ea2d1a111fe2155c3bf189e0066664d24660bbe1daf61b46aee805119c",
+      "title": "String Machine in Basic Waves + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "string_machine",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "87b066ea2d1a111fe2155c3bf189e0066664d24660bbe1daf61b46aee805119c",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "string_machine",
+          "variant": "normal",
+          "original_name": "Basic Waves",
+          "engine_name": "String Machine",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/87b066ea2d1a111fe2155c3bf189e0066664d24660bbe1daf61b46aee805119c/firmware.mflp",
+        "size": 7216,
+        "sha256": "f64250b9b893505366ebb6e0a7697cb379d46f681873a3b10704b2b2a488820c"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "de035eb54b59e1e394fcd5c067d8a935176f595b5dd84aa463b2683ccfd9b89f",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-string-machine-at-basic_waves_f65ed82e2193.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/87b066ea2d1a111fe2155c3bf189e0066664d24660bbe1daf61b46aee805119c/recipe.json",
+        "sha256": "b6d2e5642879e979a8267ebbbd7c9c8387767b3a3dcc5b46c9651f6fbe1e63e6"
+      },
+      "guide": {
+        "url": "catalog/87b066ea2d1a111fe2155c3bf189e0066664d24660bbe1daf61b46aee805119c/guide.md",
+        "sha256": "ab63c38f8f7f499ea06972c5ecb82ee527caa5d0490026bf05421873f5412597"
+      }
+    },
+    {
+      "id": "87b3995f2798111627cca152e01ffe3aaaa522f83787dc8ab1aa776b3a88fe36",
+      "title": "Swarm in Basic Waves + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "swarm",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "87b3995f2798111627cca152e01ffe3aaaa522f83787dc8ab1aa776b3a88fe36",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Basic Waves",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/87b3995f2798111627cca152e01ffe3aaaa522f83787dc8ab1aa776b3a88fe36/firmware.mflp",
+        "size": 5490,
+        "sha256": "aa75a37d16e482ffecb98fd9070cc2ffcee68c65f5a1adc957d7bc89d063aac4"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "512f5faeb06f7cb11fdf1b944b12df87af5548a0caee28a875702b318fbd248e",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-basic_waves_4ff87be1e4a5.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/87b3995f2798111627cca152e01ffe3aaaa522f83787dc8ab1aa776b3a88fe36/recipe.json",
+        "sha256": "d1ff4ad34c9ecba45a0ed6fe1f2bf8543f820730f62494ea57195805b70cf815"
+      },
+      "guide": {
+        "url": "catalog/87b3995f2798111627cca152e01ffe3aaaa522f83787dc8ab1aa776b3a88fe36/guide.md",
+        "sha256": "76daf56dee23c7d5238b80b8a1b2d346eb0f487211e12f0a2434a2d453565f74"
+      }
+    },
+    {
+      "id": "9d283fafb3de6f22dc5ceecb8682b570fc577c923bf6ffc5986592129f92631d",
+      "title": "Swarm in Harmonic + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "harmonic",
+            "engine": "swarm",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "9d283fafb3de6f22dc5ceecb8682b570fc577c923bf6ffc5986592129f92631d",
+      "replacements": [
+        {
+          "original": "harmonic",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Harmonic",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/9d283fafb3de6f22dc5ceecb8682b570fc577c923bf6ffc5986592129f92631d/firmware.mflp",
+        "size": 5481,
+        "sha256": "67e8557d189f7229fc7dd78b1dd1205d24f8b1c726b742bfd41a29a7b6fcd50e"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "8920c39499e804fa0844dd160c623ba1aecf05bc51b87393e1517466c2bf3b5b",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-harmonic_73692a499be3.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/9d283fafb3de6f22dc5ceecb8682b570fc577c923bf6ffc5986592129f92631d/recipe.json",
+        "sha256": "f78095dff558c331033ef4a618531a7c5cb17697f3a405243d45c38b63a220e9"
+      },
+      "guide": {
+        "url": "catalog/9d283fafb3de6f22dc5ceecb8682b570fc577c923bf6ffc5986592129f92631d/guide.md",
+        "sha256": "e2b6844038c0acd6adaeff58f3e951c0ea1c70edd788035cb14ba8616ea41e08"
+      }
+    },
+    {
+      "id": "78b2be03ee3a8597ca77948511d5e2a664e2499e7a990acff78b3ebba76fe31b",
+      "title": "Swarm in KarplusStr + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "karplusstr",
+            "engine": "swarm",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "78b2be03ee3a8597ca77948511d5e2a664e2499e7a990acff78b3ebba76fe31b",
+      "replacements": [
+        {
+          "original": "karplusstr",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "KarplusStr",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/78b2be03ee3a8597ca77948511d5e2a664e2499e7a990acff78b3ebba76fe31b/firmware.mflp",
+        "size": 5481,
+        "sha256": "90c02806a7ebaa092bc717212246ef57b4231f9d400b91711ee87a69f75a2007"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "dfb1b869e5280ad6419ab833fae1ffc16c56e1b1c2f63f7a13f052da4a38ea87",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-karplusstr_48188e7cdeab.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/78b2be03ee3a8597ca77948511d5e2a664e2499e7a990acff78b3ebba76fe31b/recipe.json",
+        "sha256": "41fad519644782faa0b9656f3713256b45788134c5345192712e914bbbc63338"
+      },
+      "guide": {
+        "url": "catalog/78b2be03ee3a8597ca77948511d5e2a664e2499e7a990acff78b3ebba76fe31b/guide.md",
+        "sha256": "6f14cf116008327b09e54cb3814efeda3f7ecb45b398d7ff1d5ac80880998617"
+      }
+    },
+    {
+      "id": "ea0cb9985c5de1f1279f961bdc34b857a780077482f4245484442f1ffa5644b4",
+      "title": "Swarm in SuperWave + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "superwave",
+            "engine": "swarm",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "ea0cb9985c5de1f1279f961bdc34b857a780077482f4245484442f1ffa5644b4",
+      "replacements": [
+        {
+          "original": "superwave",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "SuperWave",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/ea0cb9985c5de1f1279f961bdc34b857a780077482f4245484442f1ffa5644b4/firmware.mflp",
+        "size": 5498,
+        "sha256": "0bc17bbb1b912dee9c868b428ac017d2f0bb90d84f84285ec13ac7b9a7afd8ed"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "3ffda0f40643a92bfaf0b5eb591f532a77eba1bbaf717ea5a4493dff1d69e89e",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-superwave_e9419be64fe3.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/ea0cb9985c5de1f1279f961bdc34b857a780077482f4245484442f1ffa5644b4/recipe.json",
+        "sha256": "cf1d0b8d24026585ceefec889e1f5874d3d85a1bd3e9369e6d76d6543f493d07"
+      },
+      "guide": {
+        "url": "catalog/ea0cb9985c5de1f1279f961bdc34b857a780077482f4245484442f1ffa5644b4/guide.md",
+        "sha256": "8e4e6aa5d11c6dfcd7443b98c8a31abe24cb26b0d5ac4618715f39cf9853a3e5"
+      }
+    },
+    {
+      "id": "01ec3395a72bc2140fd0f794ef3d9866d6e858fed396223a0ba9da1835c7c4fc",
+      "title": "Swarm in Wavetable + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "wavetable",
+            "engine": "swarm",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "01ec3395a72bc2140fd0f794ef3d9866d6e858fed396223a0ba9da1835c7c4fc",
+      "replacements": [
+        {
+          "original": "wavetable",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Wavetable",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/01ec3395a72bc2140fd0f794ef3d9866d6e858fed396223a0ba9da1835c7c4fc/firmware.mflp",
+        "size": 5499,
+        "sha256": "b92570332c6246e70489d96b3641e12df295f49f70a9a6b231e8956097ef3686"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "3ac72801026ce2dd4a32c4af996cacfff49539c9fe8d9df28010f0c81ddeddfa",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-wavetable_93f8588b2160.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/01ec3395a72bc2140fd0f794ef3d9866d6e858fed396223a0ba9da1835c7c4fc/recipe.json",
+        "sha256": "6c574f471f65fddbaad4730288c9d07cca18a711f9bbb9c5d241c68290dd4fb2"
+      },
+      "guide": {
+        "url": "catalog/01ec3395a72bc2140fd0f794ef3d9866d6e858fed396223a0ba9da1835c7c4fc/guide.md",
+        "sha256": "ddb341c7f2f36cd6020e6f7a9395dc73b9e354be538b98f1b2d2ef113edc605a"
+      }
+    },
+    {
+      "id": "0864eccb166f3a479e06e8975d97af656b0d89df05129717abbbc087fa754d70",
+      "title": "Wave Terrain · 5 terrains in Basic Waves + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "wave_terrain",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "0864eccb166f3a479e06e8975d97af656b0d89df05129717abbbc087fa754d70",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "wave_terrain",
+          "variant": "normal",
+          "original_name": "Basic Waves",
+          "engine_name": "Wave Terrain · 5 terrains",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/0864eccb166f3a479e06e8975d97af656b0d89df05129717abbbc087fa754d70/firmware.mflp",
+        "size": 5601,
+        "sha256": "8c9f885ff3c8578ede8d3be5af5349e6e73a7e038c2d0f775181a9686b00a466"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "7a1621c7c4556b1316338973b76dd138acaf09dce098f58758df59398fe785b8",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-wave-terrain-at-basic_waves_d6a2bd631d96.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/0864eccb166f3a479e06e8975d97af656b0d89df05129717abbbc087fa754d70/recipe.json",
+        "sha256": "67d5671b4c738afebb7e45b421f16d8463c39f5e586cf7ff2a50923039179672"
+      },
+      "guide": {
+        "url": "catalog/0864eccb166f3a479e06e8975d97af656b0d89df05129717abbbc087fa754d70/guide.md",
+        "sha256": "db1842acad5cb2d29b2c5a8ff2b809ad3aeb00386946fee8c6a78a299b9314d3"
+      }
+    },
+    {
+      "id": "95bd24bb8b2a5bd5b672728b8c76a035277288b07d03f229035b79290aae54e0",
+      "title": "Wave Terrain · 5 terrains in Basic Waves · Alternative (AUX) + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "wave_terrain",
+            "variant": "aux"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "95bd24bb8b2a5bd5b672728b8c76a035277288b07d03f229035b79290aae54e0",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "wave_terrain",
+          "variant": "aux",
+          "original_name": "Basic Waves",
+          "engine_name": "Wave Terrain · 5 terrains",
+          "variant_name": "Alternative (AUX)"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/95bd24bb8b2a5bd5b672728b8c76a035277288b07d03f229035b79290aae54e0/firmware.mflp",
+        "size": 5627,
+        "sha256": "2969316d93f7ad839eed8be7290b7a14f7e6aa075bb7dd51aef31dd07e8d5f6a"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "7623663c804a22977877e58fceb58087d303d844d78ac4c94b2edba72225bf18",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-wave-terrain-aux-at-basic_waves_818bb0a4d9a4.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/95bd24bb8b2a5bd5b672728b8c76a035277288b07d03f229035b79290aae54e0/recipe.json",
+        "sha256": "a61569c769c90e25a104e39f1a124b1e98421ea2b1694d29e17921044285a77f"
+      },
+      "guide": {
+        "url": "catalog/95bd24bb8b2a5bd5b672728b8c76a035277288b07d03f229035b79290aae54e0/guide.md",
+        "sha256": "2e2aed05c674e2051456800ac1bfd8be236e3ab058447049375af1b78b8da61f"
+      }
+    },
+    {
+      "id": "dabedddddc0524c9bb053722c06eab44851e3c82a0be1870ade187962f6109c0",
+      "title": "Classic Waveshapes + VCF in Formant + Particle Noise in Chords + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "formant",
+            "engine": "classic_waves_vcf",
+            "variant": "normal"
+          },
+          {
+            "original": "chords",
+            "engine": "particle_noise",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "dabedddddc0524c9bb053722c06eab44851e3c82a0be1870ade187962f6109c0",
+      "replacements": [
+        {
+          "original": "formant",
+          "engine": "classic_waves_vcf",
+          "variant": "normal",
+          "original_name": "Formant",
+          "engine_name": "Classic Waveshapes + VCF",
+          "variant_name": "Main"
+        },
+        {
+          "original": "chords",
+          "engine": "particle_noise",
+          "variant": "normal",
+          "original_name": "Chords",
+          "engine_name": "Particle Noise",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/dabedddddc0524c9bb053722c06eab44851e3c82a0be1870ade187962f6109c0/firmware.mflp",
+        "size": 9831,
+        "sha256": "b1957465d230bd6e39218843f5d3a0852fe53a0c9561956ee74edc74d839b94d"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "3efedf912208bb2ee075228400ce269b3dc50ad6c841ecfc9c427fce73a48c1c",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-particle-noise-at-chords-classic-waves-vcf-at-formant_c54dacab13f4.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/dabedddddc0524c9bb053722c06eab44851e3c82a0be1870ade187962f6109c0/recipe.json",
+        "sha256": "ee17cbdd2cda9a2a48692a46e252e5ed3b3aad7d2ecbc4b4a1ba276d097434c2"
+      },
+      "guide": {
+        "url": "catalog/dabedddddc0524c9bb053722c06eab44851e3c82a0be1870ade187962f6109c0/guide.md",
+        "sha256": "18a0a2136db0d6bf53d7aed11c1de626b3b0713f105f3e00333bdf63cbeefd13"
+      }
+    },
+    {
+      "id": "53fd58c36dea6ff1b03b38bf61bf3540b38da14a8f086f3cec95f4f9512f7a8b",
+      "title": "Classic Waveshapes + VCF in Formant + Particle Noise in Chords + Swarm in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "formant",
+            "engine": "classic_waves_vcf",
+            "variant": "normal"
+          },
+          {
+            "original": "chords",
+            "engine": "particle_noise",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "swarm",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "53fd58c36dea6ff1b03b38bf61bf3540b38da14a8f086f3cec95f4f9512f7a8b",
+      "replacements": [
+        {
+          "original": "formant",
+          "engine": "classic_waves_vcf",
+          "variant": "normal",
+          "original_name": "Formant",
+          "engine_name": "Classic Waveshapes + VCF",
+          "variant_name": "Main"
+        },
+        {
+          "original": "chords",
+          "engine": "particle_noise",
+          "variant": "normal",
+          "original_name": "Chords",
+          "engine_name": "Particle Noise",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/53fd58c36dea6ff1b03b38bf61bf3540b38da14a8f086f3cec95f4f9512f7a8b/firmware.mflp",
+        "size": 8897,
+        "sha256": "3a1523fa9c32ee619e4433bfffa2876e1955d3cea8c6a34b89cafb20fdac51db"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "9ca5846264914c3e934a4757bbd8ffc4a28ff83e16998281c28f7bf2ea64a4c7",
+        "filename": "MicroFreak_5_0_0_2084_lite-swarm-at-speech-particle-noise-at-chords-classic-waves-vcf-at-formant_6cf9f4ee6750.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/53fd58c36dea6ff1b03b38bf61bf3540b38da14a8f086f3cec95f4f9512f7a8b/recipe.json",
+        "sha256": "50b5c68813c711f1072ed4dd6e2b3e287abd8a29d49bd21f19125844661ef351"
+      },
+      "guide": {
+        "url": "catalog/53fd58c36dea6ff1b03b38bf61bf3540b38da14a8f086f3cec95f4f9512f7a8b/guide.md",
+        "sha256": "e6e8ec37a5d7259df2f6ae92c909d9df342c2fc697d8a1b24aba4540ba6071e0"
+      }
+    },
+    {
+      "id": "a16d58d6d253748667269d17e131bed7055d1665678afdf71eccc96570090091",
+      "title": "Filtered Noise in Formant · Two-band (AUX) + String Machine in Chords + Swarm in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "formant",
+            "engine": "filtered_noise",
+            "variant": "dual_band"
+          },
+          {
+            "original": "chords",
+            "engine": "string_machine",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "swarm",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "a16d58d6d253748667269d17e131bed7055d1665678afdf71eccc96570090091",
+      "replacements": [
+        {
+          "original": "formant",
+          "engine": "filtered_noise",
+          "variant": "dual_band",
+          "original_name": "Formant",
+          "engine_name": "Filtered Noise",
+          "variant_name": "Two-band (AUX)"
+        },
+        {
+          "original": "chords",
+          "engine": "string_machine",
+          "variant": "normal",
+          "original_name": "Chords",
+          "engine_name": "String Machine",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/a16d58d6d253748667269d17e131bed7055d1665678afdf71eccc96570090091/firmware.mflp",
+        "size": 9491,
+        "sha256": "d6b2d378a78631de936cc84fa7540f942bc292b30a3d77771dca3ae4b4d7e111"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "a59502e41209457b28154cd56438f46393d36e50bc8f036abd4a94fdb5b8e7c3",
+        "filename": "MicroFreak_5_0_0_2084_lite-swarm-at-speech-string-machine-at-chords-filtered-noise-dual-band-at-formant_57fbd1b129e4.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/a16d58d6d253748667269d17e131bed7055d1665678afdf71eccc96570090091/recipe.json",
+        "sha256": "f47a7697c994b5e9101056c452e18ef9f85d820884c94a5ed7f8d136c7d88575"
+      },
+      "guide": {
+        "url": "catalog/a16d58d6d253748667269d17e131bed7055d1665678afdf71eccc96570090091/guide.md",
+        "sha256": "ffca557616c0c79281c18a76920a3fba89beca1e6641691058589a278774233c"
+      }
+    },
+    {
+      "id": "df860292fe6a63c3efd3396981388fc5415f286f2baed5ad9537e6281288463f",
+      "title": "Inharmonic String in Formant + String Machine in Chords + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "formant",
+            "engine": "inharmonic_string",
+            "variant": "normal"
+          },
+          {
+            "original": "chords",
+            "engine": "string_machine",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "df860292fe6a63c3efd3396981388fc5415f286f2baed5ad9537e6281288463f",
+      "replacements": [
+        {
+          "original": "formant",
+          "engine": "inharmonic_string",
+          "variant": "normal",
+          "original_name": "Formant",
+          "engine_name": "Inharmonic String",
+          "variant_name": "Main"
+        },
+        {
+          "original": "chords",
+          "engine": "string_machine",
+          "variant": "normal",
+          "original_name": "Chords",
+          "engine_name": "String Machine",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/df860292fe6a63c3efd3396981388fc5415f286f2baed5ad9537e6281288463f/firmware.mflp",
+        "size": 13790,
+        "sha256": "d1a3adf638e222190ab25daa311763946afadbd7a92f642f1e3045f6c74d6b7a"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "acb38ca8537ede7ec2d08fcd052fcd40201d3cf44b7626b199c88440730534ae",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-inharmonic-string-at-formant-string-machine-at-chords_4b68ddb960bd.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/df860292fe6a63c3efd3396981388fc5415f286f2baed5ad9537e6281288463f/recipe.json",
+        "sha256": "e23e2ee4e16cf31c4dee81a62ed90ec09ae1d7d8565baa587b8e322b9d61f476"
+      },
+      "guide": {
+        "url": "catalog/df860292fe6a63c3efd3396981388fc5415f286f2baed5ad9537e6281288463f/guide.md",
+        "sha256": "655b5449c9947af4c63640d3fcaf568e1620cb6b015193295839aab2ce0936a4"
+      }
+    },
+    {
+      "id": "c147154708cd56b7a240b386e47ae39d455437ad1671c4ea27fe0cce42811f0c",
+      "title": "Particle Noise in Basic Waves + Swarm in SuperWave + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "particle_noise",
+            "variant": "normal"
+          },
+          {
+            "original": "superwave",
+            "engine": "swarm",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "c147154708cd56b7a240b386e47ae39d455437ad1671c4ea27fe0cce42811f0c",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "particle_noise",
+          "variant": "normal",
+          "original_name": "Basic Waves",
+          "engine_name": "Particle Noise",
+          "variant_name": "Main"
+        },
+        {
+          "original": "superwave",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "SuperWave",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/c147154708cd56b7a240b386e47ae39d455437ad1671c4ea27fe0cce42811f0c/firmware.mflp",
+        "size": 8044,
+        "sha256": "b4e47fb0bedfe220fcf6ed604f63aa8f069b25a35949b8278790bd5323acd3e5"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "c0f7bb49bb616c0766dceb8ae50cc61d8a9f61a72482062e95aa2907938f1034",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-superwave-particle-noise-at-basic_waves_1f380cf535b3.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/c147154708cd56b7a240b386e47ae39d455437ad1671c4ea27fe0cce42811f0c/recipe.json",
+        "sha256": "cd7b6fbb2556a479dba7dd4ef3bf528bb63853cce4be3381057b3102ef71049a"
+      },
+      "guide": {
+        "url": "catalog/c147154708cd56b7a240b386e47ae39d455437ad1671c4ea27fe0cce42811f0c/guide.md",
+        "sha256": "d67d609bc122e6d14ea5345020e7d537227102fa4da1b843fed7b7007dd743c0"
+      }
+    },
+    {
+      "id": "df306b45336b8a7de599b2624497ae90e95590482eeee40f688d64ced005e147",
+      "title": "Wave Terrain · 5 terrains in Formant · Alternative (AUX) + Chiptune in Chords + Phase Distortion in Speech",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "formant",
+            "engine": "wave_terrain",
+            "variant": "aux"
+          },
+          {
+            "original": "chords",
+            "engine": "chiptune",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "df306b45336b8a7de599b2624497ae90e95590482eeee40f688d64ced005e147",
+      "replacements": [
+        {
+          "original": "formant",
+          "engine": "wave_terrain",
+          "variant": "aux",
+          "original_name": "Formant",
+          "engine_name": "Wave Terrain · 5 terrains",
+          "variant_name": "Alternative (AUX)"
+        },
+        {
+          "original": "chords",
+          "engine": "chiptune",
+          "variant": "normal",
+          "original_name": "Chords",
+          "engine_name": "Chiptune",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/df306b45336b8a7de599b2624497ae90e95590482eeee40f688d64ced005e147/firmware.mflp",
+        "size": 10430,
+        "sha256": "f432f33a9e367fd65f566362ea80aae8ca40b27860568eec5d87ea08ed0597d9"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "f70f848af84765ce2b9eabfd991573f5889ffcdcb0ec0d927647fed34232ccc7",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-chiptune-at-chords-wave-terrain-aux-at-formant_77e946f4797c.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/df306b45336b8a7de599b2624497ae90e95590482eeee40f688d64ced005e147/recipe.json",
+        "sha256": "8ebe5cfb07a6445b305d559a4b009cb3f1672debbec3cedf37aa7a8d811a98e0"
+      },
+      "guide": {
+        "url": "catalog/df306b45336b8a7de599b2624497ae90e95590482eeee40f688d64ced005e147/guide.md",
+        "sha256": "65641b05816a243d2b5fb2408f4710b354407c6877e5f681e04ed5c5ba2c9d98"
+      }
+    },
+    {
+      "id": "e14f4d2e7478d06a6f4b669993c464cc1cbbb01ea90cab20f9cdfa36bb32697c",
+      "title": "4 replacements · Basic Waves, SuperWave, Virtual Analog…",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "superwave",
+            "engine": "swarm",
+            "variant": "normal"
+          },
+          {
+            "original": "virtual_analog",
+            "engine": "wave_terrain",
+            "variant": "aux"
+          },
+          {
+            "original": "formant",
+            "engine": "filtered_noise",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "e14f4d2e7478d06a6f4b669993c464cc1cbbb01ea90cab20f9cdfa36bb32697c",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Basic Waves",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "superwave",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "SuperWave",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        },
+        {
+          "original": "virtual_analog",
+          "engine": "wave_terrain",
+          "variant": "aux",
+          "original_name": "Virtual Analog",
+          "engine_name": "Wave Terrain · 5 terrains",
+          "variant_name": "Alternative (AUX)"
+        },
+        {
+          "original": "formant",
+          "engine": "filtered_noise",
+          "variant": "normal",
+          "original_name": "Formant",
+          "engine_name": "Filtered Noise",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/e14f4d2e7478d06a6f4b669993c464cc1cbbb01ea90cab20f9cdfa36bb32697c/firmware.mflp",
+        "size": 12549,
+        "sha256": "affce08176f1fcc24c2d145039b573918f1ce6c89ecc09ec5ca8325e83631d93"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "9ec01db7da18976fbf83d26f8357473422296e1e193a1d32e534765361fd15b5",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-basic_waves-swarm-at-superwave-filtered-noise-at-formant-wave-terrain-aux-at-virtual_analog_0b1b1e337cab.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/e14f4d2e7478d06a6f4b669993c464cc1cbbb01ea90cab20f9cdfa36bb32697c/recipe.json",
+        "sha256": "a93a64784fb15a812e8d0cb49e5bb8f93d37d309f2150d14739e226c38ef373d"
+      },
+      "guide": {
+        "url": "catalog/e14f4d2e7478d06a6f4b669993c464cc1cbbb01ea90cab20f9cdfa36bb32697c/guide.md",
+        "sha256": "a417d989727afdb684106268a32c86de2e7e391b74c8240a308dde8a878f0092"
+      }
+    },
+    {
+      "id": "2fc45747d3dcaa90e4e40fa383687db00d08a182b7a04df85d8d8a2accb76274",
+      "title": "4 replacements · Two Op FM, Formant, Chords…",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "two_op_fm",
+            "engine": "swarm",
+            "variant": "normal"
+          },
+          {
+            "original": "formant",
+            "engine": "wave_terrain",
+            "variant": "aux"
+          },
+          {
+            "original": "chords",
+            "engine": "particle_noise",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "2fc45747d3dcaa90e4e40fa383687db00d08a182b7a04df85d8d8a2accb76274",
+      "replacements": [
+        {
+          "original": "two_op_fm",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Two Op FM",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        },
+        {
+          "original": "formant",
+          "engine": "wave_terrain",
+          "variant": "aux",
+          "original_name": "Formant",
+          "engine_name": "Wave Terrain · 5 terrains",
+          "variant_name": "Alternative (AUX)"
+        },
+        {
+          "original": "chords",
+          "engine": "particle_noise",
+          "variant": "normal",
+          "original_name": "Chords",
+          "engine_name": "Particle Noise",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/2fc45747d3dcaa90e4e40fa383687db00d08a182b7a04df85d8d8a2accb76274/firmware.mflp",
+        "size": 11269,
+        "sha256": "6c7d20166aea0194700451653ac9727087461649dce0660d1686a2d93e748dea"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "d6e2c81d7b2c9c7c8919e76f9ed9a05525c0afcedccb4eac601b9a3a209f161a",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-two_op_fm-particle-noise-at-chords-wave-terrain-aux-at-formant_402505089b70.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/2fc45747d3dcaa90e4e40fa383687db00d08a182b7a04df85d8d8a2accb76274/recipe.json",
+        "sha256": "7796c75a6be68a06cc74da0fa0993360766844ce9e132385e5b6340631de303f"
+      },
+      "guide": {
+        "url": "catalog/2fc45747d3dcaa90e4e40fa383687db00d08a182b7a04df85d8d8a2accb76274/guide.md",
+        "sha256": "0be571ab4da20d3688fee618b9324296619785b84fb7f8d926d0141663cc31f5"
+      }
+    },
+    {
+      "id": "7b78cee1e11988bb9a5d29b6651a281165b783863d43e1dbc0d34aeaf469cde8",
+      "title": "5 replacements · Two Op FM, Formant, Chords…",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "two_op_fm",
+            "engine": "swarm",
+            "variant": "normal"
+          },
+          {
+            "original": "formant",
+            "engine": "wave_terrain",
+            "variant": "aux"
+          },
+          {
+            "original": "chords",
+            "engine": "particle_noise",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "modal",
+            "engine": "filtered_noise",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "7b78cee1e11988bb9a5d29b6651a281165b783863d43e1dbc0d34aeaf469cde8",
+      "replacements": [
+        {
+          "original": "two_op_fm",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Two Op FM",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        },
+        {
+          "original": "formant",
+          "engine": "wave_terrain",
+          "variant": "aux",
+          "original_name": "Formant",
+          "engine_name": "Wave Terrain · 5 terrains",
+          "variant_name": "Alternative (AUX)"
+        },
+        {
+          "original": "chords",
+          "engine": "particle_noise",
+          "variant": "normal",
+          "original_name": "Chords",
+          "engine_name": "Particle Noise",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "modal",
+          "engine": "filtered_noise",
+          "variant": "normal",
+          "original_name": "Modal",
+          "engine_name": "Filtered Noise",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/7b78cee1e11988bb9a5d29b6651a281165b783863d43e1dbc0d34aeaf469cde8/firmware.mflp",
+        "size": 13401,
+        "sha256": "dafc905c795a27a9eb8efb1554deb8bae5c7d6d34388325804fda14a39f9654c"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "ac7c9ed364ef751b12763b09b86d1d8cf90e6ca59fa27a9a5b2438909aac81a0",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-two_op_fm-particle-noise-at-chords-filtered-noise-at-modal-wave-terrain-aux-at-formant_13e006c21d8c.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/7b78cee1e11988bb9a5d29b6651a281165b783863d43e1dbc0d34aeaf469cde8/recipe.json",
+        "sha256": "24dde1df9cd938e9dae3aab7f1dcda3a34ebd3fe44d1ca1c215bdda43adf5e68"
+      },
+      "guide": {
+        "url": "catalog/7b78cee1e11988bb9a5d29b6651a281165b783863d43e1dbc0d34aeaf469cde8/guide.md",
+        "sha256": "5b4036fc587b2b45c284d675a5b0ff3b9355dbe36cdb07eca734eb2b3b882369"
+      }
+    },
+    {
+      "id": "ca62b1492c1ee2ed322b45f0230a0b6c95654042d3c9ae1094ab1d22434cedb7",
+      "title": "6 replacements · Waveshaper, Two Op FM, Formant…",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "waveshaper",
+            "engine": "swarm",
+            "variant": "normal"
+          },
+          {
+            "original": "two_op_fm",
+            "engine": "wave_terrain",
+            "variant": "aux"
+          },
+          {
+            "original": "formant",
+            "engine": "classic_waves_vcf",
+            "variant": "normal"
+          },
+          {
+            "original": "chords",
+            "engine": "string_machine",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "modal",
+            "engine": "filtered_noise",
+            "variant": "dual_band"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "ca62b1492c1ee2ed322b45f0230a0b6c95654042d3c9ae1094ab1d22434cedb7",
+      "replacements": [
+        {
+          "original": "waveshaper",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Waveshaper",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        },
+        {
+          "original": "two_op_fm",
+          "engine": "wave_terrain",
+          "variant": "aux",
+          "original_name": "Two Op FM",
+          "engine_name": "Wave Terrain · 5 terrains",
+          "variant_name": "Alternative (AUX)"
+        },
+        {
+          "original": "formant",
+          "engine": "classic_waves_vcf",
+          "variant": "normal",
+          "original_name": "Formant",
+          "engine_name": "Classic Waveshapes + VCF",
+          "variant_name": "Main"
+        },
+        {
+          "original": "chords",
+          "engine": "string_machine",
+          "variant": "normal",
+          "original_name": "Chords",
+          "engine_name": "String Machine",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "modal",
+          "engine": "filtered_noise",
+          "variant": "dual_band",
+          "original_name": "Modal",
+          "engine_name": "Filtered Noise",
+          "variant_name": "Two-band (AUX)"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/ca62b1492c1ee2ed322b45f0230a0b6c95654042d3c9ae1094ab1d22434cedb7/firmware.mflp",
+        "size": 18058,
+        "sha256": "dd25ca38cc57e25d22553dae0331bcb7c755f895d2333d4146c8af5cf369f573"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "38c26d8207ea8969f6c54b75b6a01bd769c99779f529e2861859e075eae52a2d",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech-swarm-at-waveshaper-classic-waves-vcf-at-formant-string-machine-at-chords-wave-terrain-aux-at-two_op_fm-filtered-noise-dual-band-at-modal_0a0bb9f5b47e.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/ca62b1492c1ee2ed322b45f0230a0b6c95654042d3c9ae1094ab1d22434cedb7/recipe.json",
+        "sha256": "839ad4c7f3a4d3da8311c84a3bcf0c0b26673c30fb76d23d270473eaea1e4e2b"
+      },
+      "guide": {
+        "url": "catalog/ca62b1492c1ee2ed322b45f0230a0b6c95654042d3c9ae1094ab1d22434cedb7/guide.md",
+        "sha256": "641b2d6db922e6c49e2a4d7a112ed190b6acaad11aa361d353a3990c4fff4096"
+      }
+    },
+    {
+      "id": "5084a85f9077a15064155f9b7be5c1d9193dbc85196efd939172f66fb5c37c44",
+      "title": "7 replacements · Virtual Analog, Waveshaper, Two Op FM…",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "virtual_analog",
+            "engine": "inharmonic_string",
+            "variant": "normal"
+          },
+          {
+            "original": "waveshaper",
+            "engine": "swarm",
+            "variant": "normal"
+          },
+          {
+            "original": "two_op_fm",
+            "engine": "wave_terrain",
+            "variant": "aux"
+          },
+          {
+            "original": "formant",
+            "engine": "classic_waves_vcf",
+            "variant": "normal"
+          },
+          {
+            "original": "chords",
+            "engine": "string_machine",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "modal",
+            "engine": "filtered_noise",
+            "variant": "dual_band"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "5084a85f9077a15064155f9b7be5c1d9193dbc85196efd939172f66fb5c37c44",
+      "replacements": [
+        {
+          "original": "virtual_analog",
+          "engine": "inharmonic_string",
+          "variant": "normal",
+          "original_name": "Virtual Analog",
+          "engine_name": "Inharmonic String",
+          "variant_name": "Main"
+        },
+        {
+          "original": "waveshaper",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Waveshaper",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        },
+        {
+          "original": "two_op_fm",
+          "engine": "wave_terrain",
+          "variant": "aux",
+          "original_name": "Two Op FM",
+          "engine_name": "Wave Terrain · 5 terrains",
+          "variant_name": "Alternative (AUX)"
+        },
+        {
+          "original": "formant",
+          "engine": "classic_waves_vcf",
+          "variant": "normal",
+          "original_name": "Formant",
+          "engine_name": "Classic Waveshapes + VCF",
+          "variant_name": "Main"
+        },
+        {
+          "original": "chords",
+          "engine": "string_machine",
+          "variant": "normal",
+          "original_name": "Chords",
+          "engine_name": "String Machine",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "modal",
+          "engine": "filtered_noise",
+          "variant": "dual_band",
+          "original_name": "Modal",
+          "engine_name": "Filtered Noise",
+          "variant_name": "Two-band (AUX)"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/5084a85f9077a15064155f9b7be5c1d9193dbc85196efd939172f66fb5c37c44/firmware.mflp",
+        "size": 24337,
+        "sha256": "3f8bcadc6144880ff96d27971a95d45636b2db4208908d9c7c13711080bf7600"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "00073924ba0b322a98c96c4fdeceaffa340064850a2bc4ee78e993612a9b1218",
+        "filename": "MicroFreak_5_0_0_2084_lite-selection-4ecf5d44485c_f89883779474.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/5084a85f9077a15064155f9b7be5c1d9193dbc85196efd939172f66fb5c37c44/recipe.json",
+        "sha256": "8b8564bb6effcd205734c04278f890278f9640dfa83833026b2a099e73d78c82"
+      },
+      "guide": {
+        "url": "catalog/5084a85f9077a15064155f9b7be5c1d9193dbc85196efd939172f66fb5c37c44/guide.md",
+        "sha256": "b7144a97a4b32dd1fe86904fffedd2d5063b8770b034f9e6910916e3ff339b73"
+      }
+    },
+    {
+      "id": "7fcdb6be0dbf9267f73e23bf7108f0e8732c166bd28081be7056204f2cbce9a7",
+      "title": "8 replacements · Basic Waves, Virtual Analog, Waveshaper…",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "bass_drum",
+            "variant": "normal"
+          },
+          {
+            "original": "virtual_analog",
+            "engine": "inharmonic_string",
+            "variant": "normal"
+          },
+          {
+            "original": "waveshaper",
+            "engine": "swarm",
+            "variant": "normal"
+          },
+          {
+            "original": "two_op_fm",
+            "engine": "wave_terrain",
+            "variant": "aux"
+          },
+          {
+            "original": "formant",
+            "engine": "classic_waves_vcf",
+            "variant": "normal"
+          },
+          {
+            "original": "chords",
+            "engine": "string_machine",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "modal",
+            "engine": "filtered_noise",
+            "variant": "dual_band"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "7fcdb6be0dbf9267f73e23bf7108f0e8732c166bd28081be7056204f2cbce9a7",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "bass_drum",
+          "variant": "normal",
+          "original_name": "Basic Waves",
+          "engine_name": "Bass Drum",
+          "variant_name": "Main"
+        },
+        {
+          "original": "virtual_analog",
+          "engine": "inharmonic_string",
+          "variant": "normal",
+          "original_name": "Virtual Analog",
+          "engine_name": "Inharmonic String",
+          "variant_name": "Main"
+        },
+        {
+          "original": "waveshaper",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Waveshaper",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        },
+        {
+          "original": "two_op_fm",
+          "engine": "wave_terrain",
+          "variant": "aux",
+          "original_name": "Two Op FM",
+          "engine_name": "Wave Terrain · 5 terrains",
+          "variant_name": "Alternative (AUX)"
+        },
+        {
+          "original": "formant",
+          "engine": "classic_waves_vcf",
+          "variant": "normal",
+          "original_name": "Formant",
+          "engine_name": "Classic Waveshapes + VCF",
+          "variant_name": "Main"
+        },
+        {
+          "original": "chords",
+          "engine": "string_machine",
+          "variant": "normal",
+          "original_name": "Chords",
+          "engine_name": "String Machine",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "modal",
+          "engine": "filtered_noise",
+          "variant": "dual_band",
+          "original_name": "Modal",
+          "engine_name": "Filtered Noise",
+          "variant_name": "Two-band (AUX)"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/7fcdb6be0dbf9267f73e23bf7108f0e8732c166bd28081be7056204f2cbce9a7/firmware.mflp",
+        "size": 29572,
+        "sha256": "7b89cf5012c27d403178675654769891c8d953d1c366e3ecda2bb8b1d79febd1"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "41456e88cf2fd7107bcc31ac0b4e1d11cbce2cfca090c467ca2b6ad610495b31",
+        "filename": "MicroFreak_5_0_0_2084_lite-selection-ffab397ed63e_546273f0f3d6.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/7fcdb6be0dbf9267f73e23bf7108f0e8732c166bd28081be7056204f2cbce9a7/recipe.json",
+        "sha256": "1c262fba0d706c32a2b340431832693445699046a5b60a4074dd7e54ff037498"
+      },
+      "guide": {
+        "url": "catalog/7fcdb6be0dbf9267f73e23bf7108f0e8732c166bd28081be7056204f2cbce9a7/guide.md",
+        "sha256": "72d2a8a3054b8a67b1caf3202775d861778148818b40a196bf1badeaef87d8d5"
+      }
+    },
+    {
+      "id": "c1fbf30d61e2cdcceebaaae57fe0a41de830b5e168cf81f228ddf94f3e625f74",
+      "title": "9 replacements · Basic Waves, Virtual Analog, Waveshaper…",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "bass_drum",
+            "variant": "normal"
+          },
+          {
+            "original": "virtual_analog",
+            "engine": "inharmonic_string",
+            "variant": "normal"
+          },
+          {
+            "original": "waveshaper",
+            "engine": "swarm",
+            "variant": "normal"
+          },
+          {
+            "original": "two_op_fm",
+            "engine": "wave_terrain",
+            "variant": "aux"
+          },
+          {
+            "original": "formant",
+            "engine": "classic_waves_vcf",
+            "variant": "normal"
+          },
+          {
+            "original": "chords",
+            "engine": "string_machine",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "modal",
+            "engine": "filtered_noise",
+            "variant": "dual_band"
+          },
+          {
+            "original": "sample",
+            "engine": "snare_drum",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "c1fbf30d61e2cdcceebaaae57fe0a41de830b5e168cf81f228ddf94f3e625f74",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "bass_drum",
+          "variant": "normal",
+          "original_name": "Basic Waves",
+          "engine_name": "Bass Drum",
+          "variant_name": "Main"
+        },
+        {
+          "original": "virtual_analog",
+          "engine": "inharmonic_string",
+          "variant": "normal",
+          "original_name": "Virtual Analog",
+          "engine_name": "Inharmonic String",
+          "variant_name": "Main"
+        },
+        {
+          "original": "waveshaper",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Waveshaper",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        },
+        {
+          "original": "two_op_fm",
+          "engine": "wave_terrain",
+          "variant": "aux",
+          "original_name": "Two Op FM",
+          "engine_name": "Wave Terrain · 5 terrains",
+          "variant_name": "Alternative (AUX)"
+        },
+        {
+          "original": "formant",
+          "engine": "classic_waves_vcf",
+          "variant": "normal",
+          "original_name": "Formant",
+          "engine_name": "Classic Waveshapes + VCF",
+          "variant_name": "Main"
+        },
+        {
+          "original": "chords",
+          "engine": "string_machine",
+          "variant": "normal",
+          "original_name": "Chords",
+          "engine_name": "String Machine",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "modal",
+          "engine": "filtered_noise",
+          "variant": "dual_band",
+          "original_name": "Modal",
+          "engine_name": "Filtered Noise",
+          "variant_name": "Two-band (AUX)"
+        },
+        {
+          "original": "sample",
+          "engine": "snare_drum",
+          "variant": "normal",
+          "original_name": "Sample",
+          "engine_name": "Snare Drum",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/c1fbf30d61e2cdcceebaaae57fe0a41de830b5e168cf81f228ddf94f3e625f74/firmware.mflp",
+        "size": 33430,
+        "sha256": "d57a14d22d59bab78df5cbd31f4e8eb9a4940822d46ce4842e9fbdfc9dc0cf32"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "55de09622ea8dd4617206be1e35d804c69add68b1ec2605269579b09ef6008c4",
+        "filename": "MicroFreak_5_0_0_2084_lite-selection-c24f0fbc70e3_dba66ebb8091.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/c1fbf30d61e2cdcceebaaae57fe0a41de830b5e168cf81f228ddf94f3e625f74/recipe.json",
+        "sha256": "135561860e88abed0296dc78f5c545594fb042a21b30273e00f5e16a874f4f48"
+      },
+      "guide": {
+        "url": "catalog/c1fbf30d61e2cdcceebaaae57fe0a41de830b5e168cf81f228ddf94f3e625f74/guide.md",
+        "sha256": "f2e53d71df7b4f16e1d34ba67ce1b6ca62c92c37aa5edcaec0a0dbd34d9868c7"
+      }
+    },
+    {
+      "id": "3e439b8499fec25463b6bcc9a8c3a7f84f4f9a8f945c90794dcde9f35c180769",
+      "title": "10 replacements · Basic Waves, SuperWave, Virtual Analog…",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "engine": "chiptune",
+            "variant": "normal",
+            "original": "basic_waves"
+          },
+          {
+            "engine": "particle_noise",
+            "variant": "normal",
+            "original": "superwave"
+          },
+          {
+            "engine": "classic_waves_vcf",
+            "variant": "normal",
+            "original": "virtual_analog"
+          },
+          {
+            "engine": "wave_terrain",
+            "variant": "aux",
+            "original": "two_op_fm"
+          },
+          {
+            "engine": "inharmonic_string",
+            "variant": "normal",
+            "original": "formant"
+          },
+          {
+            "engine": "string_machine",
+            "variant": "normal",
+            "original": "chords"
+          },
+          {
+            "engine": "phase_distortion",
+            "variant": "normal",
+            "original": "speech"
+          },
+          {
+            "engine": "filtered_noise",
+            "variant": "dual_band",
+            "original": "modal"
+          },
+          {
+            "engine": "bass_drum",
+            "variant": "normal",
+            "original": "noise"
+          },
+          {
+            "engine": "swarm",
+            "variant": "normal",
+            "original": "hit_grains"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "3e439b8499fec25463b6bcc9a8c3a7f84f4f9a8f945c90794dcde9f35c180769",
+      "replacements": [
+        {
+          "engine": "chiptune",
+          "variant": "normal",
+          "original": "basic_waves",
+          "original_name": "Basic Waves",
+          "engine_name": "Chiptune",
+          "variant_name": "Main"
+        },
+        {
+          "engine": "particle_noise",
+          "variant": "normal",
+          "original": "superwave",
+          "original_name": "SuperWave",
+          "engine_name": "Particle Noise",
+          "variant_name": "Main"
+        },
+        {
+          "engine": "classic_waves_vcf",
+          "variant": "normal",
+          "original": "virtual_analog",
+          "original_name": "Virtual Analog",
+          "engine_name": "Classic Waveshapes + VCF",
+          "variant_name": "Main"
+        },
+        {
+          "engine": "wave_terrain",
+          "variant": "aux",
+          "original": "two_op_fm",
+          "original_name": "Two Op FM",
+          "engine_name": "Wave Terrain · 5 terrains",
+          "variant_name": "Alternative (AUX)"
+        },
+        {
+          "engine": "inharmonic_string",
+          "variant": "normal",
+          "original": "formant",
+          "original_name": "Formant",
+          "engine_name": "Inharmonic String",
+          "variant_name": "Main"
+        },
+        {
+          "engine": "string_machine",
+          "variant": "normal",
+          "original": "chords",
+          "original_name": "Chords",
+          "engine_name": "String Machine",
+          "variant_name": "Main"
+        },
+        {
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original": "speech",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "engine": "filtered_noise",
+          "variant": "dual_band",
+          "original": "modal",
+          "original_name": "Modal",
+          "engine_name": "Filtered Noise",
+          "variant_name": "Two-band (AUX)"
+        },
+        {
+          "engine": "bass_drum",
+          "variant": "normal",
+          "original": "noise",
+          "original_name": "Noise",
+          "engine_name": "Bass Drum",
+          "variant_name": "Main"
+        },
+        {
+          "engine": "swarm",
+          "variant": "normal",
+          "original": "hit_grains",
+          "original_name": "Hit Grains",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/3e439b8499fec25463b6bcc9a8c3a7f84f4f9a8f945c90794dcde9f35c180769/firmware.mflp",
+        "size": 35321,
+        "sha256": "543b54ada87c113956b827d023d0befdc34a105b581382b6d3ca679828f2277f"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "bf08df3224ae63f22c52e9a9ade0e9f265c5be9ea68c29cd3e6ccd62d7cd702c",
+        "filename": "MicroFreak_5_0_0_2084_lite-selection-fae6f9798f95_ebb682b5036c.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/3e439b8499fec25463b6bcc9a8c3a7f84f4f9a8f945c90794dcde9f35c180769/recipe.json",
+        "sha256": "a81a4fd917dac903417dc31347adba9fdf81b1237ca45bc4d7aaf7cade1f4703"
+      },
+      "guide": {
+        "url": "catalog/3e439b8499fec25463b6bcc9a8c3a7f84f4f9a8f945c90794dcde9f35c180769/guide.md",
+        "sha256": "2f7f98e370fd72ea41bd6d7cec012852e66cc47c776b9925e6ed1f66f9909989"
+      }
+    },
+    {
+      "id": "9f14319ab9a141af70fb8e0c28e152de7df565f1d15682bdc7a94d3dc7fad764",
+      "title": "10 replacements · Basic Waves, Virtual Analog, Waveshaper…",
+      "recipe": {
+        "format": "microfreak.firmware-recipe",
+        "version": 3,
+        "firmware": {
+          "version": "5.0.0.2084",
+          "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c"
+        },
+        "replacements": [
+          {
+            "original": "basic_waves",
+            "engine": "chiptune",
+            "variant": "normal"
+          },
+          {
+            "original": "virtual_analog",
+            "engine": "inharmonic_string",
+            "variant": "normal"
+          },
+          {
+            "original": "waveshaper",
+            "engine": "swarm",
+            "variant": "normal"
+          },
+          {
+            "original": "two_op_fm",
+            "engine": "wave_terrain",
+            "variant": "aux"
+          },
+          {
+            "original": "formant",
+            "engine": "classic_waves_vcf",
+            "variant": "normal"
+          },
+          {
+            "original": "chords",
+            "engine": "string_machine",
+            "variant": "normal"
+          },
+          {
+            "original": "speech",
+            "engine": "phase_distortion",
+            "variant": "normal"
+          },
+          {
+            "original": "modal",
+            "engine": "filtered_noise",
+            "variant": "dual_band"
+          },
+          {
+            "original": "noise",
+            "engine": "bass_drum",
+            "variant": "normal"
+          },
+          {
+            "original": "sample",
+            "engine": "snare_drum",
+            "variant": "normal"
+          }
+        ],
+        "preset_policy": {
+          "mode": "slot_occupant"
+        }
+      },
+      "recipe_sha256": "9f14319ab9a141af70fb8e0c28e152de7df565f1d15682bdc7a94d3dc7fad764",
+      "replacements": [
+        {
+          "original": "basic_waves",
+          "engine": "chiptune",
+          "variant": "normal",
+          "original_name": "Basic Waves",
+          "engine_name": "Chiptune",
+          "variant_name": "Main"
+        },
+        {
+          "original": "virtual_analog",
+          "engine": "inharmonic_string",
+          "variant": "normal",
+          "original_name": "Virtual Analog",
+          "engine_name": "Inharmonic String",
+          "variant_name": "Main"
+        },
+        {
+          "original": "waveshaper",
+          "engine": "swarm",
+          "variant": "normal",
+          "original_name": "Waveshaper",
+          "engine_name": "Swarm",
+          "variant_name": "Main"
+        },
+        {
+          "original": "two_op_fm",
+          "engine": "wave_terrain",
+          "variant": "aux",
+          "original_name": "Two Op FM",
+          "engine_name": "Wave Terrain · 5 terrains",
+          "variant_name": "Alternative (AUX)"
+        },
+        {
+          "original": "formant",
+          "engine": "classic_waves_vcf",
+          "variant": "normal",
+          "original_name": "Formant",
+          "engine_name": "Classic Waveshapes + VCF",
+          "variant_name": "Main"
+        },
+        {
+          "original": "chords",
+          "engine": "string_machine",
+          "variant": "normal",
+          "original_name": "Chords",
+          "engine_name": "String Machine",
+          "variant_name": "Main"
+        },
+        {
+          "original": "speech",
+          "engine": "phase_distortion",
+          "variant": "normal",
+          "original_name": "Speech",
+          "engine_name": "Phase Distortion",
+          "variant_name": "Main"
+        },
+        {
+          "original": "modal",
+          "engine": "filtered_noise",
+          "variant": "dual_band",
+          "original_name": "Modal",
+          "engine_name": "Filtered Noise",
+          "variant_name": "Two-band (AUX)"
+        },
+        {
+          "original": "noise",
+          "engine": "bass_drum",
+          "variant": "normal",
+          "original_name": "Noise",
+          "engine_name": "Bass Drum",
+          "variant_name": "Main"
+        },
+        {
+          "original": "sample",
+          "engine": "snare_drum",
+          "variant": "normal",
+          "original_name": "Sample",
+          "engine_name": "Snare Drum",
+          "variant_name": "Main"
+        }
+      ],
+      "base": {
+        "size": 941572,
+        "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+        "version": "5.0.0.2084"
+      },
+      "patch": {
+        "url": "catalog/9f14319ab9a141af70fb8e0c28e152de7df565f1d15682bdc7a94d3dc7fad764/firmware.mflp",
+        "size": 37378,
+        "sha256": "adeb059f3839fd235b5dbda3870411a9f0ac46e1496cf1d7e032d796b242e65b"
+      },
+      "result": {
+        "size": 941572,
+        "sha256": "bd45406d8de42ddce21a69319dc4fa5fdddc86d2c838289a39d9eb50d1c8d6b8",
+        "filename": "MicroFreak_5_0_0_2084_lite-selection-e0293d394250_27c94b015863.mff"
+      },
+      "recipe_file": {
+        "url": "catalog/9f14319ab9a141af70fb8e0c28e152de7df565f1d15682bdc7a94d3dc7fad764/recipe.json",
+        "sha256": "6e9bdaafec2f47c550c8787682599c1ecbe8cde7a62e9169e1e275375ec3619e"
+      },
+      "guide": {
+        "url": "catalog/9f14319ab9a141af70fb8e0c28e152de7df565f1d15682bdc7a94d3dc7fad764/guide.md",
+        "sha256": "359de4d8377ba2f43c549c9281b1dc851afc2f460b2e2584795bca612e687d2e"
+      }
     }
   ],
-  "release_id": "24f201fe45f9c9ce"
+  "release_id": "d14270649ab11e87"
 }

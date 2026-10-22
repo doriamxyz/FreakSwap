@@ -1,0 +1,498 @@
+{
+  "combinations": [
+    {
+      "id": "328062d7366d6d3e7de386ec3cbbc4de6fc94ad124284a4d384fa924bc3b9104",
+      "result": {
+        "size": 941572,
+        "sha256": "3f10149250054ac0d236f1f1ecdf6df5998443514b7b94010cb4e6cf9d39d754",
+        "filename": "MicroFreak_5_0_0_2084_lite-bass-drum-at-formant_3c060dde622f.mff"
+      },
+      "patch": {
+        "url": "catalog/328062d7366d6d3e7de386ec3cbbc4de6fc94ad124284a4d384fa924bc3b9104/firmware.mflp",
+        "size": 4942,
+        "sha256": "b149be06dde20ad003025d5977dfc3261397188060b702a2e33199089068ffc7"
+      }
+    },
+    {
+      "id": "7f502793d57273814857bcf267f4ad2543c0e6b95b92840e443d65851e9b7098",
+      "result": {
+        "size": 941572,
+        "sha256": "5769e7867f74661a81a3198b8bf5dbd266fdba6ca228b646306c6664fd68ffa8",
+        "filename": "MicroFreak_5_0_0_2084_lite-bass-drum-at-virtual_analog_f7d13563b363.mff"
+      },
+      "patch": {
+        "url": "catalog/7f502793d57273814857bcf267f4ad2543c0e6b95b92840e443d65851e9b7098/firmware.mflp",
+        "size": 4913,
+        "sha256": "36b4d75ad51acbe1573e7445b91b920fac404d85ed50b8733225826aaab2996f"
+      }
+    },
+    {
+      "id": "24d1a3910a3f0179a55a4063b05adcc5a79a701ad723e23badc93d36dae89d88",
+      "result": {
+        "size": 941572,
+        "sha256": "7d94f11ea844f48265ce4105745370d611e2a89cd91bd5c1ee6d3bef0808609c",
+        "filename": "MicroFreak_5_0_0_2084_lite-chiptune-at-chords_07d070455a91.mff"
+      },
+      "patch": {
+        "url": "catalog/24d1a3910a3f0179a55a4063b05adcc5a79a701ad723e23badc93d36dae89d88/firmware.mflp",
+        "size": 4609,
+        "sha256": "2adaf7ea42525e4c7205700f848a2183a42101161e17cd94ce5cedb6ab54edd0"
+      }
+    },
+    {
+      "id": "ac9dba05ff789371df8bf5ae4d652fd31b81ac445e2fd58a9e373e1b241a7ccc",
+      "result": {
+        "size": 941572,
+        "sha256": "d8b647051497d695be30d390044a6567c869770f7aee11a3e82be48af0e81ee7",
+        "filename": "MicroFreak_5_0_0_2084_lite-classic-waves-vcf-at-formant_24ce06af943c.mff"
+      },
+      "patch": {
+        "url": "catalog/ac9dba05ff789371df8bf5ae4d652fd31b81ac445e2fd58a9e373e1b241a7ccc/firmware.mflp",
+        "size": 3701,
+        "sha256": "dae09deb85bd80fd6d782e6857809929eebf29dbebdbdc119c608efaeecba9ed"
+      }
+    },
+    {
+      "id": "f164674488e20a6b60e81bac7b6b881715b0f4253b16b30b1461fbd8548c8551",
+      "result": {
+        "size": 941572,
+        "sha256": "a8612e2b69f47775b47f74de92e1f49b6670d7233d22bb6d7ce2b76af4effd21",
+        "filename": "MicroFreak_5_0_0_2084_lite-classic-waves-vcf-at-modal_cfad88f11cd2.mff"
+      },
+      "patch": {
+        "url": "catalog/f164674488e20a6b60e81bac7b6b881715b0f4253b16b30b1461fbd8548c8551/firmware.mflp",
+        "size": 3142,
+        "sha256": "688e13a660eac8702be1a04d76e905c85816bb22ac6b59e4766eddbfcc538baa"
+      }
+    },
+    {
+      "id": "164f238037867610588b8deba9c791f0cee77a5edcb333639f404a090b312659",
+      "result": {
+        "size": 941572,
+        "sha256": "3efa9eb8e579aa00583ce707e1badeaafec9d0212b151419538e371baa6cfdb1",
+        "filename": "MicroFreak_5_0_0_2084_lite-classic-waves-vcf-at-virtual_analog_ef7938b257ba.mff"
+      },
+      "patch": {
+        "url": "catalog/164f238037867610588b8deba9c791f0cee77a5edcb333639f404a090b312659/firmware.mflp",
+        "size": 3342,
+        "sha256": "631053302018eb2750be5ad084d1c775256f3342afad5060a2a8c80a82bd40ec"
+      }
+    },
+    {
+      "id": "66b7907e671518ca98841a3395a8a56e75b3953be9ffc4205e2b1a4a9dc05767",
+      "result": {
+        "size": 941572,
+        "sha256": "dc330966a9ccf8821cf0c433ab636079cac122e900792b835245fcfb3a59375e",
+        "filename": "MicroFreak_5_0_0_2084_lite-filtered-noise-at-formant_b4fa2917e2b6.mff"
+      },
+      "patch": {
+        "url": "catalog/66b7907e671518ca98841a3395a8a56e75b3953be9ffc4205e2b1a4a9dc05767/firmware.mflp",
+        "size": 2947,
+        "sha256": "7ee9b53cd02fa4dbdb3df0571cb911ae4d7f2ef5c0bbd47c781b4618f791027d"
+      }
+    },
+    {
+      "id": "30f5df3ff0ccacfb665291c5396aa6bbe4568c4557b59bacd09610820fd2f365",
+      "result": {
+        "size": 941572,
+        "sha256": "583878681e57ef5ea0ef89b11eed186a9d6074a6e8964edad66525c6e72790bb",
+        "filename": "MicroFreak_5_0_0_2084_lite-filtered-noise-dual-band-at-formant_f60487fa170d.mff"
+      },
+      "patch": {
+        "url": "catalog/30f5df3ff0ccacfb665291c5396aa6bbe4568c4557b59bacd09610820fd2f365/firmware.mflp",
+        "size": 2976,
+        "sha256": "3c76971062b80d5ac7a1c5c4bd7df011d5f152abe3dd8cd9a63f1832c00dc9f4"
+      }
+    },
+    {
+      "id": "d247cc68c82df18b816bc88025c66270460ca2d23ca7b1415674398712c31f72",
+      "result": {
+        "size": 941572,
+        "sha256": "68bcc18135fb28aacae315d9ed8b77b8145ef48f332010636b39398d15225759",
+        "filename": "MicroFreak_5_0_0_2084_lite-filtered-noise-at-modal_860084c1647f.mff"
+      },
+      "patch": {
+        "url": "catalog/d247cc68c82df18b816bc88025c66270460ca2d23ca7b1415674398712c31f72/firmware.mflp",
+        "size": 2218,
+        "sha256": "9c1c7f740e47f3707631c4f7c85f8f691fc668cdc4d1f200c24d31255f492e74"
+      }
+    },
+    {
+      "id": "9b9ee2311482af4c029f5ed93267c64626c1c86f1b43d29b2d820f42181f138f",
+      "result": {
+        "size": 941572,
+        "sha256": "80cfd4f0ac91e7072b298c634100bcbf40dcc01ecb866f8c5b237244ce559d39",
+        "filename": "MicroFreak_5_0_0_2084_lite-filtered-noise-dual-band-at-modal_ea9311d5af8b.mff"
+      },
+      "patch": {
+        "url": "catalog/9b9ee2311482af4c029f5ed93267c64626c1c86f1b43d29b2d820f42181f138f/firmware.mflp",
+        "size": 2276,
+        "sha256": "2029cbe0f0dd97d3c08ca0331ed8da74d57844dad364b181885f1519d2ba32a0"
+      }
+    },
+    {
+      "id": "3c300c5e78b8d7673896ce1a9adffdcc9b4bb90fa438e28695915c4385a9fe04",
+      "result": {
+        "size": 941572,
+        "sha256": "f13b9333393f7e37ce2e538bd49864a8af69a2761eacd05b22b7aa8b4f638227",
+        "filename": "MicroFreak_5_0_0_2084_lite-filtered-noise-at-virtual_analog_f295d818f8a8.mff"
+      },
+      "patch": {
+        "url": "catalog/3c300c5e78b8d7673896ce1a9adffdcc9b4bb90fa438e28695915c4385a9fe04/firmware.mflp",
+        "size": 2336,
+        "sha256": "7f8791b79429e9214f5afd5f96acb0ade4fc963dd0377867718a973ee673db87"
+      }
+    },
+    {
+      "id": "e69eab8c9b66bd23b417d7f8c2df76c3ffa53fb4ec50ec23a81250ad4c0200bb",
+      "result": {
+        "size": 941572,
+        "sha256": "67370ae23d13b5e6b67ca68357ed2932928f37700675f601d85c569c3e10a8d1",
+        "filename": "MicroFreak_5_0_0_2084_lite-filtered-noise-dual-band-at-virtual_analog_e4ac7d56bcbd.mff"
+      },
+      "patch": {
+        "url": "catalog/e69eab8c9b66bd23b417d7f8c2df76c3ffa53fb4ec50ec23a81250ad4c0200bb/firmware.mflp",
+        "size": 2385,
+        "sha256": "108fa27ecba6582321318faa65c6b99496a14842cec1d29d4d66190f73bac8cb"
+      }
+    },
+    {
+      "id": "0d6e83e7afde1216bf3e60e93edf3382b294bbe1ed693067ba07740f0f1ac00b",
+      "result": {
+        "size": 941572,
+        "sha256": "05f87f714b37c9f81244311012ca9caa9737ae4ca43c84dc9e6ef4e2c92fdadd",
+        "filename": "MicroFreak_5_0_0_2084_lite-inharmonic-string-at-formant_8e0e608d480b.mff"
+      },
+      "patch": {
+        "url": "catalog/0d6e83e7afde1216bf3e60e93edf3382b294bbe1ed693067ba07740f0f1ac00b/firmware.mflp",
+        "size": 6341,
+        "sha256": "acd0544e26e8543252bfc4abd597a650ca5961ddd39cd7a4cedf857f948f74ad"
+      }
+    },
+    {
+      "id": "c38026c68d670aa3db76162cf95c25a86d1a613a3ab45d7b0f97f79200dae47d",
+      "result": {
+        "size": 941572,
+        "sha256": "36b5b07a78d53d0c25e179cee8ead12aeb50fc69776fd09864f51e2430b57acc",
+        "filename": "MicroFreak_5_0_0_2084_lite-inharmonic-string-at-virtual_analog_bdd4199460ff.mff"
+      },
+      "patch": {
+        "url": "catalog/c38026c68d670aa3db76162cf95c25a86d1a613a3ab45d7b0f97f79200dae47d/firmware.mflp",
+        "size": 6373,
+        "sha256": "bc03b3dcc5b9e9f733bdfe59d6a167d37c744ca33e140648bee88c1b3f63dec6"
+      }
+    },
+    {
+      "id": "d6edef209c46ac20c36a014e5b3151cfbb4116121c5a32ebc5be1fd9a8343e22",
+      "result": {
+        "size": 941572,
+        "sha256": "c8037b507d65dc31a37e1bdf6dfbd1db553ab6d86da2f0ed983cd053974d4f57",
+        "filename": "MicroFreak_5_0_0_2084_lite-particle-noise-at-chords_5a8633049226.mff"
+      },
+      "patch": {
+        "url": "catalog/d6edef209c46ac20c36a014e5b3151cfbb4116121c5a32ebc5be1fd9a8343e22/firmware.mflp",
+        "size": 3146,
+        "sha256": "3bcf0dd9306d532ee634ce9ba702d2ca3912dd8f4bb4afdaa12937efc8f142b7"
+      }
+    },
+    {
+      "id": "93bbd80058115caf93f82b8f9e465e6ea03158b25af8a94ba57b9fdb0e425e0c",
+      "result": {
+        "size": 941572,
+        "sha256": "ae4336260b0a02668a60102ebb4ebb3b919618d3e5d2f3942497b1f29409732b",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-chords_ef91c7c0237b.mff"
+      },
+      "patch": {
+        "url": "catalog/93bbd80058115caf93f82b8f9e465e6ea03158b25af8a94ba57b9fdb0e425e0c/firmware.mflp",
+        "size": 3797,
+        "sha256": "a153119278d875cfed8ec4ce92582e610cdea7c6ca1554adebef724bae98b848"
+      }
+    },
+    {
+      "id": "dff45d48c58ee746fff4edb6ce6d1370ebd72bd49fb9e7cb21a6ce9ae1d1fc90",
+      "result": {
+        "size": 941572,
+        "sha256": "0d60aef4907bd29ac9080702ed8952e1f6eecf3587394eacb0130c63c44470fc",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-modal_dae629163806.mff"
+      },
+      "patch": {
+        "url": "catalog/dff45d48c58ee746fff4edb6ce6d1370ebd72bd49fb9e7cb21a6ce9ae1d1fc90/firmware.mflp",
+        "size": 3397,
+        "sha256": "4e9f771d0a398485955e62359b909cb5fd6ea9e44440ad7f5944ad971ccd75d3"
+      }
+    },
+    {
+      "id": "4e78c6e65f4dd227649d23c2fa2e3c49c31b6932dbf0a95db2356e3e984ed916",
+      "result": {
+        "size": 941572,
+        "sha256": "4f7ed79dc2a6dc523fa47a81fa5dfa5dad230b7b8cf1f4bfde046ad18c2d58c1",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-speech_5730d4edc8f3.mff"
+      },
+      "patch": {
+        "url": "catalog/4e78c6e65f4dd227649d23c2fa2e3c49c31b6932dbf0a95db2356e3e984ed916/firmware.mflp",
+        "size": 3100,
+        "sha256": "6ba1d55ac1fc1242828393950bbc288bece5413447d60d988851f4b30af3f248"
+      }
+    },
+    {
+      "id": "99a6b2d336e888a47561e694f8394cbb4fcccd713cc003fb2fc30abeeec795b4",
+      "result": {
+        "size": 941572,
+        "sha256": "b98a9f2b18bd45f11d9aa0e889a38a78e099551f5c799741627f8a771bff088e",
+        "filename": "MicroFreak_5_0_0_2084_lite-phase-distortion-at-virtual_analog_d512fc95111b.mff"
+      },
+      "patch": {
+        "url": "catalog/99a6b2d336e888a47561e694f8394cbb4fcccd713cc003fb2fc30abeeec795b4/firmware.mflp",
+        "size": 3837,
+        "sha256": "ea8ce671fac7ef8a754a6be6f1d7322cc7bfef1170cc242b1412528e56461da0"
+      }
+    },
+    {
+      "id": "e382ba5e3803fbc7e47aebf452dbec106ecaf3af0e100ea0a2642095c26b9eff",
+      "result": {
+        "size": 941572,
+        "sha256": "8e5811318e4904e0fbb16ef44b12a25fa36823cc1780cb5a24676461686ff57d",
+        "filename": "MicroFreak_5_0_0_2084_lite-snare-drum-at-formant_84291d0f436d.mff"
+      },
+      "patch": {
+        "url": "catalog/e382ba5e3803fbc7e47aebf452dbec106ecaf3af0e100ea0a2642095c26b9eff/firmware.mflp",
+        "size": 4609,
+        "sha256": "cd59487e3b967c49cb838714adb7f3323bf098d71f3c05e5802db7fcec1cb480"
+      }
+    },
+    {
+      "id": "318a99fa7ae255f8c5a77442ac4e702e9d36fb6969ef97d9044b25e7945f07f2",
+      "result": {
+        "size": 941572,
+        "sha256": "4b5929622b29cbc8724af8352da8f9c8e5181cb8ab64345edb763b4933f63c89",
+        "filename": "MicroFreak_5_0_0_2084_lite-snare-drum-at-virtual_analog_299af499a46d.mff"
+      },
+      "patch": {
+        "url": "catalog/318a99fa7ae255f8c5a77442ac4e702e9d36fb6969ef97d9044b25e7945f07f2/firmware.mflp",
+        "size": 4643,
+        "sha256": "85ddd592fcced7d39640071387290d9722f788f7983825be7239d6ea80490ac9"
+      }
+    },
+    {
+      "id": "ac693ee88868818edc2191da733c6100c7ed0f3b28e108d79b9a953276b8018b",
+      "result": {
+        "size": 941572,
+        "sha256": "b5ff8b8e556490d1f2128a0c0f2dbe1526d17574ce50672e311809502b1026b6",
+        "filename": "MicroFreak_5_0_0_2084_lite-string-machine-at-chords_2da745c314b7.mff"
+      },
+      "patch": {
+        "url": "catalog/ac693ee88868818edc2191da733c6100c7ed0f3b28e108d79b9a953276b8018b/firmware.mflp",
+        "size": 4465,
+        "sha256": "a1157bb094af62c17965897d1bca5cc75918c9c7ee25672680419330bd912e57"
+      }
+    },
+    {
+      "id": "1c51eec81566dec51ad176b183cdee58f3e121b7c5754c1ae43e2c124d3f706c",
+      "result": {
+        "size": 941572,
+        "sha256": "ef067883cda2b0b0d12433cbeee8419da83d2fa4e4359f5f224c619e326d3c62",
+        "filename": "MicroFreak_5_0_0_2084_lite-swarm-at-chords_65d561468ae9.mff"
+      },
+      "patch": {
+        "url": "catalog/1c51eec81566dec51ad176b183cdee58f3e121b7c5754c1ae43e2c124d3f706c/firmware.mflp",
+        "size": 2446,
+        "sha256": "fcd8bd125a174de26a0b75ee906baaa7908626e424093a0d725a10d44a7bb04d"
+      }
+    },
+    {
+      "id": "7c7fe5cdb82f2d21b965f11b69c48a0bd56a0d1575f808cd84d3bc14303b6011",
+      "result": {
+        "size": 941572,
+        "sha256": "dcfae8336374a5d3e87487298b770fcf7097ec2d35fdcd01c980eee4c44f2da3",
+        "filename": "MicroFreak_5_0_0_2084_lite-swarm-at-modal_ada6222b312b.mff"
+      },
+      "patch": {
+        "url": "catalog/7c7fe5cdb82f2d21b965f11b69c48a0bd56a0d1575f808cd84d3bc14303b6011/firmware.mflp",
+        "size": 2370,
+        "sha256": "9e3344c0d4d322e09b29a75062c3951be6f1d79e1a30ba5524e94faa026f7174"
+      }
+    },
+    {
+      "id": "44a9ac1d0262600e925879643136afaf80604fb1e76ec09e2979d3851f0a5b8e",
+      "result": {
+        "size": 941572,
+        "sha256": "92fb28b6a1ed90a305bba09805627c8eb9da87c8ca36513f46dea63f94577668",
+        "filename": "MicroFreak_5_0_0_2084_lite-swarm-at-speech_a14802bc55e9.mff"
+      },
+      "patch": {
+        "url": "catalog/44a9ac1d0262600e925879643136afaf80604fb1e76ec09e2979d3851f0a5b8e/firmware.mflp",
+        "size": 2166,
+        "sha256": "fd05104f6986cbbcb3441f82a3668640d590ee65c62ba2ae2cd4d337bfeb882f"
+      }
+    },
+    {
+      "id": "428b942be7583d93b0e08bae7826f2c96193137f85ee343bc9031cda1dba2b79",
+      "result": {
+        "size": 941572,
+        "sha256": "6fc0261d2eef9a17d86a26b6cf839fd9def5dc2f6a1ab1aba08b5b4869713414",
+        "filename": "MicroFreak_5_0_0_2084_lite-swarm-at-two_op_fm_9f37081ee366.mff"
+      },
+      "patch": {
+        "url": "catalog/428b942be7583d93b0e08bae7826f2c96193137f85ee343bc9031cda1dba2b79/firmware.mflp",
+        "size": 2392,
+        "sha256": "417fe5aea9e509d34d5bce733255d59c6630bf07c84e0f00dc20b2f724c2a26f"
+      }
+    },
+    {
+      "id": "9567f0a4dd21d5a33228f20158a28486618b38989268c4538c1a57543e354aff",
+      "result": {
+        "size": 941572,
+        "sha256": "e0c79a85b7fdd8ebdfa475b36d58244a851788bb0cf71f9802c25018f3e0f76a",
+        "filename": "MicroFreak_5_0_0_2084_lite-swarm-at-virtual_analog_8f19c10164dc.mff"
+      },
+      "patch": {
+        "url": "catalog/9567f0a4dd21d5a33228f20158a28486618b38989268c4538c1a57543e354aff/firmware.mflp",
+        "size": 2455,
+        "sha256": "09cf6d52349901696f52f3a8271e1b6757403b5c26ee4cd5f2ca574bc03e7adf"
+      }
+    },
+    {
+      "id": "a37dddd3fa86da6b2d258458d749b996440b4b0cfef8bb96f8caeaec7d930d2f",
+      "result": {
+        "size": 941572,
+        "sha256": "c8aee6ebf985c7189998eea9c8fc47607ab23ae3be47649f8b5252014546e556",
+        "filename": "MicroFreak_5_0_0_2084_lite-swarm-at-waveshaper_1c911a621a8a.mff"
+      },
+      "patch": {
+        "url": "catalog/a37dddd3fa86da6b2d258458d749b996440b4b0cfef8bb96f8caeaec7d930d2f/firmware.mflp",
+        "size": 2524,
+        "sha256": "9cd92937b187b3d8aead8eb597ccde73961a4d791de31b987dd957b73220b53e"
+      }
+    },
+    {
+      "id": "92d86451999c494d864be7079dff914acf23b50e4e1b308092d4cb754f05f3c8",
+      "result": {
+        "size": 941572,
+        "sha256": "ccf2692fc9113ab86c2fdd152fbe8182c08791c76a8a57b46cd0657795f825e0",
+        "filename": "MicroFreak_5_0_0_2084_lite-wave-terrain-at-formant_2c7656c34425.mff"
+      },
+      "patch": {
+        "url": "catalog/92d86451999c494d864be7079dff914acf23b50e4e1b308092d4cb754f05f3c8/firmware.mflp",
+        "size": 2818,
+        "sha256": "e7b6de3b630b2bca00d5c1bf7320045a8913623d7cffb40f5cc3abe9b13fe5a8"
+      }
+    },
+    {
+      "id": "25bdeb058f3bfedc92071bd6e794fbdd2e3e7363ce5cc16ddba98a2c356f85f8",
+      "result": {
+        "size": 941572,
+        "sha256": "f19f1df91b32ee18875a93d05dc2139ec2dce50e9f780bfc25b169b95b189076",
+        "filename": "MicroFreak_5_0_0_2084_lite-wave-terrain-aux-at-formant_6c1858e6b0e1.mff"
+      },
+      "patch": {
+        "url": "catalog/25bdeb058f3bfedc92071bd6e794fbdd2e3e7363ce5cc16ddba98a2c356f85f8/firmware.mflp",
+        "size": 2837,
+        "sha256": "5d581d90c0ec877e64cd93c09b7fe142d4fc33e5041ed2b748080a6442ac989e"
+      }
+    },
+    {
+      "id": "812f209dfb7d4a93644105d5b1917fe6bb631ffb9b5fc3efb2707dde6b61bfad",
+      "result": {
+        "size": 941572,
+        "sha256": "84355a5145f81e2e22b97e3db379b7feabe77f21109279b690e20ce8d63ba030",
+        "filename": "MicroFreak_5_0_0_2084_lite-wave-terrain-at-modal_a8804c687f07.mff"
+      },
+      "patch": {
+        "url": "catalog/812f209dfb7d4a93644105d5b1917fe6bb631ffb9b5fc3efb2707dde6b61bfad/firmware.mflp",
+        "size": 2278,
+        "sha256": "5792af9837225915d3f6271f25f0740a62763b2010fb43cfa896240efa986251"
+      }
+    },
+    {
+      "id": "c4d8350257f5d3ecc9ec12d6d9dc45f4e4521086c5fe9b11d9f3a7e79b6a7022",
+      "result": {
+        "size": 941572,
+        "sha256": "73d8cd83c6c94efc37de82acd266c80f7a7eb7127434926c6b9b53226dbaa004",
+        "filename": "MicroFreak_5_0_0_2084_lite-wave-terrain-aux-at-modal_4d86841f0393.mff"
+      },
+      "patch": {
+        "url": "catalog/c4d8350257f5d3ecc9ec12d6d9dc45f4e4521086c5fe9b11d9f3a7e79b6a7022/firmware.mflp",
+        "size": 2283,
+        "sha256": "eb5c87cf68cde58991109d76f487c8662bc2cb792e0d017306428d0584bc4e2c"
+      }
+    },
+    {
+      "id": "3c74eda2366386cb40e4de4fb6efbed822de8b123740772e90b47f07ad073f62",
+      "result": {
+        "size": 941572,
+        "sha256": "41204072a67a19fcc429d20b3471eaed905cdd0993439b3863052cefb15ec274",
+        "filename": "MicroFreak_5_0_0_2084_lite-wave-terrain-at-two_op_fm_9ff44d3e2431.mff"
+      },
+      "patch": {
+        "url": "catalog/3c74eda2366386cb40e4de4fb6efbed822de8b123740772e90b47f07ad073f62/firmware.mflp",
+        "size": 2383,
+        "sha256": "f26200cb89c733e8c59bf4dce8ee113db1cdb69378c96e470bb017a324c1eb68"
+      }
+    },
+    {
+      "id": "4f1be33c51898f7bb3ca4feaf2b657be7e432f4d2be3d92bb5256cd5cc7d4468",
+      "result": {
+        "size": 941572,
+        "sha256": "93af9bb9efa50de76dd266e64823ae174b6e5ce186ad329c258393706ead1709",
+        "filename": "MicroFreak_5_0_0_2084_lite-wave-terrain-aux-at-two_op_fm_24e220f0bd13.mff"
+      },
+      "patch": {
+        "url": "catalog/4f1be33c51898f7bb3ca4feaf2b657be7e432f4d2be3d92bb5256cd5cc7d4468/firmware.mflp",
+        "size": 2381,
+        "sha256": "36ec2698df83fe551266f6c006c631a906f49e17599b914530150a3ce9f2000f"
+      }
+    },
+    {
+      "id": "18f3d71a7792a17bb3753dd68c36bd9efb7b699d4a6ef2a01653090731936cca",
+      "result": {
+        "size": 941572,
+        "sha256": "751b3cc55e094ce753b84175905fddcf9ce7ac7052697e18b4d091211737c9a4",
+        "filename": "MicroFreak_5_0_0_2084_lite-wave-terrain-at-virtual_analog_eb7d09a03465.mff"
+      },
+      "patch": {
+        "url": "catalog/18f3d71a7792a17bb3753dd68c36bd9efb7b699d4a6ef2a01653090731936cca/firmware.mflp",
+        "size": 2398,
+        "sha256": "ecda02d417fd83fff6c2bb5651a5fc88927698c35c3deee260cf3f0fb38cdb44"
+      }
+    },
+    {
+      "id": "a713b7ffe2dd6029127563448bec036870aecd9631b079462da9c6f648e4b1d3",
+      "result": {
+        "size": 941572,
+        "sha256": "21fad607c0a09f8f83077d0222f5d35462241f815a0a6df42b4429c575877e72",
+        "filename": "MicroFreak_5_0_0_2084_lite-wave-terrain-aux-at-virtual_analog_c52f5b13a38b.mff"
+      },
+      "patch": {
+        "url": "catalog/a713b7ffe2dd6029127563448bec036870aecd9631b079462da9c6f648e4b1d3/firmware.mflp",
+        "size": 2396,
+        "sha256": "c2ff4a9b66c22d1e159e8352dbe5488b0771fa79026ceee7160cda68ead27793"
+      }
+    },
+    {
+      "id": "a8d67de5dd6043dfc7a33365ca06958e9d36dc4a232b413bbd618511529c73ee",
+      "result": {
+        "size": 941572,
+        "sha256": "8f46814b0a57928eb30888496c92b24e5190ea1d1dd375dbc700ec6c4758c403",
+        "filename": "MicroFreak_5_0_0_2084_lite-wave-terrain-at-waveshaper_1224b2c47900.mff"
+      },
+      "patch": {
+        "url": "catalog/a8d67de5dd6043dfc7a33365ca06958e9d36dc4a232b413bbd618511529c73ee/firmware.mflp",
+        "size": 2467,
+        "sha256": "ef4ffad05931c6fce6d7b78fb47b65ad8888d3c5c9d5d440394d547ff2ae8022"
+      }
+    },
+    {
+      "id": "4fe7d1e5c98782224ed81283d98ab26bb06c0b09338b7f94402bab3c61923bd1",
+      "result": {
+        "size": 941572,
+        "sha256": "5c7238511cf7ea4eed518194c0ec87578009db4f3125ca0bc58da363159ffd21",
+        "filename": "MicroFreak_5_0_0_2084_lite-wave-terrain-aux-at-waveshaper_98cf9b325c16.mff"
+      },
+      "patch": {
+        "url": "catalog/4fe7d1e5c98782224ed81283d98ab26bb06c0b09338b7f94402bab3c61923bd1/firmware.mflp",
+        "size": 2459,
+        "sha256": "7fd98cecd9ae32a3b62a3ecb4d52c57f527db3ed579191e62fac3681f836803d"
+      }
+    }
+  ]
+}
