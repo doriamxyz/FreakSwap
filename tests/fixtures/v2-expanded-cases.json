@@ -1,0 +1,10 @@
+{
+ "phase-basic":[{"engine":"phase_distortion","original":"basic_waves","variant":"normal"},{"engine":"swarm","original":"speech","variant":"normal"}],
+ "phase-super":[{"engine":"phase_distortion","original":"superwave","variant":"normal"},{"engine":"swarm","original":"speech","variant":"normal"}],
+ "snare-basic":[{"engine":"snare_drum","original":"basic_waves","variant":"normal"},{"engine":"phase_distortion","original":"speech","variant":"normal"}],
+ "snare-super":[{"engine":"snare_drum","original":"superwave","variant":"normal"},{"engine":"phase_distortion","original":"speech","variant":"normal"}],
+ "swarm-basic-snare-super":[{"engine":"swarm","original":"basic_waves","variant":"normal"},{"engine":"snare_drum","original":"superwave","variant":"normal"},{"engine":"phase_distortion","original":"speech","variant":"normal"}],
+ "bass-basic-snare-super":[{"engine":"bass_drum","original":"basic_waves","variant":"normal"},{"engine":"snare_drum","original":"superwave","variant":"normal"},{"engine":"phase_distortion","original":"speech","variant":"normal"}],
+ "phase-basic-bass-super":[{"engine":"phase_distortion","original":"basic_waves","variant":"normal"},{"engine":"bass_drum","original":"superwave","variant":"normal"},{"engine":"swarm","original":"speech","variant":"normal"}],
+ "phase-super-snare-basic":[{"engine":"phase_distortion","original":"superwave","variant":"normal"},{"engine":"snare_drum","original":"basic_waves","variant":"normal"},{"engine":"swarm","original":"speech","variant":"normal"}]
+}

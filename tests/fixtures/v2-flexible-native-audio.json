@@ -1,0 +1,598 @@
+{
+  "all_passed": true,
+  "reports": [
+    {
+      "original": "swarm-wavetable-phase_distortion-formant",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "5b5e1308e924e9b36dcc455812092eeca587922d9cdbbee171735642e9ad4346",
+          "peak": 13005
+        },
+        {
+          "id": 3,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "07e2987cdc04e378b19af23cc229d7626a52a91bccbc69a289a1fc7692b64074",
+          "peak": 4934
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "swarm-harmonic-phase_distortion-virtual_analog",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 4,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "07e2987cdc04e378b19af23cc229d7626a52a91bccbc69a289a1fc7692b64074",
+          "peak": 4934
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "bass_drum-wavetable-swarm-formant",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+          "peak": 7156
+        },
+        {
+          "id": 3,
+          "dispatch_count": 32,
+          "output_sha256": "3e659d178b1edb6deb9ae0ea3c20be46de40fbdeb612042b6ca621c7250a4f84",
+          "peak": 5555
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "782722fe418c31849ec812be0d5afc9a7399c88ff64392aaa831ea35f30ec986",
+          "peak": 9602
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "07e2987cdc04e378b19af23cc229d7626a52a91bccbc69a289a1fc7692b64074",
+          "peak": 4934
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "bass_drum-harmonic-swarm-formant",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+          "peak": 7156
+        },
+        {
+          "id": 4,
+          "dispatch_count": 32,
+          "output_sha256": "3e659d178b1edb6deb9ae0ea3c20be46de40fbdeb612042b6ca621c7250a4f84",
+          "peak": 5555
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "782722fe418c31849ec812be0d5afc9a7399c88ff64392aaa831ea35f30ec986",
+          "peak": 9602
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "07e2987cdc04e378b19af23cc229d7626a52a91bccbc69a289a1fc7692b64074",
+          "peak": 4934
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "snare_drum-wavetable-swarm-formant",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+          "peak": 7156
+        },
+        {
+          "id": 3,
+          "dispatch_count": 32,
+          "output_sha256": "cdde0b1bd9e9fc9941c24be2717630fc1e0d122b3ceaf5866bc2c60a2a5ac92e",
+          "peak": 8797
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "07e2987cdc04e378b19af23cc229d7626a52a91bccbc69a289a1fc7692b64074",
+          "peak": 4934
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "snare_drum-harmonic-swarm-formant",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+          "peak": 7156
+        },
+        {
+          "id": 4,
+          "dispatch_count": 32,
+          "output_sha256": "cdde0b1bd9e9fc9941c24be2717630fc1e0d122b3ceaf5866bc2c60a2a5ac92e",
+          "peak": 8797
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "07e2987cdc04e378b19af23cc229d7626a52a91bccbc69a289a1fc7692b64074",
+          "peak": 4934
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "phase_distortion-wavetable-swarm-virtual_analog",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 3,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "07e2987cdc04e378b19af23cc229d7626a52a91bccbc69a289a1fc7692b64074",
+          "peak": 4934
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "phase_distortion-harmonic-swarm-virtual_analog",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 4,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "07e2987cdc04e378b19af23cc229d7626a52a91bccbc69a289a1fc7692b64074",
+          "peak": 4934
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "snare-direct-formant",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "9d27e3cd23284bf866cfccee03ab8bf7319c0176393eceade8e0e02d8547e0fc",
+          "peak": 8773
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "07e2987cdc04e378b19af23cc229d7626a52a91bccbc69a289a1fc7692b64074",
+          "peak": 4934
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "snare-direct-virtual_analog",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "9d27e3cd23284bf866cfccee03ab8bf7319c0176393eceade8e0e02d8547e0fc",
+          "peak": 8773
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "07e2987cdc04e378b19af23cc229d7626a52a91bccbc69a289a1fc7692b64074",
+          "peak": 4934
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "speech-retained-triple",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 3,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "cdde0b1bd9e9fc9941c24be2717630fc1e0d122b3ceaf5866bc2c60a2a5ac92e",
+          "peak": 8797
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "07e2987cdc04e378b19af23cc229d7626a52a91bccbc69a289a1fc7692b64074",
+          "peak": 4934
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    }
+  ]
+}

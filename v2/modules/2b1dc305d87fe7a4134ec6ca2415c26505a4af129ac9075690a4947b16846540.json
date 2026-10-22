@@ -1,0 +1,223 @@
+{
+  "format": "freakswap.arm-module",
+  "version": 1,
+  "sections": [
+    {
+      "id": 0,
+      "size": 92,
+      "alignment": 4,
+      "data": "uu4CGjDuARqf7REKtO5AGvHuEPoK1J/tDyqw7kEKtO5CGvHuEPrIv7DuQgqAtS3tAosJSLXuACqQ7QAaIe4Civ/3/v8o7gAKvewCi4C9AL8AAADDAAD+QgQAACA=",
+      "relocations": [
+        {
+          "offset": 64,
+          "type": 10,
+          "target": {
+            "section": 10,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "size": 272,
+      "alignment": 4,
+      "data": "ELWf7T4ate4AKp/tPWrw7gAa9+4AKrTuQgqw7mF6IO4BGvHuEPq4v7DuQWqQ7QIqkO0BOpDtA0qf7TIasO5CWibuARoB7gZ6kO0AGhbuB1q57gB6Bu4QOkDuByqf7Sp6uO5GaiDuogq4v7DuQHr27gAKI+4DCjfuRHoB7gEKtO5gCvHuEPoE2bTuYQrx7hD6FtseTBDuECr+7gAK9+4IGmDuIAqk61ICAO4QKmDugApA7oAaIe6ACiPuADoh7gAahe4GCofuBlp7sTDuAiqR7QBqNe4ESgE7Au4DGgTuAWoC7kE6oewBau7ngO0DSoDtATqA7QAagO0CKhC92w9JQNsPST8K16O+AAAAAN9ZN18=",
+      "relocations": []
+    },
+    {
+      "id": 2,
+      "size": 8,
+      "alignment": 2,
+      "data": "E0YAIv/3/r8=",
+      "relocations": [
+        {
+          "offset": 4,
+          "type": 30,
+          "target": {
+            "section": 1,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "size": 188,
+      "alignment": 4,
+      "data": "te4AepDtAzqQ7QIqBu4QKpDtABqQ7QFK9u4AGrTuRwq47kZq8e4Q+qi/sO5HCjDuw1q37gB6/+4ACjDuQgqF7gZagO4GCp/tHGpaszDuAioy7gEatO5HGvHuEPoC2vDuRioP4DHuIBrB7gIqYu6hOgLu40p37mI68O5GKmPuoUpD7qQqNO4EStHtADo17gM6ATo07iBKRO4DOuHsAToy7oFK0ueA7QM6gO0BSoDtABqA7QIqcEcAvwAAAAA=",
+      "relocations": []
+    },
+    {
+      "id": 4,
+      "size": 2,
+      "alignment": 2,
+      "data": "cEc=",
+      "relocations": []
+    },
+    {
+      "id": 5,
+      "size": 100,
+      "alignment": 4,
+      "data": "8LUAaRZLACFP8H5ST/B8VLjuDAqw7gwaACUAJrX1AH8Iv/C9Au4QakcZQDUBNrjuQir5Y7ljeWM6Y/liu2J5Yjli+WG5YXxhOWH6YLpgeWAy7gAqgu4BKoftACre5wC/CtcjPA==",
+      "relocations": []
+    },
+    {
+      "id": 6,
+      "size": 44,
+      "alignment": 4,
+      "data": "CUqLaIJgQmAAIrP1AH8CcwbTo/UAcopgCmgC9QBzC2ACYf/3/r8Av83MTD8=",
+      "relocations": [
+        {
+          "offset": 34,
+          "type": 30,
+          "target": {
+            "section": 5,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "size": 4,
+      "alignment": 2,
+      "data": "//f+vw==",
+      "relocations": [
+        {
+          "offset": 0,
+          "type": 30,
+          "target": {
+            "section": 5,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "size": 808,
+      "alignment": 4,
+      "data": "Len4Ty3tFluR7QEKmUaQRg5Ggkb/9/7/sO5AipbtAgqf7bIaIO4BCv/3/v+w7kCalu0DCrfuAMqf7a0alu0EqjzuQAog7gEK//f+/yCYMWgAIgSRgAAAIZBCBNAI6wIDBDIZYPjnACEAIpBCBNAJ6wIDBDIZYPjnte4A2iCY3+2mmt/tptrf7abq3+2m+gAnT/AwC/buAKr07gC6/+4Ays34DIAg7g3qKu4KCiruAPqf7ZAKAe4QCgSYuO5BGinuAAqf7ZCaxAdg7gGKzekBSbv1DH8A8ACB2vgQAADrCwasuRbtCBoW7QkKCO6BCgbtCQq07kwK8e4Q+kTbve7AKrjuwiow7kIKBu0JCgfgT/B8UbDuagqz7gAaRvgkHHhNdUp2SxbtCioW7Qs6t+4ISp/tdVopaDLuAyoG7QsqAfsCMQPuEBoB+wIyBJm47kM6E+4JKrDuajoqYIkHBu0KKgLuECq47kIqIu4JKgLuBDqf7WZKAu4FSiHuBBpYv7DuQToG7Qg6tO5M6gWX8e4Q+g3aFu0GCqbxGABPRkVGtO5MCrDuTArx7hD6Mdo04L7uABow7gEKsO5sGi7uAAq07mwK8e4Q+gjUtO5MCrDuQBrx7hD6yL+w7kwat+4ECgDrhxlLSN/tSwoB7ioK//f+/xbtBhow7gwK3ekBRwOdCfEYACDuKgq07kwa8e4Q+gPaT/B8UUb4FBwW7QUaFu0HKoDtAOq07kzqFu0MOvHuEPoh7ikaMO5CCgbtBRo67sEaAe4AKhbtCQoW7QoaBu0HKiLuK6oW7QsqsO5CSgHuAEo07gQKMO4sCki/sO5AKiLuLQov7gAKI+4ACv/3/v8W7QwaKO4ACqhGKUYgnabxEADw7koKMe4uKipGIe4CGrDuTCov7gEaAe4NKiDuArqw7ksK//f+/zBGsO5LCvDuSgo5RipGuUb/9/7/BZ8u7i/qC/FACwE3++YhmQmxACAIcL3sFlsBsL3o8I8AvwAA8EIAAKhCzczMPA1mGQBf8248AAAAAAAAgC/NzEw+zcxMPwAAAAAAAIBEMzNzPwAAQEIK1yM87FF4Pw==",
+      "relocations": [
+        {
+          "offset": 20,
+          "type": 10,
+          "target": {
+            "section": 0,
+            "value": 1
+          }
+        },
+        {
+          "offset": 40,
+          "type": 10,
+          "target": {
+            "section": 0,
+            "value": 1
+          }
+        },
+        {
+          "offset": 72,
+          "type": 10,
+          "target": {
+            "section": 10,
+            "value": 1
+          }
+        },
+        {
+          "offset": 492,
+          "type": 10,
+          "target": {
+            "section": 9,
+            "value": 1
+          }
+        },
+        {
+          "offset": 634,
+          "type": 10,
+          "target": {
+            "section": 10,
+            "value": 1
+          }
+        },
+        {
+          "offset": 690,
+          "type": 10,
+          "target": {
+            "section": 3,
+            "value": 1
+          }
+        },
+        {
+          "offset": 710,
+          "type": 10,
+          "target": {
+            "section": 2,
+            "value": 1
+          }
+        },
+        {
+          "offset": 768,
+          "type": 2,
+          "target": {
+            "external": 536871196
+          }
+        },
+        {
+          "offset": 784,
+          "type": 2,
+          "target": {
+            "external": 134730976
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "size": 54,
+      "alignment": 2,
+      "data": "ve7AGrjuwRow7kEKIO6ACr3uwBoR7hAauO7BGgDrgQAw7kEakO0ACpDtASoy7kAqAu4BCnBH",
+      "relocations": []
+    },
+    {
+      "id": 10,
+      "size": 84,
+      "alignment": 4,
+      "data": "n+0QGhFKMO4BCr3uwBoR7hAKuO7BGjDuQQqf7QsaIO4BCr3uwAoQ7hAaAuuBAZHtAAoHSQHrgACQ7QAaIe4ACnBHAL8AAABDAACAQwAAAAAAAAAA",
+      "relocations": [
+        {
+          "offset": 76,
+          "type": 2,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 80,
+          "type": 2,
+          "target": {
+            "external": 134737128
+          }
+        }
+      ]
+    }
+  ],
+  "roots": [
+    {
+      "section": 6,
+      "value": 1
+    },
+    {
+      "section": 7,
+      "value": 1
+    },
+    {
+      "section": 4,
+      "value": 1
+    },
+    {
+      "section": 8,
+      "value": 1
+    }
+  ]
+}

@@ -1,0 +1,469 @@
+{
+  "all_passed": true,
+  "reports": [
+    {
+      "original": "phase-basic",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "b774d0ccc11da81e9dd6bd2cdf695c54e3a51f3eb3a448c98cacf7e7158af343",
+          "peak": 16830
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "phase-super",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 2,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "snare-basic",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "5b5e1308e924e9b36dcc455812092eeca587922d9cdbbee171735642e9ad4346",
+          "peak": 13005
+        },
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "0de092425f5dd8e7d0e7d7710eb39cdc18da9a81055c3a836b94ae76cf83a859",
+          "peak": 8329
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "snare-super",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "5b5e1308e924e9b36dcc455812092eeca587922d9cdbbee171735642e9ad4346",
+          "peak": 13005
+        },
+        {
+          "id": 2,
+          "dispatch_count": 32,
+          "output_sha256": "6492eb5f6d3bafcf598fed24f924a0cbd7b0662ea2e037a2ea9104cb92097805",
+          "peak": 8974
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "swarm-basic-snare-super",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "5b5e1308e924e9b36dcc455812092eeca587922d9cdbbee171735642e9ad4346",
+          "peak": 13005
+        },
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "78d2b9317fa9e75ccbee02caad1f425819e3c8f0c90dd79b70a37c2873c03214",
+          "peak": 10391
+        },
+        {
+          "id": 2,
+          "dispatch_count": 32,
+          "output_sha256": "f4a3a696baa5cfff1fc68d3f3952a197d10b78b93539ff5cad18fa3c0adce45c",
+          "peak": 7798
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "bass-basic-snare-super",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "5b5e1308e924e9b36dcc455812092eeca587922d9cdbbee171735642e9ad4346",
+          "peak": 13005
+        },
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "3e659d178b1edb6deb9ae0ea3c20be46de40fbdeb612042b6ca621c7250a4f84",
+          "peak": 5555
+        },
+        {
+          "id": 2,
+          "dispatch_count": 32,
+          "output_sha256": "b68036729ecb419f632419b0c52e436e54b0efe5acf568aed8f2848ffc748323",
+          "peak": 8444
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "phase-basic-bass-super",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "b774d0ccc11da81e9dd6bd2cdf695c54e3a51f3eb3a448c98cacf7e7158af343",
+          "peak": 16830
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 2,
+          "dispatch_count": 32,
+          "output_sha256": "3e659d178b1edb6deb9ae0ea3c20be46de40fbdeb612042b6ca621c7250a4f84",
+          "peak": 5555
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    },
+    {
+      "original": "phase-super-snare-basic",
+      "old_new_bridge_audio_identical": true,
+      "native_wasm_audio_identical": true,
+      "cases": [
+        {
+          "id": 2,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "5b1c73f0cdd93c780ebdce803fdd7b8332056e074e81bba363ca09441b2d407c",
+          "peak": 10890
+        },
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "f6ad58c8e8d3c1789f409a5165fa6110f8c13ce2d4d3e708322529aa35cd81e4",
+          "peak": 7924
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ]
+    }
+  ]
+}

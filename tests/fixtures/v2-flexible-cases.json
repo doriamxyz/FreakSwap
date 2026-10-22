@@ -1,0 +1,139 @@
+{
+  "swarm-wavetable-phase_distortion-formant": [
+    {
+      "engine": "swarm",
+      "original": "wavetable",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "formant",
+      "variant": "normal"
+    }
+  ],
+  "swarm-harmonic-phase_distortion-virtual_analog": [
+    {
+      "engine": "swarm",
+      "original": "harmonic",
+      "variant": "normal"
+    },
+    {
+      "engine": "phase_distortion",
+      "original": "virtual_analog",
+      "variant": "normal"
+    }
+  ],
+  "bass_drum-wavetable-swarm-formant": [
+    {
+      "engine": "bass_drum",
+      "original": "wavetable",
+      "variant": "normal"
+    },
+    {
+      "engine": "swarm",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "snare_drum",
+      "original": "virtual_analog",
+      "variant": "normal"
+    }
+  ],
+  "bass_drum-harmonic-swarm-formant": [
+    {
+      "engine": "bass_drum",
+      "original": "harmonic",
+      "variant": "normal"
+    },
+    {
+      "engine": "swarm",
+      "original": "formant",
+      "variant": "normal"
+    },
+    {
+      "engine": "snare_drum",
+      "original": "virtual_analog",
+      "variant": "normal"
+    }
+  ],
+  "snare_drum-wavetable-swarm-formant": [
+    {
+      "engine": "snare_drum",
+      "original": "wavetable",
+      "variant": "normal"
+    },
+    {
+      "engine": "swarm",
+      "original": "formant",
+      "variant": "normal"
+    }
+  ],
+  "snare_drum-harmonic-swarm-formant": [
+    {
+      "engine": "snare_drum",
+      "original": "harmonic",
+      "variant": "normal"
+    },
+    {
+      "engine": "swarm",
+      "original": "formant",
+      "variant": "normal"
+    }
+  ],
+  "phase_distortion-wavetable-swarm-virtual_analog": [
+    {
+      "engine": "phase_distortion",
+      "original": "wavetable",
+      "variant": "normal"
+    },
+    {
+      "engine": "swarm",
+      "original": "virtual_analog",
+      "variant": "normal"
+    }
+  ],
+  "phase_distortion-harmonic-swarm-virtual_analog": [
+    {
+      "engine": "phase_distortion",
+      "original": "harmonic",
+      "variant": "normal"
+    },
+    {
+      "engine": "swarm",
+      "original": "virtual_analog",
+      "variant": "normal"
+    }
+  ],
+  "snare-direct-formant": [
+    {
+      "engine": "snare_drum",
+      "original": "formant",
+      "variant": "normal"
+    }
+  ],
+  "snare-direct-virtual_analog": [
+    {
+      "engine": "snare_drum",
+      "original": "virtual_analog",
+      "variant": "normal"
+    }
+  ],
+  "speech-retained-triple": [
+    {
+      "engine": "phase_distortion",
+      "original": "wavetable",
+      "variant": "normal"
+    },
+    {
+      "engine": "swarm",
+      "original": "virtual_analog",
+      "variant": "normal"
+    },
+    {
+      "engine": "snare_drum",
+      "original": "formant",
+      "variant": "normal"
+    }
+  ]
+}

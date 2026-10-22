@@ -1,0 +1,2045 @@
+{
+  "format": "freakswap.module-library",
+  "version": 3,
+  "base": {
+    "version": "5.0.0.2084",
+    "sha256": "c2b405e3c8565b7b73b4dd06522559458190082a8ba633cc5f1bcc43dc64332c",
+    "size": 941572,
+    "raw_sha256": "54be2e0b695e2279602513e1a9ed39906408ba221a45e782b61273f0ef55d15f",
+    "raw_size": 473695
+  },
+  "engines": {
+    "phase_distortion": {
+      "engine": "phase_distortion",
+      "variant": "normal",
+      "name": "Phase Distortion",
+      "labels": [
+        "Phase Dist",
+        "Ratio",
+        "Amount",
+        "Distort"
+      ],
+      "module": "32f67419a043230e04a117bc4cc086155751c083f3690ebb6b978aaa7c2e6952",
+      "object_bytes": 100,
+      "scratch_bytes": 384,
+      "reset_on_activation": false,
+      "continuous_controls": true,
+      "abi": "plaits-engine-v1"
+    },
+    "classic_waves_vcf": {
+      "engine": "classic_waves_vcf",
+      "variant": "normal",
+      "name": "Classic Waveshapes + VCF",
+      "labels": [
+        "Classic VCF",
+        "Response",
+        "Cutoff",
+        "Shape"
+      ],
+      "module": "b3ca75603aee57658d5fe28842040c76d275ea253dfe565491e016faed489f5e",
+      "object_bytes": 24,
+      "scratch_bytes": 140,
+      "reset_on_activation": false,
+      "continuous_controls": true,
+      "abi": "plaits-engine-v1"
+    },
+    "swarm": {
+      "engine": "swarm",
+      "variant": "normal",
+      "name": "Swarm",
+      "labels": [
+        "Swarm",
+        "Spread",
+        "Density",
+        "Size"
+      ],
+      "module": "e46a5e5637f21593db2303fdefb26f37acd79622517c0265063970480dc09b23",
+      "object_bytes": 20,
+      "scratch_bytes": 512,
+      "reset_on_activation": true,
+      "continuous_controls": true,
+      "abi": "plaits-engine-v1"
+    },
+    "inharmonic_string": {
+      "engine": "inharmonic_string",
+      "variant": "normal",
+      "name": "Inharmonic String",
+      "labels": [
+        "Inharm String",
+        "Structure",
+        "Bright",
+        "Damping"
+      ],
+      "module": "c7b7ee5d4100b0e931e8a72d2c2d8cc0df01416e77f68a12cb967156c2e9c4a6",
+      "object_bytes": 52,
+      "scratch_bytes": 15808,
+      "reset_on_activation": false,
+      "continuous_controls": true,
+      "abi": "plaits-engine-v1"
+    },
+    "particle_noise": {
+      "engine": "particle_noise",
+      "variant": "normal",
+      "name": "Particle Noise",
+      "labels": [
+        "Particle",
+        "Spread",
+        "Density",
+        "Diff/Res"
+      ],
+      "module": "2cf141cfd2b2f63863d14a5b73aca92082fecf3e6db8a88f0ac698ff38518702",
+      "object_bytes": 224,
+      "scratch_bytes": 16384,
+      "reset_on_activation": true,
+      "continuous_controls": true,
+      "abi": "plaits-engine-v1"
+    },
+    "filtered_noise": {
+      "engine": "filtered_noise",
+      "variant": "normal",
+      "name": "Filtered Noise",
+      "labels": [
+        "Filtered Noise",
+        "Response",
+        "Grain",
+        "Resonance"
+      ],
+      "module": "52800abdacd127ca257bfb021f784c8a4e2e715a3b9f134524d50d82b9373b6c",
+      "object_bytes": 132,
+      "scratch_bytes": 96,
+      "reset_on_activation": false,
+      "continuous_controls": true,
+      "abi": "plaits-engine-v1"
+    },
+    "filtered_noise_dual_band": {
+      "engine": "filtered_noise",
+      "variant": "dual_band",
+      "name": "Filtered Noise",
+      "labels": [
+        "Filtered Noise",
+        "Response",
+        "Grain",
+        "Resonance"
+      ],
+      "module": "5aab3472a6c226b8769d52fcf2dca5e3793105118a34d5d17686003472c59fa8",
+      "object_bytes": 132,
+      "scratch_bytes": 96,
+      "reset_on_activation": false,
+      "continuous_controls": true,
+      "abi": "plaits-engine-v1"
+    },
+    "string_machine": {
+      "engine": "string_machine",
+      "variant": "normal",
+      "name": "String Machine v2",
+      "labels": [
+        "String Machine",
+        "Chord",
+        "Bright/Ens",
+        "Register"
+      ],
+      "module": "cd1e78edfffe9130217081bd3afe03a3db138ea4127bc74397b297e7b1ab7640",
+      "object_bytes": 276,
+      "scratch_bytes": 4332,
+      "reset_on_activation": false,
+      "continuous_controls": false,
+      "abi": "plaits-engine-v1"
+    },
+    "chiptune": {
+      "engine": "chiptune",
+      "variant": "normal",
+      "name": "Chiptune",
+      "labels": [
+        "Chiptune",
+        "Chord",
+        "Arp/Inv",
+        "Wave"
+      ],
+      "module": "34142df3344279cf3c57dc233fed5cba42729e721138731668a0dcb2bf801deb",
+      "object_bytes": 240,
+      "scratch_bytes": 236,
+      "reset_on_activation": true,
+      "continuous_controls": false,
+      "abi": "plaits-engine-v1"
+    },
+    "bass_drum": {
+      "engine": "bass_drum",
+      "variant": "normal",
+      "name": "Bass Drum",
+      "labels": [
+        "Bass Drum",
+        "Attack",
+        "Tone",
+        "Decay"
+      ],
+      "module": "48711dead4929bf9ca04d6c165320a71e285a35923a45171df3d419c8abbf060",
+      "object_bytes": 36,
+      "scratch_bytes": 160,
+      "reset_on_activation": false,
+      "continuous_controls": true,
+      "abi": "plaits-engine-v1"
+    },
+    "snare_drum": {
+      "engine": "snare_drum",
+      "variant": "normal",
+      "name": "Snare Drum",
+      "labels": [
+        "Snare Drum",
+        "Snappy",
+        "Tone",
+        "Decay"
+      ],
+      "module": "32293c26639307cdd2e860d8b6ee3a26447619b18dee57d20408e74243c8db10",
+      "object_bytes": 28,
+      "scratch_bytes": 276,
+      "reset_on_activation": false,
+      "continuous_controls": true,
+      "abi": "plaits-engine-v1"
+    },
+    "wave_terrain": {
+      "engine": "wave_terrain",
+      "variant": "normal",
+      "name": "Wave Terrain \u00b7 5 terrenos",
+      "labels": [
+        "Wave Terrain",
+        "Terrain",
+        "Radius",
+        "Offset"
+      ],
+      "module": "80495f6fa6f14697ceeb62a5dfc9b04d76391d3fd8208539ae3ea0d284aa9c64",
+      "object_bytes": 48,
+      "scratch_bytes": 384,
+      "reset_on_activation": false,
+      "continuous_controls": true,
+      "abi": "plaits-engine-v1"
+    },
+    "wave_terrain_aux": {
+      "engine": "wave_terrain",
+      "variant": "aux",
+      "name": "Wave Terrain \u00b7 5 terrenos",
+      "labels": [
+        "Wave Terrain",
+        "Terrain",
+        "Radius",
+        "Offset"
+      ],
+      "module": "ac347a71540fda2c22dad7e0ef1592c7a2b7ff706ca1c832acd2a41c9ca2ca24",
+      "object_bytes": 48,
+      "scratch_bytes": 384,
+      "reset_on_activation": false,
+      "continuous_controls": true,
+      "abi": "plaits-engine-v1"
+    }
+  },
+  "hosts": {
+    "basic_waves": {
+      "id": 1,
+      "name": "Basic Waves",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0
+    },
+    "superwave": {
+      "id": 2,
+      "name": "SuperWave",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0
+    },
+    "wavetable": {
+      "id": 3,
+      "name": "Wavetable",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0
+    },
+    "harmonic": {
+      "id": 4,
+      "name": "Harmonic",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0
+    },
+    "karplusstr": {
+      "id": 5,
+      "name": "KarplusStr",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0
+    },
+    "virtual_analog": {
+      "id": 6,
+      "name": "Virtual Analog",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0,
+      "retired_table": 443908
+    },
+    "waveshaper": {
+      "id": 7,
+      "name": "Waveshaper",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0,
+      "retired_table": 443932
+    },
+    "two_op_fm": {
+      "id": 8,
+      "name": "Two Op FM",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0,
+      "retired_table": 443792
+    },
+    "formant": {
+      "id": 9,
+      "name": "Formant",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0,
+      "retired_table": 443816
+    },
+    "chords": {
+      "id": 10,
+      "name": "Chords",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0,
+      "retired_table": 443768
+    },
+    "speech": {
+      "id": 11,
+      "name": "Speech",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0,
+      "retired_table": 443864
+    },
+    "modal": {
+      "id": 12,
+      "name": "Modal",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0,
+      "retired_table": 443840
+    },
+    "noise": {
+      "id": 13,
+      "name": "Noise",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0
+    },
+    "bass": {
+      "id": 15,
+      "name": "Bass",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0
+    },
+    "sawx": {
+      "id": 16,
+      "name": "SawX",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0
+    },
+    "harm": {
+      "id": 17,
+      "name": "Harm",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0
+    },
+    "user_wavetable": {
+      "id": 18,
+      "name": "User Wavetable",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0
+    },
+    "sample": {
+      "id": 19,
+      "name": "Sample",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0
+    },
+    "scan_grains": {
+      "id": 20,
+      "name": "Scan Grains",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0
+    },
+    "cloud_grains": {
+      "id": 21,
+      "name": "Cloud Grains",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0
+    },
+    "hit_grains": {
+      "id": 22,
+      "name": "Hit Grains",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0
+    },
+    "vocoder": {
+      "id": 14,
+      "name": "Vocoder",
+      "registry": 4,
+      "object_offset": 0,
+      "object_limit": 336,
+      "abi": "plaits-engine-v1",
+      "transport": "overlay",
+      "native_alias": true,
+      "windows": [],
+      "vtable": 0
+    }
+  },
+  "modules": {
+    "2b1dc305d87fe7a4134ec6ca2415c26505a4af129ac9075690a4947b16846540": {
+      "url": "modules/2b1dc305d87fe7a4134ec6ca2415c26505a4af129ac9075690a4947b16846540.json",
+      "size": 5957,
+      "sha256": "2b1dc305d87fe7a4134ec6ca2415c26505a4af129ac9075690a4947b16846540"
+    },
+    "32f67419a043230e04a117bc4cc086155751c083f3690ebb6b978aaa7c2e6952": {
+      "url": "modules/32f67419a043230e04a117bc4cc086155751c083f3690ebb6b978aaa7c2e6952.json",
+      "size": 6030,
+      "sha256": "32f67419a043230e04a117bc4cc086155751c083f3690ebb6b978aaa7c2e6952"
+    },
+    "48711dead4929bf9ca04d6c165320a71e285a35923a45171df3d419c8abbf060": {
+      "url": "modules/48711dead4929bf9ca04d6c165320a71e285a35923a45171df3d419c8abbf060.json",
+      "size": 12856,
+      "sha256": "48711dead4929bf9ca04d6c165320a71e285a35923a45171df3d419c8abbf060"
+    },
+    "e46a5e5637f21593db2303fdefb26f37acd79622517c0265063970480dc09b23": {
+      "url": "modules/e46a5e5637f21593db2303fdefb26f37acd79622517c0265063970480dc09b23.json",
+      "size": 5803,
+      "sha256": "e46a5e5637f21593db2303fdefb26f37acd79622517c0265063970480dc09b23"
+    },
+    "1f29919d7b350c20bbc984a024d49814f77239035bf5342900c1a7c294973850": {
+      "url": "modules/1f29919d7b350c20bbc984a024d49814f77239035bf5342900c1a7c294973850.json",
+      "size": 1269,
+      "sha256": "1f29919d7b350c20bbc984a024d49814f77239035bf5342900c1a7c294973850"
+    },
+    "32293c26639307cdd2e860d8b6ee3a26447619b18dee57d20408e74243c8db10": {
+      "url": "modules/32293c26639307cdd2e860d8b6ee3a26447619b18dee57d20408e74243c8db10.json",
+      "size": 11103,
+      "sha256": "32293c26639307cdd2e860d8b6ee3a26447619b18dee57d20408e74243c8db10"
+    },
+    "b3ca75603aee57658d5fe28842040c76d275ea253dfe565491e016faed489f5e": {
+      "url": "modules/b3ca75603aee57658d5fe28842040c76d275ea253dfe565491e016faed489f5e.json",
+      "size": 5554,
+      "sha256": "b3ca75603aee57658d5fe28842040c76d275ea253dfe565491e016faed489f5e"
+    },
+    "c7b7ee5d4100b0e931e8a72d2c2d8cc0df01416e77f68a12cb967156c2e9c4a6": {
+      "url": "modules/c7b7ee5d4100b0e931e8a72d2c2d8cc0df01416e77f68a12cb967156c2e9c4a6.json",
+      "size": 16067,
+      "sha256": "c7b7ee5d4100b0e931e8a72d2c2d8cc0df01416e77f68a12cb967156c2e9c4a6"
+    },
+    "2cf141cfd2b2f63863d14a5b73aca92082fecf3e6db8a88f0ac698ff38518702": {
+      "url": "modules/2cf141cfd2b2f63863d14a5b73aca92082fecf3e6db8a88f0ac698ff38518702.json",
+      "size": 5801,
+      "sha256": "2cf141cfd2b2f63863d14a5b73aca92082fecf3e6db8a88f0ac698ff38518702"
+    },
+    "52800abdacd127ca257bfb021f784c8a4e2e715a3b9f134524d50d82b9373b6c": {
+      "url": "modules/52800abdacd127ca257bfb021f784c8a4e2e715a3b9f134524d50d82b9373b6c.json",
+      "size": 5041,
+      "sha256": "52800abdacd127ca257bfb021f784c8a4e2e715a3b9f134524d50d82b9373b6c"
+    },
+    "5aab3472a6c226b8769d52fcf2dca5e3793105118a34d5d17686003472c59fa8": {
+      "url": "modules/5aab3472a6c226b8769d52fcf2dca5e3793105118a34d5d17686003472c59fa8.json",
+      "size": 5073,
+      "sha256": "5aab3472a6c226b8769d52fcf2dca5e3793105118a34d5d17686003472c59fa8"
+    },
+    "cd1e78edfffe9130217081bd3afe03a3db138ea4127bc74397b297e7b1ab7640": {
+      "url": "modules/cd1e78edfffe9130217081bd3afe03a3db138ea4127bc74397b297e7b1ab7640.json",
+      "size": 13356,
+      "sha256": "cd1e78edfffe9130217081bd3afe03a3db138ea4127bc74397b297e7b1ab7640"
+    },
+    "34142df3344279cf3c57dc233fed5cba42729e721138731668a0dcb2bf801deb": {
+      "url": "modules/34142df3344279cf3c57dc233fed5cba42729e721138731668a0dcb2bf801deb.json",
+      "size": 9242,
+      "sha256": "34142df3344279cf3c57dc233fed5cba42729e721138731668a0dcb2bf801deb"
+    },
+    "80495f6fa6f14697ceeb62a5dfc9b04d76391d3fd8208539ae3ea0d284aa9c64": {
+      "url": "modules/80495f6fa6f14697ceeb62a5dfc9b04d76391d3fd8208539ae3ea0d284aa9c64.json",
+      "size": 6240,
+      "sha256": "80495f6fa6f14697ceeb62a5dfc9b04d76391d3fd8208539ae3ea0d284aa9c64"
+    },
+    "ac347a71540fda2c22dad7e0ef1592c7a2b7ff706ca1c832acd2a41c9ca2ca24": {
+      "url": "modules/ac347a71540fda2c22dad7e0ef1592c7a2b7ff706ca1c832acd2a41c9ca2ca24.json",
+      "size": 6257,
+      "sha256": "ac347a71540fda2c22dad7e0ef1592c7a2b7ff706ca1c832acd2a41c9ca2ca24"
+    },
+    "c842ba5ab94d77710d53bfed8fe75692c25e5b4a1f08096c22e69c4908b7cc94": {
+      "url": "modules/c842ba5ab94d77710d53bfed8fe75692c25e5b4a1f08096c22e69c4908b7cc94.json",
+      "size": 773,
+      "sha256": "c842ba5ab94d77710d53bfed8fe75692c25e5b4a1f08096c22e69c4908b7cc94"
+    },
+    "fe8c9f0a508a944da9eb5ef16fba2271ee336ee54a69786fe9673dc2e0978148": {
+      "url": "modules/fe8c9f0a508a944da9eb5ef16fba2271ee336ee54a69786fe9673dc2e0978148.json",
+      "size": 1334,
+      "sha256": "fe8c9f0a508a944da9eb5ef16fba2271ee336ee54a69786fe9673dc2e0978148"
+    }
+  },
+  "bridge": {
+    "module": "fe8c9f0a508a944da9eb5ef16fba2271ee336ee54a69786fe9673dc2e0978148",
+    "bindings_root": 2,
+    "route_hex": "5846dff818c05cf820c0bcf1000f18bf41f2696354f82300dff804f0000000008b390308",
+    "route_binding_offset": 28,
+    "dispatch_hook": 162182,
+    "dispatch_expected": "54f82300",
+    "init_hook": 429344,
+    "parameter_hook": 429356,
+    "overlay_vtable": 443768
+  },
+  "retirement_module": "c842ba5ab94d77710d53bfed8fe75692c25e5b4a1f08096c22e69c4908b7cc94",
+  "limits": {
+    "maximum_engines": 22,
+    "arena_per_voice": 16384,
+    "voices": 4
+  },
+  "regions": [
+    {
+      "start": 324828,
+      "end": 324960,
+      "owners": [
+        "virtual_analog"
+      ],
+      "sha256": "5e672a4f7d9031f7b6cc557cc24c373d6fb488353ad7525ebbc7eb6a2063afe1"
+    },
+    {
+      "start": 324964,
+      "end": 324966,
+      "owners": [
+        "virtual_analog"
+      ],
+      "sha256": "c7dfbb7d02759eacb64dbc916c1bb6f21eabaff1c1032ea5c9176abf7fd28df8"
+    },
+    {
+      "start": 324968,
+      "end": 324980,
+      "owners": [
+        "virtual_analog"
+      ],
+      "sha256": "b356ee09937fd90dce112d585eecf3d42ebb4ed4ecfa9f061ae642ac069829e1"
+    },
+    {
+      "start": 324980,
+      "end": 325368,
+      "owners": [
+        "virtual_analog"
+      ],
+      "sha256": "48edba2842a482dfa6964a2175c2d7cb05d640183e75c34d0645cfbe09012e95"
+    },
+    {
+      "start": 325420,
+      "end": 327422,
+      "owners": [
+        "virtual_analog"
+      ],
+      "sha256": "bbc76c05f0233062da29308a21a915d5f5766d70eafb5585bb8854e57533ce5d"
+    },
+    {
+      "start": 327472,
+      "end": 328528,
+      "owners": [
+        "virtual_analog"
+      ],
+      "sha256": "5c66120d250bec7dea5b507ee94630995b1c4e6a2660911f4d22c4280b4bfc27"
+    },
+    {
+      "start": 328540,
+      "end": 330042,
+      "owners": [
+        "virtual_analog"
+      ],
+      "sha256": "e4131d3483a9081e9e2f918e8adf145da3582eee23feefa3ab18f08e65d43121"
+    },
+    {
+      "start": 330064,
+      "end": 330122,
+      "owners": [
+        "waveshaper"
+      ],
+      "sha256": "da31a812ab26e3ce66e48e2425639b810bcb65736bfbf1519ca1df8b3bfa21f1"
+    },
+    {
+      "start": 330128,
+      "end": 330130,
+      "owners": [
+        "waveshaper"
+      ],
+      "sha256": "c7dfbb7d02759eacb64dbc916c1bb6f21eabaff1c1032ea5c9176abf7fd28df8"
+    },
+    {
+      "start": 330132,
+      "end": 330142,
+      "owners": [
+        "waveshaper"
+      ],
+      "sha256": "21d43e2889c4cff5d5f7d2d44da968a07c9893b53df81b4ddf12959dd708042b"
+    },
+    {
+      "start": 330144,
+      "end": 330830,
+      "owners": [
+        "waveshaper"
+      ],
+      "sha256": "891707a29f290fecbd20e1d57150c66b7cb5211151ababe8c02299b6ee14393c"
+    },
+    {
+      "start": 330888,
+      "end": 332142,
+      "owners": [
+        "waveshaper"
+      ],
+      "sha256": "e2a3e1a9a5b1883b36ef2fa66321eaa42bf79f41eaba49e8e2030da4cca2a47e"
+    },
+    {
+      "start": 315900,
+      "end": 315926,
+      "owners": [
+        "two_op_fm"
+      ],
+      "sha256": "349753760cd984bef6e2eacae5f3ae3e6a3eeeb9fc363bddf467963fd38d88e7"
+    },
+    {
+      "start": 315932,
+      "end": 315934,
+      "owners": [
+        "two_op_fm"
+      ],
+      "sha256": "c7dfbb7d02759eacb64dbc916c1bb6f21eabaff1c1032ea5c9176abf7fd28df8"
+    },
+    {
+      "start": 315936,
+      "end": 316230,
+      "owners": [
+        "two_op_fm"
+      ],
+      "sha256": "946c268479553cbd14ba2993b34e6bfb577d4c4989181786c8d4aa9682db3592"
+    },
+    {
+      "start": 316268,
+      "end": 317420,
+      "owners": [
+        "two_op_fm"
+      ],
+      "sha256": "1be830a0b4923445e5efd2059d6f5480fe548e549d43599cd0ce16b206515521"
+    },
+    {
+      "start": 317468,
+      "end": 317880,
+      "owners": [
+        "two_op_fm"
+      ],
+      "sha256": "dd062bd02a1dfd04e3481ac5736a814ea997df669e5461cc5bd8bc96b6f3378a"
+    },
+    {
+      "start": 317880,
+      "end": 317890,
+      "owners": [
+        "two_op_fm"
+      ],
+      "sha256": "2a830e52af776204cd0594aff10deec215db6516cf7c2f53af79665d90714fca"
+    },
+    {
+      "start": 317892,
+      "end": 317956,
+      "owners": [
+        "formant"
+      ],
+      "sha256": "f6a788000d12f8b0a763dec5b637f0cf9069d8c4376d9fa817397b9bca06f215"
+    },
+    {
+      "start": 317964,
+      "end": 317966,
+      "owners": [
+        "formant"
+      ],
+      "sha256": "c7dfbb7d02759eacb64dbc916c1bb6f21eabaff1c1032ea5c9176abf7fd28df8"
+    },
+    {
+      "start": 317968,
+      "end": 318148,
+      "owners": [
+        "formant"
+      ],
+      "sha256": "eedc51d90edfe171c0a1c02a6b8e9226931fa54cbd284d77e5b920522be21be2"
+    },
+    {
+      "start": 318188,
+      "end": 319454,
+      "owners": [
+        "formant"
+      ],
+      "sha256": "95b6a27c4e48d85357a840e16ca5a73a0b3b86ea27c9fc038985a6e5d7a922fb"
+    },
+    {
+      "start": 319496,
+      "end": 320316,
+      "owners": [
+        "formant"
+      ],
+      "sha256": "dbe7f7de8445f863d4f3fac382be503663d0bd750cade16f341407d1be54142a"
+    },
+    {
+      "start": 320344,
+      "end": 321568,
+      "owners": [
+        "formant"
+      ],
+      "sha256": "52cc24a7b2c0a78a59237da532b24da9298927d229911c7dc39e11846c93de9c"
+    },
+    {
+      "start": 321580,
+      "end": 323596,
+      "owners": [
+        "formant"
+      ],
+      "sha256": "e00e18e3371738a3b42529e416e2070dd39de0b848fac6b75d9cfbc8b0c29d82"
+    },
+    {
+      "start": 312172,
+      "end": 312464,
+      "owners": [
+        "chords"
+      ],
+      "sha256": "43de663e4c9c69f6ef8b12f76caf7cf60d61f07ef4c24aa71a1a994d22a05e8e"
+    },
+    {
+      "start": 312468,
+      "end": 312782,
+      "owners": [
+        "chords"
+      ],
+      "sha256": "5299b655acee7aaa32a22f4bd35a581b4e0d36b9e4a177e617e0997347bb933c"
+    },
+    {
+      "start": 312800,
+      "end": 313794,
+      "owners": [
+        "chords"
+      ],
+      "sha256": "33ca7530dba0bb132272b792dd47d10dacb829362480dd0c12e019aa72e2a71d"
+    },
+    {
+      "start": 313800,
+      "end": 314496,
+      "owners": [
+        "chords"
+      ],
+      "sha256": "5234c3cc2be0c3520fae62455aad6e8314a20e2e0942179a128ca340b90e1124"
+    },
+    {
+      "start": 314576,
+      "end": 315878,
+      "owners": [
+        "chords"
+      ],
+      "sha256": "6f5fcd07bf23fc75b13ef68a12ebdc4ac29c14a9b13edbb415525e34a98a6104"
+    },
+    {
+      "start": 323980,
+      "end": 324094,
+      "owners": [
+        "speech"
+      ],
+      "sha256": "a314c381fa1794ea8cbf46b0b4a9a9f007e69789e7b5e1c155b18069828dd443"
+    },
+    {
+      "start": 324100,
+      "end": 324108,
+      "owners": [
+        "speech"
+      ],
+      "sha256": "036119518d1ea0df756ee0d8fbe0d8733a9ac65138bce3801d1d81ad7fd2ebd0"
+    },
+    {
+      "start": 335884,
+      "end": 335904,
+      "owners": [
+        "speech"
+      ],
+      "sha256": "4ee9ecc96b660cc1e255f90fd3f08cfe577925a0b52c2dea5cea617074621540"
+    },
+    {
+      "start": 324108,
+      "end": 324794,
+      "owners": [
+        "speech"
+      ],
+      "sha256": "bfa459cb3cc89322ad1b7a918a80d9c29eb2a2b32e774f58d968194be04d3d06"
+    },
+    {
+      "start": 334476,
+      "end": 335106,
+      "owners": [
+        "speech"
+      ],
+      "sha256": "b16ffc993db7988ab067dcdffb9ea5a0cdba4db9221eb4876c93e117b5546df8"
+    },
+    {
+      "start": 335140,
+      "end": 335808,
+      "owners": [
+        "speech"
+      ],
+      "sha256": "26be70b510e2a4413d172b7f6a8a0501fcb0aec60d29d8c0368dc6d1038eaf8e"
+    },
+    {
+      "start": 335824,
+      "end": 335884,
+      "owners": [
+        "speech"
+      ],
+      "sha256": "103f364612b0315f61596452396b9423adec1ad659a125edee5462468edf2770"
+    },
+    {
+      "start": 335904,
+      "end": 336304,
+      "owners": [
+        "speech"
+      ],
+      "sha256": "ed233f2cab60d66927833acbe357f40fc1710d849493df5cccb584aeae6de77e"
+    },
+    {
+      "start": 336312,
+      "end": 337126,
+      "owners": [
+        "speech"
+      ],
+      "sha256": "c28f263ab39787a1e6c40666a8e6af0f9f356d218f3f47a081a874d12088858a"
+    },
+    {
+      "start": 334424,
+      "end": 334472,
+      "owners": [
+        "speech"
+      ],
+      "sha256": "9a9491f904df38d811f964906c52303cc08655a80f56a3f6b75505cd8b069130"
+    },
+    {
+      "start": 337168,
+      "end": 337236,
+      "owners": [
+        "speech"
+      ],
+      "sha256": "96313a16303b5fb0edf5e8fbaf8ba7f3f2b8489ef9640895c37e4b430635dc64"
+    },
+    {
+      "start": 337236,
+      "end": 338120,
+      "owners": [
+        "speech"
+      ],
+      "sha256": "d11f41b7e02c88f8c3c7ef3e78eb08a998617eeca1b1bb24bb8e8ad61d54bc2c"
+    },
+    {
+      "start": 338176,
+      "end": 338408,
+      "owners": [
+        "speech"
+      ],
+      "sha256": "ef36c8bc70bba6830076bd32ae3386a66cebda80b7221723aadd5d9e9cb0f9b0"
+    },
+    {
+      "start": 338408,
+      "end": 338536,
+      "owners": [
+        "speech"
+      ],
+      "sha256": "37ae1458b92c0201949b85b867009de7b64ed180d16bb7f346052cae931dda34"
+    },
+    {
+      "start": 339824,
+      "end": 339856,
+      "owners": [
+        "speech"
+      ],
+      "sha256": "1005b6f572736214645855687f01212d9e911bfd539f0ca1f2ec529ad634ebfe"
+    },
+    {
+      "start": 323620,
+      "end": 323886,
+      "owners": [
+        "modal"
+      ],
+      "sha256": "826d62ff500898fd6fc18e421bfd0e75ab66a06f967bbac3afe51b7344adaf1c"
+    },
+    {
+      "start": 332220,
+      "end": 332960,
+      "owners": [
+        "modal"
+      ],
+      "sha256": "1eb10f79e918e105700c10739191d2fa424323d97d3854bb9b429eac35eae1ab"
+    },
+    {
+      "start": 333380,
+      "end": 334352,
+      "owners": [
+        "modal"
+      ],
+      "sha256": "93be3bf21da5169d8e603a908672b7b6e65a0aa68a16fe5ae956349469c86736"
+    },
+    {
+      "start": 155732,
+      "end": 156114,
+      "owners": [
+        "basic_waves"
+      ],
+      "sha256": "76b079f5b3d9157c429d178be8f390bf4a7efcca15af09a03bfd47b548b4f568"
+    },
+    {
+      "start": 149904,
+      "end": 149914,
+      "owners": [
+        "user_wavetable",
+        "wavetable"
+      ],
+      "sha256": "4fc7ca96ea4c70c006a7e5facc0bf56d5a06b97012111e97a1401cee075e0bc0"
+    },
+    {
+      "start": 50612,
+      "end": 51552,
+      "owners": [
+        "harmonic"
+      ],
+      "sha256": "7436be88d618f88ba5f6f418dea313ea4d89219ba5b58d810de895cc425cb934"
+    },
+    {
+      "start": 51568,
+      "end": 52224,
+      "owners": [
+        "harmonic"
+      ],
+      "sha256": "e0ba9972468b17d4d40f792a00eee23bd45cfe0c648db2e8167c312940151f8f"
+    },
+    {
+      "start": 52232,
+      "end": 53052,
+      "owners": [
+        "harmonic"
+      ],
+      "sha256": "3122a0728c902a651ac0c816be6370dcc0c33ad323172790c123801f23f9c36a"
+    },
+    {
+      "start": 53052,
+      "end": 53352,
+      "owners": [
+        "harmonic"
+      ],
+      "sha256": "a0ee59120fd1a3215c79d15e4d4a2c13733a38e75f2e6f3cbc3e468e264e4f6c"
+    },
+    {
+      "start": 53352,
+      "end": 54244,
+      "owners": [
+        "harmonic"
+      ],
+      "sha256": "b8b1289d04ea48b535362bf1488a8c2550c5d2d3ed2ec00e86c9db97843bdb98"
+    },
+    {
+      "start": 151616,
+      "end": 151658,
+      "owners": [
+        "harmonic"
+      ],
+      "sha256": "50f1bad4c791cf2e52eb4a0562ec0c06df60aa6c232a192325223a0081915a7e"
+    },
+    {
+      "start": 1232,
+      "end": 1266,
+      "owners": [
+        "karplusstr"
+      ],
+      "sha256": "c3db32d31c09f03d6afca253ed1c6ead798fa24555431f86eafd191e83837e04"
+    },
+    {
+      "start": 54780,
+      "end": 55222,
+      "owners": [
+        "karplusstr"
+      ],
+      "sha256": "2ff2dd3026bed0299b9427ebd9fa0bfd5c51703725f793ac8882dbc0d9d44af3"
+    },
+    {
+      "start": 55248,
+      "end": 56038,
+      "owners": [
+        "karplusstr"
+      ],
+      "sha256": "0b140ddf8d88e82f20f409beb83f231380ef53904e84f81d32dfd3219c9a3e30"
+    },
+    {
+      "start": 56100,
+      "end": 56660,
+      "owners": [
+        "karplusstr"
+      ],
+      "sha256": "4c28a27dc54ca535f955f6b6910dbc0b92977670cde6ad4c85bcf21ada5d7bef"
+    },
+    {
+      "start": 56664,
+      "end": 57166,
+      "owners": [
+        "karplusstr"
+      ],
+      "sha256": "27541fdfc180eb0a1b88e17393bdfd9a9242ac161aade19ea7971a9c54799d65"
+    },
+    {
+      "start": 57196,
+      "end": 57416,
+      "owners": [
+        "karplusstr"
+      ],
+      "sha256": "6e5b92d7c4cf25ace5d894dc8acdd00d24509a26a5d0f42fe50dfb33e1ed044d"
+    },
+    {
+      "start": 151568,
+      "end": 151614,
+      "owners": [
+        "karplusstr"
+      ],
+      "sha256": "40f06478f24b46579d00e933d38c3f3a8068c190511278ddf80d39fb26c34fa0"
+    },
+    {
+      "start": 342192,
+      "end": 342312,
+      "owners": [
+        "karplusstr"
+      ],
+      "sha256": "50f7bca889d6a237bd15a0a5253298f5d4244a1edb101583661de4b1c198cc9d"
+    },
+    {
+      "start": 3660,
+      "end": 3700,
+      "owners": [
+        "noise"
+      ],
+      "sha256": "84d16d8d643ee91de2ed8a776db815577bbaf5cfc3a2cc68c609da46222b5b0d"
+    },
+    {
+      "start": 57704,
+      "end": 58390,
+      "owners": [
+        "noise"
+      ],
+      "sha256": "c43146550d77ad9301227f790e6dcce0d12785f0a9dd978d3a48274b13514d71"
+    },
+    {
+      "start": 58428,
+      "end": 59372,
+      "owners": [
+        "noise"
+      ],
+      "sha256": "9f97664cadf8a0375ae32e5d34dc273a38806e5df495e473d118559a51bbca1b"
+    },
+    {
+      "start": 59424,
+      "end": 59706,
+      "owners": [
+        "noise"
+      ],
+      "sha256": "0140f3ee747ba40c636046161bc9d5612e0054cad0933b2abff14a0c1e95beef"
+    },
+    {
+      "start": 151516,
+      "end": 151568,
+      "owners": [
+        "noise"
+      ],
+      "sha256": "34cedec552ba61f4c8fbb0a21ccdcb3bc5c5ee1bcdf3235c83cdf4854d06481f"
+    },
+    {
+      "start": 342732,
+      "end": 342802,
+      "owners": [
+        "noise"
+      ],
+      "sha256": "31258260e61bd386d83f38442a871bfb32a26e77fedec444a3e401f744aa884f"
+    },
+    {
+      "start": 44592,
+      "end": 45412,
+      "owners": [
+        "sample"
+      ],
+      "sha256": "e455fa47c14c2354b11c20ad8203d3494fc8e4a1f821fc7bccaeadfed6fb6c5f"
+    },
+    {
+      "start": 45444,
+      "end": 46604,
+      "owners": [
+        "sample"
+      ],
+      "sha256": "3fe1e20126e218a6de22722137b8a67943cd22db845c8c9528252a0285c04555"
+    },
+    {
+      "start": 46636,
+      "end": 48058,
+      "owners": [
+        "sample"
+      ],
+      "sha256": "76bc2f6070cf24579296bd59e764401bb12072c3005395c6173c99986a072a4a"
+    },
+    {
+      "start": 149880,
+      "end": 149890,
+      "owners": [
+        "sample"
+      ],
+      "sha256": "f0b5294bb9b84148117e68cd1c878aa117a2804ce38aa34ea0340ab96f2171aa"
+    },
+    {
+      "start": 312168,
+      "end": 312170,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "c7dfbb7d02759eacb64dbc916c1bb6f21eabaff1c1032ea5c9176abf7fd28df8"
+    },
+    {
+      "start": 312172,
+      "end": 312464,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "43de663e4c9c69f6ef8b12f76caf7cf60d61f07ef4c24aa71a1a994d22a05e8e"
+    },
+    {
+      "start": 312468,
+      "end": 312782,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "5299b655acee7aaa32a22f4bd35a581b4e0d36b9e4a177e617e0997347bb933c"
+    },
+    {
+      "start": 312800,
+      "end": 313794,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "33ca7530dba0bb132272b792dd47d10dacb829362480dd0c12e019aa72e2a71d"
+    },
+    {
+      "start": 313800,
+      "end": 314496,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "5234c3cc2be0c3520fae62455aad6e8314a20e2e0942179a128ca340b90e1124"
+    },
+    {
+      "start": 314576,
+      "end": 315878,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "6f5fcd07bf23fc75b13ef68a12ebdc4ac29c14a9b13edbb415525e34a98a6104"
+    },
+    {
+      "start": 315900,
+      "end": 315926,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "349753760cd984bef6e2eacae5f3ae3e6a3eeeb9fc363bddf467963fd38d88e7"
+    },
+    {
+      "start": 315932,
+      "end": 315934,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "c7dfbb7d02759eacb64dbc916c1bb6f21eabaff1c1032ea5c9176abf7fd28df8"
+    },
+    {
+      "start": 315936,
+      "end": 316230,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "946c268479553cbd14ba2993b34e6bfb577d4c4989181786c8d4aa9682db3592"
+    },
+    {
+      "start": 316268,
+      "end": 317420,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "1be830a0b4923445e5efd2059d6f5480fe548e549d43599cd0ce16b206515521"
+    },
+    {
+      "start": 317468,
+      "end": 317880,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "dd062bd02a1dfd04e3481ac5736a814ea997df669e5461cc5bd8bc96b6f3378a"
+    },
+    {
+      "start": 317880,
+      "end": 317890,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "2a830e52af776204cd0594aff10deec215db6516cf7c2f53af79665d90714fca"
+    },
+    {
+      "start": 317892,
+      "end": 317956,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "f6a788000d12f8b0a763dec5b637f0cf9069d8c4376d9fa817397b9bca06f215"
+    },
+    {
+      "start": 317964,
+      "end": 317966,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "c7dfbb7d02759eacb64dbc916c1bb6f21eabaff1c1032ea5c9176abf7fd28df8"
+    },
+    {
+      "start": 317968,
+      "end": 318148,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "eedc51d90edfe171c0a1c02a6b8e9226931fa54cbd284d77e5b920522be21be2"
+    },
+    {
+      "start": 318188,
+      "end": 319454,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "95b6a27c4e48d85357a840e16ca5a73a0b3b86ea27c9fc038985a6e5d7a922fb"
+    },
+    {
+      "start": 319496,
+      "end": 320316,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "dbe7f7de8445f863d4f3fac382be503663d0bd750cade16f341407d1be54142a"
+    },
+    {
+      "start": 320344,
+      "end": 321568,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "52cc24a7b2c0a78a59237da532b24da9298927d229911c7dc39e11846c93de9c"
+    },
+    {
+      "start": 321580,
+      "end": 323596,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "e00e18e3371738a3b42529e416e2070dd39de0b848fac6b75d9cfbc8b0c29d82"
+    },
+    {
+      "start": 323620,
+      "end": 323886,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "826d62ff500898fd6fc18e421bfd0e75ab66a06f967bbac3afe51b7344adaf1c"
+    },
+    {
+      "start": 323980,
+      "end": 324094,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "a314c381fa1794ea8cbf46b0b4a9a9f007e69789e7b5e1c155b18069828dd443"
+    },
+    {
+      "start": 324100,
+      "end": 324108,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "036119518d1ea0df756ee0d8fbe0d8733a9ac65138bce3801d1d81ad7fd2ebd0"
+    },
+    {
+      "start": 335884,
+      "end": 335904,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "4ee9ecc96b660cc1e255f90fd3f08cfe577925a0b52c2dea5cea617074621540"
+    },
+    {
+      "start": 324108,
+      "end": 324794,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "bfa459cb3cc89322ad1b7a918a80d9c29eb2a2b32e774f58d968194be04d3d06"
+    },
+    {
+      "start": 324828,
+      "end": 324960,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "5e672a4f7d9031f7b6cc557cc24c373d6fb488353ad7525ebbc7eb6a2063afe1"
+    },
+    {
+      "start": 324964,
+      "end": 324966,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "c7dfbb7d02759eacb64dbc916c1bb6f21eabaff1c1032ea5c9176abf7fd28df8"
+    },
+    {
+      "start": 324968,
+      "end": 324980,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "b356ee09937fd90dce112d585eecf3d42ebb4ed4ecfa9f061ae642ac069829e1"
+    },
+    {
+      "start": 324980,
+      "end": 325368,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "48edba2842a482dfa6964a2175c2d7cb05d640183e75c34d0645cfbe09012e95"
+    },
+    {
+      "start": 325420,
+      "end": 327422,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "bbc76c05f0233062da29308a21a915d5f5766d70eafb5585bb8854e57533ce5d"
+    },
+    {
+      "start": 327472,
+      "end": 328528,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "5c66120d250bec7dea5b507ee94630995b1c4e6a2660911f4d22c4280b4bfc27"
+    },
+    {
+      "start": 328540,
+      "end": 330042,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "e4131d3483a9081e9e2f918e8adf145da3582eee23feefa3ab18f08e65d43121"
+    },
+    {
+      "start": 330064,
+      "end": 330122,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "da31a812ab26e3ce66e48e2425639b810bcb65736bfbf1519ca1df8b3bfa21f1"
+    },
+    {
+      "start": 330128,
+      "end": 330130,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "c7dfbb7d02759eacb64dbc916c1bb6f21eabaff1c1032ea5c9176abf7fd28df8"
+    },
+    {
+      "start": 330132,
+      "end": 330142,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "21d43e2889c4cff5d5f7d2d44da968a07c9893b53df81b4ddf12959dd708042b"
+    },
+    {
+      "start": 330144,
+      "end": 330830,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "891707a29f290fecbd20e1d57150c66b7cb5211151ababe8c02299b6ee14393c"
+    },
+    {
+      "start": 330888,
+      "end": 332142,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "e2a3e1a9a5b1883b36ef2fa66321eaa42bf79f41eaba49e8e2030da4cca2a47e"
+    },
+    {
+      "start": 332220,
+      "end": 332960,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "1eb10f79e918e105700c10739191d2fa424323d97d3854bb9b429eac35eae1ab"
+    },
+    {
+      "start": 333380,
+      "end": 334352,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "93be3bf21da5169d8e603a908672b7b6e65a0aa68a16fe5ae956349469c86736"
+    },
+    {
+      "start": 334476,
+      "end": 335106,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "b16ffc993db7988ab067dcdffb9ea5a0cdba4db9221eb4876c93e117b5546df8"
+    },
+    {
+      "start": 335140,
+      "end": 335808,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "26be70b510e2a4413d172b7f6a8a0501fcb0aec60d29d8c0368dc6d1038eaf8e"
+    },
+    {
+      "start": 335824,
+      "end": 335884,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "103f364612b0315f61596452396b9423adec1ad659a125edee5462468edf2770"
+    },
+    {
+      "start": 335904,
+      "end": 336304,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "ed233f2cab60d66927833acbe357f40fc1710d849493df5cccb584aeae6de77e"
+    },
+    {
+      "start": 336312,
+      "end": 337126,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "c28f263ab39787a1e6c40666a8e6af0f9f356d218f3f47a081a874d12088858a"
+    },
+    {
+      "start": 334424,
+      "end": 334472,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "9a9491f904df38d811f964906c52303cc08655a80f56a3f6b75505cd8b069130"
+    },
+    {
+      "start": 337168,
+      "end": 337236,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "96313a16303b5fb0edf5e8fbaf8ba7f3f2b8489ef9640895c37e4b430635dc64"
+    },
+    {
+      "start": 337236,
+      "end": 338120,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "d11f41b7e02c88f8c3c7ef3e78eb08a998617eeca1b1bb24bb8e8ad61d54bc2c"
+    },
+    {
+      "start": 338176,
+      "end": 338408,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "ef36c8bc70bba6830076bd32ae3386a66cebda80b7221723aadd5d9e9cb0f9b0"
+    },
+    {
+      "start": 338408,
+      "end": 338536,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "37ae1458b92c0201949b85b867009de7b64ed180d16bb7f346052cae931dda34"
+    },
+    {
+      "start": 339824,
+      "end": 339856,
+      "owners": [
+        "chords",
+        "formant",
+        "modal",
+        "speech",
+        "two_op_fm",
+        "virtual_analog",
+        "waveshaper"
+      ],
+      "sha256": "1005b6f572736214645855687f01212d9e911bfd539f0ca1f2ec529ad634ebfe"
+    },
+    {
+      "start": 324980,
+      "end": 330044,
+      "owners": [
+        "virtual_analog"
+      ],
+      "sha256": "18e54557bc9f834d18e9bb49a5afa7752a7b5f34bb201b8b5cd2d03514b0ead6"
+    },
+    {
+      "start": 330144,
+      "end": 332144,
+      "owners": [
+        "waveshaper"
+      ],
+      "sha256": "45dbc9c6f8337c3c6a18208f8164dd7fbea15e6b058527836a1c310dc6d3a5fb"
+    },
+    {
+      "start": 315936,
+      "end": 317880,
+      "owners": [
+        "two_op_fm"
+      ],
+      "sha256": "2989877eda8633640ecb8511d71d91d81d81080fb5ff7ae3c1252842c6f14526"
+    },
+    {
+      "start": 317968,
+      "end": 323612,
+      "owners": [
+        "formant"
+      ],
+      "sha256": "ba3ff90aaf31f72237cf67ca067e7da4d04e2d34c7ea0601fe9dac3221edd1cd"
+    },
+    {
+      "start": 312172,
+      "end": 315900,
+      "owners": [
+        "chords"
+      ],
+      "sha256": "ba47fc825dfe70d2ff74e6f55ff540fcdd249d57357c8504e5774ac1772bfb72"
+    },
+    {
+      "start": 444472,
+      "end": 455526,
+      "owners": [
+        "speech"
+      ],
+      "sha256": "3bf6d4cce8f01fa7dd7f2ccbf1156a44a5df131162817d2063f2b73be34849db"
+    },
+    {
+      "start": 332192,
+      "end": 334352,
+      "owners": [
+        "modal"
+      ],
+      "sha256": "95f98a014190688438d804a714156bc3c8690e4a7edc8c4597efbcded30ad482"
+    },
+    {
+      "start": 323612,
+      "end": 323980,
+      "owners": [
+        "modal"
+      ],
+      "sha256": "d2302cb29ec40ae45a85bcb2f23e9f9c3e437a46363732cc696d8fa3cd8559df"
+    }
+  ],
+  "scope": "One module per engine variant, one overlay ABI for every visible original ID, one joint allocator. Only explicitly retired owners release code. Impossible and search-budget outcomes are distinguished.",
+  "native_families": [
+    {
+      "owners": [
+        "basic_waves"
+      ],
+      "render_cell": 429440,
+      "idle_render": 134414553
+    },
+    {
+      "owners": [
+        "superwave"
+      ],
+      "render_cell": 429584,
+      "idle_render": 134414553
+    },
+    {
+      "owners": [
+        "wavetable",
+        "user_wavetable"
+      ],
+      "render_cell": 429656,
+      "idle_render": 134414553
+    },
+    {
+      "owners": [
+        "harmonic"
+      ],
+      "render_cell": 429944,
+      "idle_render": 134414553
+    },
+    {
+      "owners": [
+        "karplusstr"
+      ],
+      "render_cell": 430016,
+      "idle_render": 134414553
+    },
+    {
+      "owners": [
+        "noise"
+      ],
+      "render_cell": 430088,
+      "idle_render": 134414553
+    },
+    {
+      "owners": [
+        "bass"
+      ],
+      "render_cell": 430160,
+      "idle_render": 134414553
+    },
+    {
+      "owners": [
+        "sawx"
+      ],
+      "render_cell": 430232,
+      "idle_render": 134414553
+    },
+    {
+      "owners": [
+        "harm"
+      ],
+      "render_cell": 430304,
+      "idle_render": 134414553
+    },
+    {
+      "owners": [
+        "sample"
+      ],
+      "render_cell": 429800,
+      "idle_render": 134414553
+    },
+    {
+      "owners": [
+        "scan_grains",
+        "cloud_grains",
+        "hit_grains"
+      ],
+      "render_cell": 429728,
+      "idle_render": 134414553
+    }
+  ],
+  "audit": {
+    "base_sha256": "54be2e0b695e2279602513e1a9ed39906408ba221a45e782b61273f0ef55d15f",
+    "ghidra_export_sha256": "99443e665e9539299a15996937564b58c8ebd08c75d141fc476178d25f9d3763",
+    "untyped_pointer_scan": true,
+    "conditional_reclamation": true
+  }
+}

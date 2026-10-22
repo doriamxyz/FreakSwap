@@ -23,6 +23,7 @@ jobs:
           mkdir _site
           cp *.html *.js *.css *.json NOTICE.txt .nojekyll _site/
           python3 -m zipfile -e catalog.zip _site
+          cp -R v2 _site/v2
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

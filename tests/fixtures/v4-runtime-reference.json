@@ -1,0 +1,5346 @@
+{
+  "reports": [
+    {
+      "name": "destination-basic_waves",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "basic_waves",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "e5c82ed9a15123ec37f620c75cf1a813cc805743a2717b994317b8c368c5e1cf",
+      "package_sha256": "8b77ef1da8ec9951abcd982a6fb2a7b643377537a035f33a23cbceccc093be3b",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "1388338fa957e914a0dc6fc31dee3c18e7a643feba96f084b72b7170cd2c2454",
+          "peak": 14111
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "c731e8aaa3fd51268f7d9a597a4255663363b9ad248a9523fe880cfbd9898946",
+          "peak": 25410
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-superwave",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "superwave",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "b9bba0f385dd27d90241d5edc9913c6008e21028485197042f272562f467257d",
+      "package_sha256": "a19779e4e9b1676502387026244027d96e2c3f8cfbeb2fe8234063e1b7cf25d1",
+      "audio": [
+        {
+          "id": 2,
+          "dispatch_count": 32,
+          "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+          "peak": 7156
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "c731e8aaa3fd51268f7d9a597a4255663363b9ad248a9523fe880cfbd9898946",
+          "peak": 25410
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-wavetable",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "wavetable",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "195f244ca08cf7877ba64cc60ed2c156f1995a45df486f49a1d077f28e9030b9",
+      "package_sha256": "8a9d26af0c90c07631e6f75e27663f7adfbcdeec4665f577af942d53635646b3",
+      "audio": [
+        {
+          "id": 3,
+          "dispatch_count": 32,
+          "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+          "peak": 7156
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "c731e8aaa3fd51268f7d9a597a4255663363b9ad248a9523fe880cfbd9898946",
+          "peak": 25410
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-harmonic",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "harmonic",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "f3605dc189bc7d404e7aea7880369b341222df4bcb2be7ed46a53fe78d415a02",
+      "package_sha256": "588f9f3b1634d8224a3f82bb207cef1f924374ae4b6da0fa8638f3d6855ca61e",
+      "audio": [
+        {
+          "id": 4,
+          "dispatch_count": 32,
+          "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+          "peak": 7156
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "c731e8aaa3fd51268f7d9a597a4255663363b9ad248a9523fe880cfbd9898946",
+          "peak": 25410
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-karplusstr",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "karplusstr",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "54949ebbb858bfd1ae10511bfae0039ba160ac6d135f4d6498cf1b6527885345",
+      "package_sha256": "7380edbe5e54da3621ff85fa7a33b354a465b594017ad1cee6b9e53d30329e79",
+      "audio": [
+        {
+          "id": 5,
+          "dispatch_count": 32,
+          "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+          "peak": 7156
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "c731e8aaa3fd51268f7d9a597a4255663363b9ad248a9523fe880cfbd9898946",
+          "peak": 25410
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-virtual_analog",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "virtual_analog",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "b376223bfc9d670f3c00d84c6cbbc075825d447f216180a3264234168d5f5a88",
+      "package_sha256": "d7fe5a2c3337cb71cc2a4ee97283fd17a577a8d8c743735fb68545e81757f443",
+      "audio": [
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+          "peak": 7156
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "c731e8aaa3fd51268f7d9a597a4255663363b9ad248a9523fe880cfbd9898946",
+          "peak": 25410
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 28,
+      "empty": []
+    },
+    {
+      "name": "destination-waveshaper",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "waveshaper",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "cb778317f835333cef5bdf3b958d4a49ceee381d6a9f5bf52525f7ebd55b6022",
+      "package_sha256": "be29dab52da8de28125bc5be97e2a61295ae5a1723957ff79fe6469bdb93e902",
+      "audio": [
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+          "peak": 7156
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "c731e8aaa3fd51268f7d9a597a4255663363b9ad248a9523fe880cfbd9898946",
+          "peak": 25410
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-two_op_fm",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "two_op_fm",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "01843fe5565d3c41dda75da7d9c5d013508a3df0ee69671fa0c9aeedf6e7b580",
+      "package_sha256": "2821fe28d922176cb74dd0f21fb64aeee13609e39a5899ee23040dc68b9efee6",
+      "audio": [
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+          "peak": 7156
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "c731e8aaa3fd51268f7d9a597a4255663363b9ad248a9523fe880cfbd9898946",
+          "peak": 25410
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-formant",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "6412b78050975fe7efe749384dfd3b2b1eecd4e2a3e1a5d82400a01558409561",
+      "package_sha256": "455c3081d8d516835df8532eb7ce937f0edbde04958ab130871769eb0d1a244c",
+      "audio": [
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+          "peak": 7156
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "c731e8aaa3fd51268f7d9a597a4255663363b9ad248a9523fe880cfbd9898946",
+          "peak": 25410
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-chords",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "chords",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "521b38597ff2a2cab3f4f268c8a6512d08a237cc25df2afdfc8aea7ae80d5467",
+      "package_sha256": "ce9d85e968a80716e43e09062371945fdd5bdc31ff01577e1fbb9854b7fcc653",
+      "audio": [
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+          "peak": 7156
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "c731e8aaa3fd51268f7d9a597a4255663363b9ad248a9523fe880cfbd9898946",
+          "peak": 25410
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 24,
+      "empty": []
+    },
+    {
+      "name": "destination-speech",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "b33d354f810172c1f5f839984c46fe480cdfbdbfae1170629fb60beb55739b96",
+      "package_sha256": "869f59705431fcaed636709c256d53f67d240a34ca99518c91bbb400d57e409f",
+      "audio": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+          "peak": 7156
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 12,
+      "empty": []
+    },
+    {
+      "name": "destination-modal",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "modal",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "d101b1ce2a97204b3169e35c425ca762fd613bf943440f4d336ff3a7fd46d2ac",
+      "package_sha256": "a627bca60b39d0bef67ee39a8cbb3167ef946b22b1c0e3c8aa9e85c7978fc27e",
+      "audio": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 12,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-noise",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "noise",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "f4d8ef421c46053d6147e956cf4faf64929b93c88928678f4820ccf4be707912",
+      "package_sha256": "bd14f69a78362dd2ae87ce35f27cfb071f19950364aaf417f366d654370456a7",
+      "audio": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 13,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-bass",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "bass",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "b1e15578f5eb2c34f87216701dd2f88151b4b800bc66478b40e566c7eae46a30",
+      "package_sha256": "32a03fe495e2331c69738d46dc551b33648d72cd6381f9e8c88e181393e9fd55",
+      "audio": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 15,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-sawx",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "sawx",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "44b35c9bbb9ec6f32e1a84e7a0244563fa7f46268e31050b91e8a57cf9690c43",
+      "package_sha256": "e61a72cfe9e9054ffef24a46e6c357e4766a0295d1621aaedfab2b2f3cbdfdea",
+      "audio": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 16,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-harm",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "harm",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "2bbeba968ecbf43d95dce2c748ae0db07725fb0d0e3a47e65d005169a858bb38",
+      "package_sha256": "17c8150e590790adc272f478ed8b3a46fc7b38ab3a0b76508080b6e77e09392e",
+      "audio": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 17,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-user_wavetable",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "user_wavetable",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "11af9d800a97ee9a4624444a2663b3c22672495fae90fb4fd63445c2a2deb421",
+      "package_sha256": "467142d77fee3ae2cdfed6cb7d4b4eecb4b846236232b312ad43e362bf910844",
+      "audio": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 18,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-sample",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "sample",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "249964f77f465a0d798aa11267485290a48638a6362b38e264f89ccc91fa5dbf",
+      "package_sha256": "2a49c1b64e47719e572b01617a8e27a3077fbff3de73679a130d1183cec1b617",
+      "audio": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 19,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-scan_grains",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "scan_grains",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "b4b82717fbaa941cef46f793ab97eee85fccba368a4f1df668d11c460ec7c496",
+      "package_sha256": "0b5a49be3023f005fd10ea07e36f790893a723aa6e66dd080b0706db3b842e21",
+      "audio": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 20,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-cloud_grains",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "cloud_grains",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "22f70a695b2bd9bbbee2f173f6475c7b32f41403c3db94cf7e7d86ee5412e454",
+      "package_sha256": "9ac64a5e2d0e4138adb0cb00f1bcb29e202071f81418bda702480e1c1cb93e7e",
+      "audio": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 21,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-hit_grains",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "hit_grains",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "c159b18682675e08b8cf42d16910e3b41bef75db321e66d7164e792d0f192e8d",
+      "package_sha256": "9893ce0bb7848c4e23c8ee34a4421841bd128b2153cea87cdde61220692edd0c",
+      "audio": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 22,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "destination-vocoder",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "vocoder",
+          "variant": "normal"
+        },
+        {
+          "engine": "phase_distortion",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "1c4a997ceda8a54cc07c6b3bc48c7adb4493e26e491470d4a6c6e322c90db1b8",
+      "package_sha256": "672249a7303f4778f9c9c82d2713b7af78dface7afb4500bbfb4b18dd737d788",
+      "audio": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 14,
+          "dispatch_count": 32,
+          "output_sha256": "312668a8d6784071abeb95fc7c9a2dfe574a0b7f130f0dee7b5c2a20ac214655",
+          "peak": 10108
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 32,
+      "empty": []
+    },
+    {
+      "name": "module-phase_distortion",
+      "recipe": [
+        {
+          "engine": "phase_distortion",
+          "original": "basic_waves",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "744d4bee0a7395de66d06357d1abf56bcc26d1d0f29332b7365c6f5241bedb89",
+      "package_sha256": "c029f8241f6ad56883e66004a6e9ffcd944dad0b6dff3a64a86aa593d7e18671",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "b774d0ccc11da81e9dd6bd2cdf695c54e3a51f3eb3a448c98cacf7e7158af343",
+          "peak": 16830
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 16,
+      "empty": [
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "module-classic_waves_vcf",
+      "recipe": [
+        {
+          "engine": "classic_waves_vcf",
+          "original": "basic_waves",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "003e3826b4535b93139f1fdcf09f868dc12970a2e1341f969edf7f26a8e85608",
+      "package_sha256": "9eee1a6e1bde04e3cc477bfe2e65aa4c6fbbed25defa64153c42ba6b857930a5",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "01bc90da05064c0d4c50f1bf6b806f9343456eb8a292151eb0868e134071dbc4",
+          "peak": 13574
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 16,
+      "empty": [
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "module-swarm",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "basic_waves",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "91bbb7f1ae473a1197debf8382ef5d9ff7d92eaa5cbb9106b1ed37c6d00f686a",
+      "package_sha256": "4548ca0d8a335272d74c03c0a0637225aba4777cfe7d3444d03da1e753878278",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "1388338fa957e914a0dc6fc31dee3c18e7a643feba96f084b72b7170cd2c2454",
+          "peak": 14111
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 16,
+      "empty": [
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "module-inharmonic_string",
+      "recipe": [
+        {
+          "engine": "inharmonic_string",
+          "original": "basic_waves",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "cd692e83922e2984fa387ca994f8509125d393b6dc2abf1bbe9cec76988ecaa6",
+      "package_sha256": "80840cb8a43737051734c430c53f67c4c560b1d89b9546a8eefa6dcf23fa0bbe",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "57eb80bce7c0e27cd4c1aa97c43c6d9b752627939498b068df65ac95701bde56",
+          "peak": 2833
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 16,
+      "empty": [
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "module-particle_noise",
+      "recipe": [
+        {
+          "engine": "particle_noise",
+          "original": "basic_waves",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "9fdca8fb76b68cdd6780448639e7359c5b88bd3aac6c91c42fd717f3e77013d4",
+      "package_sha256": "1263c805671594f60392b76ca5d5716aeda09f979314be7b72013c20daeed266",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "3a7fafe607e98a479a7b2379ffdcac2c160bc8960faa4fc570dd7d27a113ed98",
+          "peak": 12316
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 16,
+      "empty": [
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "module-filtered_noise",
+      "recipe": [
+        {
+          "engine": "filtered_noise",
+          "original": "basic_waves",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "08a52ab6ee0b41314506afb097cf62016e846b18b87eb3a13bb94ed9cbd1b42d",
+      "package_sha256": "7ee169ee4d7ca45e7162deeaa892327cd6c0c5e7715c7b09be9779f918b7f3f4",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "096f378fd409472b794cad7ebeada9aaf514bdd167d516cc424a1e68330838f3",
+          "peak": 4072
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 16,
+      "empty": [
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "module-filtered_noise_dual_band",
+      "recipe": [
+        {
+          "engine": "filtered_noise",
+          "original": "basic_waves",
+          "variant": "dual_band"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "af24414a6086baaa292667268c0ca200a17f9092be7b9040308118c6a999c2ca",
+      "package_sha256": "a291b0e433b01afbcde9154709674befb40d09ba0e97af92d19c0a1fb77902ba",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "c0cf46b15f794595fc24d13f05efbf3110c93b1984cfed471551d623132ae278",
+          "peak": 9870
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 16,
+      "empty": [
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "module-string_machine",
+      "recipe": [
+        {
+          "engine": "string_machine",
+          "original": "basic_waves",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "6007b88e9a9748d7a010143e25f49f651c71ec54467d480eb9e4ecb8cb1c670f",
+      "package_sha256": "809b9e731b1a111371dbdb21bf44a6c678e21608019ce3525c291622be055c81",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "9cc309c2fc19a0ba97952ae9afe4b5812d80c3d0e7c8e014b1e562b835258c4b",
+          "peak": 4026
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 16,
+      "empty": [
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "module-chiptune",
+      "recipe": [
+        {
+          "engine": "chiptune",
+          "original": "basic_waves",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "24b8d43aee6a106daea6fb7833ebb05f30fe7cb78486ebc3684a1e1c6cc036df",
+      "package_sha256": "a55b8141de9ee5de64f73ec048e6697f18687aa11776d304286d8279493d42fb",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "a36cdfefc97a8ae9992123bf38518e9cab26016372ef4b2f7a117ebd49ad61ac",
+          "peak": 14284
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 16,
+      "empty": [
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "module-bass_drum",
+      "recipe": [
+        {
+          "engine": "bass_drum",
+          "original": "basic_waves",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "a53c7efd28532ef81d8adcd1458075abc5531130bbb9b3f464aeb5d7ff791e04",
+      "package_sha256": "4e81b5dac53868a55a3bfa0a46bb1d77885275187987b42e584356b94eb6a4f5",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "5177209a805fc54355c5f3018609658dfb1e5823407ac8b6357717efa91b5f63",
+          "peak": 7572
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 16,
+      "empty": [
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "module-snare_drum",
+      "recipe": [
+        {
+          "engine": "snare_drum",
+          "original": "basic_waves",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "475435a49f244c633ef14af7ba951e6149e4bd5f435fe62085a6c03640e7f349",
+      "package_sha256": "34e29c2ae11e727be55d6fccdabdd82eef8f237bb13a5492054c1ea911cceeba",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "66d2a562219002af107bfa41f15922496d323741155bd01acddf05ae65ca1b3c",
+          "peak": 8799
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 16,
+      "empty": [
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "module-wave_terrain",
+      "recipe": [
+        {
+          "engine": "wave_terrain",
+          "original": "basic_waves",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "f2ae09818f4df01a3f957aee5fd4c835e2d5f441021655897f75a970434a625a",
+      "package_sha256": "0984072c16f15c667c5b527acca8b6abf654d348bf454eb9bab6ae49eb0074d7",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "f8d8678d357a85f12e4982bc07a72349e01bbf7b910ec0015df965b2c9218b2a",
+          "peak": 18195
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 16,
+      "empty": [
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "module-wave_terrain_aux",
+      "recipe": [
+        {
+          "engine": "wave_terrain",
+          "original": "basic_waves",
+          "variant": "aux"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "6160e75ffdc7389183bfc9474b1397e90bf5e8d2a87e6f59c01cbb43a6adbe6b",
+      "package_sha256": "7daa31cec686a3267ea535297302f5053fe7dd21e7ffd06e5d95f9887b270915",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "f42552e81c1d92a6ed78617e3821bcdab9ec47050046e5de713ec1e86a0901da",
+          "peak": 23917
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 16,
+      "empty": [
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "native-space-only",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "basic_waves",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "harmonic",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "641948d6466db47adf897a37054eea130ad178490b95477cc2eb50923f400de9",
+      "package_sha256": "c5d5e44022bf6dad6bd81406247ba58fda2c062d078fcd7433766d09e13a8fac",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "1388338fa957e914a0dc6fc31dee3c18e7a643feba96f084b72b7170cd2c2454",
+          "peak": 14111
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "07e2987cdc04e378b19af23cc229d7626a52a91bccbc69a289a1fc7692b64074",
+          "peak": 4934
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 20,
+      "empty": [
+        {
+          "id": 4,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "all-eleven",
+      "recipe": [
+        {
+          "engine": "phase_distortion",
+          "original": "virtual_analog",
+          "variant": "normal"
+        },
+        {
+          "engine": "classic_waves_vcf",
+          "original": "waveshaper",
+          "variant": "normal"
+        },
+        {
+          "engine": "swarm",
+          "original": "two_op_fm",
+          "variant": "normal"
+        },
+        {
+          "engine": "inharmonic_string",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "particle_noise",
+          "original": "chords",
+          "variant": "normal"
+        },
+        {
+          "engine": "filtered_noise",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "string_machine",
+          "original": "modal",
+          "variant": "normal"
+        },
+        {
+          "engine": "chiptune",
+          "original": "basic_waves",
+          "variant": "normal"
+        },
+        {
+          "engine": "bass_drum",
+          "original": "superwave",
+          "variant": "normal"
+        },
+        {
+          "engine": "snare_drum",
+          "original": "wavetable",
+          "variant": "normal"
+        },
+        {
+          "engine": "wave_terrain",
+          "original": "harmonic",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "23baf3b4c9a6af4ec1a41589f4c28b2c7af2b8c4ebdf3a2be3183a8209c201d8",
+      "package_sha256": "57c11befc816a3238a05cd429b002203d0d2d939615ff32fbf2f9e2dcb4bb87e",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "a36cdfefc97a8ae9992123bf38518e9cab26016372ef4b2f7a117ebd49ad61ac",
+          "peak": 14284
+        },
+        {
+          "id": 2,
+          "dispatch_count": 32,
+          "output_sha256": "3e659d178b1edb6deb9ae0ea3c20be46de40fbdeb612042b6ca621c7250a4f84",
+          "peak": 5555
+        },
+        {
+          "id": 3,
+          "dispatch_count": 32,
+          "output_sha256": "6507a32ec57237f5871687212899cec7142a997b9fa5e46b63b352cebe6e7de6",
+          "peak": 9958
+        },
+        {
+          "id": 4,
+          "dispatch_count": 32,
+          "output_sha256": "0e1776701098e10a1ddf3abbf660798da7fcb5c767f546c2fe43c520241fc74b",
+          "peak": 12480
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "c731e8aaa3fd51268f7d9a597a4255663363b9ad248a9523fe880cfbd9898946",
+          "peak": 25410
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "64f2516120f5593d5c62b7c4a33998f64155ee939b7ac2d65e7a773b5132ed1c",
+          "peak": 12071
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "f2bbca6d85eff4e689959e3aaf6eac8c031ccf9d75d6d7c6f84010d6be146508",
+          "peak": 10232
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "70015fbbc407b6ad67eb279d9af5c7be60314e8f386b6e67a039360958bafb42",
+          "peak": 3299
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "7d4b350102cb926e3d4908fbe410df87b7df5d53014a3e04c33a4aef8629ab48",
+          "peak": 13305
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "56e2158b0214f3a0135e2b6ce505d02cc35e88d402c6e2ed4a5445f807f701bf",
+          "peak": 6896
+        },
+        {
+          "id": 12,
+          "dispatch_count": 32,
+          "output_sha256": "078c77a49d21defcfba8dad5af019b5296e95a40dfcae12572e723ec27330a34",
+          "peak": 5990
+        }
+      ],
+      "notes": 132,
+      "rates": 220,
+      "lifecycle": 560,
+      "empty": []
+    },
+    {
+      "name": "discrete-high-ids",
+      "recipe": [
+        {
+          "engine": "chiptune",
+          "original": "cloud_grains",
+          "variant": "normal"
+        },
+        {
+          "engine": "string_machine",
+          "original": "hit_grains",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "a422ddaa136f7cebc7fa6e79714585d8b483231bfb472be25d33a9c7936bebd9",
+      "package_sha256": "7df49f44448dcdb43bb5be0f61eab0ddde3f8eb2875e4b8c6482943df791d5db",
+      "audio": [
+        {
+          "id": 21,
+          "dispatch_count": 32,
+          "output_sha256": "cf6a1622180f68a85d3d727f5a1e1910257418ae77844a79087228108e10a2d2",
+          "peak": 7142
+        },
+        {
+          "id": 22,
+          "dispatch_count": 32,
+          "output_sha256": "078c77a49d21defcfba8dad5af019b5296e95a40dfcae12572e723ec27330a34",
+          "peak": 5990
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 24,
+      "rates": 40,
+      "lifecycle": 40,
+      "empty": [
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "recovered-bass",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "bass",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "harmonic",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "555e04457c45fb4321445388872e11d0ed016665b4efeb0651c9b9856ddd70ad",
+      "package_sha256": "92d47b8d03d6d7a52bd3f245ff888c2641701c35fecb2c61419fd10bef00809f",
+      "audio": [
+        {
+          "id": 15,
+          "dispatch_count": 32,
+          "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+          "peak": 7156
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "07e2987cdc04e378b19af23cc229d7626a52a91bccbc69a289a1fc7692b64074",
+          "peak": 4934
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 20,
+      "empty": [
+        {
+          "id": 4,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "recovered-sawx",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "sawx",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "harmonic",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "fb09583e1c373b991a1505a113d9fe08c8bb6042db8186835cb806a8d1cdf3ca",
+      "package_sha256": "17d396890e4299b5b59756393fa22aea15d3942be399441030e7ae8ec454f1b4",
+      "audio": [
+        {
+          "id": 16,
+          "dispatch_count": 32,
+          "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+          "peak": 7156
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "07e2987cdc04e378b19af23cc229d7626a52a91bccbc69a289a1fc7692b64074",
+          "peak": 4934
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 20,
+      "empty": [
+        {
+          "id": 4,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "recovered-harm",
+      "recipe": [
+        {
+          "engine": "swarm",
+          "original": "harm",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "harmonic",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "afc5b050b6bed70c0bee203d0dd8410e374bf97796b4c8fe288fcdc552272ee5",
+      "package_sha256": "3749f2ceec7936991f8e00ae635ad7e79c1a8fda0cf82c7564aa33534ebeadcb",
+      "audio": [
+        {
+          "id": 17,
+          "dispatch_count": 32,
+          "output_sha256": "797850ef06e622d59f2bf51b0edc075657d194af0859229533a9e366abcf46cd",
+          "peak": 7156
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "07e2987cdc04e378b19af23cc229d7626a52a91bccbc69a289a1fc7692b64074",
+          "peak": 4934
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 20,
+      "empty": [
+        {
+          "id": 4,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "shared-grains-sample",
+      "recipe": [
+        {
+          "engine": "phase_distortion",
+          "original": "scan_grains",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "cloud_grains",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "hit_grains",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "sample",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "f1f983f6d3fbcd11f29757ad72cc59749e87814393c801af6c0685e1791f0322",
+      "package_sha256": "844e85caef8d17730571976bb06e596d8991ac390c859277e81edbc3274725cd",
+      "audio": [
+        {
+          "id": 20,
+          "dispatch_count": 32,
+          "output_sha256": "1e23eb992c5a282609f008c93e0296076086d5417350cb26582fb5c0a8e27411",
+          "peak": 14863
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "07e2987cdc04e378b19af23cc229d7626a52a91bccbc69a289a1fc7692b64074",
+          "peak": 4934
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 28,
+      "empty": [
+        {
+          "id": 19,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 21,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 22,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-basic_waves",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "basic_waves",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "bd081dc4b58e8c9b31a6f791fe05981e99cd8760dc97b9e4f57b43a460191399",
+      "package_sha256": "b708f3d52147d480b02d3581edb6a9399215468d52b42cb15e498aeb6c49da8f",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "b99582fe6da100360b0204d6870c796394927abb2afe38947d371a5738c54e7e",
+          "peak": 7229
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 24,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-superwave",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "superwave",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "036307a84371afb7fe705a1d9be38314b7746954df82910480a8d8a36a793828",
+      "package_sha256": "99152c1c1e7163027562c477ed0b57a8e583be3b3875850ea434b4d2870cb396",
+      "audio": [
+        {
+          "id": 2,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 24,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-wavetable",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "wavetable",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "68bff2215d5b604cbce29a45c7939a4e774b862f1abb469fcbd8f5f115184301",
+      "package_sha256": "589077e2a0fd03128086e792c34b3603adf250e329d53cf7eba81cae9fdbe13f",
+      "audio": [
+        {
+          "id": 3,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 24,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-harmonic",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "harmonic",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "22882efc945dbc2b81a7db1f776884eee1ff5c5fe795ff785c9539e1e21063ff",
+      "package_sha256": "0eb16cf8e28dec49000a0d8f49fca7f0770c2c28bcf6f44772d0e53c93762f10",
+      "audio": [
+        {
+          "id": 4,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 24,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-karplusstr",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "karplusstr",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "5d3d56593055d5de02afffdb3140bb2523da85fbfc3e7755d5e132dc516933f2",
+      "package_sha256": "86d015c638b6abcc5ba2ef82e8954ffc76d88a98bc916215331f7210f4b4b453",
+      "audio": [
+        {
+          "id": 5,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 24,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-virtual_analog",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "virtual_analog",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "3b746cf14f01fc4d592d2ae3df3057504f28e87685eddf7aac744bc7b337186c",
+      "package_sha256": "de82b856278fa75c858f88555909226fa4a61d9b42208acd24464e3debacd75e",
+      "audio": [
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 20,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-waveshaper",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "waveshaper",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "64be7210b140836f8818027a2766a95a05106ba560ab54ace6d30e3ab836bb8e",
+      "package_sha256": "8336817193374e73da7ca426027f242e2affbdb1c684794eea3bcb738dd02b1a",
+      "audio": [
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 24,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-two_op_fm",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "two_op_fm",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "289df53b30270a3fed0cf475404523be82a86b71d0fd7c114eef4083816b8909",
+      "package_sha256": "65d5d353055d0f6d36b837a5fcbd04c36c98e4d1337b8853f9ea54f7d722449b",
+      "audio": [
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 20,
+      "empty": [
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-formant",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "808335d468e40572e16e21e7aafd0bfb7295324ae831f36270570e7b34865583",
+      "package_sha256": "5edd3c4f2892dd28a53d7aa50e6f87084cf5a799285f2e3db075c717e89c121d",
+      "audio": [
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 20,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-chords",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "chords",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "12100697558245268a45b1f3dcbab934e1cce44be759706b19b8026a9f90246a",
+      "package_sha256": "7eb4782483bbbd28d244923733c35402f3cc3e8effd36ce9d94e6c0600debcbc",
+      "audio": [
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 16,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-speech",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "dacb8005cb3fb7caef819532609fe2782a3f6a9987579dcbde65efa8a8dde52b",
+      "package_sha256": "4fdf5119633744f49098862328686d0b10ce5f38d45542ba6bf6519719670e36",
+      "audio": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 20,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-modal",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "modal",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "e72c2d4ac8d68ec6936040ef417900fd49eda5cbeb3e5fb1b43c63a246f6b5c9",
+      "package_sha256": "0509944b58f1dea7b9b18f580f890234a8ad4354cf2310d39c20264935a49308",
+      "audio": [
+        {
+          "id": 12,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 24,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-noise",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "noise",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "864b5770045a5437a6de1d5da682577e442922457c9962e1dd12c903000ab4ae",
+      "package_sha256": "74d1cbb45f8fdadc5d0ed4f6fa460597d1394320c9e63a8e3945483248a1901f",
+      "audio": [
+        {
+          "id": 13,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 24,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-bass",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "bass",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "07fc716cb451652aad7a3e3d9d778d45bb1a4d48c9d9bbea59500bfbd9c09ec4",
+      "package_sha256": "261551b24d3cb162a9853dc14cac082ec6aea4bbc533b91ef222bf6f4f2bbe29",
+      "audio": [
+        {
+          "id": 15,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 24,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-sawx",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "sawx",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "7f3663b6752b5e533325d0bd3169bc9e5e8efd919b371674d6624ffb800a8bf5",
+      "package_sha256": "2561268732805b6c907821716e914a99e09daa78ea6e55f7145e9df752d10c38",
+      "audio": [
+        {
+          "id": 16,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 24,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-harm",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "harm",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "bafe574121ab7f4d946733f3d60eec762acf578476892309f3d45296e5fbf438",
+      "package_sha256": "a6013b5e338b4583c432647ca344655678d68847d96e2ae7635c9660ab722a18",
+      "audio": [
+        {
+          "id": 17,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 24,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-user_wavetable",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "user_wavetable",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "e5799579442642f1145e7fafc38d6599ba425d38a008f7e7dcdde282bcd96e68",
+      "package_sha256": "e412b30a9610818487f3a7f1d6cef136ee2e1afbb3ba51ca82e9e8343521d4c7",
+      "audio": [
+        {
+          "id": 18,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 24,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-sample",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "sample",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "dea30d29f366eac8eac485e433e9dfec1ca4f523854da9d721770e493915d47c",
+      "package_sha256": "d7a7242bb13ae00b45bcad48a926b3a96e5fd9ef42d650052f01af47179c6dd6",
+      "audio": [
+        {
+          "id": 19,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 24,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-scan_grains",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "scan_grains",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "53e2282d43b4249d0eba3f25ba595207e2c08905cf93ff0f7a222e42f501bb0c",
+      "package_sha256": "682540a39b074a221fd6fd9cc349877e53d12d3be493363ab50595239b65e96b",
+      "audio": [
+        {
+          "id": 20,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 24,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-cloud_grains",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "cloud_grains",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "493ed367b124e071a4200b53cbfefc26e0580768ff7c9e522024f3bc59b43cec",
+      "package_sha256": "99bd226c5403b7a104e285fdcb1112b880668c64c1283ee1d92a9754a5dd2780",
+      "audio": [
+        {
+          "id": 21,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 24,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-hit_grains",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "hit_grains",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "68d96e2492135f84c4fedc58bc8ed7acae5de495388d7fc5118c0254ce292648",
+      "package_sha256": "fc732fee13030dd144bbd91e4148f86debdf66867a62ca79a6f54b534d6c6106",
+      "audio": [
+        {
+          "id": 22,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 24,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "sixop-destination-vocoder",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "vocoder",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "3e57208f3f9e8c107261682e34bf326517e07643a7dbea6e2cced1638b72fc7d",
+      "package_sha256": "6f20ccbb5b498c2ebd533342cd794ebbfcdcbe21a47a762d310278914cce501a",
+      "audio": [
+        {
+          "id": 14,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 24,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "single-bank-a",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "543f4dcbf82e7f118f056b83aab11056df9c1771a29c15ab2d07d73d33b3c181",
+      "package_sha256": "5f1b0bbd1e3b31af0a037fb2cff166c00853fec7e110d21ecec45a6497ba1f1d",
+      "audio": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 12,
+      "empty": []
+    },
+    {
+      "name": "single-bank-b",
+      "recipe": [
+        {
+          "engine": "six_op_fm_b",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "d035ac80e234f8144b28fee70710540ed158ca13a5b5a2106b86462762fa012a",
+      "package_sha256": "f3e7a6e14252097c390f329332f09e46e080493b2c6ece5d976ae5469e76b09e",
+      "audio": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "067ccc370f5e998bc245a24b1afdd0b0e3151f824d6004761044a884d4c78d24",
+          "peak": 1781
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 12,
+      "empty": []
+    },
+    {
+      "name": "single-bank-c",
+      "recipe": [
+        {
+          "engine": "six_op_fm_c",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "e4d69171ef2a800da0f0909c6e57ba57281014fa5e10c559d03e5b91cd3b5faf",
+      "package_sha256": "c25d977191cd5e03f487e6f10571b7898c72f8d5d773720d599a3d5d9b18c142",
+      "audio": [
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "c839cd3273f2ec81bd1d4e6b453fc1afed7374e0e98d37a0ec243563699968e7",
+          "peak": 19
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "afaaabaa44f65caf30e221b8b9cae80ad3abc17af4881c59fc98c6e8d0a17012",
+          "peak": 8628
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "713dfa451cf20c08c2f75fc786c783c37d164b1a9fdd02332ef96660e1fde405",
+          "peak": 4036
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 12,
+      "rates": 20,
+      "lifecycle": 12,
+      "empty": []
+    },
+    {
+      "name": "abc",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "two_op_fm",
+          "variant": "normal"
+        },
+        {
+          "engine": "six_op_fm_b",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "six_op_fm_c",
+          "original": "speech",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "fef6640908e7e0f2db8ee9c9eb2b4ba200a60f261e01e3cbba344a7166f96165",
+      "package_sha256": "4ec0de5261998897dabfc1a4c772c80d6d21418c2939cec5ddf24cc51d6dade6",
+      "audio": [
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "e48e1590a29a0c491d0785aa2ab38dec8a222e73f8b70c9d4ae05a27b19406b8",
+          "peak": 1817
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "23654a57fcb011380e2498660f754fc6d8bdf575aa670bfbf5ca359976b50fbe",
+          "peak": 15
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 36,
+      "rates": 60,
+      "lifecycle": 60,
+      "empty": []
+    },
+    {
+      "name": "abc-high-ids",
+      "recipe": [
+        {
+          "engine": "six_op_fm_a",
+          "original": "scan_grains",
+          "variant": "normal"
+        },
+        {
+          "engine": "six_op_fm_b",
+          "original": "cloud_grains",
+          "variant": "normal"
+        },
+        {
+          "engine": "six_op_fm_c",
+          "original": "hit_grains",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "two_op_fm",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "2ea37f26f17fe1f74ea1e301233175763a7497b1d7a283886e6c293839e8b40f",
+      "package_sha256": "2e2c2a3b137586fc5177e1509a82e1620f4cdbe14d9616563ce19319ee3a0bcc",
+      "audio": [
+        {
+          "id": 20,
+          "dispatch_count": 32,
+          "output_sha256": "5f7f6e34ee018bf9fc91ac4c5b722ab933b705436f395e09ab2d6094263a5f2d",
+          "peak": 3718
+        },
+        {
+          "id": 21,
+          "dispatch_count": 32,
+          "output_sha256": "e48e1590a29a0c491d0785aa2ab38dec8a222e73f8b70c9d4ae05a27b19406b8",
+          "peak": 1817
+        },
+        {
+          "id": 22,
+          "dispatch_count": 32,
+          "output_sha256": "23654a57fcb011380e2498660f754fc6d8bdf575aa670bfbf5ca359976b50fbe",
+          "peak": 15
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "60aa369c73e5fcd6ec76a1a612e3d73ff7558d56e5e6797f60bcb5dbd8d44a25",
+          "peak": 7411
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "d9cce82bda6def3262e928e9259d8586df8ed6c598ff3d81ea7da565437ccc7d",
+          "peak": 11277
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "cbd797e983fef65b549f89abc32613c6f3d14746aa26f2442ba54e0a65e697b0",
+          "peak": 14266
+        },
+        {
+          "id": 12,
+          "dispatch_count": 24,
+          "output_sha256": "88f57c3edfe79a9e810ac21e34896abb0e72defaf9ef803c01891b6208894cb4",
+          "peak": 1927
+        }
+      ],
+      "notes": 36,
+      "rates": 60,
+      "lifecycle": 96,
+      "empty": [
+        {
+          "id": 8,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 9,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 11,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    },
+    {
+      "name": "all-fourteen",
+      "recipe": [
+        {
+          "engine": "phase_distortion",
+          "original": "virtual_analog",
+          "variant": "normal"
+        },
+        {
+          "engine": "classic_waves_vcf",
+          "original": "waveshaper",
+          "variant": "normal"
+        },
+        {
+          "engine": "swarm",
+          "original": "two_op_fm",
+          "variant": "normal"
+        },
+        {
+          "engine": "inharmonic_string",
+          "original": "formant",
+          "variant": "normal"
+        },
+        {
+          "engine": "particle_noise",
+          "original": "chords",
+          "variant": "normal"
+        },
+        {
+          "engine": "filtered_noise",
+          "original": "speech",
+          "variant": "normal"
+        },
+        {
+          "engine": "string_machine",
+          "original": "modal",
+          "variant": "normal"
+        },
+        {
+          "engine": "chiptune",
+          "original": "basic_waves",
+          "variant": "normal"
+        },
+        {
+          "engine": "bass_drum",
+          "original": "superwave",
+          "variant": "normal"
+        },
+        {
+          "engine": "snare_drum",
+          "original": "wavetable",
+          "variant": "normal"
+        },
+        {
+          "engine": "wave_terrain",
+          "original": "harmonic",
+          "variant": "normal"
+        },
+        {
+          "engine": "six_op_fm_a",
+          "original": "karplusstr",
+          "variant": "normal"
+        },
+        {
+          "engine": "six_op_fm_b",
+          "original": "noise",
+          "variant": "normal"
+        },
+        {
+          "engine": "six_op_fm_c",
+          "original": "vocoder",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "bass",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "sawx",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "harm",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "user_wavetable",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "sample",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "scan_grains",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "cloud_grains",
+          "variant": "normal"
+        },
+        {
+          "engine": "empty",
+          "original": "hit_grains",
+          "variant": "normal"
+        }
+      ],
+      "raw_sha256": "ccfcd6fc1b9f938b829e58323fd085115e51c6edcc814a3a2aae4dd615cc03ec",
+      "package_sha256": "6bb1df9f4f553c26341dd090f8016b4bbec3d5e8e07c5cd8c6ea4596dfe83ed7",
+      "audio": [
+        {
+          "id": 1,
+          "dispatch_count": 32,
+          "output_sha256": "a36cdfefc97a8ae9992123bf38518e9cab26016372ef4b2f7a117ebd49ad61ac",
+          "peak": 14284
+        },
+        {
+          "id": 2,
+          "dispatch_count": 32,
+          "output_sha256": "3e659d178b1edb6deb9ae0ea3c20be46de40fbdeb612042b6ca621c7250a4f84",
+          "peak": 5555
+        },
+        {
+          "id": 3,
+          "dispatch_count": 32,
+          "output_sha256": "6507a32ec57237f5871687212899cec7142a997b9fa5e46b63b352cebe6e7de6",
+          "peak": 9958
+        },
+        {
+          "id": 4,
+          "dispatch_count": 32,
+          "output_sha256": "0e1776701098e10a1ddf3abbf660798da7fcb5c767f546c2fe43c520241fc74b",
+          "peak": 12480
+        },
+        {
+          "id": 5,
+          "dispatch_count": 32,
+          "output_sha256": "68d876dcbddf080da35210b4b3faed136424d2c052c8ec3a545dcd7a983b4860",
+          "peak": 4067
+        },
+        {
+          "id": 6,
+          "dispatch_count": 32,
+          "output_sha256": "c731e8aaa3fd51268f7d9a597a4255663363b9ad248a9523fe880cfbd9898946",
+          "peak": 25410
+        },
+        {
+          "id": 7,
+          "dispatch_count": 32,
+          "output_sha256": "64f2516120f5593d5c62b7c4a33998f64155ee939b7ac2d65e7a773b5132ed1c",
+          "peak": 12071
+        },
+        {
+          "id": 8,
+          "dispatch_count": 32,
+          "output_sha256": "f2bbca6d85eff4e689959e3aaf6eac8c031ccf9d75d6d7c6f84010d6be146508",
+          "peak": 10232
+        },
+        {
+          "id": 9,
+          "dispatch_count": 32,
+          "output_sha256": "70015fbbc407b6ad67eb279d9af5c7be60314e8f386b6e67a039360958bafb42",
+          "peak": 3299
+        },
+        {
+          "id": 10,
+          "dispatch_count": 32,
+          "output_sha256": "7d4b350102cb926e3d4908fbe410df87b7df5d53014a3e04c33a4aef8629ab48",
+          "peak": 13305
+        },
+        {
+          "id": 11,
+          "dispatch_count": 32,
+          "output_sha256": "56e2158b0214f3a0135e2b6ce505d02cc35e88d402c6e2ed4a5445f807f701bf",
+          "peak": 6896
+        },
+        {
+          "id": 12,
+          "dispatch_count": 32,
+          "output_sha256": "078c77a49d21defcfba8dad5af019b5296e95a40dfcae12572e723ec27330a34",
+          "peak": 5990
+        },
+        {
+          "id": 13,
+          "dispatch_count": 32,
+          "output_sha256": "e48e1590a29a0c491d0785aa2ab38dec8a222e73f8b70c9d4ae05a27b19406b8",
+          "peak": 1817
+        },
+        {
+          "id": 14,
+          "dispatch_count": 32,
+          "output_sha256": "23654a57fcb011380e2498660f754fc6d8bdf575aa670bfbf5ca359976b50fbe",
+          "peak": 15
+        }
+      ],
+      "notes": 168,
+      "rates": 280,
+      "lifecycle": 1332,
+      "empty": [
+        {
+          "id": 15,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 16,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 17,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 18,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 19,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 20,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 21,
+          "silent": true,
+          "voices": 4
+        },
+        {
+          "id": 22,
+          "silent": true,
+          "voices": 4
+        }
+      ]
+    }
+  ]
+}
