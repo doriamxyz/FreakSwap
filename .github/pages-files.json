@@ -12,8 +12,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 26201,
-      "sha256": "88298899f5820da66970d58bcef5b9c5104027770aa8b37da7c4d1984ef50977"
+      "bytes": 26281,
+      "sha256": "6b8cbd82a77632ad0cb21ec29ef5454c2e5dc73ff3c173b0ede20d6180e91e10"
     },
     {
       "path": "arm-checks.js",
@@ -142,8 +142,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 6014,
-      "sha256": "c0d849c8ffd0c8ecc1b8974756feeaaae0afa0070ec4d6381b6b4396eaa400ff"
+      "bytes": 6004,
+      "sha256": "580dbf96b4116f6d99bb3cd541d219b9f4097272348a444780ec0f4b5d816b3d"
     },
     {
       "path": "library-release.js",
