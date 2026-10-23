@@ -1,0 +1,382 @@
+{
+  "format": "freakswap.arm-module",
+  "version": 1,
+  "sections": [
+    {
+      "id": 0,
+      "size": 1028,
+      "alignment": 4,
+      "data": "AABAPyZaQj9LskQ/eAZHP8VUST9jm0s/odhNP/IKUD/zMFI/aklUP0pTVj+0TVg/9jdaP4YRXD8G2l0/PJFfPw43YT+Ey2I/v05kP/jAZT99Imc/q3NoP+20aT+65mo/jwlsP/IdbT9qJG4/gh1vP8cJcD/E6XA/A75xPw2Hcj9nRXM/k/lzPw+kdD9VRXU/3N11PxZudj9u9nY/Tnd3Pxrxdz8xZHg/7tB4P6k3eT+zmHk/XPR5P+5Kej+wnHo/5el6P84yez+md3s/prh7Pwb2ez/4L3w/rWZ8P1OafD8Vy3w/Hfl8P5IkfT+XTX0/UHR9P96YfT9gu30/8tt9P7L6fT+4F34/HTN+P/lMfj9iZX4/bHx+PyySfj+zpn4/FLp+P17Mfj+i3X4/7e1+P0/9fj/TC38/hxl/P3Ymfz+sMn8/Mj5/PxJJfz9XU38/B11/Py1mfz/Pbn8/9XZ/P6Z+fz/phX8/w4x/PzqTfz9VmX8/GJ9/P4mkfz+rqX8/g65/Pxazfz9nt38/ert/P1O/fz/0wn8/YcZ/P53Jfz+rzH8/jM9/P0TSfz/V1H8/Qtd/P4vZfz+0238/vd1/P6nffz964X8/MeN/P8/kfz9V5n8/xud/PyLpfz9r6n8/oet/P8bsfz/a7X8/3+5/P9Xvfz+98H8/mPF/P2fyfz8r838/4/N/P5H0fz819X8/0PV/P2P2fz/t9n8/b/d/P+r3fz9f+H8/zPh/PzT5fz+V+X8/8vl/P0n6fz+b+n8/6Pp/PzH7fz92+38/uPt/P/X7fz8v/H8/Zvx/P5r8fz/L/H8/+fx/PyT9fz9N/X8/dP1/P5n9fz+7/X8/3P1/P/v9fz8Y/n8/M/5/P03+fz9l/n8/fP5/P5L+fz+n/n8/uv5/P8z+fz/e/n8/7v5/P/3+fz8M/38/Gv9/Pyb/fz8z/38/Pv9/P0n/fz9T/38/Xf9/P2b/fz9v/38/d/9/P3//fz+G/38/jf9/P5P/fz+Z/38/n/9/P6X/fz+q/38/r/9/P7P/fz+3/38/u/9/P7//fz/D/38/xv9/P8r/fz/N/38/0P9/P9L/fz/V/38/1/9/P9r/fz/c/38/3v9/P+D/fz/h/38/4/9/P+X/fz/m/38/6P9/P+n/fz/q/38/7P9/P+3/fz/u/38/7/9/P/D/fz/x/38/8v9/P/L/fz/z/38/9P9/P/X/fz/1/38/9v9/P/b/fz/3/38/9/9/P/j/fz/4/38/+f9/P/n/fz/6/38/+v9/P/r/fz/7/38/+/9/P/v/fz/7/38//P9/P/z/fz/8/38//P9/P/3/fz/9/38//f9/P/3/fz/9/38//f9/P/7/fz/+/38//v9/P/7/fz8=",
+      "relocations": []
+    },
+    {
+      "id": 1,
+      "size": 996,
+      "alignment": 4,
+      "data": "LenwR7DuYEr17gAKt+4AarDuQTog7iBaNu5hGpxGlkYKm93pCCQl7gEaMe4hGhm5vvEADwDwroCw7gB6d+5BOmHuIzr+7gBKc+6kOt/t00rf7dNaY+6kOnPupTr97uNK+O7kWhTukFrf7c5Kc+7lOkDyAAbA8gAGY+6kOgbrhQX97uM6QPIABtXtAFoT7pBawPIABgbrhQXV7QA68e4AKmTuIipl7qM63+2/Sk/2AH5i7qMqwvIBDvTuZCrx7hD6yL/w7mQq3vgAUEXyUHbD8lQWtUIT0b74CnC39YBPENmn9YBHA+6Qet/tsEr47mM6w+6kOvbuAEpz7qQ6CeBP9IBHA+6Qet/tqkr47mM6Y+6kOnPuo0r27ghaZO6lWnXuoAr/7gBadO6lSvDuCFpk7qVK9u4AWnTuhkr07mU68e4Q+ki/8O5gSt/tmgrE7oQ6Yu6gCt/tmEpg7qIKcO6kCmLuoAoAKRi/sO5GemfuICpy7oYqYO6gSnTuoirG7iIqwO0ACvzu4zrA7Rc6gO0BesDtAioAKUvQACsA8M2An+2IemHuoQog7od63+2GGifuIHo37iF6xu4HCkDyAA757ggawPIADmfuIRry7gAqT/JfOEbyDWXe+ABgce6iGt/tdyrf7Xk6w/ZuSMDyGQVnRhlGAL8G+wWG8O5jWgTukGr47mRKZO6iSvTuR0pg7qRK8e4Q+ki/8O5kWmHupUpg7iRK5+wBSgE55NHO+ABgSeDBbQApPNCLQolGOL+ZRqHrCQGj6wkOZUbBZSuzQPIACMDyAAhP8l86RvINZ9j4ABCf7VYKw/ZuSsDyGQe/7gB6ZUZORgH7B6EBPgDukBr47mAKYO6ACnDuoApw7ocK5ewBCu/RyPgAEL7xAA8G0KnrAwEAJwExRfgEe/vTU7lD4AArQdCZAAAnZkYAvwQ5RvgEe/vRkO0DepDtBAphRh5G0O0BKtHtAArQ7QAaYu6HKnDu4gph7ocq0O0COnDu4gpw7sAKY+6gCmHuoApw7ocqMO6iemHuogpw7oAaAT4w7qEK4ewBGtvRYUYfRoDtA3qA7QQKsewBCpTtAHoBPzDuBwqk7AEK9dGf7SQKtO5AOvHuEPoI1Z/tJQqf7SV6M+4ACmDuBwoS4J/tHQrf7R4Kn+0cejPuAAq07mA63+0WCiDuBwrx7hD6yL/w7kAKNu5CCiXuAApw7gIaFDCw7kQKYUa96PBH//f+vwC/AACQQgAAAEMAAIBD7nz/PgD8/0YAAAA411c5QdsPSUAAAIAvufx/Pxe3UTgAAAAAj8J1Prgehb4J+aw/uB6FPo/Cdb7fT4VA",
+      "relocations": [
+        {
+          "offset": 112,
+          "type": 47,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 116,
+          "type": 48,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 132,
+          "type": 47,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 144,
+          "type": 48,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 442,
+          "type": 47,
+          "target": {
+            "external": 536871196
+          }
+        },
+        {
+          "offset": 450,
+          "type": 48,
+          "target": {
+            "external": 536871196
+          }
+        },
+        {
+          "offset": 588,
+          "type": 47,
+          "target": {
+            "external": 536871196
+          }
+        },
+        {
+          "offset": 592,
+          "type": 48,
+          "target": {
+            "external": 536871196
+          }
+        },
+        {
+          "offset": 918,
+          "type": 30,
+          "target": {
+            "section": 12,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "size": 30,
+      "alignment": 2,
+      "data": "gLWEsEFrAmhP9IBDAZEAkc3pAjMSaGlGkEcEsIC9",
+      "relocations": []
+    },
+    {
+      "id": 3,
+      "size": 28,
+      "alignment": 4,
+      "data": "CmhP8AAMACNCYwC/QvgjwAEzs/V3b/nR//f+vw==",
+      "relocations": [
+        {
+          "offset": 24,
+          "type": 30,
+          "target": {
+            "section": 6,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "size": 30,
+      "alignment": 2,
+      "data": "gLWEsEFrAmhP9IBDAZEAkc3pAjMSaGlGkEcEsIC9",
+      "relocations": []
+    },
+    {
+      "id": 5,
+      "size": 12,
+      "alignment": 2,
+      "data": "3fgAwM34AMD/9/6/",
+      "relocations": [
+        {
+          "offset": 8,
+          "type": 30,
+          "target": {
+            "section": 7,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "size": 274,
+      "alignment": 4,
+      "data": "LenwT4GwBUYBIChzACDL9oBwaGCIaIpGTPbNQcP2THGw9ZB/qWAB0gAhCeDa+AAQoPWQcAH1kHLK+AAgyvgIAClhACZgKE/wAAEI09r4ABBgOAHxYALK+AAgyvgIAE3yCnlK9sorBfEUB1wkw/YjScP2f3vpYgC/1fgQgEv2IiEI6wQAw/YAUUD4XBxA+FicQPhUvED4TGxA+FBsSDhRRv/3/v9I+ARgYDS09b5/R/gEm+HR2vgIIAIgqGIAIEAqT/AAAQjT2vgAEEA6AfFAA8r4ADDK+AggACJpYohQBDJAKvvRACAoYkvy2ADC8gEAAHgCKAHRASAG4ETyzjDC8gAAAHgA8AEAhfgwAAGwvejwjw==",
+      "relocations": [
+        {
+          "offset": 160,
+          "type": 10,
+          "target": {
+            "section": 10,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "size": 616,
+      "alignment": 4,
+      "data": "LenwT4ewBpJL8tgCwvIBAhJ4mkaLRgIqgEYB0QEiBuBE8s4wwvIAAAB4APABApj4MACQQjHQS/YiJk3yCnRK9sonzekEKgAlw/YAVsP2I0TD9n93T/AACU/wAArY+CgAgkUO0Nj4EAAA6wkBQPgJYAHxFADNZUxgj2ANYc1g//f+/wnxYAm59ZB/CvEBCuXRBJrd+BSgiPgwIJv4AAABISHqAAAQQy7R2PggANj4JBAA8Q4DATgD8A8DAPAPAAHrgwMB64AAk+0ACpDtABqf7WEq2PgoIDHuQBoh7gIaMe4ACgjrggBF8lZRgO0FClAcxfJVUVD7AfEB69FxAetBAUAayPgoAJvtARq67gIqn+1SCjHuAhrd+ECQtO5AGvHuEPoK1J/tTSqw7kEKtO5CGvHuEPrIv7DuQgqf7UkaBCAw7gEKve7AGrjuwTow7kMKn+1EOsLyAABA8gABkO0AKhHuEArA8gABIO4DCgHrgAC97sAKQPIAAZDtADoQ7hAKwPIAAQHrgACQ7QAKte4AGtj4KBAi7gEaI+4ACgjxFATY+CAA2PgkICHuAAoE64EBge0ACgLrgAEBOADwDwC58QAPge0ACsj4IAAP0E/qiQAGmwAhAkYAvwQ6Q/gEG/vRACFSRgQ4QvgEG/vRACUAJpj4MBDY+CgAASkB0YZCH9EwGrD6gPDb+ABwQgnY+BAAm+0COtj4LDAC6lcBOkCb7QUK1O0ACpvtBBqb7QMqBp8oRGPuAxrN6QGpAJf/9/7/YDUBNrX1kH8E8QQE0NEHsL3o8I8AAAAAAAAAwwAA/kIAAABDAACAQw==",
+      "relocations": [
+        {
+          "offset": 126,
+          "type": 10,
+          "target": {
+            "section": 11,
+            "value": 1
+          }
+        },
+        {
+          "offset": 344,
+          "type": 47,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 356,
+          "type": 48,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 372,
+          "type": 47,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 384,
+          "type": 48,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 572,
+          "type": 10,
+          "target": {
+            "section": 1,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "size": 1044,
+      "alignment": 4,
+      "data": "t+4ASoTuACqx7gA6tO5DKvHuEPoK1J/t8Fqw7kI6tO5FKvHuEPrIv7DuRTqf7etaIO4DKrTuRSrx7hD6or9P8H5cwPg8wLDuRCrwtYGwLe0Ci5/t40oh7qFaJe4ESrLuCFo07gVKs+4IWiHuBRqf7d1aMe4ESp/t3Bq07kVK8e4Q+si/sO5FSjTuAVq97sVquO7GehbuEMqf7dRqNe5HWkDyAA7A8gAOJe4GWg7rjAy97sVaQPIADpztAHoV7hDKwPIADg7rjAyc7QBan+3IaifuBVog7gUKn+3GWrTuRgrx7hD69O5FGsi/sO5GCvHuEPoV25/twFqf7cB6Me6FWrPuBGol7gZaN+5AajHuRBol7gZqJe4BGjbuAAox7gRKn+23WiDuABqf7bZqIe4FWjXuBlqf7bRqIe4FGjHuBhog7gEaMe4BWrfuAAo17gBaIe4BajbuBVqA7gVagO0EGpDtDBpP8IBMACvA+BTAgO0GWgDwKoG97sRaQPIADhXuEMrA8gAODuuMDLjuxWqc7QBanO0BejTuRko37kVqJu4ESjTuBUoj7gQ6BO4QOjPuQTq47kRKg+4EOp/tlEog7qBa0PgAwND4BOCf7ZF6Je4ESr/uAFq27gBq/+4ICvvuBBrz7gQqAL/Q7Q86cu4jSvTuQErx7hD6wO0PSkDz0IB07oU6wO0POtDtDjoz7gEaY+6EOnDuYzph7iM6/e7jShTukEpkRGUeZhxv858lb/OfJvju5EoO64UFpxxv858kDuuGBnPu5DoO64QEb/OfJ9XtAErW7QBaDuuHBdTtAGp17uRK1e0AemTuhkp27uVaNe6kinfu5np17ohaZ+6GenfupVp47iV6Ze6jWnXu51pl7qNade6kSmTuozpz7qY69e5AOvHuY0rw7mNa8e4Q+ki/8O5kWnXuh0rw7mBa9e5ASvDuZHrIv/DuQFrx7hD68e5kaki/8O5menTup0pl7qRKwO0OStHtAEp07qNK9O5hSvHuEPrw7mE6CNT07mJK8O5kOvHuEPrIv/DuYjrQ7QtK0O0JWtDtCmpk7qVKdO6jSsDtCjrQ7QU60O0HWnTu5krQ7QRqY+6lOsDtC0p07uM6Zu6lSnPu5DrQ7QhK0O0GenPu5Dpj7qc6Zu6jOnPupVpz7qU6Zu6lWsDtBzp17qQ6de6jSg7rjATA7QhKxO0AOqzxAQzQ7RBa0O0PSm/znyzA+ADAwO0RWsDtEDoD4NDtEDrQ7RFac+7lOmPupDrS7QBKc+6lOnTuozoBO+LsAToB8QQBf/QPr4DtDBq97AKLAbDwvQC/AAB/RHL5fz8AAHBCAACoQgAAAEMAAIBD7nz/PjMzcz8zM3O/5fL/PkkmX0KPuiFB2w9JQArXIzzNzMy8",
+      "relocations": [
+        {
+          "offset": 160,
+          "type": 47,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 164,
+          "type": 48,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 180,
+          "type": 47,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 192,
+          "type": 48,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 378,
+          "type": 47,
+          "target": {
+            "section": 0,
+            "value": 0
+          }
+        },
+        {
+          "offset": 386,
+          "type": 48,
+          "target": {
+            "section": 0,
+            "value": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "size": 1432,
+      "alignment": 4,
+      "data": "t+4AOoPuACqx7gBatO5FKvHuEPoK1J/t6kqw7kJatO5EKvHuEPrIv7DuRFot6fBPgbAt7Q6Ln+3jSiDuBSq07kQq8e4Q+qK/T/B+V8djsO5DKp/t3Toh7qFKJO4DOrLuCEoz7gQ6s+4ISiHuBEqf7dd6NO4Dap/t1jq07kdq8e4Q+si/sO5HajbuA0q97sR6+O7HKhfuEHqf7c56NO5iSkDyAAbA8gAGJO4HSgbrhwe97sRKQPIABtftACoU7hB6wPIABgbrhweX7QBKn+3CeiLuhEog7gQKn+3ASrTuRwrx7hD69O5EGsi/sO5HCvHuEPod25/tukqz7gR6Me6ESiTuB0q37gB6N+5Bet/ttRok7gd6N+4BGjHuwHoz7kY6JO4HeiTuAzo37gAKM+4Gap/trUog7gA6n+2seiPuBEo07gdKn+2qeiPuBDoz7gc6IO4DOjPuA0q37gAKNO4ASiPuA3o37gRKgO4ESk/wgEe97sZ6QPIABkdhF+4QesDyAAaA7QQ6BuuHB5DtDDqA7QZKn+32StftABol7gRK1+0BKrTuQErx7hD6CtTf7fA6sO5ECrTuY0rx7hD6yL+w7mMKvu4ISvbuCEpw7oQ6se4ASvTuZApj7oQ63+3mSvHuEPr17kAKyL/w7mNK8e4Q+vDuYDrx7mBaSL/w7mU6ACsA8KuBuO7HejbuR2oy7uF6J+4GajbuIWqw7gB6Je4GWgbuEDo37mB63+3PGjXuQ1q47kZqIO6HeoXuBlon7iFq3+3NGt/tzSok7qR6J+4hemHuIhrf7coqIe6BGjHuIhrf7cga3+3IKmDuoQpz7qIawO6hCt/txRrf7cUqZu4hGnHuohrQ+ATA0PgIsND4DOBA8gAKT/JfOEbyDWnf7b1K8e5hGvfuACr/7gA6wPIACsP2bkjA8hkJ/u4AWvvuBGrz7gR6tu4AipDtD5oy7gmatO5imvHuEPqA7Q+aQPOKgNr4AGA57iOaBvsJhoDtD5oJ7hBquO5JminuJJqQ7Q2qOe4lmjnuSpoh7gmaOe4KuivuB5o17gM6Oe4imiPuCZrK+ABgJu4JqgZotO5EqvHuEPqA7Q26Y9sq7iG6K+4AujvuCbq07kS68e4Q+ljbve7LmhnuEHo3RH0cb/OfJQzrhQW87sqqb/OfJ5XtANoa7hBaDOuHB11EuO7JypftAJrtsg7rhQU77ky6Pe5JypXtAKos7gu6O+4JmiDuiro77gmaDuuLBavxAQSF7QCaX/qE+ynuIJrA+AiwOu5JmmHgAAB/RHL5fz8AAHBCAACoQgAAAEMAAIBD7nz/PjMzcz8zM3O/5fL/PkkmX0KPuiFB2w9JQJDtEKqQ7RG6nOAAv73uyaoa7hBaNURvHm/znycM64cHuO7KupftAKpvHKwcb/OfJQzrhQVv858nle0AygzrhwU57kuale0Aum/znyQM64QElO0A2jvuSqoq7giqPO5LujvuCuo97kzaO+4Oui3uCNo97gu6Pu4L2ivuCbo77k26K+4JujvuCqoq7gmaOe4MmpHtAKo57gqqtO5mqvHuEPqw7maaCNS07meqsO5KmvHuEPrIv7DuZ5qQ7QuqkO0JupDtCsoq7guqOu4JqoDtCpqQ7QWakO0HujruTKqQ7QTKKe4LmoDtC6o67kmaLO4LqjnuSpqQ7QiqkO0G2jnuSpop7g2aLO4JmjnuC7o57guagO0HmizuC5o57gqqOe4KmgzrhgSA7QiahO0AqnQekO0QupDtD5pv858kBGCA7RG6gO0QqjruS6oq7gmaku0AqjnuC5o67gmaATui7AGaAfEEAX/0t66A7Qw6vewOiwGwvejwj2ZmZj4OdFo7ZmYGQAAAAADNzMw916NwP4/CdT0/NR6/mpkZPi2ynb5g5dA+AACALw==",
+      "relocations": [
+        {
+          "offset": 160,
+          "type": 47,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 164,
+          "type": 48,
+          "target": {
+            "external": 134737128
+          }
+        },
+        {
+          "offset": 180,
+          "type": 47,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 192,
+          "type": 48,
+          "target": {
+            "external": 134736100
+          }
+        },
+        {
+          "offset": 372,
+          "type": 47,
+          "target": {
+            "section": 0,
+            "value": 0
+          }
+        },
+        {
+          "offset": 382,
+          "type": 48,
+          "target": {
+            "section": 0,
+            "value": 0
+          }
+        },
+        {
+          "offset": 656,
+          "type": 47,
+          "target": {
+            "external": 536871196
+          }
+        },
+        {
+          "offset": 684,
+          "type": 48,
+          "target": {
+            "external": 536871196
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "size": 120,
+      "alignment": 4,
+      "data": "gLXR+AjAT/AADrz1gF8B0gAiB+AKaKz1gFwC9YBTC2DB+AjAACNCYEL4A+AEM7P1gF/50U/wAA689YBvT/AAAsD4AOAG0wpoAvWAYwtgrPWAY4tgACHCYEL4AeAEMbH1gG/50QAhgWAAIcTyyCEBY73ogED/9/6/",
+      "relocations": [
+        {
+          "offset": 116,
+          "type": 30,
+          "target": {
+            "section": 11,
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "size": 102,
+      "alignment": 4,
+      "data": "QWgAIgAjAL/KUAQzs/WAX/rRwmgAIQAjAWAAv9FQBDOz9YBv+tFL9iIiw/YAUgJhTfIKcsP2I0JCYUr2yiLD9n9ygmFO8rFCACHD9n9ygWABYsFhgWLBYkJiQWOBY0FkAWTBY3BH",
+      "relocations": []
+    },
+    {
+      "id": 12,
+      "size": 22,
+      "alignment": 2,
+      "data": "9e5ACvHuEPqIv//3/r/x7mAK//f+vw==",
+      "relocations": [
+        {
+          "offset": 10,
+          "type": 30,
+          "target": {
+            "section": 9,
+            "value": 1
+          }
+        },
+        {
+          "offset": 18,
+          "type": 30,
+          "target": {
+            "section": 8,
+            "value": 1
+          }
+        }
+      ]
+    }
+  ],
+  "roots": [
+    {
+      "section": 3,
+      "value": 1
+    },
+    {
+      "section": 4,
+      "value": 1
+    },
+    {
+      "section": 2,
+      "value": 1
+    },
+    {
+      "section": 5,
+      "value": 1
+    }
+  ]
+}

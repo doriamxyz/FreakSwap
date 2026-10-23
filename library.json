@@ -91,8 +91,8 @@
         "Bright",
         "Damping"
       ],
-      "module": "f5fd9e5e37af1186bc9f119966645ad79c2942ac690e841039c2fe36ab3fd871",
-      "object_bytes": 52,
+      "module": "143a290025ce47cbeedd4f550b4b936a7ef30493e2c499d173ef5241d2c11567",
+      "object_bytes": 56,
       "scratch_bytes": 15808,
       "reset_on_activation": false,
       "continuous_controls": true,
@@ -174,15 +174,15 @@
     "string_machine": {
       "engine": "string_machine",
       "variant": "normal",
-      "name": "String Machine v2",
+      "name": "String Machine v3",
       "labels": [
         "StringMachine",
         "Chord",
         "Bright/Ens",
         "Register"
       ],
-      "module": "d2dc23f3fd58ffd6cc43927e5f92e8113ab9c223eaaa07d298caba4961ea2142",
-      "object_bytes": 276,
+      "module": "c5b67a096332cf35f322f714b9c36d17d2a4aa7d3a82018b3f5ff5b7427a4a1a",
+      "object_bytes": 244,
       "scratch_bytes": 4332,
       "reset_on_activation": false,
       "continuous_controls": false,
@@ -791,11 +791,6 @@
       "size": 6007,
       "sha256": "b11307266090ab6b522eec428527d6c0b92de66c82bb6dd19ea9ead74325cda4"
     },
-    "f5fd9e5e37af1186bc9f119966645ad79c2942ac690e841039c2fe36ab3fd871": {
-      "url": "modules/f5fd9e5e37af1186bc9f119966645ad79c2942ac690e841039c2fe36ab3fd871.json",
-      "size": 16862,
-      "sha256": "f5fd9e5e37af1186bc9f119966645ad79c2942ac690e841039c2fe36ab3fd871"
-    },
     "842cb660e75e4d36d8355e22574bba3b333afa21d75b84b5a4f883089fcb3fa2": {
       "url": "modules/842cb660e75e4d36d8355e22574bba3b333afa21d75b84b5a4f883089fcb3fa2.json",
       "size": 5985,
@@ -805,11 +800,6 @@
       "url": "modules/b6311c1bacbf948f39203e1e4472d71ba717b010d480a4010289a36d3a19855e.json",
       "size": 5205,
       "sha256": "b6311c1bacbf948f39203e1e4472d71ba717b010d480a4010289a36d3a19855e"
-    },
-    "d2dc23f3fd58ffd6cc43927e5f92e8113ab9c223eaaa07d298caba4961ea2142": {
-      "url": "modules/d2dc23f3fd58ffd6cc43927e5f92e8113ab9c223eaaa07d298caba4961ea2142.json",
-      "size": 13980,
-      "sha256": "d2dc23f3fd58ffd6cc43927e5f92e8113ab9c223eaaa07d298caba4961ea2142"
     },
     "9be89d2d825734fcc254745741568c390db58ec8c58a638e30b4d8aa966d2687": {
       "url": "modules/9be89d2d825734fcc254745741568c390db58ec8c58a638e30b4d8aa966d2687.json",
@@ -840,6 +830,16 @@
       "url": "modules/c1438f8b62f38555c746fa83826f1e1f7992a68a3ccf0837a8c760e5106c5f54.json",
       "size": 7654,
       "sha256": "c1438f8b62f38555c746fa83826f1e1f7992a68a3ccf0837a8c760e5106c5f54"
+    },
+    "143a290025ce47cbeedd4f550b4b936a7ef30493e2c499d173ef5241d2c11567": {
+      "url": "modules/143a290025ce47cbeedd4f550b4b936a7ef30493e2c499d173ef5241d2c11567.json",
+      "size": 14404,
+      "sha256": "143a290025ce47cbeedd4f550b4b936a7ef30493e2c499d173ef5241d2c11567"
+    },
+    "c5b67a096332cf35f322f714b9c36d17d2a4aa7d3a82018b3f5ff5b7427a4a1a": {
+      "url": "modules/c5b67a096332cf35f322f714b9c36d17d2a4aa7d3a82018b3f5ff5b7427a4a1a.json",
+      "size": 9988,
+      "sha256": "c5b67a096332cf35f322f714b9c36d17d2a4aa7d3a82018b3f5ff5b7427a4a1a"
     }
   },
   "bridge": {
