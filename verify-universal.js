@@ -1,5 +1,5 @@
 // Independent ownership/preservation check. Does not trust the writer's edit list.
-import {FLASH_BASE,META,branch} from './compose.js';
+import {FLASH_BASE,META,branch} from './compose.js?raster-20261026';
 const equal=(a,b)=>a.length===b.length&&a.every((x,i)=>x===b[i]),read=(b,p)=>new DataView(b.buffer,b.byteOffset,b.byteLength).getUint32(p,true),assert=(ok,s)=>{if(!ok)throw new Error('Independent firmware verification failed: '+s);};
 export function verifyUniversal(base,library,c){
  const {image,selected,nativeBridge}=c,retired=new Set(selected.map(a=>a.original)),pools=library.regions.filter(r=>r.owners.every(k=>retired.has(k))).map(r=>[r.start,r.end]).sort((a,b)=>a[0]-b[0]);

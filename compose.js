@@ -1,4 +1,4 @@
-import {universalAdapters,universalSelection,composeUniversal} from './universal.js?sixop-defaults-20261022';
+import {universalAdapters,universalSelection,composeUniversal} from './universal.js?raster-20261026';
 // Offline ARM module composition. No catalog of complete firmware is consulted.
 export const FLASH_BASE=0x0800c000, META=0x564f4, POOL_END=0x6f366;
 export const hash=async bytes=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),x=>x.toString(16).padStart(2,'0')).join('');

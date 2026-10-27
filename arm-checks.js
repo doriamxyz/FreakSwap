@@ -1,6 +1,6 @@
 // Execute native firmware routines under the ARM interpreter in a Worker.
 // This is a bounded test harness, not a device/boot/interrupt simulation.
-import {FLASH_BASE,hash} from './compose.js?sixop-defaults-20261022';
+import {FLASH_BASE,hash} from './compose.js?raster-20261026';
 const STOP=0x0800b000,CONTROLLER=0x2001c898,OWNER=0x20004830,COMMON=0x2000484c,STRIDE=0x59e4;
 const BUFFER=0x21005000,ALLOCATOR=0x20004384,KEYBOARD=0x20003778;
 const assert=(ok,message)=>{if(!ok)throw new Error('ARM verification failed: '+message);};
@@ -10,7 +10,8 @@ function f32(n){const b=new Uint8Array(4);new DataView(b.buffer).setFloat32(0,n,
 export function armMachine(uc,image){
  const e=new uc.Unicorn(uc.ARCH_ARM,uc.MODE_THUMB|uc.MODE_MCLASS);
  assert(typeof e.ctl_set_cpu_model==='function','Cortex-M4 model control is required');e.ctl_set_cpu_model(uc.CPU_ARM_CORTEX_M4);
- e.mem_map(0x08000000,0x80000,uc.PROT_ALL);e.mem_map(0x20000000,0x20000,uc.PROT_ALL);e.mem_write(FLASH_BASE,image);
+ // A cold-boot BSS fixture: reused WASM heap pages must not supply prior SRAM.
+ e.mem_map(0x08000000,0x80000,uc.PROT_ALL);e.mem_map(0x20000000,0x20000,uc.PROT_ALL);e.mem_write(0x20000000,new Uint8Array(0x20000));e.mem_write(FLASH_BASE,image);
  e.reg_write_i32(uc.ARM_REG_C1_C0_2,0xf00000);e.reg_write_i32(uc.ARM_REG_FPEXC,0x40000000);
  const read32=p=>new DataView(e.mem_read(p,4).buffer).getUint32(0,true),put32=(p,n)=>e.mem_write(p,bytes32(n));
  const r=n=>e.reg_read_i32(uc['ARM_REG_'+n])>>>0,w=(n,v)=>e.reg_write_i32(uc['ARM_REG_'+n],v|0);
@@ -39,6 +40,10 @@ export function audioFixture(uc,image){
  return {...m,locations,set,render};
 }
 export async function checkComposition(uc,image,selected,onProgress=()=>{}){
+ if(selected.some(a=>a.native_sample)){const {checkNativeSample}=await import('./native-sample-checks.js?raster-20261026');const native=await checkNativeSample(uc,image,selected,onProgress),regular=await checkPlaitsComposition(uc,image,selected.filter(a=>!a.native_sample),onProgress);return {...regular,passed:native.passed&&regular.passed,native_sample:native};}
+ return checkPlaitsComposition(uc,image,selected,onProgress);
+}
+async function checkPlaitsComposition(uc,image,selected,onProgress=()=>{}){
  const start=performance.now(),f=audioFixture(uc,image),{e,read32,put32,r,w,call,set,render,hook}=f;
  const rows=[],dispatch=[],modelTables={},parameterReads=[],live={capture:false,object:0,objects:new Set(),coefficients:[]};hook(0x0805f6a6,()=>{dispatch.push({object:r('R0'),entry:r('R7')&~1});const pv=new DataView(e.mem_read(r('R1'),24).buffer);parameterReads.push({object:r('R0'),note:pv.getFloat32(4,true),controls:[8,12,16].map(off=>pv.getFloat32(off,true))});if(live.capture)live.object=r('R0');});
  try{

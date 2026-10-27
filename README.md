@@ -4,6 +4,10 @@
 
 A free, independent browser tool for building a custom MicroFreak engine lineup. Choose which original engines to replace, listen to examples, and prepare a modified firmware file locally in your browser.
 
+## Raster
+
+Raster replaces Sample with rhythmic sample slicing and repeat controls. Wave sets Start, Timbre chooses the Density division and Shape adds Chaos. It uses your loaded samples and the existing sample selector. Repeats follow transport while it runs and return to free repetition when it stops. Cloud, Hit and Scan stay unchanged unless you explicitly replace those slots too. [Implementation, rebuilding and limits](engines/raster/README.md).
+
 ## Use
 
 1. Choose the original positions and their replacement engines.

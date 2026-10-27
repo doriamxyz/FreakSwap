@@ -1,6 +1,7 @@
 // Public model names follow Plaits Palette; resource IDs and firmware labels stay stable.
 // Reference: https://www.rubato.audio/plaits-palette/
 const ENGINE_NAMES={
+ raster:'Raster',
  phase_distortion:'Phase Distortion',classic_waves_vcf:'VA + VCF',swarm:'Swarm',
  inharmonic_string:'Inharmonic String',particle_noise:'Particle Noise',filtered_noise:'Filtered Noise',
  string_machine:'String Machine',chiptune:'Chiptune',bass_drum:'Analog Bass Drum',snare_drum:'Analog Snare',
@@ -14,6 +15,7 @@ export function engineName(engine){
 }
 // Sound descriptions are editorial guidance; DSP identities remain in library.json.
 export const ENGINE_GUIDE={
+ raster:{character:'Repeating sample slices with rhythmic cuts and controlled position changes.',uses:'Wave chooses the start position, Timbre sets divisions from 1/2 to 1/32, and Shape adds position variation. Uses your loaded samples and the existing sample selector. Replaces Sample; Cloud, Hit and Scan remain available. Repeats follow transport while it runs and return to free repetition when it stops.'},
  phase_distortion:{character:'Sharp, animated digital tones that move from rounded to biting.',uses:'Basses, leads and metallic textures.'},
  classic_waves_vcf:{character:'Classic oscillator shapes through a resonant filter, with extra drive on Shift + Type.',uses:'Basses, filter sweeps and warm leads.'},
  swarm:{character:'A moving cloud of small oscillator grains, from focused to widely spread.',uses:'Dense drones, animated pads and buzzing leads.'},

@@ -1,6 +1,7 @@
-import {verifyUniversal} from './verify-universal.js?sixop-defaults-20261022';
+import {hasRaster,planRaster,composeRaster} from './native-sample.js?raster-20261026';
+import {verifyUniversal} from './verify-universal.js?raster-20261026';
 // One overlay ABI, conditional ownership and joint placement for the whole selection.
-import {FLASH_BASE,META,hash,linkModule,branch,configurationBridge} from './compose.js';
+import {FLASH_BASE,META,hash,linkModule,branch,configurationBridge} from './compose.js?raster-20261026';
 const enc=s=>new TextEncoder().encode(s),view=b=>new DataView(b.buffer,b.byteOffset,b.byteLength),align=(n,a=4)=>Math.ceil(n/a)*a;
 const error=(code,message,details={})=>{const e=new Error(message);e.code=code;e.details=details;throw e;};
 const words=values=>{const b=new Uint8Array(values.length*4);values.forEach((n,i)=>view(b).setUint32(i*4,n,true));return b;};
@@ -8,7 +9,7 @@ const abiKey=a=>a.module+':'+(a.root_indices||[0,1,2,3]).join(',');
 const same=(a,b)=>a.length===b.length&&a.every((n,i)=>n===b[i]);
 export function universalAdapters(library){
  const rows=[];for(const [original,host] of Object.entries(library.hosts)){
-  for(const e of Object.values(library.engines)){if(e.abi!==host.abi||e.object_bytes>host.object_limit||e.scratch_bytes>library.limits.arena_per_voice)continue;rows.push({...e,...host,original,native_alias:true,portable:true});}
+  for(const e of Object.values(library.engines)){if(e.native_sample){if(original===e.original)rows.push({...host,...e,id:host.id,original,native_alias:false,portable:false});continue;}if(e.abi!==host.abi||e.object_bytes>host.object_limit||e.scratch_bytes>library.limits.arena_per_voice)continue;rows.push({...e,...host,original,native_alias:true,portable:true});}
   rows.push({...host,original,engine:'empty',variant:'normal',name:'Empty · release space',labels:['Empty','','',''],module:library.retirement_module,object_bytes:0,scratch_bytes:0,continuous_controls:true,reset_on_activation:false,native_alias:true,empty:true});
  }return rows;
 }
@@ -20,7 +21,7 @@ export function universalSelection(library,recipe){
  return selected.sort((a,b)=>a.id-b.id);
 }
 export function poolRegions(library,selected){
- const retired=new Set(selected.map(a=>a.original)),rows=library.regions.filter(r=>r.owners.every(k=>retired.has(k))).map(r=>[r.start,r.end]).sort((a,b)=>a[0]-b[0]);const union=[];
+ const retired=new Set(selected.map(a=>a.original)),native=selected.some(a=>a.native_sample),rows=[...library.regions.filter(r=>r.owners.every(k=>retired.has(k))&&!(native&&r.owners.includes('sample'))).map(r=>[r.start,r.end]),...(native?library.extensions.raster.windows.map(r=>[r.start,r.end]):[])].sort((a,b)=>a[0]-b[0]);const union=[];
  for(const [a,b] of rows){const last=union.at(-1);if(last&&a<=last[1])last[1]=Math.max(last[1],b);else union.push([a,b]);}return union;
 }
 function screenBridge(selected){
@@ -29,6 +30,7 @@ function screenBridge(selected){
  v.setUint16(at,0x3801,true);at+=2;const literal=b.length-4,delta=literal-Math.floor((at+4)/4)*4;v.setUint16(at,0xf8df,true);v.setUint16(at+2,0xf000|delta,true);at+=4;if(at<literal)v.setUint16(at,0xbf00,true);v.setUint32(literal,0x0804df9b,true);return b;
 }
 export function planUniversal(library,recipe,modules,{searchLimit=1000000}={}){
+ if(hasRaster(recipe))return planRaster(library,recipe,modules,{searchLimit},planUniversal,universalSelection);
  const selected=universalSelection(library,recipe),regions=poolRegions(library,selected),sections=[],moduleMaps={};
  function add(data,alignment=4,relocations=[]){const id=sections.length;sections.push({id,size:data.length,alignment,data:btoa(String.fromCharCode(...data)),relocations});return id;}
  const needed=[...new Set([...(selected.some(a=>a.twist)?[library.extensions.twist.module]:[]),...selected.flatMap(a=>[a.module,...(a.resources||[])]),library.bridge.module,...(selected.some(a=>a.retired_table)?[library.retirement_module]:[])])].sort();
@@ -44,6 +46,7 @@ export function planUniversal(library,recipe,modules,{searchLimit=1000000}={}){
  return {selected,regions,required,available,linked,sections,moduleMaps,tableSections,labelSections,twistLabelSections,config,screen,route,address};
 }
 export async function composeUniversal(base,library,recipe,modules,options={}){
+ if(hasRaster(recipe))return composeRaster(base,library,recipe,modules,options,planUniversal,composeUniversal,universalSelection);
  if(!(base instanceof Uint8Array)||base.length!==library.base.raw_size||await hash(base)!==library.base.raw_sha256)error('base','The raw official firmware is incorrect.');
  for(const id of new Set([...(universalSelection(library,recipe).some(a=>a.twist)?[library.extensions.twist.module]:[]),...universalSelection(library,recipe).flatMap(a=>[a.module,...(a.resources||[])]),library.bridge.module,library.retirement_module])){const m=modules[id];if(!m||await hash(enc(JSON.stringify(m,null,2)+'\n'))!==id)error('module','Module content failed verification.');}
  const p=planUniversal(library,recipe,modules,options),{linked,address,selected}=p,image=base.slice(),edits=[],links=[],spec=library.bridge,retired=new Set(selected.map(a=>a.original));
@@ -93,6 +96,6 @@ export async function composeUniversal(base,library,recipe,modules,options={}){
  if(retired.has('speech')){replace(0x5366c,Uint8Array.of(0,0xbf),'retired Speech route');if(selected.some(a=>a.engine==='phase_distortion'&&a.id===11)){const b=new Uint8Array(4);view(b).setFloat32(0,0.7,true);replace(0x53450,b,'Phase output gain');}}
  edits.sort((a,b)=>a.start-b.start);let cursor=0;for(const e of edits){if(!same(image.slice(cursor,e.start),base.slice(cursor,e.start)))error('preservation','An unselected region changed.');cursor=e.end;}if(!same(image.slice(cursor),base.slice(cursor)))error('preservation','An unselected region changed.');
  for(const a of selected){if(view(image).getUint32(a.runtime_vtable+8,true)!==(moduleRoots(a)[3]|1))error('dispatch','A module dispatch table is incorrect.');}
- const result={image,selected,edits,links,nativeBridge:{bindings,bindings_raw:bindingRaw,roots,route:routeRaw,module:spec.module,overlay_group:'chords',preserves_native_vtables:!families.length,reclaimed_regions:p.regions,speech_retained:!retired.has('speech')},plan:{regions:p.regions,required:p.required,available:p.available,placements:linked.placements,section_layout:p.sections.map(s=>({id:s.id,start:linked.placements[s.id].start,size:s.size,alignment:s.alignment})),relocations:linked.relocationCount,all_modules_placed_jointly:true},extensions:(sixop||twist)?{...(twist?{twist:{roots:twistRoots,models_raw:twistRoots[twist.models_root]-FLASH_BASE,next_raw:twistRoots[twist.next_root]-FLASH_BASE,state_address:twist.state_address}}:{}),...(sixop?{sixop:{roots:sixopRoots,models_raw:sixopRoots[sixop.models_root]-FLASH_BASE,banks_raw:sixopRoots[sixop.banks_root]-FLASH_BASE,state_address:sixop.state_address}}:{})}:null,sha256:await hash(image),structuralVerified:false};
+ const result={image,selected,edits,links,nativeBridge:{bindings,bindings_raw:bindingRaw,roots,route:routeRaw,screen:screenRaw,module:spec.module,overlay_group:'chords',preserves_native_vtables:!families.length,reclaimed_regions:p.regions,speech_retained:!retired.has('speech')},plan:{regions:p.regions,required:p.required,available:p.available,placements:linked.placements,section_layout:p.sections.map(s=>({id:s.id,start:linked.placements[s.id].start,size:s.size,alignment:s.alignment})),relocations:linked.relocationCount,all_modules_placed_jointly:true},extensions:(sixop||twist)?{...(twist?{twist:{roots:twistRoots,models_raw:twistRoots[twist.models_root]-FLASH_BASE,next_raw:twistRoots[twist.next_root]-FLASH_BASE,state_address:twist.state_address}}:{}),...(sixop?{sixop:{roots:sixopRoots,models_raw:sixopRoots[sixop.models_root]-FLASH_BASE,banks_raw:sixopRoots[sixop.banks_root]-FLASH_BASE,state_address:sixop.state_address}}:{})}:null,sha256:await hash(image),structuralVerified:false};
  result.independentVerification=verifyUniversal(base,library,result);result.structuralVerified=result.independentVerification.passed;return result;
 }

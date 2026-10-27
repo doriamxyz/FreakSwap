@@ -395,6 +395,25 @@
       "resources": [
         "63d4f7eae44dbf5148c0fbc70bf9009a751a35b2f77c79dd943e423a26df5409"
       ]
+    },
+    "raster": {
+      "engine": "raster",
+      "variant": "normal",
+      "name": "Raster",
+      "labels": [
+        "Raster",
+        "Start",
+        "Density",
+        "Chaos"
+      ],
+      "module": "d812044b6f1a9500d736928f2e42fadda0c76baeefe78332230564c69280c062",
+      "abi": "native-sample-v1",
+      "object_bytes": 148,
+      "scratch_bytes": 1056,
+      "continuous_controls": true,
+      "reset_on_activation": false,
+      "native_sample": true,
+      "original": "sample"
     }
   },
   "hosts": {
@@ -840,6 +859,11 @@
       "url": "modules/c5b67a096332cf35f322f714b9c36d17d2a4aa7d3a82018b3f5ff5b7427a4a1a.json",
       "size": 9988,
       "sha256": "c5b67a096332cf35f322f714b9c36d17d2a4aa7d3a82018b3f5ff5b7427a4a1a"
+    },
+    "d812044b6f1a9500d736928f2e42fadda0c76baeefe78332230564c69280c062": {
+      "url": "modules/d812044b6f1a9500d736928f2e42fadda0c76baeefe78332230564c69280c062.json",
+      "size": 3751,
+      "sha256": "d812044b6f1a9500d736928f2e42fadda0c76baeefe78332230564c69280c062"
     }
   },
   "bridge": {
@@ -1533,6 +1557,45 @@
         "tw_runtime_init"
       ],
       "families": 11
+    },
+    "raster": {
+      "module": "d812044b6f1a9500d736928f2e42fadda0c76baeefe78332230564c69280c062",
+      "id": 19,
+      "original": "sample",
+      "object_bytes": 148,
+      "state_bytes": 32,
+      "buffer_bytes": 1024,
+      "windows": [
+        {
+          "start": 43116,
+          "end": 44590,
+          "sha256": "3f2e7aadc08cd5bf7615e8c22628584af66a012afa3f0dbfee60ff142af25f50"
+        },
+        {
+          "start": 149732,
+          "end": 149814,
+          "sha256": "592b6833f3ab52f477d055f790274c23eec4e7a2c7304ffa9c1f854bc0b3a82c"
+        }
+      ],
+      "reload": {
+        "raw": 44632,
+        "expected": "16d0",
+        "replacement": "16e0"
+      },
+      "callbacks": [
+        {
+          "raw": 429776,
+          "expected": 134415989
+        },
+        {
+          "raw": 429788,
+          "expected": 134416613
+        },
+        {
+          "raw": 429800,
+          "expected": 134416761
+        }
+      ]
     }
   }
 }
