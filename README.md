@@ -29,3 +29,11 @@ FreakSwap is free and always will be. Optional contributions: [Support the proje
 ## Notices
 
 Independent project, unaffiliated with Arturia. MicroFreak and MIDI Control Center are Arturia product names. See [NOTICE.txt](NOTICE.txt) for third-party attribution and licenses. The verification interpreter's source and build instructions are included in [unicorn-source.tar.gz](unicorn-source.tar.gz).
+
+## Optional performance controls
+
+The “Double-tap Shift + ARP LOCK” checkbox is enabled by default. Its setting is remembered locally and recorded in the download summary and installation guide. Unchecking it generates the same engine firmware as before this option was added.
+
+Double-tap Shift retains the native Shift modifier; another tap releases it. With Paraphonic + ARP + Hold enabled and keys released, Shift + Hold locks the arpeggio and frees the keyboard. Hold blinks in FREE PLAY and stays steady while editing. Shift + Hold returns to editing without stopping the arpeggio.
+
+The package is separate from engine modules. Composition verifies its pinned asset, code ownership, preset-load continuation and separate state reservation before running native control checks. SixOp/TWIST combinations reserve the UI state below engine state and retain the existing engine preset loader. The standalone Base UI V2 was owner-tested; engine combinations also need instrument testing for boot, preset persistence, MIDI timing, CPU and stack limits.

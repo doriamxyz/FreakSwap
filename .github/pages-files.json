@@ -27,8 +27,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 26544,
-      "sha256": "c0136ffe4bbf9f03af706b32c6edec68cf1b4f77f6ef810b86a98a806340933f"
+      "bytes": 27626,
+      "sha256": "d499e8a823ab16c336f94a4ecc89659ba3a51d2189f623d262c008a31ca64eae"
     },
     {
       "path": "arm-checks.js",
@@ -126,6 +126,11 @@
       "sha256": "76b7f7c7529ed81d538582740b051a24eaa81d922be384eec912ba5e1e765802"
     },
     {
+      "path": "controls-release.js",
+      "bytes": 99,
+      "sha256": "f12f60f9a7ae630a2d204d94fef4aff7c628a586d55beeec3523cfa864f8b3c4"
+    },
+    {
       "path": "custom-audition.js",
       "bytes": 4409,
       "sha256": "57e60f1063c27a620dd8d1d8e711a60c40ee4b0c086ec5af6448ddea9ad6f37c"
@@ -157,8 +162,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 6047,
-      "sha256": "963aef4881992354d1154cc13a73d34d24ce8dc642352f1cfcf2cbe1f538c8f5"
+      "bytes": 6393,
+      "sha256": "db3bc38c8efd637fd308d238b0d4458635536cf2588ef3591ba2b31af12d5a7f"
     },
     {
       "path": "library-release.js",
@@ -356,9 +361,24 @@
       "sha256": "022f52f3d0c4f2f64c2679f539ec6a54a7fed3a7facad3ed4217f124b6a761dc"
     },
     {
+      "path": "performance-checks.js",
+      "bytes": 2344,
+      "sha256": "58d92e7c5ab9d2e24c938fbed271369c1a78e90948f34436fc37e30751ba6102"
+    },
+    {
+      "path": "performance-controls.js",
+      "bytes": 3922,
+      "sha256": "f0381a791b2abfe93dfa74bf7f91f174b49265c9766564e8d77cdfb3334c7633"
+    },
+    {
+      "path": "performance-controls.json",
+      "bytes": 23240,
+      "sha256": "7258f5adc9282c599e18685eabc57d6162cdd745e815ffc082922d0e2a4e0398"
+    },
+    {
       "path": "styles.css",
-      "bytes": 10626,
-      "sha256": "38f0e812ce4f35c61d032ea2691420fbbb81bcb0c1c8a256397f8c026613ce9a"
+      "bytes": 10921,
+      "sha256": "6c878dbd07e6a007f33c2d42a6104e06627e05ba4be0641d372309e4cdccaf82"
     },
     {
       "path": "unicorn-source.tar.gz",
@@ -382,8 +402,8 @@
     },
     {
       "path": "worker.js",
-      "bytes": 2941,
-      "sha256": "6419874ffeb1a25d98817f0e984ffdb194a2ffe7978da308b790f6e633006dd2"
+      "bytes": 3902,
+      "sha256": "30bfc6215a64e0aebf03a1dd055b1c9acd5d90112d3443d1bf53be42871ef16d"
     }
   ]
 }

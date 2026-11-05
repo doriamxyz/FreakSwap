@@ -1,0 +1,337 @@
+{
+  "format": "freakswap.performance-controls",
+  "version": 1,
+  "baseSHA256": "54be2e0b695e2279602513e1a9ed39906408ba221a45e782b61273f0ef55d15f",
+  "variants": {
+    "plain": {
+      "windows": [
+        {
+          "raw": 129888,
+          "expected": "2de9f843224f3b788146b3b3dff88c800023d8f800603b706eb31e4c002503e054f8045c002d1cdb54f8081c3046e0f73bfb083403460028f2d13a789ab13b703046e0f73bfb012815d13278a2f13102b2fa82f2e9b248465209bde8f84303f021b9bde8f8830c4935f09efd0646c8f800000028e4d1bde8f88318460649dff81c8035f091fd0646c8f80000c4e700bf584400206c3d0708603d0708544400202de9f0411b4e33788046f3b11a4f00233d68337065b3194c03e054f8043c002b11db54f8081c2846e0f7eefa083403460028f2d1327882b1337029464046bde8f04103f017b9bde8f08118460c490a4f35f05afd05463860dce7094935f054fd0546386029464046bde8f04103f002b9bde8f0815844002054440020583d0708603d07081c4b187870b5d8b11b4900220e681a70a6b11a4c002503e054f8045c002d0edb54f8081c30460834e0f7acfa0028f3d1032d03d8dfe805f01115190b70bd70bd0f4935f01ffd0c4b06461860e0e70d4a136823f44063136070bdbde8704003f085b8bde8704003f079b80748bde87040f7f7f2b85844002054440020683c0708603d07080004024060090020",
+          "data": "sLVFTJgHT/ABAFT4BFwf0UJLnUIc0UD2BACCQgTRACkYvwEhYXA24EHyARATGgYrD9gBIAD6A/KU+KwwAClD6gIFCL8j6gIFhPisUCF4AbuwvbL1iF8E0VGx4HiAsaB4CuABICJ4ACny0AAq8NAQ4KB4ACGhcOFwsPqA8EAJsL0BIOBwYHgQsZT4rAAosSB4CLEA8PP4ASCwvQDwy/gAKPXQIHhosSB4ASgr0QDwpvsCICBwlPirADC7ACCE+KoAIuAAIBAoBdAhGAEwCXkAKfjQ4OcSSAF5Aync0QF4QHiBQtjRD0gAeAAH1NUOSQQgQLER+AYsErEKeAAqy9AMMQE49ecBICBwASWE+K1QAPBR+wAgpXCwvQT/ASABAExBNDkAIFc6ACCMQwAgcLUbTgVGG0oMRilGBvE0AJBHBCFhsRb4BiwysTJ4ASoD0Rb4BCyQQhfQDDYBOfHnEUkAIgMqCNCLXP8rA9CLGNt4mEIJ0AEy9OcAIgMqBNCLXP8rAtABMvjncL2NVBFEyHAoRiFGvehwQADwEboAv4xDACDlnwQIKP8BIAAEAkBgCQAg"
+        },
+        {
+          "raw": 130452,
+          "expected": "2de9f84fdff8ec8098f800308146002b49d0dff8e4a00023daf8007088f80030002f3cd0304c002603e054f8046c002e37db54f8081c3846e0f71cfa083405460028f2d198f80030002b3fd088f80050384635f003fb1ffa80fb98f8000070b30023daf8007088f80030002f39d01f4c03e054f8045c002d1fdb54f8081c38460834e0f7f7f90028f3d1ebb25946f2b2484602f085fda9f80660bde8f88fbde8f88fbde8f88f18461149dff84ca035f061fc0746caf80000b2e70023e6e70c4935f058fc0746caf80000cee7084935f051fc0746caf800000028b9d14ff6ff7bbbe73b46d2e700bf843f0708b43f0708603d07085844002054440020",
+          "data": "DEgBeAEpDdhAeAEoCtEKSAF4ObFAeCixCEgAeBC5CEgAeAixACBwRwZIAHgAKBi/ASBwRwQ3ACAyOQAgzkMAIF06ACCfDQAgsLUNTA1JIGiIQhTRIHmQsQDwtvoAJSVxhPivUIT4rlAA8Ir6EC0G0GAZATUBegJ+EUMBdvbnsL0A/wEgAQBMQRC1DUoAI5L4gECjQgTS1FwBM6BC99EQvZL4gDA/K/rY0FTQGID4QBBYHIL4gAABIIL4gQAQvQC/Lv8BIBC1C0gAIcQiACMqsUPqAAQBOgEzIXD45wAh/yIDKQTQQxgBMYP4KCD45wJJAWAQvQD/ASABAExB"
+        },
+        {
+          "raw": 130704,
+          "expected": "2de9f04fa74d2b7883b08046002b00f0c880a54f00233c682b7044b12678722e08d0772e06d006f0df03442b02d003b0bde8f08f2878002800f0d48000232b702046e0f7a3f90228f1d12278a2f13003d9b209290ad9a2f16103052b40f2d380a2f14103052be2d8a2f137036278a2f130095ffa89f109294fea031300f2998049ea03092878002800f0a38000232b702046e0f77bf90228c9d12278a2f13003d9b209290ad9a2f16103052b40f2ba80a2f14103052bbad8a2f137036278a2f1300a5ffa8af109294fea031340f29380a2f16101052900f2a880573a42ea030a722e00f08d802878002800f0a78000232b702046e0f74af9022898d12378a3f1300b5ffa8bf2092a0ad9a3f16102052a40f2a880a3f14102052a88d8a3f1370b6378a3f13002d1b209294fea0b1b71d842ea0b0b2878002800f0a68000232b702046e0f723f9022840f0a6802278a2f13003d9b209290bd9a2f16103052b40f29080a2f14103052b00f29680a2f137036278a2f13001c8b209284fea031366d80b435ffa8bf21bb28de80c0031465ffa8af35ffa89f2404602f0fefc03b0bde8f08f18464149404f35f066fb0446386033e7a2f16101052928d9a2f1410105293ff635af2878373a42ea030900287ff45daf364935f050fb0446386000287ff457af24e7314935f047fb0446386000287ff426af1be7722e4aea030a7ff473af00231a46c0e7a2f157032fe7573a42ea030937e7a3f16102052a26d8573b43ea0b0b87e7a2f1570348e7a2f1410105293ff6fdae373a42ea030a51e71b4935f01bfb0446386000287ff453afefe6a2f16101052912d9a2f1410105291cd8373a13438ee7a3f1570b5ae7a3f14102052a3ff6ddae373b43ea0b0b5be7573a13437fe7a2f1570373e7084935f0f5fa0446386000287ff454af5ffa8bf24ff0ff3372e700bf5844002054440020603d0708",
+          "data": "sLVCSAxGnQcBaGfRQE2pQmTRQPYEAYpCCtEhRgAsGL8BIZD4vCCKQhbRT/D/NFXgVLEAIYD4vhCA+L8Q0Pi0EKH2xRHA+LQQIUb/90H+ACgIv0/w/zRB4ID4vBAtSQloXLGQ+L0girEAJAEhgPi9QID4vkCA+MAQKuCQ+MAgorEAIU/w/zSA+MAQIuCQ+L4wACKrsdD4uDBA9rk0yxqjQk/wAAM4vwEjC+DQ+LQgiRpA9sUSkUIT0wAkgPi+QAfgACOA+L8wgPi+IMD4tBABJERxQPYFAAAhAfDG+iBGsL2Q+L8QQbEBIU/w/zSA+L0QACGA+L8Q7OfQ+LQQACTA+LgQASGA+L4Q4ucAvwD/ASABAExB2OEBIC3p+EM+SpL4gIC48QAPdNC48UAPcdg7TALxQACRRkNG4RxzsRV4ATsNcAV4TXAS+AFbgfiCUBD4AVuB+INQAjHv5wEgACFARSLQBOtAAg9GkviFMJL4hsC9HBDQ5hmW+IUgmkIM2QbxhgICPxL4ASyG+IcglviGIIb4iCDs5wAlYhkCMQEwgviFMIL4hsDa5x1PHk1P9IFgh/gAgKhHAygE0Hh4QEUkvwAgeHD/IAX1p2H4cCBGiEcVSAAhgCI6sUMYAToBMZx5BPDPBJxx9udJRkJGQrER+AE7AToDRJx5RPAwBJxx9ecDIYD4AICA+AGAAXEAIIn4gQC96PiDAL8u/wEgmAwAIJ8NACCBVwIINDkAIPi1FU4MRgVGFEkwaIhCHdEwedix//dg/rCxvLGW+K8AMLHv8xCHcrb/92D/h/MQiDB5ASgK0Zb4sQCA8AEAhvixAADwCfkB4P/3av4oRiFGvej4QADwPrkA/wEgAQBMQRC1CQQGTAAiACNB6gAgAPGQAQJIpEa96BBAYEeEQwAggdoECA=="
+        },
+        {
+          "raw": 131828,
+          "expected": "2de9f0473a4f3b7882b0814633b3dff8eca0daf800604ff0000887f80080002e5fd0344c002503e054f8045c002d07db54f8081c30460834dff76cff0028f3d1b8f1000f1cd000233b7026b1307835f0cbfa50281cd002b0bde8f08718462649dff898a035f0d6f94ff0ff350646caf8000097f800800028d3d1b8f1000fe2d11d49002035f0c6f90646caf80000dce7707835f0a9fa4138c4b20a2cdbd8b01c35f02cf8022dc6b20ad0387898b10023daf800003b70b8b135f020f880b200e000200090334622462946484602f0b6fa02b0bde8f087084935f09cf9caf80000e9e74ff0ff35cbe74ff6ff70e9e700bf58440020903c0708603d070854440020",
+          "data": "H7UYRgaZAfDT+AaQvegfQPC0vfkQUN/4BPAAAJMaAggESAF4QfIIEAApGL//IQHw6bgAvzI5ACAt6Q9Q//eS/b3oD1CE+Cgw3/gA8FM7BAgt6Q9Q//dI/b3oD1DQ+NQy3/gA8A1OBQgQtQAkAywIvxC9IEYB8HD4ATT35xC1BEb/9zL9IEa96BBAAPANuNznLenwT9/4APAphQQIkPgHMd/4APANWgIILenwR9/4APDlkgIIO3C4sTXwIPiAsgDgACAAkDNGIkYpRkhGAvC2+gKwvejwhwhJNfCc+cr4AADp50/w/zXL50/2/3Dp5wC/WEQAIJA8BwhgPQcIVEQAIA=="
+        },
+        {
+          "raw": 133780,
+          "expected": "2de9f047dff8608198f800308146002b53d0dff858a10023daf8006088f80030002e46d04c4c002503e054f8045c002d41db54f8081c3046dff79cfb083407460028f2d198f80030002b40d088f80070304634f083fc061e2bdb042d29d8dfe805f03f3f4d03470098f80000002866d00023daf8005088f80030d5b1374c03e054f8047c002f58db54f8081c2846dff771fb083403460028f2d198f80020002a3cd12f4934f0e6fd0546caf80000002836d1bde8f087bde8f08718462849dff8aca034f0d7fd0646caf80000a8e7244934f0d0fd0646caf800000028b8d1e8e70023b2b2e9b24846bde8f04702f088b803211c48fff7cefe0023f2e798f8000020b30023daf8000088f800300028d0d034f024fc031eccdb1bb2e2e788f80030284634f01bfc031ec3dbfab2b1b24846dbb2bde8f04702f079b8bde8f087084934f098fd0546caf8000096e7044934f091fdcaf80000d9e70c3e07083c3e0708603d070898c801205844002054440020",
+          "data": "Len4T8HzBkkWRkpKD0aCRklJmEZNRrnxAA8YvwElUvgEDN3pCkuIQmvRB/DwALDxkAEAkRi/gChj0RB4MLH/91/5PEoQuf/3f/k6ShB4ELFwHgIoPdMDLlPRAJjH8wYhEx2URk/q0Q6w+oDwE/gOIEAJKEBP8AEFT+oXIADwBwAF+gDwE/gOUBPQBUMD+A5QDOsOAxt9GEIb0Zz4ADCDsxBAFtGc+AEAsLMkSCRKkEcP4CXqAAID+A4gDPEUAhL4DjAYQgjQEvgOMMBDGEAC+A4AASC96PiPnPgAAIixACQDLPbQDOsEAJD4JACBQgbRIEZlRg5GAPBf/DFGrEYBNO7nzekKS1BGOUYyRkNGAbC96PBP//fsu5z4AAACKATRCEZJRv/3MPnT5whGSUb/92P4zucE/wEgAQBMQZgMACAZYAIIDbX/91n5EPEBDwbQAUa96A1AcLUURt/4CPC96A1AcEcpMgQIWEQAIFREACA="
+        },
+        {
+          "raw": 136268,
+          "expected": "2de9f843dff8d48098f8000000283bd0dff8cc900023d9f8006088f800307eb32a4c002503e054f8045c002d2adb54f8081c3046def7c2fe0834034607460028f1d1052d12d098f8000030b30023d9f8000088f8003098b133f0a4ff00280fdb052d20d01a4b5855bde8f88398f8002012b388f80030304633f094ff071ee2dabde8f883bde8f8831249dff8549034f015f90646c9f80000c1e70e4934f00ef9c9f80000d7e700f07f0207f07f010a48bde8f843f4f7c8bc064934f0fff80646c9f800000028d6d1dae700bfbc3d0708ac000020603d0708a80700205844002054440020",
+          "data": "E0lCXP8qIdDwtRJMjkbKHAAjT/ACDAAmMC4S0DcZF/gEHGGxuXhRuRf4AhwVXKlCBdEH+AQ8h/gDwDNVe3AMNurn/yIO+AAgvejwQHBHAL8o/wEgikMAIBC1EkoSTBNoo0Id0UHyCBOYQgzQQPYFA5hCFdGS+LwQAvG9AGGxkvjAECmxCOAQeVCxEHkCKAHR/yEF4ALxsQABeAApGL//IQhGEL0A/wEgAQBMQb+1CUwDRgAgAJH/IQAizekCAAKoBPXPZahH3ekCEgNIASOgR7+9AL8VFAIIoAUAIFhEACBURAAg"
+        }
+      ],
+      "edits": [
+        {
+          "raw": 426036,
+          "expected": "01bc0208",
+          "data": "edb80208",
+          "name": "retire_console_method"
+        },
+        {
+          "raw": 426068,
+          "expected": "61bb0208",
+          "data": "edb80208",
+          "name": "retire_console_method"
+        },
+        {
+          "raw": 426164,
+          "expected": "4dd40208",
+          "data": "edb80208",
+          "name": "retire_console_method"
+        },
+        {
+          "raw": 425940,
+          "expected": "85bc0208",
+          "data": "edb80208",
+          "name": "retire_console_method"
+        },
+        {
+          "raw": 425972,
+          "expected": "f5c20208",
+          "data": "edb80208",
+          "name": "retire_console_method"
+        },
+        {
+          "raw": 426132,
+          "expected": "91be0208",
+          "data": "edb80208",
+          "name": "retire_console_method"
+        },
+        {
+          "raw": 426196,
+          "expected": "95ca0208",
+          "data": "edb80208",
+          "name": "retire_console_method"
+        },
+        {
+          "raw": 426292,
+          "expected": "95bd0208",
+          "data": "edb80208",
+          "name": "retire_console_method"
+        },
+        {
+          "raw": 88716,
+          "expected": "f0b4bdf91050",
+          "data": "0af032bc1050",
+          "name": "panel_led_hook"
+        },
+        {
+          "raw": 225828,
+          "expected": "70b51446",
+          "data": "e9f7d8bc",
+          "name": "lock_dispatch"
+        },
+        {
+          "raw": 228174,
+          "expected": "84f82830",
+          "data": "e8f7edbb",
+          "name": "lock_init_hook"
+        },
+        {
+          "raw": 247076,
+          "expected": "2de9f04f",
+          "data": "e4f7b6ba",
+          "name": "lock_keyboard"
+        },
+        {
+          "raw": 104968,
+          "expected": "90f80731",
+          "data": "06f058bb",
+          "name": "lock_step"
+        },
+        {
+          "raw": 119520,
+          "expected": "2de9f047",
+          "data": "03f046b8",
+          "name": "lock_stop"
+        },
+        {
+          "raw": 298504,
+          "expected": "d0f8d432",
+          "data": "d7f79cba",
+          "name": "lock_load_hook"
+        },
+        {
+          "raw": 342148,
+          "expected": "00000220",
+          "data": "00ff0120",
+          "name": "reset_literal_reserve_256_bytes"
+        }
+      ],
+      "state": 537001728,
+      "stateBytes": 196,
+      "sha256": "105529590e803cc1cbceb6064bb2c475987eb8700a8f146d2b52b57f9b191112",
+      "symbols": {
+        "$t": 134398708,
+        "$d": 134398736,
+        "led": 134403321,
+        "eligible": 134397333,
+        "live_off": 134398813,
+        "hold_led": 134398741,
+        "release_live": 134403149,
+        "capture": 134397469,
+        "live_on": 134397069,
+        "assign": 134398237,
+        "commit": 134397865,
+        "panel_brightness": 134403237,
+        "panel_event": 134397585,
+        "lock_panel": 134396769,
+        "lock_exit": 134397405,
+        "lock_init": 134397529,
+        "lock_keyboard": 134400661,
+        "lock_step": 134398141,
+        "lock_stop": 134398833,
+        "lock_dispatch": 134400985,
+        "lock_init_hook": 134398765,
+        "lock_keyboard_original": 134398853,
+        "lock_step_original": 134398865,
+        "lock_stop_original": 134398877,
+        "lock_load_hook": 134398789,
+        "panel_led_hook": 134398709
+      },
+      "loadContinuation": 131920,
+      "loadExpected": "d0f8d432"
+    },
+    "shared": {
+      "windows": [
+        {
+          "raw": 129888,
+          "expected": "2de9f843224f3b788146b3b3dff88c800023d8f800603b706eb31e4c002503e054f8045c002d1cdb54f8081c3046e0f73bfb083403460028f2d13a789ab13b703046e0f73bfb012815d13278a2f13102b2fa82f2e9b248465209bde8f84303f021b9bde8f8830c4935f09efd0646c8f800000028e4d1bde8f88318460649dff81c8035f091fd0646c8f80000c4e700bf584400206c3d0708603d0708544400202de9f0411b4e33788046f3b11a4f00233d68337065b3194c03e054f8043c002b11db54f8081c2846e0f7eefa083403460028f2d1327882b1337029464046bde8f04103f017b9bde8f08118460c490a4f35f05afd05463860dce7094935f054fd0546386029464046bde8f04103f002b9bde8f0815844002054440020583d0708603d07081c4b187870b5d8b11b4900220e681a70a6b11a4c002503e054f8045c002d0edb54f8081c30460834e0f7acfa0028f3d1032d03d8dfe805f01115190b70bd70bd0f4935f01ffd0c4b06461860e0e70d4a136823f44063136070bdbde8704003f085b8bde8704003f079b80748bde87040f7f7f2b85844002054440020683c0708603d07080004024060090020",
+          "data": "sLVFTJgHT/ABAFT4BFwf0UJLnUIc0UD2BACCQgTRACkYvwEhYXA24EHyARATGgYrD9gBIAD6A/KU+KwwAClD6gIFCL8j6gIFhPisUCF4AbuwvbL1iF8E0VGx4HiAsaB4CuABICJ4ACny0AAq8NAQ4KB4ACGhcOFwsPqA8EAJsL0BIOBwYHgQsZT4rAAosSB4CLEA8PP4ASCwvQDwy/gAKPXQIHhosSB4ASgr0QDwpvsCICBwlPirADC7ACCE+KoAIuAAIBAoBdAhGAEwCXkAKfjQ4OcSSAF5Aync0QF4QHiBQtjRD0gAeAAH1NUOSQQgQLER+AYsErEKeAAqy9AMMQE49ecBICBwASWE+K1QAPBR+wAgpXCwvQT+ASABAExBNDkAIFc6ACCMQwAgcLUbTgVGG0oMRilGBvE0AJBHBCFhsRb4BiwysTJ4ASoD0Rb4BCyQQhfQDDYBOfHnEUkAIgMqCNCLXP8rA9CLGNt4mEIJ0AEy9OcAIgMqBNCLXP8rAtABMvjncL2NVBFEyHAoRiFGvehwQADwEboAv4xDACDlnwQIKP4BIAAEAkBgCQAg"
+        },
+        {
+          "raw": 130452,
+          "expected": "2de9f84fdff8ec8098f800308146002b49d0dff8e4a00023daf8007088f80030002f3cd0304c002603e054f8046c002e37db54f8081c3846e0f71cfa083405460028f2d198f80030002b3fd088f80050384635f003fb1ffa80fb98f8000070b30023daf8007088f80030002f39d01f4c03e054f8045c002d1fdb54f8081c38460834e0f7f7f90028f3d1ebb25946f2b2484602f085fda9f80660bde8f88fbde8f88fbde8f88f18461149dff84ca035f061fc0746caf80000b2e70023e6e70c4935f058fc0746caf80000cee7084935f051fc0746caf800000028b9d14ff6ff7bbbe73b46d2e700bf843f0708b43f0708603d07085844002054440020",
+          "data": "DEgBeAEpDdhAeAEoCtEKSAF4ObFAeCixCEgAeBC5CEgAeAixACBwRwZIAHgAKBi/ASBwRwQ3ACAyOQAgzkMAIF06ACCfDQAgsLUNTA1JIGiIQhTRIHmQsQDwtvoAJSVxhPivUIT4rlAA8Ir6EC0G0GAZATUBegJ+EUMBdvbnsL0A/gEgAQBMQRC1DUoAI5L4gECjQgTS1FwBM6BC99EQvZL4gDA/K/rY0FTQGID4QBBYHIL4gAABIIL4gQAQvQC/Lv4BIBC1C0gAIcQiACMqsUPqAAQBOgEzIXD45wAh/yIDKQTQQxgBMYP4KCD45wJJAWAQvQD+ASABAExB"
+        },
+        {
+          "raw": 130704,
+          "expected": "2de9f04fa74d2b7883b08046002b00f0c880a54f00233c682b7044b12678722e08d0772e06d006f0df03442b02d003b0bde8f08f2878002800f0d48000232b702046e0f7a3f90228f1d12278a2f13003d9b209290ad9a2f16103052b40f2d380a2f14103052be2d8a2f137036278a2f130095ffa89f109294fea031300f2998049ea03092878002800f0a38000232b702046e0f77bf90228c9d12278a2f13003d9b209290ad9a2f16103052b40f2ba80a2f14103052bbad8a2f137036278a2f1300a5ffa8af109294fea031340f29380a2f16101052900f2a880573a42ea030a722e00f08d802878002800f0a78000232b702046e0f74af9022898d12378a3f1300b5ffa8bf2092a0ad9a3f16102052a40f2a880a3f14102052a88d8a3f1370b6378a3f13002d1b209294fea0b1b71d842ea0b0b2878002800f0a68000232b702046e0f723f9022840f0a6802278a2f13003d9b209290bd9a2f16103052b40f29080a2f14103052b00f29680a2f137036278a2f13001c8b209284fea031366d80b435ffa8bf21bb28de80c0031465ffa8af35ffa89f2404602f0fefc03b0bde8f08f18464149404f35f066fb0446386033e7a2f16101052928d9a2f1410105293ff635af2878373a42ea030900287ff45daf364935f050fb0446386000287ff457af24e7314935f047fb0446386000287ff426af1be7722e4aea030a7ff473af00231a46c0e7a2f157032fe7573a42ea030937e7a3f16102052a26d8573b43ea0b0b87e7a2f1570348e7a2f1410105293ff6fdae373a42ea030a51e71b4935f01bfb0446386000287ff453afefe6a2f16101052912d9a2f1410105291cd8373a13438ee7a3f1570b5ae7a3f14102052a3ff6ddae373b43ea0b0b5be7573a13437fe7a2f1570373e7084935f0f5fa0446386000287ff454af5ffa8bf24ff0ff3372e700bf5844002054440020603d0708",
+          "data": "sLVCSAxGnQcBaGfRQE2pQmTRQPYEAYpCCtEhRgAsGL8BIZD4vCCKQhbRT/D/NFXgVLEAIYD4vhCA+L8Q0Pi0EKH2xRHA+LQQIUb/90H+ACgIv0/w/zRB4ID4vBAtSQloXLGQ+L0girEAJAEhgPi9QID4vkCA+MAQKuCQ+MAgorEAIU/w/zSA+MAQIuCQ+L4wACKrsdD4uDBA9rk0yxqjQk/wAAM4vwEjC+DQ+LQgiRpA9sUSkUIT0wAkgPi+QAfgACOA+L8wgPi+IMD4tBABJERxQPYFAAAhAfDG+iBGsL2Q+L8QQbEBIU/w/zSA+L0QACGA+L8Q7OfQ+LQQACTA+LgQASGA+L4Q4ucAvwD+ASABAExB2OEBIC3p+EM+SpL4gIC48QAPdNC48UAPcdg7TALxQACRRkNG4RxzsRV4ATsNcAV4TXAS+AFbgfiCUBD4AVuB+INQAjHv5wEgACFARSLQBOtAAg9GkviFMJL4hsC9HBDQ5hmW+IUgmkIM2QbxhgICPxL4ASyG+IcglviGIIb4iCDs5wAlYhkCMQEwgviFMIL4hsDa5x1PHk1P9IFgh/gAgKhHAygE0Hh4QEUkvwAgeHD/IAX1p2H4cCBGiEcVSAAhgCI6sUMYAToBMZx5BPDPBJxx9udJRkJGQrER+AE7AToDRJx5RPAwBJxx9ecDIYD4AICA+AGAAXEAIIn4gQC96PiDAL8u/gEgmAwAIJ8NACCBVwIINDkAIPi1FU4MRgVGFEkwaIhCHdEwedix//dg/rCxvLGW+K8AMLHv8xCHcrb/92D/h/MQiDB5ASgK0Zb4sQCA8AEAhvixAADwCfkB4P/3av4oRiFGvej4QADwPrkA/gEgAQBMQRC1CQQGTAAiACNB6gAgAPGQAQJIpEa96BBAYEeEQwAggdoECA=="
+        },
+        {
+          "raw": 131828,
+          "expected": "2de9f0473a4f3b7882b0814633b3dff8eca0daf800604ff0000887f80080002e5fd0344c002503e054f8045c002d07db54f8081c30460834dff76cff0028f3d1b8f1000f1cd000233b7026b1307835f0cbfa50281cd002b0bde8f08718462649dff898a035f0d6f94ff0ff350646caf8000097f800800028d3d1b8f1000fe2d11d49002035f0c6f90646caf80000dce7707835f0a9fa4138c4b20a2cdbd8b01c35f02cf8022dc6b20ad0387898b10023daf800003b70b8b135f020f880b200e000200090334622462946484602f0b6fa02b0bde8f087084935f09cf9caf80000e9e74ff0ff35cbe74ff6ff70e9e700bf58440020903c0708603d070854440020",
+          "data": "H7UYRgaZAfDT+AaQvegfQPC0vfkQUN/4BPAAAJMaAggESAF4QfIIEAApGL//IQHw6bgAvzI5ACAt6Q9Q//eS/b3oD1CE+Cgw3/gA8FM7BAgt6Q9Q//dI/b3oD1DQ+NQy3/gA8A1OBQgQtQAkAywIvxC9IEYB8HD4ATT35xC1BEb/9zL9IEa96BBAAPANuNznLenwT9/4APAphQQIkPgHMd/4APANWgIILenwR9/4APDlkgIIO3C4sTXwIPiAsgDgACAAkDNGIkYpRkhGAvC2+gKwvejwhwhJNfCc+cr4AADp50/w/zXL50/2/3Dp5wC/WEQAIJA8BwhgPQcIVEQAIA=="
+        },
+        {
+          "raw": 133780,
+          "expected": "2de9f047dff8608198f800308146002b53d0dff858a10023daf8006088f80030002e46d04c4c002503e054f8045c002d41db54f8081c3046dff79cfb083407460028f2d198f80030002b40d088f80070304634f083fc061e2bdb042d29d8dfe805f03f3f4d03470098f80000002866d00023daf8005088f80030d5b1374c03e054f8047c002f58db54f8081c2846dff771fb083403460028f2d198f80020002a3cd12f4934f0e6fd0546caf80000002836d1bde8f087bde8f08718462849dff8aca034f0d7fd0646caf80000a8e7244934f0d0fd0646caf800000028b8d1e8e70023b2b2e9b24846bde8f04702f088b803211c48fff7cefe0023f2e798f8000020b30023daf8000088f800300028d0d034f024fc031eccdb1bb2e2e788f80030284634f01bfc031ec3dbfab2b1b24846dbb2bde8f04702f079b8bde8f087084934f098fd0546caf8000096e7044934f091fdcaf80000d9e70c3e07083c3e0708603d070898c801205844002054440020",
+          "data": "Len4T8HzBkkWRkpKD0aCRklJmEZNRrnxAA8YvwElUvgEDN3pCkuIQmvRB/DwALDxkAEAkRi/gChj0RB4MLH/91/5PEoQuf/3f/k6ShB4ELFwHgIoPdMDLlPRAJjH8wYhEx2URk/q0Q6w+oDwE/gOIEAJKEBP8AEFT+oXIADwBwAF+gDwE/gOUBPQBUMD+A5QDOsOAxt9GEIb0Zz4ADCDsxBAFtGc+AEAsLMkSCRKkEcP4CXqAAID+A4gDPEUAhL4DjAYQgjQEvgOMMBDGEAC+A4AASC96PiPnPgAAIixACQDLPbQDOsEAJD4JACBQgbRIEZlRg5GAPBf/DFGrEYBNO7nzekKS1BGOUYyRkNGAbC96PBP//fsu5z4AAACKATRCEZJRv/3MPnT5whGSUb/92P4zucE/gEgAQBMQZgMACAZYAIIDbX/91n5EPEBDwbQAUa96A1AcLUURt/4CPC96A1AcEcpMgQIWEQAIFREACA="
+        },
+        {
+          "raw": 136268,
+          "expected": "2de9f843dff8d48098f8000000283bd0dff8cc900023d9f8006088f800307eb32a4c002503e054f8045c002d2adb54f8081c3046def7c2fe0834034607460028f1d1052d12d098f8000030b30023d9f8000088f8003098b133f0a4ff00280fdb052d20d01a4b5855bde8f88398f8002012b388f80030304633f094ff071ee2dabde8f883bde8f8831249dff8549034f015f90646c9f80000c1e70e4934f00ef9c9f80000d7e700f07f0207f07f010a48bde8f843f4f7c8bc064934f0fff80646c9f800000028d6d1dae700bfbc3d0708ac000020603d0708a80700205844002054440020",
+          "data": "E0lCXP8qIdDwtRJMjkbKHAAjT/ACDAAmMC4S0DcZF/gEHGGxuXhRuRf4AhwVXKlCBdEH+AQ8h/gDwDNVe3AMNurn/yIO+AAgvejwQHBHAL8o/gEgikMAIBC1EkoSTBNoo0Id0UHyCBOYQgzQQPYFA5hCFdGS+LwQAvG9AGGxkvjAECmxCOAQeVCxEHkCKAHR/yEF4ALxsQABeAApGL//IQhGEL0A/gEgAQBMQb+1CUwDRgAgAJH/IQAizekCAAKoBPXPZahH3ekCEgNIASOgR7+9AL8VFAIIoAUAIFhEACBURAAg"
+        }
+      ],
+      "edits": [
+        {
+          "raw": 426036,
+          "expected": "01bc0208",
+          "data": "edb80208",
+          "name": "retire_console_method"
+        },
+        {
+          "raw": 426068,
+          "expected": "61bb0208",
+          "data": "edb80208",
+          "name": "retire_console_method"
+        },
+        {
+          "raw": 426164,
+          "expected": "4dd40208",
+          "data": "edb80208",
+          "name": "retire_console_method"
+        },
+        {
+          "raw": 425940,
+          "expected": "85bc0208",
+          "data": "edb80208",
+          "name": "retire_console_method"
+        },
+        {
+          "raw": 425972,
+          "expected": "f5c20208",
+          "data": "edb80208",
+          "name": "retire_console_method"
+        },
+        {
+          "raw": 426132,
+          "expected": "91be0208",
+          "data": "edb80208",
+          "name": "retire_console_method"
+        },
+        {
+          "raw": 426196,
+          "expected": "95ca0208",
+          "data": "edb80208",
+          "name": "retire_console_method"
+        },
+        {
+          "raw": 426292,
+          "expected": "95bd0208",
+          "data": "edb80208",
+          "name": "retire_console_method"
+        },
+        {
+          "raw": 88716,
+          "expected": "f0b4bdf91050",
+          "data": "0af032bc1050",
+          "name": "panel_led_hook"
+        },
+        {
+          "raw": 225828,
+          "expected": "70b51446",
+          "data": "e9f7d8bc",
+          "name": "lock_dispatch"
+        },
+        {
+          "raw": 228174,
+          "expected": "84f82830",
+          "data": "e8f7edbb",
+          "name": "lock_init_hook"
+        },
+        {
+          "raw": 247076,
+          "expected": "2de9f04f",
+          "data": "e4f7b6ba",
+          "name": "lock_keyboard"
+        },
+        {
+          "raw": 104968,
+          "expected": "90f80731",
+          "data": "06f058bb",
+          "name": "lock_step"
+        },
+        {
+          "raw": 119520,
+          "expected": "2de9f047",
+          "data": "03f046b8",
+          "name": "lock_stop"
+        },
+        {
+          "raw": 298504,
+          "expected": "d0f8d432",
+          "data": "d7f79cba",
+          "name": "lock_load_hook"
+        },
+        {
+          "raw": 342148,
+          "expected": "00000220",
+          "data": "00fe0120",
+          "name": "reset_literal_reserve_256_bytes"
+        }
+      ],
+      "state": 537001472,
+      "stateBytes": 196,
+      "sha256": "861f4b188e6cbe81c6b3b023a2d3918a64734317c1df0f3c5f8ecc8d3c42de41",
+      "symbols": {
+        "$t": 134398708,
+        "$d": 134398736,
+        "led": 134403321,
+        "eligible": 134397333,
+        "live_off": 134398813,
+        "hold_led": 134398741,
+        "release_live": 134403149,
+        "capture": 134397469,
+        "live_on": 134397069,
+        "assign": 134398237,
+        "commit": 134397865,
+        "panel_brightness": 134403237,
+        "panel_event": 134397585,
+        "lock_panel": 134396769,
+        "lock_exit": 134397405,
+        "lock_init": 134397529,
+        "lock_keyboard": 134400661,
+        "lock_step": 134398141,
+        "lock_stop": 134398833,
+        "lock_dispatch": 134400985,
+        "lock_init_hook": 134398765,
+        "lock_keyboard_original": 134398853,
+        "lock_step_original": 134398865,
+        "lock_stop_original": 134398877,
+        "lock_load_hook": 134398789,
+        "panel_led_hook": 134398709
+      },
+      "loadContinuation": 131920,
+      "loadExpected": "d0f8d432"
+    }
+  }
+}
